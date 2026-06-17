@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>KOISHIKAWA｜旅館・ホテル専門のWebサイト制作</title>
+  <meta name="description" content="旅館・ホテル業界に特化したデザインと集客導線で、公式サイトからの予約獲得を支援します。予約につながる旅館サイトを、最短数日で。" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@500;600;700&family=Cormorant+Garamond:wght@500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- ====================== Header ====================== -->
+  <header class="site-header" id="top">
+    <div class="header-inner">
+      <a href="#top" class="brand" aria-label="KOISHIKAWA トップへ">
+        <span class="brand-mark">KOISHIKAWA</span>
+        <span class="brand-sub">旅館・ホテル専門の<br />Webサイト制作</span>
+      </a>
+
+      <nav class="global-nav" aria-label="グローバルナビゲーション">
+        <a href="#service">サービス</a>
+        <a href="#works">実績</a>
+        <a href="#marketing">広告・集客</a>
+        <a href="#template">テンプレート</a>
+        <a href="#price">料金</a>
+        <a href="#flow">進め方</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contact">お問い合わせ</a>
+      </nav>
+
+      <div class="header-actions">
+        <a href="#works" class="btn btn-ghost">実績を見る</a>
+        <a href="#contact" class="btn btn-gold">相談する</a>
+      </div>
+
+      <button class="nav-toggle" aria-label="メニューを開く">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ====================== Hero ====================== -->
+  <main>
+    <section class="hero" aria-labelledby="hero-title">
+      <!-- faint luxury background layers -->
+      <div class="hero-bg" aria-hidden="true">
+        <div class="hero-bg-photo"></div>
+        <div class="hero-bg-veil"></div>
+        <div class="hero-bg-grain"></div>
+      </div>
+
+      <div class="hero-inner">
+        <!-- Left : copy + CTA -->
+        <div class="hero-copy">
+          <span class="hero-badge reveal">旅館・ホテル業界特化のWeb制作</span>
+
+          <h1 class="hero-title reveal" id="hero-title">
+            <span class="line">予約につながる</span>
+            <span class="line">旅館サイトを、</span>
+            <span class="line accent">最短数日で。</span>
+          </h1>
+
+          <p class="hero-lead reveal">
+            旅館・ホテル業界に特化したデザインと集客導線で、<br />
+            公式サイトからの予約獲得を支援します。
+          </p>
+
+          <ul class="hero-points reveal" aria-label="サービスの強み">
+            <li><span class="tick" aria-hidden="true"></span>旅館・ホテル業界特化</li>
+            <li><span class="tick" aria-hidden="true"></span>最短7日公開</li>
+            <li><span class="tick" aria-hidden="true"></span>スマホ予約最適化</li>
+            <li><span class="tick" aria-hidden="true"></span>Google集客対応</li>
+          </ul>
+
+          <div class="hero-cta reveal">
+            <a href="#contact" class="cta cta-main">
+              <span class="cta-eyebrow">まずは無料でご相談</span>
+              <span class="cta-label">無料相談する<span class="cta-arrow" aria-hidden="true">→</span></span>
+            </a>
+            <a href="#works" class="cta cta-sub">
+              <span class="cta-eyebrow">制作実績はこちら</span>
+              <span class="cta-label">制作実績を見る<span class="cta-arrow" aria-hidden="true">→</span></span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Right : device mockups (placeholder) -->
+        <div class="hero-visual reveal" aria-hidden="true">
+          <!-- Laptop -->
+          <div class="laptop">
+            <div class="laptop-screen">
+              <div class="mini-site">
+                <div class="mini-photo">
+                  <div class="mini-nav">
+                    <span class="mini-logo">— ゆの宿 —</span>
+                    <span class="mini-links"><i></i><i></i><i></i><i></i><i></i></span>
+                    <span class="mini-cta">ご予約</span>
+                  </div>
+                  <div class="mini-hero">
+                    <p class="mini-jp">心ほどける、</p>
+                    <p class="mini-jp">特別なひとときを。</p>
+                  </div>
+                </div>
+                <div class="mini-booking">
+                  <div class="bk-field"><span>ご宿泊日</span><b></b></div>
+                  <div class="bk-field"><span>人数</span><b></b></div>
+                  <div class="bk-field"><span>部屋タイプ</span><b></b></div>
+                  <div class="bk-search">空室検索</div>
+                </div>
+              </div>
+            </div>
+            <div class="laptop-base"></div>
+          </div>
+
+          <!-- Phone -->
+          <div class="phone">
+            <div class="phone-notch"></div>
+            <div class="phone-screen">
+              <div class="ph-nav"><span>ゆの宿</span><i></i></div>
+              <div class="ph-photo">
+                <p class="ph-jp">心ほどける、</p>
+                <p class="ph-jp">特別なひととき。</p>
+              </div>
+              <div class="ph-cta">ご予約・空室確認</div>
+              <div class="ph-row"><i></i><i></i></div>
+              <div class="ph-line"></div>
+              <div class="ph-line short"></div>
+            </div>
+          </div>
+
+          <!-- decorative glow -->
+          <div class="visual-glow"></div>
+        </div>
+      </div>
+
+      <!-- floating consult chip (like reference) -->
+      <a href="#contact" class="consult-chip" aria-label="ご相談はこちら">
+        <span class="chip-icon" aria-hidden="true">💬</span>
+        <span class="chip-text">ご相談はこちら</span>
+      </a>
+    </section>
+
+    <!-- ====================== Service ====================== -->
+    <section class="section-wrap" id="service">
+      <div class="section-inner">
+        <div class="section-head">
+          <span class="section-badge">SERVICE</span>
+          <h2 class="section-title">旅館・ホテルのための<br />Web制作サービス</h2>
+          <p class="section-lead">業界特化だからこそ実現できる、予約に直結するWebサイト。<br />お宿の魅力を最大限に引き出し、公式予約を増やします。</p>
+        </div>
+        <div class="service-grid">
+          <div class="service-card reveal">
+            <div class="service-icon">✦</div>
+            <h3>旅館・ホテル専用デザイン</h3>
+            <p>旅館・ホテル業界専門のデザイナーが、お宿の世界観を丁寧に表現。宿泊ゲストの心を動かすビジュアルを制作します。</p>
+          </div>
+          <div class="service-card reveal">
+            <div class="service-icon">◈</div>
+            <h3>スマホ予約最適化</h3>
+            <p>スマートフォンからの予約に特化したUXデザイン。「予約したい」と思った瞬間を逃さない導線設計を実現します。</p>
+          </div>
+          <div class="service-card reveal">
+            <div class="service-icon">◉</div>
+            <h3>SEO・Google集客対応</h3>
+            <p>「○○ 旅館」「○○ 温泉 宿」などの検索で上位表示されるよう、SEO設計を標準搭載。Google集客の基盤を構築します。</p>
+          </div>
+          <div class="service-card reveal">
+            <div class="service-icon">◆</div>
+            <h3>予約システム連携</h3>
+            <p>じゃらん・楽天トラベル・一休などの予約サイトとの連携、または公式予約システムの導入をサポートします。</p>
+          </div>
+          <div class="service-card reveal">
+            <div class="service-icon">⬡</div>
+            <h3>最短7日で公開</h3>
+            <p>テンプレートベースの制作で最短7日での公開が可能。リニューアルも素材さえあればスピーディーに対応します。</p>
+          </div>
+          <div class="service-card reveal">
+            <div class="service-icon">◎</div>
+            <h3>公開後サポート</h3>
+            <p>公開後も写真差し替え・テキスト修正・プラン更新などのメンテナンスをサポート。長期的なパートナーとして伴走します。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================== Works ====================== -->
+    <section class="section-wrap bg-warm" id="works">
+      <div class="section-inner">
+        <div class="section-head">
+          <span class="section-badge">WORKS</span>
+          <h2 class="section-title">制作実績</h2>
+          <p class="section-lead">旅館・ホテルのWebサイト制作実績をご覧ください。</p>
+        </div>
+        <div class="works-grid">
+          <div class="work-card reveal">
+            <div class="work-thumb">
+              <div class="wm-photo wm-green">
+                <div class="wm-header">
+                  <span class="wm-logo">— 山乃湯 —</span>
+                  <span class="wm-btn">ご予約</span>
+                </div>
+                <div class="wm-copy">
+                  <p>奥飛騨の秘湯で</p>
+                  <p>心ほぐれる休日を。</p>
+                </div>
+              </div>
+              <div class="wm-body">
+                <div class="wm-line"></div>
+                <div class="wm-line short"></div>
+              </div>
+            </div>
+            <div class="work-info">
+              <span class="work-tag">温泉旅館</span>
+              <h3>山乃湯 — 奥飛騨温泉郷</h3>
+              <p>リニューアル制作 / スマホ予約強化 / SEO対策</p>
+            </div>
+          </div>
+          <div class="work-card reveal">
+            <div class="work-thumb">
+              <div class="wm-photo wm-ocean">
+                <div class="wm-header">
+                  <span class="wm-logo" style="font-family:var(--sans);letter-spacing:.2em;font-weight:300">HANAYADO</span>
+                  <span class="wm-btn">RESERVE</span>
+                </div>
+                <div class="wm-copy">
+                  <p style="font-family:var(--sans);letter-spacing:.12em">Refresh</p>
+                  <p style="font-family:var(--sans);letter-spacing:.12em">Your Soul.</p>
+                </div>
+              </div>
+              <div class="wm-body">
+                <div class="wm-line"></div>
+                <div class="wm-line short"></div>
+              </div>
+            </div>
+            <div class="work-info">
+              <span class="work-tag">リゾートホテル</span>
+              <h3>HANAYADO — 瀬戸内海</h3>
+              <p>新規制作 / 多言語対応 / 予約システム連携</p>
+            </div>
+          </div>
+          <div class="work-card reveal">
+            <div class="work-thumb">
+              <div class="wm-photo wm-sakura">
+                <div class="wm-header">
+                  <span class="wm-logo">— 桜庵 —</span>
+                  <span class="wm-btn">ご予約</span>
+                </div>
+                <div class="wm-copy">
+                  <p>嵐山の四季と</p>
+                  <p>美食をお届けします。</p>
+                </div>
+              </div>
+              <div class="wm-body">
+                <div class="wm-line"></div>
+                <div class="wm-line short"></div>
+              </div>
+            </div>
+            <div class="work-info">
+              <span class="work-tag">料理旅館</span>
+              <h3>桜庵 — 京都嵐山</h3>
+              <p>新規制作 / 料理特化LP / Google広告連携</p>
+            </div>
+          </div>
+        </div>
+        <div class="section-more reveal">
+          <a href="#contact" class="btn btn-gold">制作実績についてご相談する</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================== Marketing ====================== -->
+    <section class="section-wrap" id="marketing">
+      <div class="section-inner">
+        <div class="section-head">
+          <span class="section-badge">MARKETING</span>
+          <h2 class="section-title">広告・集客サポート</h2>
+          <p class="section-lead">Webサイト制作だけでなく、サイトに人を集める仕組みづくりまで<br />ワンストップで対応します。</p>
+        </div>
+        <div class="marketing-grid">
+          <div class="mkt-card reveal">
+            <div class="mkt-icon-wrap"><span class="mkt-icon">G</span></div>
+            <h3>Google広告運用</h3>
+            <p>「○○ 旅館 予約」など旅行検索に特化したキーワード選定と広告設計。予約意欲の高いユーザーに絞って広告を届けます。</p>
+            <ul class="mkt-list">
+              <li>リスティング広告</li>
+              <li>ディスプレイ広告</li>
+              <li>P-MAX キャンペーン</li>
+            </ul>
+          </div>
+          <div class="mkt-card reveal">
+            <div class="mkt-icon-wrap"><span class="mkt-icon">SEO</span></div>
+            <h3>SEO・MEO対策</h3>
+            <p>地名×旅館などの検索ワードで自然検索流入を獲得。Googleマップ最適化（MEO）でローカル集客も強化します。</p>
+            <ul class="mkt-list">
+              <li>技術的SEO</li>
+              <li>コンテンツSEO</li>
+              <li>Googleビジネス最適化</li>
+            </ul>
+          </div>
+          <div class="mkt-card reveal">
+            <div class="mkt-icon-wrap"><span class="mkt-icon">SNS</span></div>
+            <h3>SNS・コンテンツ支援</h3>
+            <p>Instagram・Xを活用したブランディング支援。料理・客室・四季の風景など、予約意欲を高めるコンテンツ戦略を立案します。</p>
+            <ul class="mkt-list">
+              <li>Instagram運用</li>
+              <li>コンテンツ制作</li>
+              <li>インフルエンサー連携</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================== Template ====================== -->
+    <section class="section-wrap bg-warm" id="template">
+      <div class="section-inner">
+        <div class="section-head">
+          <span class="section-badge">TEMPLATE</span>
+          <h2 class="section-title">選べるデザインテンプレート</h2>
+          <p class="section-lead">旅館・ホテルのスタイルに合わせたテンプレートをご用意。<br />写真と文章を入れるだけで、本格的なサイトが完成します。</p>
+        </div>
+        <div class="template-grid">
+          <div class="tmpl-card reveal">
+            <div class="tmpl-preview tmpl-wa">
+              <div class="tp-header">— ゆの宿 —</div>
+              <div class="tp-hero">
+                <p>心ほどける、</p>
+                <p>特別なひとときを。</p>
+              </div>
+            </div>
+            <div class="tmpl-info">
+              <span class="tmpl-tag">和風 / 落ち着き</span>
+              <h3>WABI（わび）</h3>
+              <p>伝統的な和の美学を表現した格式あるデザイン。温泉旅館・料理旅館向け。</p>
+            </div>
+          </div>
+          <div class="tmpl-card reveal">
+            <div class="tmpl-preview tmpl-resort">
+              <div class="tp-header" style="font-family:var(--sans);letter-spacing:.22em;font-weight:300">RESORT INN</div>
+              <div class="tp-hero">
+                <p style="font-family:var(--sans);font-size:17px;letter-spacing:.14em">Refresh</p>
+                <p style="font-family:var(--sans);font-size:17px;letter-spacing:.14em">Your Soul.</p>
+              </div>
+            </div>
+            <div class="tmpl-info">
+              <span class="tmpl-tag">洋風 / モダン</span>
+              <h3>SORA（そら）</h3>
+              <p>海辺・高原リゾート向けのモダンで開放的なデザイン。外国人客にも好評。</p>
+            </div>
+          </div>
+          <div class="tmpl-card reveal">
+            <div class="tmpl-preview tmpl-luxury">
+              <div class="tp-header">— 結の宿 —</div>
+              <div class="tp-hero">
+                <p>一期一会の</p>
+                <p>おもてなし。</p>
+              </div>
+            </div>
+            <div class="tmpl-info">
+              <span class="tmpl-tag">高級 / 上品</span>
+              <h3>KOTO（こと）</h3>
+              <p>高級旅館・高単価宿向けの格調高いデザイン。エレガントな雰囲気を演出。</p>
+            </div>
+          </div>
+        </div>
+        <p class="tmpl-note reveal">※ すべてのテンプレートはフルカスタマイズ可能です</p>
+      </div>
+    </section>
+
+    <!-- ====================== Price ====================== -->
+    <section class="section-wrap" id="price">
+      <div class="section-inner">
+        <div class="section-head">
+          <span class="section-badge">PRICE</span>
+          <h2 class="section-title">料金プラン</h2>
+          <p class="section-lead">受託制作・テンプレ購入・追加オプション、用途に合わせて選べます。<br />旅館・ホテルはスタンダードプランが最も選ばれています。</p>
+        </div>
+
+        <!-- 受託制作 -->
+        <div class="price-category reveal">
+          <div class="price-category-head">
+            <h3 class="price-category-title">受託制作</h3>
+            <span class="price-category-tag">税抜・銀行振込</span>
+          </div>
+          <div class="price-grid">
+            <div class="price-card">
+              <div class="price-header">
+                <span class="plan-name">ライト</span>
+                <div class="plan-price-dual">
+                  <div class="price-row">
+                    <span class="price-label">月額</span>
+                    <span class="price-num sm">5,000</span><span class="price-unit">円</span>
+                  </div>
+                  <span class="price-or">または</span>
+                  <div class="price-row">
+                    <span class="price-label">買い切り</span>
+                    <span class="price-num">120,000</span><span class="price-unit">円</span>
+                  </div>
+                </div>
+                <p class="plan-desc">1ページLP — 小規模宿・民宿向け</p>
+              </div>
+              <ul class="plan-features">
+                <li class="ok">1ページ構成</li>
+                <li class="ok">スマホ対応</li>
+                <li class="ok">お問い合わせ導線</li>
+                <li class="ok">基本SEO設定</li>
+              </ul>
+              <a href="#contact" class="btn btn-ghost plan-btn">このプランで相談する</a>
+            </div>
+            <div class="price-card price-featured">
+              <div class="price-badge-pop">旅館の目安</div>
+              <div class="price-header">
+                <span class="plan-name">スタンダード</span>
+                <div class="plan-price-dual">
+                  <div class="price-row">
+                    <span class="price-label">月額</span>
+                    <span class="price-num sm">10,000</span><span class="price-unit">円</span>
+                  </div>
+                  <span class="price-or">または</span>
+                  <div class="price-row">
+                    <span class="price-label">買い切り</span>
+                    <span class="price-num">240,000</span><span class="price-unit">円</span>
+                  </div>
+                </div>
+                <p class="plan-desc">3〜5ページ — 旅館・ホテルに最適</p>
+              </div>
+              <ul class="plan-features">
+                <li class="ok">3〜5ページ構成</li>
+                <li class="ok">スマホ予約最適化</li>
+                <li class="ok">予約・問い合わせ導線</li>
+                <li class="ok">SEO・構造化データ</li>
+              </ul>
+              <a href="#contact" class="btn btn-gold plan-btn">このプランで相談する</a>
+            </div>
+            <div class="price-card">
+              <div class="price-header">
+                <span class="plan-name">カスタム</span>
+                <div class="plan-price-dual">
+                  <div class="price-row">
+                    <span class="price-label">月額</span>
+                    <span class="price-num sm">30,000</span><span class="price-unit">円</span>
+                  </div>
+                  <span class="price-or">または</span>
+                  <div class="price-row">
+                    <span class="price-label">買い切り</span>
+                    <span class="price-num">720,000</span><span class="price-unit">円</span>
+                  </div>
+                </div>
+                <p class="plan-desc">機能拡張・API連携 — 高機能・個別要件向け</p>
+              </div>
+              <ul class="plan-features">
+                <li class="ok">予約API連携（ねっぱん等）</li>
+                <li class="ok">Stripe事前決済</li>
+                <li class="ok">会員・リピーター機能</li>
+                <li class="ok">完全フルオーダー</li>
+              </ul>
+              <a href="#contact" class="btn btn-ghost plan-btn">カスタムで相談する</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- テンプレ購入のみ -->
+        <div class="price-category reveal">
+          <div class="price-category-head">
+            <h3 class="price-category-title">テンプレ購入のみ</h3>
+            <span class="price-category-tag tag-stripe">Stripe決済</span>
+          </div>
+          <div class="template-price-grid">
+            <div class="tmpl-price-card">
+              <div class="tmpl-price-num">¥9,800</div>
+              <h4 class="tmpl-price-name">テンプレのみ</h4>
+              <p class="tmpl-price-desc">テンプレートファイルの提供。ご自身で差し替え・公開。</p>
+            </div>
+            <div class="tmpl-price-card tmpl-price-featured">
+              <div class="tmpl-price-badge">人気</div>
+              <div class="tmpl-price-num">¥19,800</div>
+              <h4 class="tmpl-price-name">差し替え＋公開</h4>
+              <p class="tmpl-price-desc">写真・文章の差し替えと公開作業まで代行。</p>
+            </div>
+            <div class="tmpl-price-card">
+              <div class="tmpl-price-num">¥49,800</div>
+              <h4 class="tmpl-price-name">フルカスタム</h4>
+              <p class="tmpl-price-desc">テンプレをベースにデザイン・構成をカスタマイズ。</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 追加オプション -->
+        <div class="price-category reveal">
+          <div class="price-category-head">
+            <h3 class="price-category-title">追加オプション</h3>
+            <span class="price-category-tag">税抜</span>
+          </div>
+          <ul class="addon-list">
+            <li class="addon-item">
+              <span class="addon-name">安心サポート</span>
+              <span class="addon-price">月 ¥3,000</span>
+            </li>
+            <li class="addon-item">
+              <span class="addon-name">CMS更新機能</span>
+              <span class="addon-price">+ ¥30,000〜</span>
+            </li>
+            <li class="addon-item">
+              <span class="addon-name">ページ追加</span>
+              <span class="addon-price">+ ¥5,000 / ページ</span>
+            </li>
+            <li class="addon-item">
+              <span class="addon-name">フォーム設置</span>
+              <span class="addon-price">+ ¥5,000</span>
+            </li>
+            <li class="addon-item">
+              <span class="addon-name">ロゴ制作</span>
+              <span class="addon-price">+ ¥10,000〜</span>
+            </li>
+            <li class="addon-item">
+              <span class="addon-name">多言語対応</span>
+              <span class="addon-price">+ ¥10,000〜</span>
+            </li>
+            <li class="addon-item">
+              <span class="addon-name">決済ページ</span>
+              <span class="addon-price">+ ¥20,000〜</span>
+            </li>
+            <li class="addon-item">
+              <span class="addon-name">追加修正</span>
+              <span class="addon-price">+ ¥3,000（3箇所）</span>
+            </li>
+            <li class="addon-item addon-free">
+              <span class="addon-name">SNS導線</span>
+              <span class="addon-price addon-price-free">無料</span>
+            </li>
+            <li class="addon-item">
+              <span class="addon-name">独自ドメイン</span>
+              <span class="addon-price">+ ¥3,000</span>
+            </li>
+          </ul>
+        </div>
+
+        <p class="price-note reveal">※ 掲載価格はすべて税抜表示です。受託制作は銀行振込、テンプレ購入はStripe決済に対応しています。</p>
+      </div>
+    </section>
+
+    <!-- ====================== Flow ====================== -->
+    <section class="section-wrap bg-warm" id="flow">
+      <div class="section-inner">
+        <div class="section-head">
+          <span class="section-badge">FLOW</span>
+          <h2 class="section-title">制作の進め方</h2>
+          <p class="section-lead">ご相談から公開まで、丁寧にサポートします。</p>
+        </div>
+        <div class="flow-list">
+          <div class="flow-item reveal">
+            <div class="flow-num">01</div>
+            <div class="flow-body">
+              <h3>無料相談・ヒアリング</h3>
+              <p>お宿の現状・課題・ご要望をお伺いします。現サイトの課題分析も無料で行います。</p>
+              <span class="flow-period">所要日数：1〜3日</span>
+            </div>
+          </div>
+          <div class="flow-item reveal">
+            <div class="flow-num">02</div>
+            <div class="flow-body">
+              <h3>お見積もり・ご契約</h3>
+              <p>ヒアリング内容をもとにお見積もりをご提出。内容にご納得いただいてからご契約となります。</p>
+              <span class="flow-period">所要日数：2〜5日</span>
+            </div>
+          </div>
+          <div class="flow-item reveal">
+            <div class="flow-num">03</div>
+            <div class="flow-body">
+              <h3>素材収集・デザイン制作</h3>
+              <p>写真・テキストのご提供をいただき、デザインを制作。ワイヤーフレームとデザイン案をご確認いただきます。</p>
+              <span class="flow-period">所要日数：5〜14日</span>
+            </div>
+          </div>
+          <div class="flow-item reveal">
+            <div class="flow-num">04</div>
+            <div class="flow-body">
+              <h3>コーディング・テスト</h3>
+              <p>デザイン確定後、コーディングを行いテスト環境でご確認いただきます。修正は2回まで無料です。</p>
+              <span class="flow-period">所要日数：3〜7日</span>
+            </div>
+          </div>
+          <div class="flow-item reveal">
+            <div class="flow-num">05</div>
+            <div class="flow-body">
+              <h3>公開・アフターサポート</h3>
+              <p>最終確認後、本番環境に公開。公開後も写真差し替え・プラン更新など継続してサポートします。</p>
+              <span class="flow-period">公開後サポート：継続対応</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================== FAQ ====================== -->
+    <section class="section-wrap" id="faq">
+      <div class="section-inner">
+        <div class="section-head">
+          <span class="section-badge">FAQ</span>
+          <h2 class="section-title">よくある質問</h2>
+        </div>
+        <div class="faq-list">
+          <details class="faq-item reveal">
+            <summary class="faq-q">制作期間はどのくらいかかりますか？</summary>
+            <div class="faq-a"><p>プランや内容によって異なりますが、テンプレートプランで最短7日、フルオーダープランで3〜6週間が目安です。素材（写真・テキスト）をすぐにご提供いただける場合はよりスピーディーに対応できます。</p></div>
+          </details>
+          <details class="faq-item reveal">
+            <summary class="faq-q">写真や文章がなくても制作できますか？</summary>
+            <div class="faq-a"><p>はい、可能です。文章のライティング（有料オプション）やストックフォトの使用もご提案できます。プロのカメラマン手配のご相談も承っています。</p></div>
+          </details>
+          <details class="faq-item reveal">
+            <summary class="faq-q">既存のサイトからのリニューアルも対応できますか？</summary>
+            <div class="faq-a"><p>もちろんです。既存サイトの課題分析から行い、予約増加に向けた改善提案をした上でリニューアルを進めます。URLの変更なしでの移行も可能です。</p></div>
+          </details>
+          <details class="faq-item reveal">
+            <summary class="faq-q">じゃらん・楽天トラベルとの連携は可能ですか？</summary>
+            <div class="faq-a"><p>はい、対応可能です。各予約サイトのウィジェット埋め込みや、API連携による空室カレンダーの設置も行っています。公式予約システム（Temairazu・予約番頭など）との連携実績もあります。</p></div>
+          </details>
+          <details class="faq-item reveal">
+            <summary class="faq-q">公開後に自分でコンテンツを更新できますか？</summary>
+            <div class="faq-a"><p>CMSを導入したプランでは、専門知識なしで写真・テキスト・プラン情報を更新できます。操作方法のマニュアルお渡し＆レクチャーも行っています。</p></div>
+          </details>
+          <details class="faq-item reveal">
+            <summary class="faq-q">料金の支払い方法はどうなっていますか？</summary>
+            <div class="faq-a"><p>ご契約時に50%、公開時に50%の二回払いが基本です。銀行振込に対応しています。分割払いについてもご相談ください。</p></div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====================== Contact ====================== -->
+    <section class="section-wrap bg-night" id="contact">
+      <div class="section-inner">
+        <div class="section-head">
+          <span class="section-badge badge-light">CONTACT</span>
+          <h2 class="section-title title-light">まずは無料でご相談ください</h2>
+          <p class="section-lead lead-light">お宿の課題・ご要望をお聞かせください。<br />2営業日以内にご返信いたします。</p>
+        </div>
+        <form class="contact-form reveal" action="#" method="post" novalidate>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">お名前 <span class="req">必須</span></label>
+              <input type="text" id="name" name="name" placeholder="山田 太郎" required />
+            </div>
+            <div class="form-group">
+              <label for="facility">施設名</label>
+              <input type="text" id="facility" name="facility" placeholder="○○旅館" />
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="email">メールアドレス <span class="req">必須</span></label>
+              <input type="email" id="email" name="email" placeholder="info@example.com" required />
+            </div>
+            <div class="form-group">
+              <label for="tel">電話番号</label>
+              <input type="tel" id="tel" name="tel" placeholder="000-0000-0000" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="type">ご相談内容 <span class="req">必須</span></label>
+            <select id="type" name="type" required>
+              <option value="">選択してください</option>
+              <option>新規サイト制作</option>
+              <option>サイトリニューアル</option>
+              <option>広告・SEO対策</option>
+              <option>料金・見積もりの確認</option>
+              <option>カスタム機能・API連携の相談</option>
+              <option>Stripe決済・事前決済の導入</option>
+              <option>その他</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="message">メッセージ</label>
+            <textarea id="message" name="message" rows="5" placeholder="現在の課題や、ご要望をお気軽にお書きください。"></textarea>
+          </div>
+          <button type="submit" class="btn btn-gold form-submit">無料相談を申し込む</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- ====================== Footer ====================== -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <span class="brand-mark">KOISHIKAWA</span>
+        <span class="footer-tagline">旅館・ホテル専門のWebサイト制作</span>
+      </div>
+      <nav class="footer-nav" aria-label="フッターナビゲーション">
+        <a href="#service">サービス</a>
+        <a href="#works">実績</a>
+        <a href="#marketing">広告・集客</a>
+        <a href="#template">テンプレート</a>
+        <a href="#price">料金</a>
+        <a href="#flow">進め方</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contact">お問い合わせ</a>
+      </nav>
+      <p class="footer-copy">© 2024 KOISHIKAWA. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- ====================== Mobile Nav Drawer ====================== -->
+  <div class="nav-drawer" aria-hidden="true">
+    <div class="nav-drawer-bg"></div>
+    <nav class="nav-drawer-panel" aria-label="モバイルナビゲーション">
+      <a href="#service">サービス</a>
+      <a href="#works">実績</a>
+      <a href="#marketing">広告・集客</a>
+      <a href="#template">テンプレート</a>
+      <a href="#price">料金</a>
+      <a href="#flow">進め方</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contact">お問い合わせ</a>
+      <div class="drawer-cta">
+        <a href="#works" class="btn btn-ghost">実績を見る</a>
+        <a href="#contact" class="btn btn-gold">相談する</a>
+      </div>
+    </nav>
+  </div>
+
+  <script>
+    window.addEventListener('DOMContentLoaded', () => {
+      // hero: staggered reveal on load
+      document.querySelectorAll('.hero .reveal').forEach((el, i) => {
+        setTimeout(() => el.classList.add('is-in'), 120 * i + 150);
+      });
+
+      // other sections: reveal on scroll
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(e => {
+          if (e.isIntersecting) { e.target.classList.add('is-in'); observer.unobserve(e.target); }
+        });
+      }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+      document.querySelectorAll('.section-wrap .reveal').forEach(el => observer.observe(el));
+
+      // mobile drawer: close on link/bg click
+      document.querySelectorAll('.nav-drawer-panel a').forEach(a =>
+        a.addEventListener('click', () => document.body.classList.remove('nav-open'))
+      );
+      document.querySelector('.nav-drawer-bg').addEventListener('click', () =>
+        document.body.classList.remove('nav-open')
+      );
+    });
+
+    // header shadow on scroll
+    const header = document.querySelector('.site-header');
+    const onScroll = () => header.classList.toggle('is-scrolled', window.scrollY > 8);
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+
+    // mobile nav toggle
+    document.querySelector('.nav-toggle').addEventListener('click', () => {
+      document.body.classList.toggle('nav-open');
+    });
+  </script>
+</body>
+</html>

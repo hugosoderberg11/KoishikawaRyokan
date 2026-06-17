@@ -1,0 +1,18 @@
+{
+  "name": "ryokan-koishikawa",
+  "private": true,
+  "version": "0.1.0",
+  "description": "KOISHIKAWA — 旅館・ホテル専門のWebサイト制作 ランディングページ",
+  "type": "module",
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^6.3.5"
+  }
+}
