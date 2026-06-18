@@ -1,0 +1,74 @@
+[
+  {
+    "id": "plan-01",
+    "tag": { "ja": "スタンダード", "en": "Standard", "zh": "标准" },
+    "featured": false,
+    "badge": null,
+    "name": {
+      "ja": "古民家ステイプラン",
+      "en": "Kominka Stay Plan",
+      "zh": "古民家住宿方案"
+    },
+    "description": {
+      "ja": "築100年の古民家で、京の暮らしを体感。朝食付きの基本プラン。",
+      "en": "Experience Kyoto living in a century-old kominka. Basic plan with breakfast included.",
+      "zh": "在百年古民家体验京都生活。含早餐的基本方案。"
+    },
+    "includes": {
+      "ja": ["朝食：京野菜の和朝食", "囲炉裏スペース利用", "日本庭園散策", "Wi-Fi・タオル類"],
+      "en": ["Breakfast: Kyoto vegetable washoku", "Irori space access", "Garden stroll", "Wi-Fi & towels"],
+      "zh": ["早餐：京都蔬菜和食", "围炉空间使用", "庭园散步", "Wi-Fi与毛巾"]
+    },
+    "priceLabel": { "ja": "1泊 お一人様", "en": "Per night", "zh": "1晚/人" },
+    "price": "¥38,000〜",
+    "image": "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80"
+  },
+  {
+    "id": "plan-02",
+    "tag": { "ja": "文化体験", "en": "Culture", "zh": "文化体验" },
+    "featured": true,
+    "badge": { "ja": "おすすめ", "en": "Recommended", "zh": "推荐" },
+    "name": {
+      "ja": "京文化体験プラン",
+      "en": "Kyoto Culture Experience Plan",
+      "zh": "京都文化体验方案"
+    },
+    "description": {
+      "ja": "茶道・着物レンタル・町家散策ガイド付き。インバウンドの方にも人気の体験プラン。",
+      "en": "Includes tea ceremony, kimono rental, and guided machiya walk — popular with international guests.",
+      "zh": "含茶道、和服租赁与町家导览，深受海外客人欢迎。"
+    },
+    "includes": {
+      "ja": ["夕朝食：京会席風", "茶道体験（45分）", "着物レンタル", "町家散策ガイド"],
+      "en": ["Dinner & breakfast: Kyoto kaiseki-style", "Tea ceremony (45 min)", "Kimono rental", "Machiya walking guide"],
+      "zh": ["晚早餐：京会席风", "茶道体验（45分钟）", "和服租赁", "町家散步导览"]
+    },
+    "priceLabel": { "ja": "1泊2食 お一人様", "en": "1 night, 2 meals", "zh": "1晚2餐/人" },
+    "price": "¥58,000〜",
+    "image": "https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?w=800&q=80"
+  },
+  {
+    "id": "plan-03",
+    "tag": { "ja": "一棟貸し", "en": "Entire House", "zh": "整栋出租" },
+    "featured": false,
+    "badge": null,
+    "name": {
+      "ja": "紬の郷 一棟貸しプラン",
+      "en": "Tsumugi no Sato Entire House Plan",
+      "zh": "紬之乡整栋出租方案"
+    },
+    "description": {
+      "ja": "古民家全体を貸切。家族・グループ旅行に。囲炉裏で囲む夕食もご用意できます。",
+      "en": "Exclusive use of the entire kominka for families and groups. Irori dinner available on request.",
+      "zh": "整栋包租，适合家庭与团体。可安排围炉晚餐。"
+    },
+    "includes": {
+      "ja": ["一棟貸切（最大6名）", "夕朝食：囲炉裏料理", "専用駐車場", "チェックアウト延長可"],
+      "en": ["Entire house (up to 6)", "Dinner & breakfast at irori", "Private parking", "Late checkout available"],
+      "zh": ["整栋包租（最多6人）", "围炉晚早餐", "专用停车位", "可延迟退房"]
+    },
+    "priceLabel": { "ja": "1泊（2名様〜）", "en": "Per night (2+ guests)", "zh": "1晚（2人起）" },
+    "price": "¥68,000〜",
+    "image": "https://images.unsplash.com/photo-1528360980937-0dd9998a9ef2?w=800&q=80"
+  }
+]

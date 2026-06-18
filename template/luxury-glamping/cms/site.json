@@ -1,0 +1,29 @@
+{
+  "templateName": "ラグジュアリーグランピングテンプレート",
+  "name": {
+    "ja": "STELLA FOREST 森の星グランプ",
+    "en": "STELLA FOREST Glamping",
+    "zh": "STELLA FOREST 森之星豪华露营"
+  },
+  "nameEn": "STELLA FOREST",
+  "tagline": "自然の中で過ごす非日常体験",
+  "description": "長野・軽井沢の森に佇むラグジュアリーグランピング。星空のドームテント、焚き火、サウナ、BBQで特別な夜を。",
+  "url": "https://stellaforest.example.com/",
+  "telephone": "0267-00-0000",
+  "telephoneRaw": "0267000000",
+  "email": "info@stellaforest.example.com",
+  "address": {
+    "postalCode": "389-0111",
+    "region": "長野県",
+    "locality": "北佐久郡軽井沢町",
+    "street": "追分1234-5"
+  },
+  "geo": { "latitude": "36.3421", "longitude": "138.6358" },
+  "hours": "受付 9:00〜20:00",
+  "checkin": "15:00",
+  "checkout": "11:00",
+  "priceRange": "¥¥¥",
+  "ogImage": "https://stellaforest.example.com/images/og-image.jpg",
+  "mapEmbed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12850.5!2d138.6358!3d36.3421!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzbCsDIwJzMxLjYiTiAxMzjCsDM4JzA4LjkiRQ!5e0!3m2!1sja!2sjp!4v1700000000000!5m2!1sja!2sjp",
+  "mapLink": "https://maps.google.com/?q=軽井沢+グランピング"
+}

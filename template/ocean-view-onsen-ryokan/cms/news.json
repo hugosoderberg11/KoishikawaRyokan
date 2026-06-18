@@ -1,0 +1,32 @@
+[
+  {
+    "date": "2026-06-01",
+    "dateDisplay": { "ja": "2026.06.01", "en": "Jun 1, 2026", "zh": "2026.06.01" },
+    "title": {
+      "ja": "【夏季限定】サンセットオーシャンスパ＆海鮮会席プラン受付開始",
+      "en": "Summer Sunset Ocean Spa & Seafood Kaiseki Plan now available",
+      "zh": "【夏季限定】日落海洋SPA与海鲜会席方案开始预约"
+    },
+    "url": "#plans"
+  },
+  {
+    "date": "2026-05-15",
+    "dateDisplay": { "ja": "2026.05.15", "en": "May 15, 2026", "zh": "2026.05.15" },
+    "title": {
+      "ja": "全室リニューアル完了 — 客室露天風呂を全面改装しました",
+      "en": "All rooms renovated — in-room open-air baths fully upgraded",
+      "zh": "全室翻新完成 — 客室露天风吕全面改装"
+    },
+    "url": "#rooms"
+  },
+  {
+    "date": "2026-04-20",
+    "dateDisplay": { "ja": "2026.04.20", "en": "Apr 20, 2026", "zh": "2026.04.20" },
+    "title": {
+      "ja": "GW期間（5/3〜5/6）の空き状況を更新しました",
+      "en": "Golden Week (May 3–6) availability updated",
+      "zh": "黄金周（5/3–5/6）空房情况已更新"
+    },
+    "url": "#reserve"
+  }
+]

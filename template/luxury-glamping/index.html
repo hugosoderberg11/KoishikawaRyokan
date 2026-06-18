@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title data-i18n="meta.title">【公式】STELLA FOREST 森の星グランプ｜ラグジュアリーグランピング ｜ 軽井沢</title>
+  <meta name="description" data-i18n-attr="content:meta.description" content="長野・軽井沢の森に佇むラグジュアリーグランピング「STELLA FOREST」。星空のドームテント、焚き火、サウナ、BBQで非日常の体験を。" />
+  <meta name="keywords" data-i18n-attr="content:meta.keywords" content="グランピング,ドームテント,サウナ,BBQ,軽井沢,アウトドア,焚き火,星空" />
+  <link rel="canonical" href="https://stellaforest.example.com/" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" data-i18n-attr="content:og.title" content="STELLA FOREST 森の星グランプ｜自然の中で過ごす非日常体験" />
+  <meta property="og:description" data-i18n-attr="content:og.description" content="星空のドームテント、焚き火、サウナ、BBQ。森に囲まれたラグジュアリーグランピング。" />
+  <meta property="og:url" content="https://stellaforest.example.com/" />
+  <meta property="og:image" content="https://stellaforest.example.com/images/og-image.jpg" />
+  <meta property="og:site_name" content="STELLA FOREST" />
+  <meta property="og:locale" content="ja_JP" id="og-locale" />
+  <meta property="og:locale:alternate" content="en_US" />
+  <meta property="og:locale:alternate" content="zh_CN" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="STELLA FOREST 森の星グランプ" />
+  <meta name="twitter:description" content="星空のドームテント、焚き火、サウナ、BBQ。軽井沢。" />
+  <meta name="twitter:image" content="https://stellaforest.example.com/images/og-image.jpg" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
+
+  <script type="application/ld+json" id="schema-hotel">
+  {
+    "@context": "https://schema.org",
+    "@type": "Hotel",
+    "name": "STELLA FOREST 森の星グランプ",
+    "alternateName": "STELLA FOREST Glamping",
+    "description": "長野・軽井沢の森に佇むラグジュアリーグランピング。星空ドームテント、焚き火、サウナ、BBQ。",
+    "url": "https://stellaforest.example.com/",
+    "telephone": "0267-00-0000",
+    "email": "info@stellaforest.example.com",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "追分1234-5",
+      "addressLocality": "北佐久郡軽井沢町",
+      "addressRegion": "長野県",
+      "postalCode": "389-0111",
+      "addressCountry": "JP"
+    },
+    "geo": { "@type": "GeoCoordinates", "latitude": "36.3421", "longitude": "138.6358" },
+    "priceRange": "¥¥¥",
+    "checkinTime": "15:00",
+    "checkoutTime": "11:00",
+    "amenityFeature": [
+      { "@type": "LocationFeatureSpecification", "name": "ドームテント", "value": true },
+      { "@type": "LocationFeatureSpecification", "name": "サウナ", "value": true },
+      { "@type": "LocationFeatureSpecification", "name": "BBQ", "value": true },
+      { "@type": "LocationFeatureSpecification", "name": "焚き火エリア", "value": true },
+      { "@type": "LocationFeatureSpecification", "name": "駐車場", "value": true },
+      { "@type": "LocationFeatureSpecification", "name": "Wi-Fi", "value": true }
+    ],
+    "image": [
+      "https://stellaforest.example.com/images/hero.jpg",
+      "https://stellaforest.example.com/images/dome.jpg"
+    ]
+  }
+  </script>
+</head>
+<body>
+
+<header class="header" id="top">
+  <div class="header__inner">
+    <a href="#top" class="logo">
+      <span class="logo__mark" aria-hidden="true">✦</span>
+      <span class="logo__text">
+        <span class="logo__en">STELLA FOREST</span>
+        <span class="logo__ja" id="site-name-ja">森の星グランプ</span>
+      </span>
+    </a>
+    <nav class="nav" aria-label="メインナビゲーション">
+      <a href="#rooms" data-i18n="nav.rooms">客室</a>
+      <a href="#sauna" data-i18n="nav.sauna">サウナ</a>
+      <a href="#dining" data-i18n="nav.dining">BBQ・食事</a>
+      <a href="#plans" data-i18n="nav.plans">宿泊プラン</a>
+      <a href="#activities" data-i18n="nav.activities">アクティビティ</a>
+      <a href="#faq" data-i18n="nav.faq">FAQ</a>
+      <a href="#access" data-i18n="nav.access">アクセス</a>
+    </nav>
+    <div class="header__actions">
+      <div class="lang-switch" role="group" aria-label="Language">
+        <button type="button" class="lang-switch__btn is-active" data-lang="ja" aria-pressed="true">JP</button>
+        <button type="button" class="lang-switch__btn" data-lang="en" aria-pressed="false">EN</button>
+        <button type="button" class="lang-switch__btn" data-lang="zh" aria-pressed="false">中文</button>
+      </div>
+      <a href="tel:0267000000" class="header__tel">0267-00-0000</a>
+      <a href="#reserve" class="btn btn--accent" data-i18n="nav.reserve">予約する</a>
+    </div>
+    <button class="menu-btn" aria-label="メニュー" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<div class="drawer" aria-hidden="true">
+  <div class="drawer__overlay"></div>
+  <nav class="drawer__panel">
+    <p class="drawer__logo" id="drawer-site-name">STELLA FOREST</p>
+    <div class="lang-switch lang-switch--drawer" role="group" aria-label="Language">
+      <button type="button" class="lang-switch__btn is-active" data-lang="ja">JP</button>
+      <button type="button" class="lang-switch__btn" data-lang="en">EN</button>
+      <button type="button" class="lang-switch__btn" data-lang="zh">中文</button>
+    </div>
+    <a href="#rooms" data-i18n="nav.rooms">客室</a>
+    <a href="#sauna" data-i18n="nav.sauna">サウナ</a>
+    <a href="#dining" data-i18n="nav.dining">BBQ・食事</a>
+    <a href="#plans" data-i18n="nav.plans">宿泊プラン</a>
+    <a href="#activities" data-i18n="nav.activities">アクティビティ</a>
+    <a href="#faq" data-i18n="nav.faq">FAQ</a>
+    <a href="#access" data-i18n="nav.access">アクセス</a>
+    <a href="#reserve" class="btn btn--accent" data-i18n="nav.reserve">予約する</a>
+  </nav>
+</div>
+
+<main>
+  <!-- ===== Hero ===== -->
+  <section class="hero">
+    <div class="hero__bg">
+      <img src="https://images.unsplash.com/photo-1478131188740-ef5b588173ea?w=2000&q=85" alt="星空のドームテント" width="2000" height="1200" class="hero__img" />
+      <div class="hero__overlay"></div>
+    </div>
+    <div class="hero__content">
+      <p class="hero__eyebrow" data-i18n="hero.eyebrow">LUXURY GLAMPING — KARUIZAWA</p>
+      <h1 class="hero__title" data-i18n="hero.title">森と星に、<br />包まれる夜。</h1>
+      <p class="hero__lead" data-i18n="hero.lead">ドームテント、焚き火、サウナ、BBQ。<br class="u-pc" />自然の中で過ごす、あなただけの非日常体験。</p>
+      <div class="hero__btns">
+        <a href="#reserve" class="btn btn--accent btn--lg" data-i18n="hero.btn1">空室を確認</a>
+        <a href="#experience" class="btn btn--ghost btn--lg" data-i18n="hero.btn2">体験を見る</a>
+      </div>
+    </div>
+    <div class="hero__scroll" aria-hidden="true">
+      <span data-i18n="hero.scroll">SCROLL</span>
+      <span class="hero__scroll-line"></span>
+    </div>
+  </section>
+
+  <!-- ===== News (CMS) ===== -->
+  <aside class="news" aria-label="お知らせ">
+    <div class="news__inner">
+      <span class="news__label" data-i18n="news.label">NEWS</span>
+      <div class="news__track" id="cms-news"></div>
+    </div>
+  </aside>
+
+  <!-- ===== Experience Mosaic ===== -->
+  <section class="experience" id="experience">
+    <div class="container">
+      <header class="section-head fade-in">
+        <span class="section-tag" data-i18n="exp.tag">EXPERIENCE</span>
+        <h2 class="section-title" data-i18n="exp.title">STELLA FOREST の体験</h2>
+        <p class="section-lead" data-i18n="exp.lead">星空・焚き火・サウナ・BBQ・自然体験。写真のように記憶に残る時間を。</p>
+      </header>
+      <div class="exp-grid fade-in">
+        <a href="#rooms" class="exp-card exp-card--hero">
+          <img src="https://images.unsplash.com/photo-1523987355523-0a70375ef3ce?w=1200&q=85" alt="星空ドームテント" width="800" height="1000" loading="lazy" />
+          <div class="exp-card__overlay">
+            <span class="exp-card__label" data-i18n="exp.dome.label">DOME</span>
+            <h3 data-i18n="exp.dome.title">星空ドームテント</h3>
+          </div>
+        </a>
+        <a href="#sauna" class="exp-card">
+          <img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db948?w=800&q=85" alt="森のサウナ" width="600" height="750" loading="lazy" />
+          <div class="exp-card__overlay">
+            <span class="exp-card__label" data-i18n="exp.sauna.label">SAUNA</span>
+            <h3 data-i18n="exp.sauna.title">森のサウナ</h3>
+          </div>
+        </a>
+        <a href="#dining" class="exp-card">
+          <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=800&q=85" alt="BBQ" width="600" height="750" loading="lazy" />
+          <div class="exp-card__overlay">
+            <span class="exp-card__label" data-i18n="exp.bbq.label">BBQ</span>
+            <h3 data-i18n="exp.bbq.title">地元食材BBQ</h3>
+          </div>
+        </a>
+        <a href="#plans" class="exp-card exp-card--wide">
+          <img src="https://images.unsplash.com/photo-1475483768296-6163e088bfa6?w=1200&q=85" alt="焚き火エリア" width="1000" height="600" loading="lazy" />
+          <div class="exp-card__overlay">
+            <span class="exp-card__label" data-i18n="exp.bonfire.label">BONFIRE</span>
+            <h3 data-i18n="exp.bonfire.title">焚き火エリア</h3>
+          </div>
+        </a>
+        <a href="#activities" class="exp-card">
+          <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=800&q=85" alt="自然体験" width="600" height="750" loading="lazy" />
+          <div class="exp-card__overlay">
+            <span class="exp-card__label" data-i18n="exp.nature.label">NATURE</span>
+            <h3 data-i18n="exp.nature.title">自然体験</h3>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Intro ===== -->
+  <section class="intro">
+    <div class="container">
+      <div class="intro__layout fade-in">
+        <div class="intro__text">
+          <span class="section-tag section-tag--light" data-i18n="intro.tag">ABOUT</span>
+          <h2 class="section-title section-title--light" data-i18n="intro.title">自然の中で過ごす<br />非日常体験。</h2>
+          <p class="intro__desc" data-i18n="intro.text">STELLA FORESTは、軽井沢の原生林に佇むラグジュアリーグランピング施設です。</p>
+          <div class="intro__stats">
+            <div class="intro__stat">
+              <span class="intro__stat-num" data-i18n="intro.stat1.num">12</span>
+              <span class="intro__stat-label" data-i18n="intro.stat1.label">ドーム＆コテージ</span>
+            </div>
+            <div class="intro__stat">
+              <span class="intro__stat-num" data-i18n="intro.stat2.num">24h</span>
+              <span class="intro__stat-label" data-i18n="intro.stat2.label">焚き火エリア</span>
+            </div>
+            <div class="intro__stat">
+              <span class="intro__stat-num" data-i18n="intro.stat3.num">3</span>
+              <span class="intro__stat-label" data-i18n="intro.stat3.label">サウナ施設</span>
+            </div>
+          </div>
+        </div>
+        <div class="intro__visual">
+          <img src="https://images.unsplash.com/photo-1510790655699-3673431863eb?w=1000&q=85" alt="森の中のグランピング" width="800" height="1000" loading="lazy" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Rooms (CMS) ===== -->
+  <section class="rooms section" id="rooms">
+    <div class="container">
+      <header class="section-head fade-in">
+        <span class="section-tag" data-i18n="rooms.tag">STAY</span>
+        <h2 class="section-title" data-i18n="rooms.title">ドームテント & コテージ</h2>
+        <p class="section-lead" data-i18n="rooms.lead">星空を望むドームから、檜の香り漂うコテージまで。</p>
+      </header>
+      <div class="rooms__grid" id="cms-rooms"></div>
+    </div>
+  </section>
+
+  <!-- ===== Sauna ===== -->
+  <section class="sauna section" id="sauna">
+    <div class="sauna__layout">
+      <div class="sauna__visual fade-in">
+        <img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db948?w=1400&q=85" alt="森のバレルサウナ" width="1200" height="900" loading="lazy" />
+      </div>
+      <div class="sauna__body fade-in">
+        <span class="section-tag section-tag--accent" data-i18n="sauna.tag">SAUNA</span>
+        <h2 class="section-title" data-i18n="sauna.title">森のサウナ</h2>
+        <p class="sauna__text" data-i18n="sauna.text">森の中に佇むバレルサウナとテントサウナ。</p>
+        <dl class="sauna__facts">
+          <div><dt data-i18n="sauna.f1.label">バレルサウナ</dt><dd data-i18n="sauna.f1.value">檜製・定員6名・90℃</dd></div>
+          <div><dt data-i18n="sauna.f2.label">テントサウナ</dt><dd data-i18n="sauna.f2.value">ロウリュ対応・定員4名</dd></div>
+          <div><dt data-i18n="sauna.f3.label">冷水風呂</dt><dd data-i18n="sauna.f3.value">地下水使用・通年</dd></div>
+          <div><dt data-i18n="sauna.f4.label">外気浴</dt><dd data-i18n="sauna.f4.value">森のデッキ・星空ビュー</dd></div>
+          <div><dt data-i18n="sauna.f5.label">利用時間</dt><dd data-i18n="sauna.f5.value">7:00〜22:00</dd></div>
+        </dl>
+        <a href="#plans" class="btn btn--accent" data-i18n="sauna.btn">サウナ付きプランを見る</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Dining ===== -->
+  <section class="dining section" id="dining">
+    <div class="container">
+      <header class="section-head fade-in">
+        <span class="section-tag" data-i18n="dining.tag">DINING</span>
+        <h2 class="section-title" data-i18n="dining.title">BBQ & 食事</h2>
+        <p class="section-lead" data-i18n="dining.lead">地元の食材を、焚き火とBBQで。</p>
+      </header>
+      <div class="dining__featured fade-in">
+        <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=1400&q=85" alt="BBQプレート" width="1200" height="700" loading="lazy" />
+        <div class="dining__featured-text">
+          <span class="dining__season" data-i18n="dining.featured.season">シーズナルメニュー</span>
+          <h3 data-i18n="dining.featured.title">信州牛 & 地野菜BBQプレート</h3>
+          <p data-i18n="dining.featured.text">軽井沢近郊の契約農家から届く新鮮野菜と、信州牛のステーキを焚き火で。</p>
+        </div>
+      </div>
+      <div class="dining__grid fade-in">
+        <article class="dining-item">
+          <img src="https://images.unsplash.com/photo-1529193591184-b1d58069ecdd?w=700&q=85" alt="地元ソーセージ" width="500" height="600" loading="lazy" />
+          <h4 data-i18n="dining.item1">地元ソーセージ & 野菜</h4>
+        </article>
+        <article class="dining-item">
+          <img src="https://images.unsplash.com/photo-1475483768296-6163e088bfa6?w=700&q=85" alt="スモア" width="500" height="600" loading="lazy" />
+          <h4 data-i18n="dining.item2">スモア & ホットドリンク</h4>
+        </article>
+        <article class="dining-item">
+          <img src="https://images.unsplash.com/photo-1494859802809-d069cc3b4acd?w=700&q=85" alt="朝食ボックス" width="500" height="600" loading="lazy" />
+          <h4 data-i18n="dining.item3">森の朝食ボックス</h4>
+        </article>
+      </div>
+      <p class="dining__note fade-in" data-i18n="dining.note">※ ベジタリアン・ヴィーガン対応可（要事前連絡）</p>
+    </div>
+  </section>
+
+  <!-- ===== Plans (CMS) ===== -->
+  <section class="plans section" id="plans">
+    <div class="container">
+      <header class="section-head fade-in">
+        <span class="section-tag section-tag--light" data-i18n="plans.tag">PLANS</span>
+        <h2 class="section-title section-title--light" data-i18n="plans.title">宿泊プラン</h2>
+        <p class="section-lead section-lead--light" data-i18n="plans.lead">カップルからファミリーまで、シーンに合わせたプランをご用意。</p>
+      </header>
+      <div class="plans__grid" id="cms-plans"></div>
+    </div>
+  </section>
+
+  <!-- ===== Activities (CMS) ===== -->
+  <section class="activities section" id="activities">
+    <div class="container">
+      <header class="section-head fade-in">
+        <span class="section-tag" data-i18n="activities.tag">ACTIVITIES</span>
+        <h2 class="section-title" data-i18n="activities.title">アクティビティ</h2>
+        <p class="section-lead" data-i18n="activities.lead">森の中で楽しむ、多彩な体験プログラム。</p>
+      </header>
+      <div class="activities__grid" id="cms-activities"></div>
+    </div>
+  </section>
+
+  <!-- ===== FAQ ===== -->
+  <section class="faq section" id="faq">
+    <div class="container container--narrow">
+      <header class="section-head fade-in">
+        <span class="section-tag" data-i18n="faq.tag">FAQ</span>
+        <h2 class="section-title" data-i18n="faq.title">よくあるご質問</h2>
+      </header>
+      <div class="faq__list fade-in">
+        <details class="faq__item">
+          <summary data-i18n="faq.q1">チェックイン・チェックアウトは？</summary>
+          <p data-i18n="faq.a1">チェックイン 15:00〜、チェックアウト 〜11:00 です。</p>
+        </details>
+        <details class="faq__item">
+          <summary data-i18n="faq.q2">冬でも利用できますか？</summary>
+          <p data-i18n="faq.a2">はい、通年営業です。ドームテントは冷暖房完備です。</p>
+        </details>
+        <details class="faq__item">
+          <summary data-i18n="faq.q3">子供連れでも大丈夫ですか？</summary>
+          <p data-i18n="faq.a3">はい、ファミリープランやフォレストドームをご用意しています。</p>
+        </details>
+        <details class="faq__item">
+          <summary data-i18n="faq.q4">ペットは同伴できますか？</summary>
+          <p data-i18n="faq.a4">一部ドームのみペット同伴可です。詳細はお問い合わせください。</p>
+        </details>
+        <details class="faq__item">
+          <summary data-i18n="faq.q5">BBQの食材は持ち込みできますか？</summary>
+          <p data-i18n="faq.a5">施設提供のBBQセットをおすすめしていますが、持ち込みも可能です。</p>
+        </details>
+        <details class="faq__item">
+          <summary data-i18n="faq.q6">キャンセルポリシーは？</summary>
+          <p data-i18n="faq.a6">7日前まで無料、6〜3日前30%、2日前50%、前日80%、当日100%。</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Access ===== -->
+  <section class="access section" id="access">
+    <div class="container">
+      <header class="section-head fade-in">
+        <span class="section-tag" data-i18n="access.tag">ACCESS</span>
+        <h2 class="section-title" data-i18n="access.title">アクセス</h2>
+      </header>
+      <div class="access__grid fade-in">
+        <div class="access__map">
+          <iframe
+            title="STELLA FOREST 地図"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12850.5!2d138.6358!3d36.3421!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzbCsDIwJzMxLjYiTiAxMzjCsDM4JzA4LjkiRQ!5e0!3m2!1sja!2sjp!4v1700000000000!5m2!1sja!2sjp"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            allowfullscreen
+          ></iframe>
+        </div>
+        <dl class="access__info">
+          <div><dt data-i18n="access.addr">住所</dt><dd>〒389-0111 長野県北佐久郡軽井沢町追分1234-5</dd></div>
+          <div><dt data-i18n="access.tel">電話</dt><dd><a href="tel:0267000000">0267-00-0000</a>（9:00〜20:00）</dd></div>
+          <div><dt data-i18n="access.car">車</dt><dd data-i18n="access.car.text">上信越自動車道 碓氷軽井沢ICより約20分</dd></div>
+          <div><dt data-i18n="access.train">電車</dt><dd data-i18n="access.train.text">JR北陸新幹線 軽井沢駅よりタクシー約15分</dd></div>
+          <div><dt data-i18n="access.pickup">送迎</dt><dd data-i18n="access.pickup.text">軽井沢駅南口より送迎可</dd></div>
+        </dl>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Reserve ===== -->
+  <section class="reserve section" id="reserve">
+    <div class="container">
+      <header class="section-head fade-in">
+        <span class="section-tag section-tag--light" data-i18n="reserve.tag">RESERVE</span>
+        <h2 class="section-title section-title--light" data-i18n="reserve.title">ご予約・お問い合わせ</h2>
+        <p class="section-lead section-lead--light" data-i18n="reserve.lead">2営業日以内にご返信いたします。</p>
+      </header>
+      <div class="reserve__layout fade-in">
+        <div class="reserve__phone">
+          <h3 data-i18n="reserve.phone.title">お電話でのご予約</h3>
+          <a href="tel:0267000000" class="reserve__tel">0267-00-0000</a>
+          <p data-i18n="reserve.phone.hours">受付 9:00〜20:00（年中無休）</p>
+          <p class="reserve__hint" data-i18n="reserve.phone.hint">※ ご希望の客室・プラン・人数をお伝えください</p>
+        </div>
+        <form class="form" id="contact" novalidate>
+          <h3 class="form__title" data-i18n="form.title">オンラインフォーム</h3>
+          <div class="form__row">
+            <div class="form__group">
+              <label for="name"><span data-i18n="form.name">お名前</span> <span class="req" data-i18n="form.required">必須</span></label>
+              <input type="text" id="name" name="name" required autocomplete="name" />
+            </div>
+            <div class="form__group">
+              <label for="email"><span data-i18n="form.email">メール</span> <span class="req" data-i18n="form.required">必須</span></label>
+              <input type="email" id="email" name="email" required autocomplete="email" />
+            </div>
+          </div>
+          <div class="form__row">
+            <div class="form__group">
+              <label for="tel"><span data-i18n="form.tel">電話番号</span> <span class="req" data-i18n="form.required">必須</span></label>
+              <input type="tel" id="tel" name="tel" required autocomplete="tel" />
+            </div>
+            <div class="form__group">
+              <label for="checkin"><span data-i18n="form.checkin">宿泊日</span> <span class="req" data-i18n="form.required">必須</span></label>
+              <input type="date" id="checkin" name="checkin" required />
+            </div>
+          </div>
+          <div class="form__group">
+            <label for="guests"><span data-i18n="form.guests">人数</span> <span class="req" data-i18n="form.required">必須</span></label>
+            <input type="text" id="guests" name="guests" required data-i18n-attr="placeholder:form.guests.placeholder" placeholder="例：大人2名・子供1名" />
+          </div>
+          <div class="form__row">
+            <div class="form__group">
+              <label for="plan" data-i18n="form.plan">ご希望プラン</label>
+              <select id="plan" name="plan"><option value="" data-i18n="form.select">選択</option></select>
+            </div>
+            <div class="form__group">
+              <label for="room" data-i18n="form.room">ご希望客室</label>
+              <select id="room" name="room"><option value="" data-i18n="form.select">選択</option></select>
+            </div>
+          </div>
+          <div class="form__group">
+            <label for="message" data-i18n="form.message">メッセージ</label>
+            <textarea id="message" name="message" rows="4" data-i18n-attr="placeholder:form.message.placeholder" placeholder="アレルギー・記念日・アクティビティ希望など"></textarea>
+          </div>
+          <label class="form__check">
+            <input type="checkbox" name="privacy" required />
+            <span><a href="/privacy" target="_blank" rel="noopener" data-i18n="form.privacy">プライバシーポリシー</a><span data-i18n="form.privacy.agree">に同意する</span></span>
+          </label>
+          <button type="submit" class="btn btn--accent btn--block" data-i18n="form.submit">予約リクエストを送信</button>
+          <p class="form__note" data-i18n="form.note">※ 空室確認後、担当者よりご連絡いたします。</p>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container footer__inner">
+    <div class="footer__brand">
+      <span class="footer__logo" id="footer-site-name">✦ STELLA FOREST</span>
+      <p>〒389-0111 長野県北佐久郡軽井沢町追分1234-5</p>
+    </div>
+    <nav class="footer__nav">
+      <a href="#rooms" data-i18n="nav.rooms">客室</a>
+      <a href="#sauna" data-i18n="nav.sauna">サウナ</a>
+      <a href="#dining" data-i18n="nav.dining">BBQ・食事</a>
+      <a href="#plans" data-i18n="nav.plans">宿泊プラン</a>
+      <a href="#activities" data-i18n="nav.activities">アクティビティ</a>
+      <a href="#reserve" data-i18n="nav.reserve">予約する</a>
+    </nav>
+    <p class="footer__copy" data-i18n="footer.copy">© 2026 STELLA FOREST 森の星グランプ ｜ ラグジュアリーグランピングテンプレート</p>
+  </div>
+</footer>
+
+<button class="totop" id="totop" aria-label="ページトップへ">↑</button>
+
+<script src="script.js" type="module"></script>
+</body>
+</html>

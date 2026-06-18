@@ -1,0 +1,46 @@
+[
+  {
+    "id": "voice-01",
+    "text": {
+      "ja": "「部屋の露天風呂から満点の星空を眺めながら、本当に時間を忘れました。料理も一皿一皿が丁寧で感動。また必ず来ます。」",
+      "en": "\"Gazing at a sky full of stars from my room's open-air bath, I truly lost track of time. Every dish was crafted with care — I will definitely return.\"",
+      "zh": "「从客房露天风吕仰望满天星空，真的忘却了时间。每道菜都精心制作，令人感动。一定会再来。」"
+    },
+    "author": { "ja": "東京都 / 40代女性", "en": "Tokyo / Woman, 40s", "zh": "东京 / 40代女性" },
+    "date": { "ja": "2025年10月ご宿泊", "en": "Stayed Oct 2025", "zh": "2025年10月住宿" },
+    "datetime": "2025-10"
+  },
+  {
+    "id": "voice-02",
+    "text": {
+      "ja": "「結婚記念日で利用しました。スタッフの方々の心遣いが素晴らしく、妻もとても喜んでいました。温泉の泉質も最高です。」",
+      "en": "\"We came for our anniversary. The staff's thoughtfulness was wonderful — my wife was delighted. The hot spring quality is superb.\"",
+      "zh": "「结婚纪念日入住。员工的贴心令人赞叹，妻子也非常高兴。温泉水质极佳。」"
+    },
+    "author": { "ja": "大阪府 / 50代男性", "en": "Osaka / Man, 50s", "zh": "大阪府 / 50代男性" },
+    "date": { "ja": "2025年9月ご宿泊", "en": "Stayed Sep 2025", "zh": "2025年9月住宿" },
+    "datetime": "2025-09"
+  },
+  {
+    "id": "voice-03",
+    "text": {
+      "ja": "「渓流の音を聞きながら露天風呂に浸かる時間は格別でした。飛騨牛の朴葉焼きは今まで食べた中で一番おいしかった。」",
+      "en": "\"Soaking in the open-air bath while listening to the stream was extraordinary. The Hida beef hooba-yaki was the best I've ever had.\"",
+      "zh": "「听着溪流声浸泡露天风吕，格外特别。飞驒牛朴叶烧是我吃过最好吃的。」"
+    },
+    "author": { "ja": "愛知県 / 30代カップル", "en": "Aichi / Couple, 30s", "zh": "爱知县 / 30代情侣" },
+    "date": { "ja": "2025年11月ご宿泊", "en": "Stayed Nov 2025", "zh": "2025年11月住宿" },
+    "datetime": "2025-11"
+  },
+  {
+    "id": "voice-04",
+    "text": {
+      "ja": "「チェックインからチェックアウトまで、すべてが完璧でした。部屋の設えも美しく、何度でも訪れたくなる宿です。」",
+      "en": "\"From check-in to check-out, everything was perfect. Beautifully appointed rooms — an inn I'd visit again and again.\"",
+      "zh": "「从入住到退房，一切完美。客房陈设精美，是让人想反复造访的旅馆。」"
+    },
+    "author": { "ja": "神奈川県 / 60代ご夫婦", "en": "Kanagawa / Couple, 60s", "zh": "神奈川县 / 60代夫妇" },
+    "date": { "ja": "2025年8月ご宿泊", "en": "Stayed Aug 2025", "zh": "2025年8月住宿" },
+    "datetime": "2025-08"
+  }
+]

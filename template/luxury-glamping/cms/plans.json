@@ -1,0 +1,74 @@
+[
+  {
+    "id": "plan-01",
+    "tag": { "ja": "スタンダード", "en": "Standard", "zh": "标准" },
+    "featured": false,
+    "badge": null,
+    "name": {
+      "ja": "フォレストリトリートプラン",
+      "en": "Forest Retreat Plan",
+      "zh": "森林静修方案"
+    },
+    "description": {
+      "ja": "ドームテントでの宿泊と朝食、焚き火スペース利用が含まれる基本プラン。",
+      "en": "Basic plan with dome stay, breakfast, and bonfire area access.",
+      "zh": "圆顶住宿、早餐与篝火区使用的基本方案。"
+    },
+    "includes": {
+      "ja": ["ドーム宿泊", "森の朝食ボックス", "焚き火スペース利用", "アメニティ一式"],
+      "en": ["Dome stay", "Forest breakfast box", "Bonfire area access", "Full amenities"],
+      "zh": ["圆顶住宿", "森林早餐盒", "篝火区使用", "全套用品"]
+    },
+    "priceLabel": { "ja": "1泊 2名様", "en": "1 night, 2 guests", "zh": "1晚 2人" },
+    "price": "¥38,000〜",
+    "image": "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=1200&q=85"
+  },
+  {
+    "id": "plan-02",
+    "tag": { "ja": "人気", "en": "Popular", "zh": "人气" },
+    "featured": true,
+    "badge": { "ja": "おすすめ", "en": "Recommended", "zh": "推荐" },
+    "name": {
+      "ja": "星空BBQ＆焚き火ナイトプラン",
+      "en": "Starry BBQ & Bonfire Night Plan",
+      "zh": "星空BBQ与篝火之夜方案"
+    },
+    "description": {
+      "ja": "地元食材のBBQディナーと焚き火体験、サウナ利用付き。カップル・ご夫婦に人気。",
+      "en": "Local BBQ dinner, bonfire experience, and sauna access. Popular with couples.",
+      "zh": "当地食材BBQ晚餐、篝火体验与桑拿使用。情侣与夫妻人气之选。"
+    },
+    "includes": {
+      "ja": ["ドーム宿泊", "BBQディナー（2名分）", "焚き火体験", "サウナ利用（90分）", "朝食ボックス"],
+      "en": ["Dome stay", "BBQ dinner (2)", "Bonfire experience", "Sauna 90 min", "Breakfast box"],
+      "zh": ["圆顶住宿", "BBQ晚餐（2人份）", "篝火体验", "桑拿90分钟", "早餐盒"]
+    },
+    "priceLabel": { "ja": "1泊 2名様", "en": "1 night, 2 guests", "zh": "1晚 2人" },
+    "price": "¥58,000〜",
+    "image": "https://images.unsplash.com/photo-1475483768296-6163e088bfa6?w=1200&q=85"
+  },
+  {
+    "id": "plan-03",
+    "tag": { "ja": "ファミリー", "en": "Family", "zh": "家庭" },
+    "featured": false,
+    "badge": null,
+    "name": {
+      "ja": "ファミリーアドベンチャープラン",
+      "en": "Family Adventure Plan",
+      "zh": "家庭冒险方案"
+    },
+    "description": {
+      "ja": "フォレストドーム宿泊＋森のアクティビティ3種＋BBQ。お子様連れのご家族向け。",
+      "en": "Forest dome stay + 3 forest activities + BBQ. Perfect for families with kids.",
+      "zh": "森林圆顶住宿+3项森林活动+BBQ。适合带儿童的家庭。"
+    },
+    "includes": {
+      "ja": ["フォレストドーム宿泊", "BBQランチ", "トレッキング体験", "朝食ボックス", "キッズアメニティ"],
+      "en": ["Forest dome stay", "BBQ lunch", "Trekking experience", "Breakfast box", "Kids amenities"],
+      "zh": ["森林圆顶住宿", "BBQ午餐", "徒步体验", "早餐盒", "儿童用品"]
+    },
+    "priceLabel": { "ja": "1泊 4名様", "en": "1 night, 4 guests", "zh": "1晚 4人" },
+    "price": "¥72,000〜",
+    "image": "https://images.unsplash.com/photo-1510790655699-3673431863eb?w=1200&q=85"
+  }
+]

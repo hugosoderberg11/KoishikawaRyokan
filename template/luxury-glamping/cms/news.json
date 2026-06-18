@@ -1,0 +1,32 @@
+[
+  {
+    "date": "2026-05-20",
+    "dateDisplay": { "ja": "2026.05.20", "en": "May 20, 2026", "zh": "2026.05.20" },
+    "title": {
+      "ja": "【新設】森のバレルサウナ＆冷水風呂がオープンしました",
+      "en": "New: Forest barrel sauna & cold plunge now open",
+      "zh": "【新设】森林桶式桑拿与冷水浴正式开放"
+    },
+    "url": "#sauna"
+  },
+  {
+    "date": "2026-05-01",
+    "dateDisplay": { "ja": "2026.05.01", "en": "May 1, 2026", "zh": "2026.05.01" },
+    "title": {
+      "ja": "夏限定「星空BBQ＆焚き火ナイトプラン」予約受付開始",
+      "en": "Summer Starry BBQ & Bonfire Night Plan now available",
+      "zh": "夏季限定「星空BBQ与篝火之夜方案」开始预约"
+    },
+    "url": "#plans"
+  },
+  {
+    "date": "2026-04-10",
+    "dateDisplay": { "ja": "2026.04.10", "en": "Apr 10, 2026", "zh": "2026.04.10" },
+    "title": {
+      "ja": "GW期間（5/3〜5/6）の空き状況を更新しました",
+      "en": "Golden Week (May 3–6) availability updated",
+      "zh": "黄金周（5/3–5/6）空房情况已更新"
+    },
+    "url": "#reserve"
+  }
+]

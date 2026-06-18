@@ -1,0 +1,80 @@
+[
+  {
+    "id": "act-01",
+    "icon": "🌲",
+    "name": { "ja": "フォレストトレッキング", "en": "Forest Trekking", "zh": "森林徒步" },
+    "description": {
+      "ja": "ガイドと巡る原生林の散策コース。四季折々の flora & fauna を体感。",
+      "en": "Guided walk through primeval forest. Experience seasonal flora and fauna.",
+      "zh": "与向导同行原生林步道，感受四季 flora & fauna。"
+    },
+    "duration": { "ja": "約90分", "en": "Approx. 90 min", "zh": "约90分钟" },
+    "price": { "ja": "¥3,500/人", "en": "¥3,500/person", "zh": "¥3,500/人" },
+    "image": "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=800&q=85"
+  },
+  {
+    "id": "act-02",
+    "icon": "🔭",
+    "name": { "ja": "星空観測ツアー", "en": "Stargazing Tour", "zh": "星空观测之旅" },
+    "description": {
+      "ja": "天文ガイドによる星空解説。ドーム天窓からも満天の星をお楽しみいただけます。",
+      "en": "Astronomy guide explains the night sky. Also enjoy stars from dome skylight.",
+      "zh": "天文向导讲解星空。亦可从圆顶天窗欣赏满天繁星。"
+    },
+    "duration": { "ja": "約60分", "en": "Approx. 60 min", "zh": "约60分钟" },
+    "price": { "ja": "¥2,500/人", "en": "¥2,500/person", "zh": "¥2,500/人" },
+    "image": "https://images.unsplash.com/photo-1419242902214-272b3b66eee7?w=800&q=85"
+  },
+  {
+    "id": "act-03",
+    "icon": "🧘",
+    "name": { "ja": "森のヨガ", "en": "Forest Yoga", "zh": "森林瑜伽" },
+    "description": {
+      "ja": "朝もやに包まれた森の中で行うヨガセッション。心身を整える贅沢な時間。",
+      "en": "Yoga session in morning mist forest. A luxurious time to reset body and mind.",
+      "zh": "在晨雾森林中进行的瑜伽课程，身心焕新的奢华时光。"
+    },
+    "duration": { "ja": "約75分", "en": "Approx. 75 min", "zh": "约75分钟" },
+    "price": { "ja": "¥4,000/人", "en": "¥4,000/person", "zh": "¥4,000/人" },
+    "image": "https://images.unsplash.com/photo-1545205597-3d1d53a4f66b?w=800&q=85"
+  },
+  {
+    "id": "act-04",
+    "icon": "🪵",
+    "name": { "ja": "薪割り＆焚き火体験", "en": "Wood Splitting & Bonfire", "zh": "劈柴与篝火体验" },
+    "description": {
+      "ja": "薪割りから火おこしまで。キャンプファイヤーの醍醐味を存分に味わえます。",
+      "en": "From splitting wood to lighting fire. Full campfire experience.",
+      "zh": "从劈柴到生火，尽情体验营火乐趣。"
+    },
+    "duration": { "ja": "約45分", "en": "Approx. 45 min", "zh": "约45分钟" },
+    "price": { "ja": "¥2,000/人", "en": "¥2,000/person", "zh": "¥2,000/人" },
+    "image": "https://images.unsplash.com/photo-1475483768296-6163e088bfa6?w=800&q=85"
+  },
+  {
+    "id": "act-05",
+    "icon": "🍳",
+    "name": { "ja": "森の朝食クッキング", "en": "Forest Breakfast Cooking", "zh": "森林早餐烹饪" },
+    "description": {
+      "ja": "地元野菜と卵を使った朝食づくり体験。焚き火で焼くスキレットパンケーキが人気。",
+      "en": "Cook breakfast with local veggies and eggs. Skillet pancakes over fire are a hit.",
+      "zh": "用当地蔬菜与鸡蛋制作早餐。篝火煎锅松饼最受欢迎。"
+    },
+    "duration": { "ja": "約60分", "en": "Approx. 60 min", "zh": "约60分钟" },
+    "price": { "ja": "¥3,000/人", "en": "¥3,000/person", "zh": "¥3,000/人" },
+    "image": "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=800&q=85"
+  },
+  {
+    "id": "act-06",
+    "icon": "🚴",
+    "name": { "ja": "E-Bike サイクリング", "en": "E-Bike Cycling", "zh": "电动单车骑行" },
+    "description": {
+      "ja": "軽井沢の自然を巡るE-Bikeツアー。初心者でも安心のガイド付きコース。",
+      "en": "E-bike tour through Karuizawa nature. Guided course suitable for beginners.",
+      "zh": "骑行电动单车巡游轻井泽自然。新手也可安心的向导陪同路线。"
+    },
+    "duration": { "ja": "約120分", "en": "Approx. 120 min", "zh": "约120分钟" },
+    "price": { "ja": "¥5,500/人", "en": "¥5,500/person", "zh": "¥5,500/人" },
+    "image": "https://images.unsplash.com/photo-1541625602330-2277a4c46182?w=800&q=85"
+  }
+]

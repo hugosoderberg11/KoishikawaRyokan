@@ -1,0 +1,29 @@
+{
+  "templateName": "ペット同伴温泉旅館テンプレート",
+  "name": {
+    "ja": "温泉宿 わんにゃんの里",
+    "en": "WANNyan no Sato",
+    "zh": "温泉宿 汪汪里"
+  },
+  "nameEn": "WANNyan no Sato",
+  "tagline": "愛犬・愛猫と泊まれる温泉旅館",
+  "description": "静岡・伊豆高原のペット同伴可能な温泉旅館。愛犬・愛猫と客室露天風呂、専用ドッグラン、充実のペットアメニティで、家族みんなの特別な温泉旅行を。",
+  "url": "https://wannyan.example.com/",
+  "telephone": "0557-00-0000",
+  "telephoneRaw": "0557000000",
+  "email": "info@wannyan.example.com",
+  "address": {
+    "postalCode": "413-0232",
+    "region": "静岡県",
+    "locality": "伊東市",
+    "street": "八幡野1234-5"
+  },
+  "geo": { "latitude": "34.9032", "longitude": "139.0721" },
+  "hours": "受付 8:00〜21:00",
+  "checkin": "15:00",
+  "checkout": "11:00",
+  "priceRange": "¥¥¥",
+  "ogImage": "https://wannyan.example.com/images/og-image.jpg",
+  "mapEmbed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3248.5!2d139.0721!3d34.9032!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzTCsDU0JzExLjUiEIDEzOcKwMDQnMTkuNiJF!5e0!3m2!1sja!2sjp!4v1700000000000!5m2!1sja!2sjp",
+  "mapLink": "https://maps.google.com/?q=伊豆高原+温泉"
+}

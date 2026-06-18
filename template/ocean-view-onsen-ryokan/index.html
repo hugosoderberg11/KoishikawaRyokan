@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title data-i18n="meta.title">【公式】OCEANA RESORT 潮音の湯｜オーシャンビュー温泉旅館 ｜ 伊豆</title>
+  <meta name="description" data-i18n-attr="content:meta.description" content="静岡・伊豆の断崖に佇むオーシャンビュー温泉旅館。客室露天風呂、サンセット、海の幸会席で非日常のリゾート体験を。" />
+  <meta name="keywords" data-i18n-attr="content:meta.keywords" content="オーシャンビュー,温泉,露天風呂,伊豆,リゾート,高級旅館,海,サンセット" />
+  <link rel="canonical" href="https://oceana-resort.example.com/" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" data-i18n-attr="content:og.title" content="OCEANA RESORT 潮音の湯｜海と温泉を楽しむ非日常リゾート" />
+  <meta property="og:description" data-i18n-attr="content:og.description" content="オーシャンビュー・客室露天風呂・サンセットダイニング。波音に包まれる極上の滞在。" />
+  <meta property="og:url" content="https://oceana-resort.example.com/" />
+  <meta property="og:image" content="https://oceana-resort.example.com/images/og-image.jpg" />
+  <meta property="og:site_name" content="OCEANA RESORT" />
+  <meta property="og:locale" content="ja_JP" id="og-locale" />
+  <meta property="og:locale:alternate" content="en_US" />
+  <meta property="og:locale:alternate" content="zh_CN" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="OCEANA RESORT 潮音の湯" />
+  <meta name="twitter:description" content="オーシャンビュー温泉旅館。伊豆。" />
+  <meta name="twitter:image" content="https://oceana-resort.example.com/images/og-image.jpg" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
+
+  <script type="application/ld+json" id="schema-hotel">
+  {
+    "@context": "https://schema.org",
+    "@type": "Hotel",
+    "name": "OCEANA RESORT 潮音の湯",
+    "alternateName": "OCEANA RESORT Shioine",
+    "description": "静岡・伊豆の断崖に佇むオーシャンビュー温泉旅館。客室露天風呂、サンセット、海の幸会席。",
+    "url": "https://oceana-resort.example.com/",
+    "telephone": "0557-00-0000",
+    "email": "info@oceana-resort.example.com",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "八幡682",
+      "addressLocality": "伊豆市",
+      "addressRegion": "静岡県",
+      "postalCode": "410-2416",
+      "addressCountry": "JP"
+    },
+    "geo": { "@type": "GeoCoordinates", "latitude": "34.8765", "longitude": "138.9456" },
+    "priceRange": "¥¥¥¥",
+    "checkinTime": "15:00",
+    "checkoutTime": "11:00",
+    "amenityFeature": [
+      { "@type": "LocationFeatureSpecification", "name": "客室露天風呂", "value": true },
+      { "@type": "LocationFeatureSpecification", "name": "大浴場", "value": true },
+      { "@type": "LocationFeatureSpecification", "name": "貸切風呂", "value": true },
+      { "@type": "LocationFeatureSpecification", "name": "オーシャンビュー", "value": true },
+      { "@type": "LocationFeatureSpecification", "name": "駐車場", "value": true },
+      { "@type": "LocationFeatureSpecification", "name": "Wi-Fi", "value": true }
+    ],
+    "image": [
+      "https://oceana-resort.example.com/images/hero.jpg",
+      "https://oceana-resort.example.com/images/onsen.jpg"
+    ]
+  }
+  </script>
+</head>
+<body>
+
+<header class="header" id="top">
+  <div class="header__inner">
+    <a href="#top" class="logo">
+      <span class="logo__mark" aria-hidden="true">◆</span>
+      <span class="logo__text">
+        <span class="logo__en">OCEANA RESORT</span>
+        <span class="logo__ja" id="site-name-ja">潮音の湯</span>
+      </span>
+    </a>
+    <nav class="nav" aria-label="メインナビゲーション">
+      <a href="#rooms" data-i18n="nav.rooms">客室</a>
+      <a href="#onsen" data-i18n="nav.onsen">温泉</a>
+      <a href="#cuisine" data-i18n="nav.cuisine">お料理</a>
+      <a href="#plans" data-i18n="nav.plans">宿泊プラン</a>
+      <a href="#faq" data-i18n="nav.faq">FAQ</a>
+      <a href="#access" data-i18n="nav.access">アクセス</a>
+    </nav>
+    <div class="header__actions">
+      <div class="lang-switch" role="group" aria-label="Language">
+        <button type="button" class="lang-switch__btn is-active" data-lang="ja" aria-pressed="true">JP</button>
+        <button type="button" class="lang-switch__btn" data-lang="en" aria-pressed="false">EN</button>
+        <button type="button" class="lang-switch__btn" data-lang="zh" aria-pressed="false">中文</button>
+      </div>
+      <a href="tel:0557000000" class="header__tel">0557-00-0000</a>
+      <a href="#reserve" class="btn btn--gold" data-i18n="nav.reserve">予約する</a>
+    </div>
+    <button class="menu-btn" aria-label="メニュー" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<div class="drawer" aria-hidden="true">
+  <div class="drawer__overlay"></div>
+  <nav class="drawer__panel">
+    <p class="drawer__logo" id="drawer-site-name">OCEANA RESORT</p>
+    <div class="lang-switch lang-switch--drawer" role="group" aria-label="Language">
+      <button type="button" class="lang-switch__btn is-active" data-lang="ja">JP</button>
+      <button type="button" class="lang-switch__btn" data-lang="en">EN</button>
+      <button type="button" class="lang-switch__btn" data-lang="zh">中文</button>
+    </div>
+    <a href="#rooms" data-i18n="nav.rooms">客室</a>
+    <a href="#onsen" data-i18n="nav.onsen">温泉</a>
+    <a href="#cuisine" data-i18n="nav.cuisine">お料理</a>
+    <a href="#plans" data-i18n="nav.plans">宿泊プラン</a>
+    <a href="#faq" data-i18n="nav.faq">FAQ</a>
+    <a href="#access" data-i18n="nav.access">アクセス</a>
+    <a href="#reserve" class="btn btn--gold" data-i18n="nav.reserve">予約する</a>
+  </nav>
+</div>
+
+<main>
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero__bg">
+      <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=2400&q=90" alt="オーシャンビューとサンセット" width="2400" height="1400" class="hero__img" />
+      <div class="hero__overlay"></div>
+    </div>
+    <div class="hero__content">
+      <p class="hero__eyebrow" data-i18n="hero.eyebrow">OCEAN VIEW ONSEN RESORT — IZU</p>
+      <h1 class="hero__title" data-i18n="hero.title">海と湯に、<br />心をゆだねる。</h1>
+      <p class="hero__lead" data-i18n="hero.lead">オーシャンビュー・客室露天風呂・サンセット。<br class="u-pc" />波音に包まれる、極上のリゾート滞在。</p>
+      <div class="hero__btns">
+        <a href="#reserve" class="btn btn--gold btn--lg" data-i18n="hero.btn1">空室を確認</a>
+        <a href="#experience" class="btn btn--ghost btn--lg" data-i18n="hero.btn2">体験を見る</a>
+      </div>
+    </div>
+    <div class="hero__scroll" aria-hidden="true">
+      <span data-i18n="hero.scroll">SCROLL</span>
+      <span class="hero__scroll-line"></span>
+    </div>
+    <div class="hero__wave" aria-hidden="true">
+      <svg viewBox="0 0 1440 80" preserveAspectRatio="none"><path d="M0,40 C360,80 720,0 1080,40 C1260,60 1380,50 1440,40 L1440,80 L0,80 Z" fill="currentColor"/></svg>
+    </div>
+  </section>
+
+  <!-- News -->
+  <aside class="news" aria-label="お知らせ">
+    <div class="news__inner">
+      <span class="news__label" data-i18n="news.label">NEWS</span>
+      <div class="news__track" id="cms-news"></div>
+    </div>
+  </aside>
+
+  <!-- Experience -->
+  <section class="experience" id="experience">
+    <div class="container">
+      <header class="section-head fade-in">
+        <span class="section-tag" data-i18n="exp.tag">EXPERIENCE</span>
+        <h2 class="section-title" data-i18n="exp.title">OCEANA RESORT の体験</h2>
+        <p class="section-lead" data-i18n="exp.lead">サンセット・客室露天風呂・オーシャンビュー・波音。海を主役にした非日常体験。</p>
+      </header>
+      <div class="exp-grid fade-in">
+        <a href="#rooms" class="exp-card exp-card--hero">
+          <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1400&q=90" alt="オーシャンビュー客室" width="900" height="1100" loading="lazy" />
+          <div class="exp-card__overlay">
+            <span class="exp-card__label" data-i18n="exp.ocean.label">OCEAN</span>
+            <h3 data-i18n="exp.ocean.title">オーシャンビュー</h3>
+          </div>
+        </a>
+        <a href="#onsen" class="exp-card">
+          <img src="https://images.unsplash.com/photo-1540555709978-06abbb98f9e2?w=900&q=90" alt="客室露天風呂" width="700" height="850" loading="lazy" />
+          <div class="exp-card__overlay">
+            <span class="exp-card__label" data-i18n="exp.onsen.label">ONSEN</span>
+            <h3 data-i18n="exp.onsen.title">客室露天風呂</h3>
+          </div>
+        </a>
+        <a href="#cuisine" class="exp-card">
+          <img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?w=900&q=90" alt="海の幸会席" width="700" height="850" loading="lazy" />
+          <div class="exp-card__overlay">
+            <span class="exp-card__label" data-i18n="exp.cuisine.label">CUISINE</span>
+            <h3 data-i18n="exp.cuisine.title">海の幸会席</h3>
+          </div>
+        </a>
+        <a href="#plans" class="exp-card exp-card--wide">
+          <img src="https://images.unsplash.com/photo-1495616819653-618148b83e83?w=1400&q=90" alt="サンセットテラス" width="1100" height="650" loading="lazy" />
+          <div class="exp-card__overlay">
+            <span class="exp-card__label" data-i18n="exp.sunset.label">SUNSET</span>
+            <h3 data-i18n="exp.sunset.title">サンセットテラス</h3>
+          </div>
+        </a>
+        <a href="#onsen" class="exp-card">
+          <img src="https://images.unsplash.com/photo-1473496169908-88ba623cee26?w=900&q=90" alt="波音のリゾート" width="700" height="850" loading="lazy" />
+          <div class="exp-card__overlay">
+            <span class="exp-card__label" data-i18n="exp.wave.label">WAVES</span>
+            <h3 data-i18n="exp.wave.title">波音のリゾート</h3>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Intro -->
+  <section class="intro">
+    <div class="container">
+      <div class="intro__layout fade-in">
+        <div class="intro__text">
+          <span class="section-tag section-tag--light" data-i18n="intro.tag">ABOUT</span>
+          <h2 class="section-title section-title--light" data-i18n="intro.title">海と温泉を楽しむ<br />非日常リゾート。</h2>
+          <p class="intro__desc" data-i18n="intro.text">OCEANA RESORT 潮音の湯は、伊豆の断崖に佇むオーシャンビュー温泉旅館です。</p>
+          <div class="intro__stats">
+            <div class="intro__stat">
+              <span class="intro__stat-num" data-i18n="intro.stat1.num">18</span>
+              <span class="intro__stat-label" data-i18n="intro.stat1.label">全室露天風呂付き</span>
+            </div>
+            <div class="intro__stat">
+              <span class="intro__stat-num" data-i18n="intro.stat2.num">180°</span>
+              <span class="intro__stat-label" data-i18n="intro.stat2.label">オーシャンビュー</span>
+            </div>
+            <div class="intro__stat">
+              <span class="intro__stat-num" data-i18n="intro.stat3.num">3</span>
+              <span class="intro__stat-label" data-i18n="intro.stat3.label">源泉かけ流し</span>
+            </div>
+          </div>
+        </div>
+        <div class="intro__visual">
+          <img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1200&q=90" alt="オーシャンビューリゾート" width="900" height="1100" loading="lazy" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Rooms -->
+  <section class="rooms section" id="rooms">
+    <div class="container">
+      <header class="section-head fade-in">
+        <span class="section-tag" data-i18n="rooms.tag">ROOMS</span>
+        <h2 class="section-title" data-i18n="rooms.title">客室</h2>
+        <p class="section-lead" data-i18n="rooms.lead">オーシャンビューと客室露天風呂。波音を聞きながら、極上の休息を。</p>
+      </header>
+      <div class="rooms__grid" id="cms-rooms"></div>
+    </div>
+  </section>
+
+  <!-- Onsen -->
+  <section class="onsen section" id="onsen">
+    <div class="onsen__layout">
+      <div class="onsen__visual fade-in">
+        <img src="https://images.unsplash.com/photo-1540555709978-06abbb98f9e2?w=1600&q=90" alt="海を望む露天風呂" width="1400" height="1000" loading="lazy" />
+        <div class="onsen__visual-caption">
+          <span class="onsen__visual-tag">OPEN-AIR BATH</span>
+        </div>
+      </div>
+      <div class="onsen__body fade-in">
+        <span class="section-tag section-tag--gold" data-i18n="onsen.tag">HOT SPRING</span>
+        <h2 class="section-title" data-i18n="onsen.title">温泉</h2>
+        <p class="onsen__text" data-i18n="onsen.text">伊豆の源泉かけ流し。客室露天風呂に加え、海を望む大浴場と3つの貸切風呂をご用意。</p>
+        <dl class="onsen__facts">
+          <div><dt data-i18n="onsen.f1.label">源泉</dt><dd data-i18n="onsen.f1.value">弱アルカリ性単純泉・源泉かけ流し</dd></div>
+          <div><dt data-i18n="onsen.f2.label">大浴場</dt><dd data-i18n="onsen.f2.value">海側露天・内湯・サウナ</dd></div>
+          <div><dt data-i18n="onsen.f3.label">貸切風呂</dt><dd data-i18n="onsen.f3.value">3室（サンセット貸切可）</dd></div>
+          <div><dt data-i18n="onsen.f4.label">客室露天</dt><dd data-i18n="onsen.f4.value">全18室に専用露天風呂</dd></div>
+          <div><dt data-i18n="onsen.f5.label">利用時間</dt><dd data-i18n="onsen.f5.value">大浴場 5:00〜24:00 / 貸切 24h予約制</dd></div>
+        </dl>
+        <a href="#plans" class="btn btn--gold" data-i18n="onsen.btn">温泉付きプランを見る</a>
+      </div>
+    </div>
+    <div class="onsen__gallery fade-in">
+      <img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db948?w=800&q=85" alt="大浴場" width="600" height="450" loading="lazy" />
+      <img src="https://images.unsplash.com/photo-1600334089648-4fa4aa9a543a?w=800&q=85" alt="貸切風呂" width="600" height="450" loading="lazy" />
+      <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&q=85" alt="サンセット露天" width="600" height="450" loading="lazy" />
+    </div>
+  </section>
+
+  <!-- Cuisine -->
+  <section class="cuisine section" id="cuisine">
+    <div class="container">
+      <header class="section-head fade-in">
+        <span class="section-tag section-tag--light" data-i18n="cuisine.tag">CUISINE</span>
+        <h2 class="section-title section-title--light" data-i18n="cuisine.title">お料理</h2>
+        <p class="section-lead section-lead--light" data-i18n="cuisine.lead">伊豆近海の海の幸を、季節の会席で。</p>
+      </header>
+      <div class="cuisine__featured fade-in">
+        <img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?w=1600&q=90" alt="伊豆湾の海鮮会席" width="1400" height="750" loading="lazy" />
+        <div class="cuisine__featured-text">
+          <span class="cuisine__season" data-i18n="cuisine.featured.season">シーズナルメニュー</span>
+          <h3 data-i18n="cuisine.featured.title">伊豆湾の海鮮会席</h3>
+          <p data-i18n="cuisine.featured.text">その日の水揚げを活かした伊豆近海の海の幸。金目鯛・伊勢海老・のどぐろを、職人の技で。</p>
+        </div>
+      </div>
+      <div class="cuisine__grid" id="cms-cuisine"></div>
+      <p class="cuisine__note fade-in" data-i18n="cuisine.note">※ アレルギー・ベジタリアン対応可（要事前連絡）</p>
+    </div>
+  </section>
+
+  <!-- Plans -->
+  <section class="plans section" id="plans">
+    <div class="container">
+      <header class="section-head fade-in">
+        <span class="section-tag section-tag--light" data-i18n="plans.tag">PLANS</span>
+        <h2 class="section-title section-title--light" data-i18n="plans.title">宿泊プラン</h2>
+        <p class="section-lead section-lead--light" data-i18n="plans.lead">カップルからファミリーまで、海と温泉を楽しむプランをご用意。</p>
+      </header>
+      <div class="plans__grid" id="cms-plans"></div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq section" id="faq">
+    <div class="container container--narrow">
+      <header class="section-head fade-in">
+        <span class="section-tag" data-i18n="faq.tag">FAQ</span>
+        <h2 class="section-title" data-i18n="faq.title">よくあるご質問</h2>
+      </header>
+      <div class="faq__list fade-in">
+        <details class="faq__item">
+          <summary data-i18n="faq.q1">チェックイン・チェックアウトは？</summary>
+          <p data-i18n="faq.a1">チェックイン 15:00〜、チェックアウト 〜11:00 です。</p>
+        </details>
+        <details class="faq__item">
+          <summary data-i18n="faq.q2">客室露天風呂は全室にありますか？</summary>
+          <p data-i18n="faq.a2">はい、全18室に専用の客室露天風呂を完備しています。</p>
+        </details>
+        <details class="faq__item">
+          <summary data-i18n="faq.q3">子供連れでも大丈夫ですか？</summary>
+          <p data-i18n="faq.a3">はい、ファミリープランやキッズアメニティをご用意しています。</p>
+        </details>
+        <details class="faq__item">
+          <summary data-i18n="faq.q4">貸切風呂の予約方法は？</summary>
+          <p data-i18n="faq.a4">チェックイン時または事前にフロントでご予約ください。</p>
+        </details>
+        <details class="faq__item">
+          <summary data-i18n="faq.q5">食事のアレルギー対応は可能ですか？</summary>
+          <p data-i18n="faq.a5">はい、事前にご連絡いただければ可能な限り対応いたします。</p>
+        </details>
+        <details class="faq__item">
+          <summary data-i18n="faq.q6">キャンセルポリシーは？</summary>
+          <p data-i18n="faq.a6">7日前まで無料、6〜3日前30%、2日前50%、前日80%、当日100%。</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- Access -->
+  <section class="access section" id="access">
+    <div class="container">
+      <header class="section-head fade-in">
+        <span class="section-tag" data-i18n="access.tag">ACCESS</span>
+        <h2 class="section-title" data-i18n="access.title">アクセス</h2>
+      </header>
+      <div class="access__grid fade-in">
+        <div class="access__map">
+          <iframe
+            title="OCEANA RESORT 地図"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13050!2d138.9456!3d34.8765!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMznCsDUyJzM1LjQiTiAxMzhCsDU2JzQ0LjIiRQ!5e0!3m2!1sja!2sjp!4v1700000000000!5m2!1sja!2sjp"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            allowfullscreen
+          ></iframe>
+        </div>
+        <dl class="access__info">
+          <div><dt data-i18n="access.addr">住所</dt><dd>〒410-2416 静岡県伊豆市八幡682</dd></div>
+          <div><dt data-i18n="access.tel">電話</dt><dd><a href="tel:0557000000">0557-00-0000</a>（9:00〜21:00）</dd></div>
+          <div><dt data-i18n="access.car">車</dt><dd data-i18n="access.car.text">東名高速 沼津ICより約40分</dd></div>
+          <div><dt data-i18n="access.train">電車</dt><dd data-i18n="access.train.text">JR伊東線 伊豆高原駅より送迎15分</dd></div>
+          <div><dt data-i18n="access.pickup">送迎</dt><dd data-i18n="access.pickup.text">伊豆高原駅より無料送迎</dd></div>
+        </dl>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reserve -->
+  <section class="reserve section" id="reserve">
+    <div class="container">
+      <header class="section-head fade-in">
+        <span class="section-tag section-tag--light" data-i18n="reserve.tag">RESERVE</span>
+        <h2 class="section-title section-title--light" data-i18n="reserve.title">ご予約・お問い合わせ</h2>
+        <p class="section-lead section-lead--light" data-i18n="reserve.lead">2営業日以内にご返信いたします。</p>
+      </header>
+      <div class="reserve__layout fade-in">
+        <div class="reserve__phone">
+          <h3 data-i18n="reserve.phone.title">お電話でのご予約</h3>
+          <a href="tel:0557000000" class="reserve__tel">0557-00-0000</a>
+          <p data-i18n="reserve.phone.hours">受付 9:00〜21:00（年中無休）</p>
+          <p class="reserve__hint" data-i18n="reserve.phone.hint">※ ご希望の客室・プラン・人数をお伝えください</p>
+        </div>
+        <form class="form" id="contact" novalidate>
+          <h3 class="form__title" data-i18n="form.title">オンラインフォーム</h3>
+          <div class="form__row">
+            <div class="form__group">
+              <label for="name"><span data-i18n="form.name">お名前</span> <span class="req" data-i18n="form.required">必須</span></label>
+              <input type="text" id="name" name="name" required autocomplete="name" />
+            </div>
+            <div class="form__group">
+              <label for="email"><span data-i18n="form.email">メール</span> <span class="req" data-i18n="form.required">必須</span></label>
+              <input type="email" id="email" name="email" required autocomplete="email" />
+            </div>
+          </div>
+          <div class="form__row">
+            <div class="form__group">
+              <label for="tel"><span data-i18n="form.tel">電話番号</span> <span class="req" data-i18n="form.required">必須</span></label>
+              <input type="tel" id="tel" name="tel" required autocomplete="tel" />
+            </div>
+            <div class="form__group">
+              <label for="checkin"><span data-i18n="form.checkin">宿泊日</span> <span class="req" data-i18n="form.required">必須</span></label>
+              <input type="date" id="checkin" name="checkin" required />
+            </div>
+          </div>
+          <div class="form__group">
+            <label for="guests"><span data-i18n="form.guests">人数</span> <span class="req" data-i18n="form.required">必須</span></label>
+            <input type="text" id="guests" name="guests" required data-i18n-attr="placeholder:form.guests.placeholder" placeholder="例：大人2名・子供1名" />
+          </div>
+          <div class="form__row">
+            <div class="form__group">
+              <label for="plan" data-i18n="form.plan">ご希望プラン</label>
+              <select id="plan" name="plan"><option value="" data-i18n="form.select">選択</option></select>
+            </div>
+            <div class="form__group">
+              <label for="room" data-i18n="form.room">ご希望客室</label>
+              <select id="room" name="room"><option value="" data-i18n="form.select">選択</option></select>
+            </div>
+          </div>
+          <div class="form__group">
+            <label for="message" data-i18n="form.message">メッセージ</label>
+            <textarea id="message" name="message" rows="4" data-i18n-attr="placeholder:form.message.placeholder" placeholder="アレルギー・記念日・貸切風呂希望など"></textarea>
+          </div>
+          <label class="form__check">
+            <input type="checkbox" name="privacy" required />
+            <span><a href="/privacy" target="_blank" rel="noopener" data-i18n="form.privacy">プライバシーポリシー</a><span data-i18n="form.privacy.agree">に同意する</span></span>
+          </label>
+          <button type="submit" class="btn btn--gold btn--block" data-i18n="form.submit">予約リクエストを送信</button>
+          <p class="form__note" data-i18n="form.note">※ 空室確認後、担当者よりご連絡いたします。</p>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container footer__inner">
+    <div class="footer__brand">
+      <span class="footer__logo" id="footer-site-name">◆ OCEANA RESORT</span>
+      <p>〒410-2416 静岡県伊豆市八幡682</p>
+    </div>
+    <nav class="footer__nav">
+      <a href="#rooms" data-i18n="nav.rooms">客室</a>
+      <a href="#onsen" data-i18n="nav.onsen">温泉</a>
+      <a href="#cuisine" data-i18n="nav.cuisine">お料理</a>
+      <a href="#plans" data-i18n="nav.plans">宿泊プラン</a>
+      <a href="#reserve" data-i18n="nav.reserve">予約する</a>
+    </nav>
+    <p class="footer__copy" data-i18n="footer.copy">© 2026 OCEANA RESORT 潮音の湯 ｜ オーシャンビュー温泉旅館テンプレート</p>
+  </div>
+</footer>
+
+<button class="totop" id="totop" aria-label="ページトップへ">↑</button>
+
+<script src="script.js" type="module"></script>
+</body>
+</html>

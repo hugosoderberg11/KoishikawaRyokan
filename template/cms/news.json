@@ -1,0 +1,32 @@
+[
+  {
+    "date": "2025-12-01",
+    "dateDisplay": { "ja": "2025.12.01", "en": "Dec 1, 2025", "zh": "2025.12.01" },
+    "title": {
+      "ja": "冬の特別プラン「雪見の宴」のご予約受付を開始いたしました。",
+      "en": "Winter special plan \"Snow View Banquet\" now accepting reservations.",
+      "zh": "冬季特别方案「雪见之宴」开始接受预约。"
+    },
+    "url": "#plans"
+  },
+  {
+    "date": "2025-11-15",
+    "dateDisplay": { "ja": "2025.11.15", "en": "Nov 15, 2025", "zh": "2025.11.15" },
+    "title": {
+      "ja": "【重要】年末年始（12月29日〜1月3日）の料金改定についてのご案内。",
+      "en": "Important: Year-end/New Year (Dec 29–Jan 3) rate changes.",
+      "zh": "【重要】年末年初（12月29日–1月3日）价格调整通知。"
+    },
+    "url": "#reserve"
+  },
+  {
+    "date": "2025-11-01",
+    "dateDisplay": { "ja": "2025.11.01", "en": "Nov 1, 2025", "zh": "2025.11.01" },
+    "title": {
+      "ja": "秋の味覚プラン「紅葉と山の幸」は満室となりました。ありがとうございます。",
+      "en": "Autumn plan \"Maple & Mountain Bounty\" is fully booked. Thank you.",
+      "zh": "秋季美食方案「红叶与山珍」已满房。感谢您的支持。"
+    },
+    "url": "#plans"
+  }
+]

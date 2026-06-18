@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title data-i18n="meta.title">【公式】古民家宿 紬の郷｜築100年の古民家一棟貸し ｜ 京都・東山</title>
+  <meta name="description" data-i18n-attr="content:meta.description" content="京都・東山の築100年古民家「紬の郷」。囲炉裏・日本庭園・畳の客室で、日本の原風景に泊まる一棟貸し宿。" />
+  <meta name="keywords" data-i18n-attr="content:meta.keywords" content="古民家,町家,一棟貸し,京都,東山,インバウンド,宿泊,文化体験" />
+  <link rel="canonical" href="https://tsumugi.example.com/" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" data-i18n-attr="content:og.title" content="古民家宿 紬の郷｜日本の原風景に泊まる" />
+  <meta property="og:description" data-i18n-attr="content:og.description" content="築100年の古民家。囲炉裏と日本庭園、畳の客室。京都・東山の静かな一棟貸し宿。" />
+  <meta property="og:url" content="https://tsumugi.example.com/" />
+  <meta property="og:image" content="https://tsumugi.example.com/images/og-image.jpg" />
+  <meta property="og:site_name" content="古民家宿 紬の郷" id="og-site-name" />
+  <meta property="og:locale" content="ja_JP" id="og-locale" />
+  <meta property="og:locale:alternate" content="en_US" />
+  <meta property="og:locale:alternate" content="zh_CN" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" data-i18n-attr="content:og.title" content="古民家宿 紬の郷｜日本の原風景に泊まる" />
+  <meta name="twitter:description" data-i18n-attr="content:og.description" content="築100年の古民家。囲炉裏と日本庭園、畳の客室。" />
+  <meta name="twitter:image" content="https://tsumugi.example.com/images/og-image.jpg" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Noto+Serif+JP:wght@400;500;600;700&family=Shippori+Mincho:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
+
+  <script type="application/ld+json" id="schema-hotel">
+  {
+    "@context": "https://schema.org",
+    "@type": "Hotel",
+    "name": "古民家宿 紬の郷",
+    "alternateName": "Kominka Stay Tsumugi no Sato",
+    "description": "京都・東山の築100年古民家。囲炉裏・日本庭園・畳の客室で、日本の原風景に泊まる一棟貸し宿。",
+    "url": "https://tsumugi.example.com/",
+    "telephone": "075-000-0000",
+    "email": "info@tsumugi.example.com",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "清水寺町384",
+      "addressLocality": "京都市東山区",
+      "addressRegion": "京都府",
+      "postalCode": "605-0826",
+      "addressCountry": "JP"
+    },
+    "geo": { "@type": "GeoCoordinates", "latitude": "34.9949", "longitude": "135.7850" },
+    "priceRange": "¥¥¥",
+    "checkinTime": "15:00",
+    "checkoutTime": "10:00",
+    "amenityFeature": [
+      { "@type": "LocationFeatureSpecification", "name": "一棟貸し", "value": true },
+      { "@type": "LocationFeatureSpecification", "name": "囲炉裏", "value": true },
+      { "@type": "LocationFeatureSpecification", "name": "日本庭園", "value": true },
+      { "@type": "LocationFeatureSpecification", "name": "茶室", "value": true },
+      { "@type": "LocationFeatureSpecification", "name": "文化体験", "value": true },
+      { "@type": "LocationFeatureSpecification", "name": "駐車場", "value": true }
+    ],
+    "image": [
+      "https://tsumugi.example.com/images/hero.jpg",
+      "https://tsumugi.example.com/images/garden.jpg"
+    ]
+  }
+  </script>
+</head>
+<body>
+
+<header class="header" id="top">
+  <div class="header__inner">
+    <a href="#top" class="logo">
+      <span class="logo__mark" aria-hidden="true">紬</span>
+      <span class="logo__text">
+        <span class="logo__en">Tsumugi no Sato</span>
+        <span class="logo__ja" id="site-name-ja">古民家宿 紬の郷</span>
+      </span>
+    </a>
+    <nav class="nav" aria-label="メインナビゲーション">
+      <a href="#rooms" data-i18n="nav.rooms">客室</a>
+      <a href="#facilities" data-i18n="nav.facilities">館内紹介</a>
+      <a href="#cuisine" data-i18n="nav.cuisine">お料理</a>
+      <a href="#plans" data-i18n="nav.plans">宿泊プラン</a>
+      <a href="#sightseeing" data-i18n="nav.sightseeing">周辺観光</a>
+      <a href="#faq" data-i18n="nav.faq">FAQ</a>
+      <a href="#access" data-i18n="nav.access">アクセス</a>
+    </nav>
+    <div class="header__actions">
+      <div class="lang-switch" role="group" aria-label="Language">
+        <button type="button" class="lang-switch__btn is-active" data-lang="ja" aria-pressed="true">JP</button>
+        <button type="button" class="lang-switch__btn" data-lang="en" aria-pressed="false">EN</button>
+        <button type="button" class="lang-switch__btn" data-lang="zh" aria-pressed="false">中文</button>
+      </div>
+      <a href="tel:0750000000" class="header__tel" id="header-tel">075-000-0000</a>
+      <a href="#reserve" class="btn btn--primary" data-i18n="nav.reserve">ご予約</a>
+    </div>
+    <button class="menu-btn" aria-label="メニュー" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<div class="drawer" aria-hidden="true">
+  <div class="drawer__overlay"></div>
+  <nav class="drawer__panel">
+    <p class="drawer__logo" id="drawer-site-name">古民家宿 紬の郷</p>
+    <div class="lang-switch lang-switch--drawer" role="group" aria-label="Language">
+      <button type="button" class="lang-switch__btn is-active" data-lang="ja">JP</button>
+      <button type="button" class="lang-switch__btn" data-lang="en">EN</button>
+      <button type="button" class="lang-switch__btn" data-lang="zh">中文</button>
+    </div>
+    <a href="#rooms" data-i18n="nav.rooms">客室</a>
+    <a href="#facilities" data-i18n="nav.facilities">館内紹介</a>
+    <a href="#cuisine" data-i18n="nav.cuisine">お料理</a>
+    <a href="#plans" data-i18n="nav.plans">宿泊プラン</a>
+    <a href="#sightseeing" data-i18n="nav.sightseeing">周辺観光</a>
+    <a href="#faq" data-i18n="nav.faq">FAQ</a>
+    <a href="#access" data-i18n="nav.access">アクセス</a>
+    <a href="#reserve" class="btn btn--primary" data-i18n="nav.reserve">ご予約</a>
+  </nav>
+</div>
+
+<main>
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero__visual">
+      <img src="https://images.unsplash.com/photo-1528360980937-0dd9998a9ef2?w=1800&q=85" alt="築100年の古民家" width="1800" height="1000" class="hero__img" />
+      <div class="hero__shoji" aria-hidden="true"></div>
+      <div class="hero__overlay"></div>
+    </div>
+    <div class="hero__content">
+      <span class="hero__badge" data-i18n="hero.badge">築100年 — 国登録有形文化財</span>
+      <h1 class="hero__title" data-i18n="hero.title">日本の原風景に、<br />泊まる。</h1>
+      <p class="hero__lead" data-i18n="hero.lead">京都・東山の古民家で、囲炉裏の温もりと庭の静けさを。</p>
+      <div class="hero__btns">
+        <a href="#reserve" class="btn btn--primary btn--lg" data-i18n="hero.btn1">空室を確認する</a>
+        <a href="#facilities" class="btn btn--outline btn--lg" data-i18n="hero.btn2">館内を見る</a>
+      </div>
+    </div>
+    <div class="hero__vertical" aria-hidden="true">古民家宿</div>
+  </section>
+
+  <!-- News CMS -->
+  <aside class="news" aria-label="お知らせ">
+    <div class="news__inner">
+      <span class="news__label" data-i18n="news.label">お知らせ</span>
+      <div class="news__track" id="cms-news"></div>
+    </div>
+  </aside>
+
+  <!-- Intro -->
+  <section class="intro">
+    <div class="container">
+      <div class="intro__grid">
+        <div class="intro__text fade-in">
+          <span class="section-tag" data-i18n="intro.tag">紬の郷について</span>
+          <h2 class="section-title" data-i18n="intro.title">古民家が語る、<br />京の暮らし。</h2>
+          <p data-i18n="intro.text">紬の郷は、明治時代に建てられた京町家を活かした古民家宿です。</p>
+        </div>
+        <div class="intro__photos fade-in">
+          <img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=640&q=80" alt="日本庭園" width="640" height="480" class="intro__photo intro__photo--main" />
+          <img src="https://images.unsplash.com/photo-1545569341-9bb253845b9b2?w=440&q=80" alt="囲炉裏" width="440" height="330" class="intro__photo intro__photo--sub" />
+        </div>
+      </div>
+      <ul class="intro__features fade-in">
+        <li><span class="intro__feat-icon" aria-hidden="true">家</span><span data-i18n="intro.feat1">築100年の古民家</span></li>
+        <li><span class="intro__feat-icon" aria-hidden="true">庭</span><span data-i18n="intro.feat2">日本庭園</span></li>
+        <li><span class="intro__feat-icon" aria-hidden="true">炉</span><span data-i18n="intro.feat3">囲炉裏</span></li>
+        <li><span class="intro__feat-icon" aria-hidden="true">体</span><span data-i18n="intro.feat4">文化体験</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Rooms CMS -->
+  <section class="rooms section" id="rooms">
+    <div class="container">
+      <header class="section-head fade-in">
+        <span class="section-tag" data-i18n="rooms.tag">客室</span>
+        <h2 class="section-title" data-i18n="rooms.title">畳と障子の客室</h2>
+        <p class="section-lead" data-i18n="rooms.lead">古民家の構造を活かした、静かで温かみのあるお部屋。</p>
+      </header>
+      <div class="rooms__grid" id="cms-rooms"></div>
+    </div>
+  </section>
+
+  <!-- Facilities -->
+  <section class="facilities section" id="facilities">
+    <div class="container">
+      <header class="section-head fade-in">
+        <span class="section-tag" data-i18n="facilities.tag">館内紹介</span>
+        <h2 class="section-title" data-i18n="facilities.title">古民家の設え</h2>
+        <p class="section-lead" data-i18n="facilities.lead">木材・障子・畳 — 日本の伝統建築が織りなす空間。</p>
+      </header>
+      <div class="facilities__grid">
+        <article class="fac-card fac-card--large fade-in">
+          <img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=900&q=80" alt="日本庭園" width="900" height="560" loading="lazy" />
+          <div class="fac-card__body">
+            <h3 data-i18n="fac.garden.title">日本庭園</h3>
+            <p data-i18n="fac.garden.text">苔むした石と楓の木。四季折々の表情を映す、枯山水を取り入れた庭。</p>
+          </div>
+        </article>
+        <article class="fac-card fade-in">
+          <img src="https://images.unsplash.com/photo-1545569341-9bb253845b9b2?w=600&q=80" alt="囲炉裏" width="600" height="400" loading="lazy" />
+          <div class="fac-card__body">
+            <h3 data-i18n="fac.irori.title">囲炉裏</h3>
+            <p data-i18n="fac.irori.text">土間に据えた囲炉裏。炭火のパチパチという音と、ほのかな煙の香り。</p>
+          </div>
+        </article>
+        <article class="fac-card fade-in">
+          <img src="https://images.unsplash.com/photo-1528360980937-0dd9998a9ef2?w=600&q=80" alt="古民家建築" width="600" height="400" loading="lazy" />
+          <div class="fac-card__body">
+            <h3 data-i18n="fac.arch.title">古民家建築</h3>
+            <p data-i18n="fac.arch.text">梁の見える吹き抜け、古材の床板、漆喰の壁。</p>
+          </div>
+        </article>
+        <article class="fac-card fade-in">
+          <img src="https://images.unsplash.com/photo-1593693397697-46b5d0b7f1d4?w=600&q=80" alt="畳の客室" width="600" height="400" loading="lazy" />
+          <div class="fac-card__body">
+            <h3 data-i18n="fac.tea.title">茶室</h3>
+            <p data-i18n="fac.tea.text">離れに設えた茶室。宿泊者限定で茶道体験も承ります。</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Cuisine -->
+  <section class="cuisine section" id="cuisine">
+    <div class="container">
+      <header class="section-head fade-in">
+        <span class="section-tag" data-i18n="cuisine.tag">お料理</span>
+        <h2 class="section-title" data-i18n="cuisine.title">京の恵みを、囲炉裏で。</h2>
+        <p class="section-lead" data-i18n="cuisine.lead">地元の食材を使った季節の料理。</p>
+      </header>
+      <div class="cuisine__featured fade-in">
+        <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=840&q=80" alt="季節の会席料理" width="840" height="520" />
+        <div class="cuisine__text">
+          <span class="cuisine__season" data-i18n="cuisine.season">春の献立</span>
+          <h3 data-i18n="cuisine.featured.title">筍の土瓶蒸しと京野菜の会席</h3>
+          <p data-i18n="cuisine.featured.text">京都近郊の筍と、契約農家の京野菜を使った春の献立。</p>
+        </div>
+      </div>
+      <div class="cuisine__grid fade-in">
+        <article class="cuisine-item">
+          <img src="https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?w=420&q=80" alt="前菜" width="420" height="300" loading="lazy" />
+          <h4 data-i18n="cuisine.item1">京野菜の前菜</h4>
+        </article>
+        <article class="cuisine-item">
+          <img src="https://images.unsplash.com/photo-1569718212665-3a8278d5f624?w=420&q=80" alt="土瓶蒸し" width="420" height="300" loading="lazy" />
+          <h4 data-i18n="cuisine.item2">囲炉裏の土瓶蒸し</h4>
+        </article>
+        <article class="cuisine-item">
+          <img src="https://images.unsplash.com/photo-1493770348161-369653ae8272?w=420&q=80" alt="椀物" width="420" height="300" loading="lazy" />
+          <h4 data-i18n="cuisine.item3">季節の椀物</h4>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Plans CMS -->
+  <section class="plans section" id="plans">
+    <div class="container">
+      <header class="section-head fade-in">
+        <span class="section-tag section-tag--dark" data-i18n="plans.tag">宿泊プラン</span>
+        <h2 class="section-title section-title--light" data-i18n="plans.title">宿泊プラン</h2>
+        <p class="section-lead section-lead--light" data-i18n="plans.lead">古民家ステイから文化体験まで。</p>
+      </header>
+      <div class="plans__grid" id="cms-plans"></div>
+    </div>
+  </section>
+
+  <!-- Sightseeing CMS -->
+  <section class="sightseeing section" id="sightseeing">
+    <div class="container">
+      <header class="section-head fade-in">
+        <span class="section-tag" data-i18n="sight.tag">周辺観光</span>
+        <h2 class="section-title" data-i18n="sight.title">周辺観光</h2>
+        <p class="section-lead" data-i18n="sight.lead">清水寺・祇園・高台寺など、東山の名所へ徒歩圏内。</p>
+      </header>
+      <div class="sight__grid" id="cms-sightseeing"></div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq section" id="faq">
+    <div class="container container--narrow">
+      <header class="section-head fade-in">
+        <span class="section-tag" data-i18n="faq.tag">FAQ</span>
+        <h2 class="section-title" data-i18n="faq.title">よくあるご質問</h2>
+      </header>
+      <div class="faq__list fade-in">
+        <details class="faq__item">
+          <summary data-i18n="faq.q1">一棟貸しは何名まで利用できますか？</summary>
+          <p data-i18n="faq.a1">最大6名様までご利用いただけます。</p>
+        </details>
+        <details class="faq__item">
+          <summary data-i18n="faq.q2">チェックイン・チェックアウトの時間は？</summary>
+          <p data-i18n="faq.a2">チェックイン 15:00、チェックアウト 10:00 です。</p>
+        </details>
+        <details class="faq__item">
+          <summary data-i18n="faq.q3">外国語対応はありますか？</summary>
+          <p data-i18n="faq.a3">英語・中国語（簡体字）でのご案内が可能です。</p>
+        </details>
+        <details class="faq__item">
+          <summary data-i18n="faq.q4">駐車場はありますか？</summary>
+          <p data-i18n="faq.a4">一棟貸しプランのお客様には専用駐車場1台分をご用意しています。</p>
+        </details>
+        <details class="faq__item">
+          <summary data-i18n="faq.q5">キャンセルポリシーは？</summary>
+          <p data-i18n="faq.a5">14日前まで無料、13〜7日前30%、6〜3日前50%、2日前以降100%。</p>
+        </details>
+        <details class="faq__item">
+          <summary data-i18n="faq.q6">文化体験は予約が必要ですか？</summary>
+          <p data-i18n="faq.a6">茶道・着物レンタル等は事前予約をお願いします。</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- Access -->
+  <section class="access section" id="access">
+    <div class="container">
+      <header class="section-head fade-in">
+        <span class="section-tag" data-i18n="access.tag">アクセス</span>
+        <h2 class="section-title" data-i18n="access.title">アクセス</h2>
+      </header>
+      <div class="access__grid fade-in">
+        <div class="access__map">
+          <iframe
+            title="古民家宿 紬の郷 地図"
+            id="map-iframe"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3268.5!2d135.7850!3d34.9949!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x600108ee0a918909%3A0x4e5b2c5b5b5b5b5b!2z5bKh6YOo5bGx5Yy65YyX6Kq/5rGf77yR77yR77yR!5e0!3m2!1sja!2sjp!4v1700000000000!5m2!1sja!2sjp"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            allowfullscreen
+          ></iframe>
+        </div>
+        <dl class="access__info">
+          <div><dt data-i18n="access.addr">住所</dt><dd id="access-address">〒605-0826 京都府京都市東山区清水寺町384</dd></div>
+          <div><dt data-i18n="access.tel">電話</dt><dd><a href="tel:0750000000" id="access-tel">075-000-0000</a> <span id="access-hours">（9:00〜18:00）</span></dd></div>
+          <div><dt data-i18n="access.car">車</dt><dd data-i18n="access.car.text">名神高速 京都南ICより約20分</dd></div>
+          <div><dt data-i18n="access.train">電車</dt><dd data-i18n="access.train.text">京阪「清水五条」駅より徒歩12分</dd></div>
+          <div><dt data-i18n="access.pickup">送迎</dt><dd data-i18n="access.pickup.text">京都駅よりタクシー約15分</dd></div>
+        </dl>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reserve -->
+  <section class="reserve section" id="reserve">
+    <div class="container">
+      <header class="section-head fade-in">
+        <span class="section-tag section-tag--dark" data-i18n="reserve.tag">ご予約</span>
+        <h2 class="section-title section-title--light" data-i18n="reserve.title">ご予約・お問い合わせ</h2>
+        <p class="section-lead section-lead--light" data-i18n="reserve.lead">2営業日以内にご返信いたします。</p>
+      </header>
+      <div class="reserve__layout fade-in">
+        <div class="reserve__phone">
+          <h3 data-i18n="reserve.phone.title">お電話でのご予約</h3>
+          <a href="tel:0750000000" class="reserve__tel" id="reserve-tel">075-000-0000</a>
+          <p data-i18n="reserve.phone.hours">受付 9:00〜18:00（年中無休）</p>
+          <p class="reserve__hint" data-i18n="reserve.phone.hint">※ ご希望のプラン・人数をお伝えください</p>
+        </div>
+        <form class="form" id="contact" novalidate>
+          <h3 class="form__title" data-i18n="form.title">オンラインフォーム</h3>
+          <div class="form__row">
+            <div class="form__group">
+              <label for="name"><span data-i18n="form.name">お名前</span> <span class="req" data-i18n="form.required">必須</span></label>
+              <input type="text" id="name" name="name" required autocomplete="name" />
+            </div>
+            <div class="form__group">
+              <label for="email"><span data-i18n="form.email">メール</span> <span class="req" data-i18n="form.required">必須</span></label>
+              <input type="email" id="email" name="email" required autocomplete="email" />
+            </div>
+          </div>
+          <div class="form__row">
+            <div class="form__group">
+              <label for="tel"><span data-i18n="form.tel">電話番号</span> <span class="req" data-i18n="form.required">必須</span></label>
+              <input type="tel" id="tel" name="tel" required autocomplete="tel" />
+            </div>
+            <div class="form__group">
+              <label for="checkin"><span data-i18n="form.checkin">宿泊日</span> <span class="req" data-i18n="form.required">必須</span></label>
+              <input type="date" id="checkin" name="checkin" required />
+            </div>
+          </div>
+          <div class="form__group">
+            <label for="guests"><span data-i18n="form.guests">人数</span> <span class="req" data-i18n="form.required">必須</span></label>
+            <select id="guests" name="guests" required>
+              <option value="" data-i18n="form.guests.placeholder">選択</option>
+              <option value="1" data-i18n="form.guests.1">1名</option>
+              <option value="2" data-i18n="form.guests.2">2名</option>
+              <option value="3" data-i18n="form.guests.3">3名</option>
+              <option value="4" data-i18n="form.guests.4">4名</option>
+              <option value="5" data-i18n="form.guests.5">5名</option>
+              <option value="6" data-i18n="form.guests.6">6名</option>
+            </select>
+          </div>
+          <div class="form__row">
+            <div class="form__group">
+              <label for="plan" data-i18n="form.plan">ご希望プラン</label>
+              <select id="plan" name="plan"><option value="" data-i18n="form.select">選択</option></select>
+            </div>
+            <div class="form__group">
+              <label for="room" data-i18n="form.room">ご希望客室</label>
+              <select id="room" name="room"><option value="" data-i18n="form.select">選択</option></select>
+            </div>
+          </div>
+          <div class="form__group">
+            <label for="message" data-i18n="form.message">メッセージ</label>
+            <textarea id="message" name="message" rows="4" data-i18n-attr="placeholder:form.message.placeholder" placeholder="文化体験・送迎・アレルギーなど"></textarea>
+          </div>
+          <label class="form__check">
+            <input type="checkbox" name="privacy" required />
+            <span><a href="/privacy" target="_blank" rel="noopener" data-i18n="form.privacy">プライバシーポリシー</a><span data-i18n="form.privacy.agree">に同意する</span></span>
+          </label>
+          <button type="submit" class="btn btn--primary btn--block" data-i18n="form.submit">予約リクエストを送信</button>
+          <p class="form__note" data-i18n="form.note">※ 空室確認後、担当者よりご連絡いたします。</p>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container footer__inner">
+    <div class="footer__brand">
+      <span class="footer__logo" id="footer-site-name">古民家宿 紬の郷</span>
+      <p id="footer-address">〒605-0826 京都府京都市東山区清水寺町384</p>
+    </div>
+    <nav class="footer__nav">
+      <a href="#rooms" data-i18n="nav.rooms">客室</a>
+      <a href="#facilities" data-i18n="nav.facilities">館内紹介</a>
+      <a href="#cuisine" data-i18n="nav.cuisine">お料理</a>
+      <a href="#plans" data-i18n="nav.plans">宿泊プラン</a>
+      <a href="#sightseeing" data-i18n="nav.sightseeing">周辺観光</a>
+      <a href="#reserve" data-i18n="nav.reserve">ご予約</a>
+    </nav>
+    <p class="footer__copy" data-i18n="footer.copy">© 2026 古民家宿 紬の郷 ｜ 古民家宿テンプレート</p>
+  </div>
+</footer>
+
+<button class="totop" id="totop" aria-label="ページトップへ">↑</button>
+
+<script src="script.js" type="module"></script>
+</body>
+</html>

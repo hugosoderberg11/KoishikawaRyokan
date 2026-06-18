@@ -1,0 +1,62 @@
+[
+  {
+    "id": "room-01",
+    "badge": { "ja": "山側", "en": "Mountain View", "zh": "山景" },
+    "badgeType": "mountain",
+    "typeEn": "Standard Room",
+    "name": { "ja": "山懐（やまがくれ）", "en": "Yamagakure", "zh": "山怀" },
+    "description": {
+      "ja": "奥飛騨の山並みを一望する、落ち着きあるお部屋。朝霧に包まれた山の表情が毎日違う表情を見せてくれます。",
+      "en": "A serene room overlooking the Okuhida mountains. Mist-shrouded peaks reveal a different face each morning.",
+      "zh": "眺望奥飞驒山脉的静逸客房。晨雾中的山景每日呈现不同表情。"
+    },
+    "amenities": {
+      "ja": ["源泉かけ流し露天風呂", "2名〜4名", "和室 12畳 + 広縁"],
+      "en": ["Natural open-air bath", "2–4 guests", "12 tatami + engawa"],
+      "zh": ["源泉流淌露天风吕", "2–4人", "和室12叠+缘侧"]
+    },
+    "priceLabel": { "ja": "1泊2食 お一人様", "en": "1 night, 2 meals", "zh": "1晚2餐/人" },
+    "price": "¥38,000〜",
+    "image": "https://images.unsplash.com/photo-1593693397697-46b5d0b7f1d4?w=900&q=85"
+  },
+  {
+    "id": "room-02",
+    "badge": { "ja": "渓流側", "en": "Riverside", "zh": "溪畔" },
+    "badgeType": "river",
+    "typeEn": "Riverside Room",
+    "name": { "ja": "水音（みずね）", "en": "Mizune", "zh": "水音" },
+    "description": {
+      "ja": "渓流の音を子守唄に、深い眠りへ誘う客室。せせらぎに面した露天風呂では、四季折々の自然を肌で感じられます。",
+      "en": "Lulled by the stream, drift into deep sleep. Riverside open-air bath lets you feel nature through every season.",
+      "zh": "以溪流声为摇篮曲，引人深眠。临溪露天风吕，四季自然触手可及。"
+    },
+    "amenities": {
+      "ja": ["源泉かけ流し露天風呂", "2名", "和洋室 14畳 + テラス"],
+      "en": ["Natural open-air bath", "2 guests", "14 tatami Japanese-Western + terrace"],
+      "zh": ["源泉流淌露天风吕", "2人", "和洋室14叠+露台"]
+    },
+    "priceLabel": { "ja": "1泊2食 お一人様", "en": "1 night, 2 meals", "zh": "1晚2餐/人" },
+    "price": "¥48,000〜",
+    "image": "https://images.unsplash.com/photo-1571902940322-4ac0901747cc?w=900&q=85"
+  },
+  {
+    "id": "room-03",
+    "badge": { "ja": "特別室", "en": "Premier", "zh": "特别室" },
+    "badgeType": "special",
+    "typeEn": "Premier Suite",
+    "name": { "ja": "星野（ほしの）", "en": "Hoshino Suite", "zh": "星野" },
+    "description": {
+      "ja": "当館最上位のスイートルーム。内湯と露天風呂を両備え、専用のリビングと茶室を有する贅沢な空間です。",
+      "en": "Our premier suite with indoor and open-air baths, private living room, and tea room — ultimate luxury.",
+      "zh": "本馆最高级套房。内汤与露天风吕兼备，附专用客厅与茶室。"
+    },
+    "amenities": {
+      "ja": ["源泉かけ流し内湯・露天風呂", "2名〜6名", "和室 20畳 + 洋間 + 茶室"],
+      "en": ["Indoor & open-air baths", "2–6 guests", "20 tatami + Western room + tea room"],
+      "zh": ["源泉内汤·露天风吕", "2–6人", "和室20叠+洋间+茶室"]
+    },
+    "priceLabel": { "ja": "1泊2食 お一人様", "en": "1 night, 2 meals", "zh": "1晚2餐/人" },
+    "price": "¥78,000〜",
+    "image": "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&q=85"
+  }
+]

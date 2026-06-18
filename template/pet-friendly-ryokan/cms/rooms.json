@@ -1,0 +1,82 @@
+[
+  {
+    "id": "room-01",
+    "badge": { "ja": "ペット可", "en": "Pet OK", "zh": "可带宠物" },
+    "badgeType": "pet",
+    "typeEn": "Pet Friendly",
+    "name": { "ja": "若草（わかくさ）", "en": "Wakakusa", "zh": "若草" },
+    "description": {
+      "ja": "愛犬・愛猫と一緒に過ごせる、檜の露天風呂付き和室。ペット用ベッドと足洗い場完備。",
+      "en": "Japanese room with hinoki open-air bath for you and your pet. Pet bed and paw-wash area included.",
+      "zh": "可与爱犬爱猫同住的桧木露天风吕和室。配备宠物床与洗脚处。"
+    },
+    "amenities": {
+      "ja": ["ペット2頭まで", "客室露天風呂", "和室 10畳"],
+      "en": ["Up to 2 pets", "Room open-air bath", "10 tatami Japanese room"],
+      "zh": ["最多2只宠物", "客房露天风吕", "和室10叠"]
+    },
+    "priceLabel": { "ja": "1泊2食 お一人様", "en": "1 night, 2 meals", "zh": "1晚2餐/人" },
+    "price": "¥28,000〜",
+    "image": "https://images.unsplash.com/photo-1601758228041-f3b2795255f1?w=900&q=85"
+  },
+  {
+    "id": "room-02",
+    "badge": { "ja": "人気", "en": "Popular", "zh": "人气" },
+    "badgeType": "popular",
+    "typeEn": "Garden Room",
+    "name": { "ja": "陽だまり（ひだまり）", "en": "Hidamari", "zh": "阳光" },
+    "description": {
+      "ja": "庭園テラスからドッグランへ直結。小型犬から大型犬までゆったり過ごせる広々空間。",
+      "en": "Garden terrace connects directly to the dog run. Spacious room for small to large dogs.",
+      "zh": "庭园露台直通狗跑道。小型至大型犬均可舒适停留的宽敞空间。"
+    },
+    "amenities": {
+      "ja": ["ペット3頭まで", "庭園テラス", "和洋室 12畳"],
+      "en": ["Up to 3 pets", "Garden terrace", "12 tatami Japanese-Western room"],
+      "zh": ["最多3只宠物", "庭园露台", "和洋室12叠"]
+    },
+    "priceLabel": { "ja": "1泊2食 お一人様", "en": "1 night, 2 meals", "zh": "1晚2餐/人" },
+    "price": "¥34,000〜",
+    "image": "https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=900&q=85"
+  },
+  {
+    "id": "room-03",
+    "badge": { "ja": "猫歓迎", "en": "Cat Friendly", "zh": "欢迎猫咪" },
+    "badgeType": "cat",
+    "typeEn": "Cat Friendly Suite",
+    "name": { "ja": "猫の間（ねこのま）", "en": "Neko no Ma", "zh": "猫之间" },
+    "description": {
+      "ja": "猫ちゃん専用アメニティ完備。キャットタワー・トイレ付きで、にゃんこもリラックス。",
+      "en": "Full cat amenities with cat tower and litter area. A relaxing space for your cat.",
+      "zh": "猫咪专用设施完备。猫爬架与猫砂区，让猫咪也放松。"
+    },
+    "amenities": {
+      "ja": ["猫2頭まで", "キャットタワー", "和室 14畳 + リビング"],
+      "en": ["Up to 2 cats", "Cat tower", "14 tatami + living room"],
+      "zh": ["最多2只猫", "猫爬架", "和室14叠+客厅"]
+    },
+    "priceLabel": { "ja": "1泊2食 お一人様", "en": "1 night, 2 meals", "zh": "1晚2餐/人" },
+    "price": "¥36,000〜",
+    "image": "https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?w=900&q=85"
+  },
+  {
+    "id": "room-04",
+    "badge": { "ja": "スイート", "en": "Suite", "zh": "套房" },
+    "badgeType": "special",
+    "typeEn": "Family Suite",
+    "name": { "ja": "家族の間（かぞくのま）", "en": "Kazoku no Ma", "zh": "家族之间" },
+    "description": {
+      "ja": "ファミリー＋多頭飼い向けの広々スイート。リビング付きで、ペットも人もゆったり。",
+      "en": "Spacious suite for families and multiple pets. Living room for everyone to relax.",
+      "zh": "家庭与多宠适用的宽敞套房。附客厅，宠物与主人都舒适。"
+    },
+    "amenities": {
+      "ja": ["ペット4頭まで", "檜露天風呂", "和室16畳+リビング"],
+      "en": ["Up to 4 pets", "Hinoki open-air bath", "16 tatami + living room"],
+      "zh": ["最多4只宠物", "桧木露天风吕", "和室16叠+客厅"]
+    },
+    "priceLabel": { "ja": "1泊2食 お一人様", "en": "1 night, 2 meals", "zh": "1晚2餐/人" },
+    "price": "¥42,000〜",
+    "image": "https://images.unsplash.com/photo-1608098548499-f2414460882e?w=900&q=85"
+  }
+]

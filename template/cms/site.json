@@ -1,0 +1,26 @@
+{
+  "templateName": "高級旅館テンプレート",
+  "name": { "ja": "湯宿 星野庵", "en": "Yuyado Hoshinoan", "zh": "汤宿 星野庵" },
+  "nameEn": "HOSHINOAN",
+  "url": "https://hoshinoan.example.com/",
+  "telephone": "0578-00-0000",
+  "telephoneRaw": "0578000000",
+  "email": "info@hoshinoan.example.com",
+  "address": {
+    "postalCode": "506-1400",
+    "region": { "ja": "岐阜県", "en": "Gifu", "zh": "岐阜县" },
+    "locality": { "ja": "高山市", "en": "Takayama", "zh": "高山市" },
+    "street": { "ja": "奥飛騨温泉郷新平湯温泉0000", "en": "Shin-Hirayu Onsen, Okuhida", "zh": "奥飞驒温泉乡新平汤温泉0000" }
+  },
+  "geo": { "latitude": "36.2345", "longitude": "137.5678" },
+  "hours": { "ja": "受付 8:00〜21:00", "en": "Reception 8:00–21:00", "zh": "接待 8:00–21:00" },
+  "checkin": "15:00",
+  "checkout": "11:00",
+  "priceRange": "¥¥¥¥",
+  "ogImage": "https://hoshinoan.example.com/og-image.jpg",
+  "heroImage": "https://images.unsplash.com/photo-1595815771621-458b0136310c?w=1800&q=85",
+  "onsenImage": "https://images.unsplash.com/photo-1540555700478-4be289fbecef?w=1200&q=85",
+  "cuisineImage": "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=900&q=85",
+  "mapEmbed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3205.5!2d137.5678!3d36.2345!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzbCsDE0JzA0LjIiTiAxMzfCsDM0JzA0LjEiRQ!5e0!3m2!1sja!2sjp!4v1700000000000!5m2!1sja!2sjp",
+  "mapLink": "https://maps.google.com/?q=Okuhida+Onsen"
+}

@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- ===== SEO ===== -->
+  <title data-i18n="meta.title">【公式】湯宿 星野庵｜全室露天風呂付き客室 ｜ 奥飛騨温泉郷</title>
+  <meta name="description" data-i18n-attr="content:meta.description" content="奥飛騨温泉郷に佇む全室露天風呂付き客室の高級旅館「湯宿 星野庵」。" />
+  <meta name="keywords" data-i18n-attr="content:meta.keywords" content="奥飛騨,温泉旅館,露天風呂付き客室,高級旅館,懐石料理,源泉かけ流し,星野庵" />
+  <link rel="canonical" href="https://hoshinoan.example.com/" />
+
+  <!-- ===== OGP ===== -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" data-i18n-attr="content:og.title" content="湯宿 星野庵｜全室露天風呂付き客室" />
+  <meta property="og:description" data-i18n-attr="content:og.description" content="誰にも邪魔されない、あなただけの湯時間。" />
+  <meta property="og:url" content="https://hoshinoan.example.com/" />
+  <meta property="og:image" content="https://hoshinoan.example.com/og-image.jpg" />
+  <meta property="og:site_name" content="湯宿 星野庵" />
+  <meta property="og:locale" content="ja_JP" id="og-locale" />
+  <meta property="og:locale:alternate" content="en_US" />
+  <meta property="og:locale:alternate" content="zh_CN" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="湯宿 星野庵｜全室露天風呂付き客室" />
+  <meta name="twitter:description" content="誰にも邪魔されない、あなただけの湯時間。" />
+  <meta name="twitter:image" content="https://hoshinoan.example.com/og-image.jpg" />
+
+  <!-- ===== Fonts ===== -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Noto+Sans+JP:wght@300;400;500&family=Noto+Serif+JP:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- ===== Hotel 構造化データ ===== -->
+  <script type="application/ld+json" id="schema-hotel">
+  {
+    "@context": "https://schema.org",
+    "@type": "Hotel",
+    "name": "湯宿 星野庵",
+    "alternateName": "Yuyado Hoshinoan",
+    "description": "奥飛騨温泉郷に佇む全室露天風呂付き客室の高級旅館。源泉かけ流しの温泉と季節の懐石料理でお迎えします。",
+    "url": "https://hoshinoan.example.com/",
+    "telephone": "0578-00-0000",
+    "email": "info@hoshinoan.example.com",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "奥飛騨温泉郷新平湯温泉0000",
+      "addressLocality": "高山市",
+      "addressRegion": "岐阜県",
+      "postalCode": "506-1400",
+      "addressCountry": "JP"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "36.2345",
+      "longitude": "137.5678"
+    },
+    "starRating": {
+      "@type": "Rating",
+      "ratingValue": "5"
+    },
+    "amenityFeature": [
+      { "@type": "LocationFeatureSpecification", "name": "露天風呂付き客室", "value": true },
+      { "@type": "LocationFeatureSpecification", "name": "源泉かけ流し", "value": true },
+      { "@type": "LocationFeatureSpecification", "name": "懐石料理", "value": true },
+      { "@type": "LocationFeatureSpecification", "name": "Wi-Fi", "value": true },
+      { "@type": "LocationFeatureSpecification", "name": "駐車場", "value": true }
+    ],
+    "priceRange": "¥¥¥¥",
+    "checkinTime": "15:00",
+    "checkoutTime": "11:00",
+    "image": [
+      "https://hoshinoan.example.com/images/hero.jpg",
+      "https://hoshinoan.example.com/images/room-01.jpg",
+      "https://hoshinoan.example.com/images/onsen.jpg"
+    ],
+    "sameAs": [
+      "https://www.instagram.com/hoshinoan/",
+      "https://twitter.com/hoshinoan/"
+    ]
+  }
+  </script>
+</head>
+<body>
+
+<!-- ====================== Header ====================== -->
+<header class="site-header" id="top">
+  <div class="header-inner">
+    <a href="#top" class="brand" aria-label="湯宿 星野庵 トップへ">
+      <span class="brand-en">HOSHINOAN</span>
+      <span class="brand-ja" id="site-name-ja">湯宿 星野庵</span>
+    </a>
+
+    <nav class="global-nav" aria-label="グローバルナビゲーション">
+      <a href="#rooms" data-i18n="nav.rooms">客室</a>
+      <a href="#onsen" data-i18n="nav.onsen">温泉</a>
+      <a href="#cuisine" data-i18n="nav.cuisine">お料理</a>
+      <a href="#plans" data-i18n="nav.plans">宿泊プラン</a>
+      <a href="#access" data-i18n="nav.access">アクセス</a>
+      <a href="#faq" data-i18n="nav.faq">FAQ</a>
+    </nav>
+
+    <div class="header-actions">
+      <div class="lang-switch" role="group" aria-label="Language">
+        <button type="button" class="lang-switch__btn is-active" data-lang="ja" aria-pressed="true">JP</button>
+        <button type="button" class="lang-switch__btn" data-lang="en" aria-pressed="false">EN</button>
+        <button type="button" class="lang-switch__btn" data-lang="zh" aria-pressed="false">中文</button>
+      </div>
+      <a href="tel:0578000000" class="btn-tel">
+        <span class="tel-icon" aria-hidden="true">☎</span>
+        <span>0578-00-0000</span>
+      </a>
+      <a href="#reserve" class="btn btn-reserve" data-i18n="nav.reserve">ご予約</a>
+    </div>
+
+    <button class="nav-toggle" aria-label="メニューを開く" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- Mobile Drawer -->
+<div class="nav-drawer" aria-hidden="true">
+  <div class="drawer-bg"></div>
+  <nav class="drawer-panel">
+    <div class="drawer-logo">
+      <span class="brand-en">HOSHINOAN</span>
+      <span class="brand-ja">湯宿 星野庵</span>
+    </div>
+    <div class="lang-switch lang-switch--drawer" role="group" aria-label="Language">
+      <button type="button" class="lang-switch__btn is-active" data-lang="ja">JP</button>
+      <button type="button" class="lang-switch__btn" data-lang="en">EN</button>
+      <button type="button" class="lang-switch__btn" data-lang="zh">中文</button>
+    </div>
+    <a href="#rooms" data-i18n="nav.rooms">客室</a>
+    <a href="#onsen" data-i18n="nav.onsen">温泉</a>
+    <a href="#cuisine" data-i18n="nav.cuisine">お料理</a>
+    <a href="#plans" data-i18n="nav.plans">宿泊プラン</a>
+    <a href="#access" data-i18n="nav.access">アクセス</a>
+    <a href="#faq" data-i18n="nav.faq">FAQ</a>
+    <div class="drawer-cta">
+      <a href="tel:0578000000" class="btn btn-ghost-light">0578-00-0000</a>
+      <a href="#reserve" class="btn btn-reserve" data-i18n="nav.reserve">ご予約</a>
+    </div>
+  </nav>
+</div>
+
+<main>
+<!-- ====================== Hero ====================== -->
+<section class="hero" aria-labelledby="hero-heading">
+  <div class="hero-bg" aria-hidden="true">
+    <div class="hero-photo"></div>
+    <div class="hero-veil"></div>
+    <div class="hero-grain"></div>
+  </div>
+
+  <div class="hero-inner">
+    <div class="hero-meta reveal-up" data-i18n="hero.meta">全室露天風呂付き客室 — 奥飛騨温泉郷</div>
+    <h1 class="hero-title reveal-up" id="hero-heading">
+      <span class="title-line" data-i18n="hero.title1">誰にも邪魔されない、</span>
+      <span class="title-line" data-i18n="hero.title2">あなただけの湯時間。</span>
+    </h1>
+    <p class="hero-sub reveal-up" data-i18n="hero.sub">山の静けさの中で、季節の移ろいをただ感じる。</p>
+    <div class="hero-cta reveal-up">
+      <a href="#reserve" class="btn btn-hero-gold" data-i18n="hero.btn1">オンライン予約</a>
+      <a href="#contact" class="btn btn-hero-ghost" data-i18n="hero.btn2">お問い合わせ</a>
+    </div>
+  </div>
+
+  <div class="hero-scroll" aria-hidden="true">
+    <span class="scroll-label">Scroll</span>
+    <span class="scroll-bar"></span>
+  </div>
+</section>
+
+<!-- ====================== News Bar ====================== -->
+<div class="news-bar" role="complementary" aria-label="お知らせ">
+  <div class="news-bar-inner">
+    <span class="news-label" data-i18n="news.label">お知らせ</span>
+    <div class="news-track" aria-live="off"></div>
+  </div>
+</div>
+
+<!-- ====================== Rooms ====================== -->
+<section class="section rooms" id="rooms" aria-labelledby="rooms-heading">
+  <div class="section-inner">
+    <header class="section-head">
+      <span class="section-label reveal-up" data-i18n="rooms.label">ROOMS</span>
+      <h2 class="section-title reveal-up" id="rooms-heading" data-i18n="rooms.title">全室露天風呂付き客室</h2>
+      <p class="section-lead reveal-up" data-i18n="rooms.lead">山の懐へと続く縁側に、あなただけの湯が待っています。</p>
+    </header>
+
+    <div class="rooms-grid"></div>
+
+    <div class="section-action reveal-up">
+      <a href="#reserve" class="btn btn-outline-moss" data-i18n="rooms.btn">全客室を見る</a>
+    </div>
+  </div>
+</section>
+
+<!-- ====================== Onsen ====================== -->
+<section class="section onsen" id="onsen" aria-labelledby="onsen-heading">
+  <div class="onsen-inner">
+    <div class="onsen-photo" aria-hidden="true">
+      <div class="onsen-photo-bg"></div>
+      <div class="onsen-photo-veil"></div>
+      <span class="photo-hint onsen-hint">温泉・露天風呂写真</span>
+    </div>
+    <div class="onsen-content">
+      <span class="section-label section-label-light reveal-up" data-i18n="onsen.label">OPEN-AIR BATH</span>
+      <h2 class="section-title section-title-light reveal-up" id="onsen-heading" data-i18n="onsen.title">源泉かけ流しの<br />大露天風呂</h2>
+      <div class="onsen-divider reveal-up" aria-hidden="true"></div>
+      <p class="onsen-desc reveal-up" data-i18n="onsen.desc">奥飛騨の山深く湧き出る天然温泉を、源泉かけ流しでご提供しています。</p>
+      <ul class="onsen-features reveal-up">
+        <li><span class="feat-label" data-i18n="onsen.f1.label">泉質</span><span class="feat-value" data-i18n="onsen.f1.value">アルカリ性単純温泉</span></li>
+        <li><span class="feat-label" data-i18n="onsen.f2.label">泉温</span><span class="feat-value" data-i18n="onsen.f2.value">42.3℃</span></li>
+        <li><span class="feat-label" data-i18n="onsen.f3.label">効能</span><span class="feat-value" data-i18n="onsen.f3.value">神経痛・筋肉痛・冷え性・疲労回復</span></li>
+        <li><span class="feat-label" data-i18n="onsen.f4.label">大浴場</span><span class="feat-value" data-i18n="onsen.f4.value">男女別 各2種</span></li>
+        <li><span class="feat-label" data-i18n="onsen.f5.label">貸切風呂</span><span class="feat-value" data-i18n="onsen.f5.value">2室（無料・要予約）</span></li>
+      </ul>
+      <a href="#reserve" class="btn btn-gold-outline reveal-up" data-i18n="onsen.btn">ご予約はこちら</a>
+    </div>
+  </div>
+</section>
+
+<!-- ====================== Cuisine ====================== -->
+<section class="section cuisine" id="cuisine" aria-labelledby="cuisine-heading">
+  <div class="section-inner">
+    <header class="section-head">
+      <span class="section-label reveal-up" data-i18n="cuisine.label">CUISINE</span>
+      <h2 class="section-title reveal-up" id="cuisine-heading" data-i18n="cuisine.title">山の幸が織りなす<br />季節の懐石料理</h2>
+      <p class="section-lead reveal-up" data-i18n="cuisine.lead">地元の農家・漁師と直接つながり、旬の食材だけを使った懐石料理。</p>
+    </header>
+
+    <div class="cuisine-featured reveal-up">
+      <div class="cuisine-main-photo" aria-hidden="true">
+        <div class="cuisine-photo-bg main-dish"></div>
+      </div>
+      <div class="cuisine-main-text">
+        <span class="cuisine-season" data-i18n="cuisine.season">秋の献立より</span>
+        <h3 class="cuisine-dish-title" data-i18n="cuisine.featured.title">飛騨牛の朴葉焼きと松茸の土瓶蒸し</h3>
+        <p data-i18n="cuisine.featured.text">飛騨牛A5ランクの希少部位を、地元の朴葉で香り高く焼き上げました。</p>
+        <blockquote class="chef-note">
+          <p data-i18n="cuisine.chef.quote">「食材が持つ本来の声を、丁寧に引き出すことが私の仕事です」</p>
+          <cite data-i18n="cuisine.chef.name">料理長 山田 一郎</cite>
+        </blockquote>
+      </div>
+    </div>
+
+    <div class="cuisine-grid"></div>
+
+    <div class="section-action reveal-up">
+      <a href="#reserve" class="btn btn-outline-moss" data-i18n="cuisine.btn">お料理の詳細を見る</a>
+    </div>
+  </div>
+</section>
+
+<!-- ====================== Plans ====================== -->
+<section class="section plans" id="plans" aria-labelledby="plans-heading">
+  <div class="section-inner">
+    <header class="section-head">
+      <span class="section-label section-label-light reveal-up" data-i18n="plans.label">PLAN</span>
+      <h2 class="section-title section-title-light reveal-up" id="plans-heading" data-i18n="plans.title">宿泊プラン</h2>
+      <p class="section-lead section-lead-light reveal-up" data-i18n="plans.lead">ご目的やシーンに合わせたプランをご用意しています。</p>
+    </header>
+
+    <div class="plans-grid"></div>
+  </div>
+</section>
+
+<!-- ====================== Testimonials ====================== -->
+<section class="section testimonials" aria-labelledby="testimonials-heading">
+  <div class="section-inner">
+    <header class="section-head">
+      <span class="section-label reveal-up" data-i18n="voice.label">VOICE</span>
+      <h2 class="section-title reveal-up" id="testimonials-heading" data-i18n="voice.title">お客様の声</h2>
+    </header>
+
+    <div class="testimonials-grid"></div>
+  </div>
+</section>
+
+<!-- ====================== Access ====================== -->
+<section class="section access" id="access" aria-labelledby="access-heading">
+  <div class="section-inner">
+    <header class="section-head">
+      <span class="section-label section-label-light reveal-up" data-i18n="access.label">ACCESS</span>
+      <h2 class="section-title section-title-light reveal-up" id="access-heading" data-i18n="access.title">アクセス</h2>
+    </header>
+
+    <div class="access-body">
+      <div class="access-map reveal-up" aria-label="Google マップ">
+        <iframe
+          title="湯宿 星野庵 地図"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3205.5!2d137.5678!3d36.2345!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzbCsDE0JzA0LjIiTiAxMzfCsDM0JzA0LjEiRQ!5e0!3m2!1sja!2sjp!4v1700000000000!5m2!1sja!2sjp"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          allowfullscreen
+          style="width:100%;height:100%;border:0;display:block;"
+        ></iframe>
+      </div>
+
+      <div class="access-info reveal-up">
+        <dl class="access-detail">
+          <div class="access-row">
+            <dt data-i18n="access.addr">住所</dt>
+            <dd id="access-address">〒506-1400<br />岐阜県高山市奥飛騨温泉郷新平湯温泉0000</dd>
+          </div>
+          <div class="access-row">
+            <dt data-i18n="access.tel">電話</dt>
+            <dd><a href="tel:0578000000">0578-00-0000</a><br /><small data-i18n="reserve.phone.hours">受付時間 8:00〜21:00</small></dd>
+          </div>
+          <div class="access-row">
+            <dt data-i18n="access.car">車</dt>
+            <dd data-i18n="access.car.text">松本ICより約60分<br />高山ICより約40分<br />無料駐車場あり（20台）</dd>
+          </div>
+          <div class="access-row">
+            <dt data-i18n="access.train">公共交通</dt>
+            <dd data-i18n="access.train.text">JR高山駅より濃飛バス「新平湯温泉」下車 徒歩3分</dd>
+          </div>
+          <div class="access-row">
+            <dt data-i18n="access.pickup">送迎</dt>
+            <dd data-i18n="access.pickup.text">高山駅より送迎可（要予約 前日17時まで）</dd>
+          </div>
+        </dl>
+        <div class="access-shuttle">
+          <a href="#contact" class="btn btn-outline-light" data-i18n="access.shuttle">送迎をご依頼する</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====================== FAQ ====================== -->
+<section class="section faq" id="faq" aria-labelledby="faq-heading">
+  <div class="section-inner">
+    <header class="section-head">
+      <span class="section-label reveal-up" data-i18n="faq.label">FAQ</span>
+      <h2 class="section-title reveal-up" id="faq-heading" data-i18n="faq.title">よくあるご質問</h2>
+    </header>
+
+    <div class="faq-list">
+      <details class="faq-item reveal-up">
+        <summary class="faq-q" data-i18n="faq.q1">チェックイン・チェックアウトの時間を教えてください。</summary>
+        <div class="faq-a"><p data-i18n="faq.a1">チェックインは15:00〜18:00、チェックアウトは11:00となっております。</p></div>
+      </details>
+      <details class="faq-item reveal-up">
+        <summary class="faq-q" data-i18n="faq.q2">子どもも利用できますか？</summary>
+        <div class="faq-a"><p data-i18n="faq.a2">当館は静寂と非日常をコンセプトとしているため、大人の方のみのご利用をお願いしております。</p></div>
+      </details>
+      <details class="faq-item reveal-up">
+        <summary class="faq-q" data-i18n="faq.q3">一人旅での宿泊は可能ですか？</summary>
+        <div class="faq-a"><p data-i18n="faq.a3">もちろんです。一人旅のお客様も大歓迎です。</p></div>
+      </details>
+      <details class="faq-item reveal-up">
+        <summary class="faq-q" data-i18n="faq.q4">キャンセルポリシーを教えてください。</summary>
+        <div class="faq-a"><p data-i18n="faq.a4">以下のキャンセル料をいただいております。</p></div>
+      </details>
+      <details class="faq-item reveal-up">
+        <summary class="faq-q" data-i18n="faq.q5">アレルギーや食事制限がある場合は？</summary>
+        <div class="faq-a"><p data-i18n="faq.a5">ご予約時にお申し出ください。</p></div>
+      </details>
+      <details class="faq-item reveal-up">
+        <summary class="faq-q" data-i18n="faq.q6">クレジットカードは使えますか？</summary>
+        <div class="faq-a"><p data-i18n="faq.a6">Visa・MasterCard・JCB・American Express・Diners Clubがご利用いただけます。</p></div>
+      </details>
+      <details class="faq-item reveal-up">
+        <summary class="faq-q" data-i18n="faq.q7">貸切風呂の予約方法は？</summary>
+        <div class="faq-a"><p data-i18n="faq.a7">チェックイン後にフロントにてご予約を承ります。</p></div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ====================== Reserve / Contact ====================== -->
+<section class="section reserve" id="reserve" aria-labelledby="reserve-heading">
+  <div class="section-inner">
+    <header class="section-head">
+      <span class="section-label section-label-light reveal-up" data-i18n="reserve.label">RESERVATION</span>
+      <h2 class="section-title section-title-light reveal-up" id="reserve-heading" data-i18n="reserve.title">ご予約・<br class="sp-only" />お問い合わせ</h2>
+      <p class="section-lead section-lead-light reveal-up" data-i18n="reserve.lead">2営業日以内にご返信いたします。</p>
+    </header>
+
+    <div class="reserve-body">
+      <div class="phone-reserve reveal-up">
+        <h3 class="phone-reserve-title" data-i18n="reserve.phone.title">お電話でのご予約</h3>
+        <a href="tel:0578000000" class="phone-number">0578-00-0000</a>
+        <p class="phone-hours" data-i18n="reserve.phone.hours">受付時間 8:00〜21:00（年中無休）</p>
+      </div>
+
+      <form class="contact-form reveal-up" id="contact" action="#" method="post" novalidate>
+        <h3 class="form-title" data-i18n="form.title">オンラインフォーム</h3>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="r-name"><span data-i18n="form.name">お名前</span> <span class="req" data-i18n="form.required">必須</span></label>
+            <input type="text" id="r-name" name="name" autocomplete="name" required />
+          </div>
+          <div class="form-group">
+            <label for="r-name-kana"><span data-i18n="form.nameKana">フリガナ</span> <span class="req" data-i18n="form.required">必須</span></label>
+            <input type="text" id="r-name-kana" name="name_kana" required />
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="r-email"><span data-i18n="form.email">メールアドレス</span> <span class="req" data-i18n="form.required">必須</span></label>
+            <input type="email" id="r-email" name="email" autocomplete="email" required />
+          </div>
+          <div class="form-group">
+            <label for="r-tel"><span data-i18n="form.tel">電話番号</span> <span class="req" data-i18n="form.required">必須</span></label>
+            <input type="tel" id="r-tel" name="tel" autocomplete="tel" required />
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="r-checkin"><span data-i18n="form.checkin">ご宿泊日</span><span class="req" data-i18n="form.required">必須</span></label>
+            <input type="date" id="r-checkin" name="checkin" required />
+          </div>
+          <div class="form-group">
+            <label for="r-nights"><span data-i18n="form.nights">泊数</span> <span class="req" data-i18n="form.required">必須</span></label>
+            <select id="r-nights" name="nights" required>
+              <option value="" data-i18n="form.select">選択</option>
+              <option value="1" data-i18n="form.nights.1">1泊</option>
+              <option value="2" data-i18n="form.nights.2">2泊</option>
+              <option value="3" data-i18n="form.nights.3">3泊</option>
+              <option value="4" data-i18n="form.nights.4">4泊以上</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="r-guests"><span data-i18n="form.guests">人数</span> <span class="req" data-i18n="form.required">必須</span></label>
+            <select id="r-guests" name="guests" required>
+              <option value="" data-i18n="form.select">選択</option>
+              <option value="1" data-i18n="form.guests.1">1名</option>
+              <option value="2" data-i18n="form.guests.2">2名</option>
+              <option value="3" data-i18n="form.guests.3">3名</option>
+              <option value="4" data-i18n="form.guests.4">4名以上</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="r-plan" data-i18n="form.plan">ご希望のプラン</label>
+          <select id="r-plan" name="plan"><option value="" data-i18n="form.select">選択</option></select>
+        </div>
+
+        <div class="form-group">
+          <label for="r-room" data-i18n="form.room">ご希望のお部屋</label>
+          <select id="r-room" name="room"><option value="" data-i18n="form.select">選択</option></select>
+        </div>
+
+        <div class="form-group">
+          <label for="r-message" data-i18n="form.message">メッセージ・ご要望</label>
+          <textarea id="r-message" name="message" rows="5" data-i18n-attr="placeholder:form.message.placeholder" placeholder="記念日・食物アレルギー・送迎ご希望など"></textarea>
+        </div>
+
+        <div class="form-privacy">
+          <label class="checkbox-label">
+            <input type="checkbox" name="privacy" required />
+            <span><a href="/privacy" target="_blank" rel="noopener" data-i18n="form.privacy">プライバシーポリシー</a><span data-i18n="form.privacy.agree">に同意する</span> <span class="req" data-i18n="form.required">必須</span></span>
+          </label>
+        </div>
+
+        <button type="submit" class="btn btn-submit" data-i18n="form.submit">予約リクエストを送信する</button>
+        <p class="form-note" data-i18n="form.note">※ このフォームは予約リクエストです。</p>
+      </form>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- ====================== Footer ====================== -->
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <span class="brand-en footer-logo-en">HOSHINOAN</span>
+        <span class="brand-ja footer-logo-ja">湯宿 星野庵</span>
+        <p class="footer-addr" id="footer-address">〒506-1400 岐阜県高山市奥飛騨温泉郷新平湯温泉0000<br />Tel: <a href="tel:0578000000">0578-00-0000</a></p>
+      </div>
+      <nav class="footer-nav" aria-label="フッターナビゲーション">
+        <div class="footer-nav-col">
+          <span class="footer-nav-head" data-i18n="footer.about">宿について</span>
+          <a href="#rooms" data-i18n="footer.about.rooms">客室</a>
+          <a href="#onsen" data-i18n="footer.about.onsen">温泉</a>
+          <a href="#cuisine" data-i18n="footer.about.cuisine">お料理</a>
+        </div>
+        <div class="footer-nav-col">
+          <span class="footer-nav-head" data-i18n="footer.guide">ご利用案内</span>
+          <a href="#plans" data-i18n="footer.guide.plans">宿泊プラン</a>
+          <a href="#access" data-i18n="footer.guide.access">アクセス</a>
+          <a href="#faq" data-i18n="footer.guide.faq">FAQ</a>
+        </div>
+        <div class="footer-nav-col">
+          <span class="footer-nav-head" data-i18n="footer.book">ご予約</span>
+          <a href="#reserve" data-i18n="footer.book.online">オンライン予約</a>
+          <a href="tel:0578000000" data-i18n="footer.book.phone">お電話でのご予約</a>
+          <a href="#contact" data-i18n="footer.book.contact">お問い合わせ</a>
+        </div>
+      </nav>
+      <div class="footer-sns">
+        <span class="footer-sns-label">Follow us</span>
+        <div class="footer-sns-links">
+          <a href="#" aria-label="Instagram" target="_blank" rel="noopener">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+          </a>
+          <a href="#" aria-label="X (Twitter)" target="_blank" rel="noopener">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.73-8.835L1.254 2.25H8.08l4.259 5.63L18.244 2.25zm-1.161 17.52h1.833L7.084 4.126H5.117L17.083 19.77z"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <nav class="footer-legal" aria-label="法的情報ナビゲーション">
+        <a href="/privacy" data-i18n="footer.privacy">プライバシーポリシー</a>
+        <a href="/terms" data-i18n="footer.terms">利用規約</a>
+        <a href="/sitemap" data-i18n="footer.sitemap">サイトマップ</a>
+      </nav>
+      <p class="footer-copy" data-i18n="footer.copy">© 2025 湯宿 星野庵 All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- Scroll to Top -->
+<button class="scroll-top" aria-label="ページ先頭へ戻る" id="scrollTop">
+  <span aria-hidden="true">↑</span>
+</button>
+
+<script src="script.js" type="module"></script>
+</body>
+</html>

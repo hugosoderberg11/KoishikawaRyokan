@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title data-i18n="meta.title">【公式】温泉宿 わんにゃんの里｜ペット同伴可能な温泉旅館 ｜ 伊豆高原</title>
+  <meta name="description" data-i18n-attr="content:meta.description" content="静岡・伊豆高原のペット同伴可能な温泉旅館「温泉宿 わんにゃんの里」。愛犬・愛猫と客室露天風呂、専用ドッグラン、充実のペットアメニティで家族みんなの温泉旅行を。" />
+  <meta name="keywords" data-i18n-attr="content:meta.keywords" content="ペット同伴,温泉旅館,伊豆高原,愛犬,愛猫,ドッグラン,ペット可,ファミリー" />
+  <link rel="canonical" href="https://wannyan.example.com/" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" data-i18n-attr="content:og.title" content="温泉宿 わんにゃんの里｜愛犬・愛猫と泊まれる温泉旅館" />
+  <meta property="og:description" data-i18n-attr="content:og.description" content="ペットと一緒に、源泉温泉を。全室ペット可・ドッグラン完備の暖かい和の宿。" />
+  <meta property="og:url" content="https://wannyan.example.com/" />
+  <meta property="og:image" content="https://wannyan.example.com/images/og-image.jpg" />
+  <meta property="og:site_name" content="温泉宿 わんにゃんの里" />
+  <meta property="og:locale" content="ja_JP" id="og-locale" />
+  <meta property="og:locale:alternate" content="en_US" />
+  <meta property="og:locale:alternate" content="zh_CN" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="温泉宿 わんにゃんの里｜ペット同伴温泉旅館" />
+  <meta name="twitter:description" content="愛犬・愛猫と泊まれる温泉旅館。伊豆高原。" />
+  <meta name="twitter:image" content="https://wannyan.example.com/images/og-image.jpg" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;500;700&family=Noto+Sans+JP:wght@300;400;500;700&family=Noto+Serif+JP:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
+
+  <script type="application/ld+json" id="schema-hotel">
+  {
+    "@context": "https://schema.org",
+    "@type": "Hotel",
+    "name": "温泉宿 わんにゃんの里",
+    "alternateName": "WANNyan no Sato Pet Friendly Ryokan",
+    "description": "静岡・伊豆高原のペット同伴可能な温泉旅館。愛犬・愛猫と客室露天風呂、専用ドッグラン、充実のペットアメニティ。",
+    "url": "https://wannyan.example.com/",
+    "telephone": "0557-00-0000",
+    "email": "info@wannyan.example.com",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "八幡野1234-5",
+      "addressLocality": "伊東市",
+      "addressRegion": "静岡県",
+      "postalCode": "413-0232",
+      "addressCountry": "JP"
+    },
+    "geo": { "@type": "GeoCoordinates", "latitude": "34.9032", "longitude": "139.0721" },
+    "priceRange": "¥¥¥",
+    "checkinTime": "15:00",
+    "checkoutTime": "11:00",
+    "petsAllowed": true,
+    "amenityFeature": [
+      { "@type": "LocationFeatureSpecification", "name": "ペット同伴可", "value": true },
+      { "@type": "LocationFeatureSpecification", "name": "ドッグラン", "value": true },
+      { "@type": "LocationFeatureSpecification", "name": "客室露天風呂", "value": true },
+      { "@type": "LocationFeatureSpecification", "name": "ペット用アメニティ", "value": true },
+      { "@type": "LocationFeatureSpecification", "name": "源泉かけ流し", "value": true },
+      { "@type": "LocationFeatureSpecification", "name": "駐車場", "value": true }
+    ],
+    "image": [
+      "https://wannyan.example.com/images/hero.jpg",
+      "https://wannyan.example.com/images/dogrun.jpg"
+    ]
+  }
+  </script>
+</head>
+<body>
+
+<header class="header" id="top">
+  <div class="header__inner">
+    <a href="#top" class="logo">
+      <span class="logo__icon" aria-hidden="true">🐾</span>
+      <span class="logo__text">
+        <span class="logo__en">WANNyan no Sato</span>
+        <span class="logo__ja" id="site-name-ja">温泉宿 わんにゃんの里</span>
+      </span>
+    </a>
+    <nav class="nav" aria-label="メインナビゲーション">
+      <a href="#rooms" data-i18n="nav.rooms">客室</a>
+      <a href="#onsen" data-i18n="nav.onsen">温泉</a>
+      <a href="#pet" data-i18n="nav.pet">ペット設備</a>
+      <a href="#dogrun" data-i18n="nav.dogrun">ドッグラン</a>
+      <a href="#cuisine" data-i18n="nav.cuisine">お料理</a>
+      <a href="#plans" data-i18n="nav.plans">宿泊プラン</a>
+      <a href="#faq" data-i18n="nav.faq">FAQ</a>
+      <a href="#access" data-i18n="nav.access">アクセス</a>
+    </nav>
+    <div class="header__actions">
+      <div class="lang-switch" role="group" aria-label="Language">
+        <button type="button" class="lang-switch__btn is-active" data-lang="ja" aria-pressed="true">JP</button>
+        <button type="button" class="lang-switch__btn" data-lang="en" aria-pressed="false">EN</button>
+        <button type="button" class="lang-switch__btn" data-lang="zh" aria-pressed="false">中文</button>
+      </div>
+      <a href="tel:0557000000" class="header__tel">0557-00-0000</a>
+      <a href="#reserve" class="btn btn--primary" data-i18n="nav.reserve">ご予約</a>
+    </div>
+    <button class="menu-btn" aria-label="メニュー" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<div class="drawer" aria-hidden="true">
+  <div class="drawer__overlay"></div>
+  <nav class="drawer__panel">
+    <p class="drawer__logo" id="drawer-site-name">温泉宿 わんにゃんの里</p>
+    <div class="lang-switch lang-switch--drawer" role="group" aria-label="Language">
+      <button type="button" class="lang-switch__btn is-active" data-lang="ja">JP</button>
+      <button type="button" class="lang-switch__btn" data-lang="en">EN</button>
+      <button type="button" class="lang-switch__btn" data-lang="zh">中文</button>
+    </div>
+    <a href="#rooms" data-i18n="nav.rooms">客室</a>
+    <a href="#onsen" data-i18n="nav.onsen">温泉</a>
+    <a href="#pet" data-i18n="nav.pet">ペット設備</a>
+    <a href="#dogrun" data-i18n="nav.dogrun">ドッグラン</a>
+    <a href="#cuisine" data-i18n="nav.cuisine">お料理</a>
+    <a href="#plans" data-i18n="nav.plans">宿泊プラン</a>
+    <a href="#faq" data-i18n="nav.faq">FAQ</a>
+    <a href="#access" data-i18n="nav.access">アクセス</a>
+    <a href="#reserve" class="btn btn--primary" data-i18n="nav.reserve">ご予約</a>
+  </nav>
+</div>
+
+<main>
+  <!-- ===== Hero ===== -->
+  <section class="hero">
+    <div class="hero__visual">
+      <img src="https://images.unsplash.com/photo-1608098548499-f2414460882e?w=1800&q=85" alt="愛犬と温泉旅館" width="1600" height="900" class="hero__img" />
+      <div class="hero__overlay"></div>
+    </div>
+    <div class="hero__content">
+      <span class="hero__badge" data-i18n="hero.badge">🐾 ペット同伴歓迎 — 犬・猫 OK</span>
+      <h1 class="hero__title" data-i18n="hero.title">愛犬・愛猫と、<br />暖かい温泉旅行。</h1>
+      <p class="hero__lead" data-i18n="hero.lead">伊豆高原の源泉温泉で、大切な家族みんながリラックス。</p>
+      <div class="hero__btns">
+        <a href="#reserve" class="btn btn--primary btn--lg" data-i18n="hero.btn1">空室を確認する</a>
+        <a href="#pet" class="btn btn--outline btn--lg" data-i18n="hero.btn2">ペット設備を見る</a>
+      </div>
+    </div>
+    <div class="hero__pets" aria-hidden="true">
+      <img src="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?w=400&q=80" alt="" class="hero__pet hero__pet--cat" width="120" height="120" />
+      <img src="https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?w=400&q=80" alt="" class="hero__pet hero__pet--dog" width="120" height="120" />
+    </div>
+  </section>
+
+  <!-- ===== News (CMS) ===== -->
+  <aside class="news" aria-label="お知らせ">
+    <div class="news__inner">
+      <span class="news__label" data-i18n="news.label">NEWS</span>
+      <div class="news__track" id="cms-news"></div>
+    </div>
+  </aside>
+
+  <!-- ===== Intro ===== -->
+  <section class="intro">
+    <div class="container">
+      <div class="intro__grid">
+        <div class="intro__text fade-in">
+          <span class="section-tag" data-i18n="intro.tag">ABOUT</span>
+          <h2 class="section-title" data-i18n="intro.title">家族全員で、<br />のんびり温泉旅。</h2>
+          <p data-i18n="intro.text">わんにゃんの里は、愛犬・愛猫と一緒に泊まれる伊豆高原の温泉旅館です。</p>
+        </div>
+        <div class="intro__photos fade-in">
+          <img src="https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=700&q=85" alt="ペットと過ごす客室" width="600" height="400" class="intro__photo intro__photo--main" />
+          <img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?w=500&q=85" alt="温泉" width="400" height="300" class="intro__photo intro__photo--sub" />
+        </div>
+      </div>
+      <ul class="intro__features fade-in">
+        <li><span class="intro__feat-icon">🏠</span><span data-i18n="intro.feat1">全室ペット同伴可</span></li>
+        <li><span class="intro__feat-icon">♨</span><span data-i18n="intro.feat2">客室露天風呂</span></li>
+        <li><span class="intro__feat-icon">🌿</span><span data-i18n="intro.feat3">専用ドッグラン</span></li>
+        <li><span class="intro__feat-icon">🎁</span><span data-i18n="intro.feat4">ペットアメニティ無料</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ===== Rooms (CMS) ===== -->
+  <section class="rooms section" id="rooms">
+    <div class="container">
+      <header class="section-head fade-in">
+        <span class="section-tag" data-i18n="rooms.tag">ROOMS</span>
+        <h2 class="section-title" data-i18n="rooms.title">ペットと泊まれる客室</h2>
+        <p class="section-lead" data-i18n="rooms.lead">愛犬・愛猫と一緒に、ゆったり過ごせるお部屋をご用意しています。</p>
+      </header>
+      <div class="rooms__grid" id="cms-rooms"></div>
+    </div>
+  </section>
+
+  <!-- ===== Onsen ===== -->
+  <section class="onsen section" id="onsen">
+    <div class="onsen__layout">
+      <div class="onsen__visual fade-in">
+        <img src="https://images.unsplash.com/photo-1595815771621-458b0136310c?w=1100&q=85" alt="露天風呂" width="1000" height="700" />
+      </div>
+      <div class="onsen__body fade-in">
+        <span class="section-tag section-tag--light" data-i18n="onsen.tag">ONSEN</span>
+        <h2 class="section-title section-title--light" data-i18n="onsen.title">源泉かけ流しの温泉</h2>
+        <p data-i18n="onsen.text">伊豆高原の地下から湧き出る天然温泉。</p>
+        <dl class="onsen__facts">
+          <div><dt data-i18n="onsen.f1.label">泉質</dt><dd data-i18n="onsen.f1.value">弱アルカリ性単純温泉</dd></div>
+          <div><dt data-i18n="onsen.f2.label">泉温</dt><dd data-i18n="onsen.f2.value">41.5℃（源泉かけ流し）</dd></div>
+          <div><dt data-i18n="onsen.f3.label">客室風呂</dt><dd data-i18n="onsen.f3.value">全室 檜の露天風呂（ペット同伴可）</dd></div>
+          <div><dt data-i18n="onsen.f4.label">大浴場</dt><dd data-i18n="onsen.f4.value">男女別（ペット同伴不可）</dd></div>
+          <div><dt data-i18n="onsen.f5.label">貸切風呂</dt><dd data-i18n="onsen.f5.value">2室（小型犬同伴可・無料）</dd></div>
+        </dl>
+        <a href="#reserve" class="btn btn--warm" data-i18n="onsen.btn">ご予約はこちら</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Pet Facilities ===== -->
+  <section class="pet section" id="pet">
+    <div class="container">
+      <header class="section-head fade-in">
+        <span class="section-tag" data-i18n="pet.tag">PET FACILITIES</span>
+        <h2 class="section-title" data-i18n="pet.title">ペット向け設備</h2>
+        <p class="section-lead" data-i18n="pet.lead">愛犬・愛猫が快適に過ごせる、充実の設備とサービス。</p>
+      </header>
+      <div class="pet__grid">
+        <article class="pet-card fade-in">
+          <img src="https://images.unsplash.com/photo-1583337130417-3346a1be7dee?w=600&q=85" alt="ペット用アメニティ" width="500" height="320" />
+          <div class="pet-card__body">
+            <h3 data-i18n="pet.c1.title">客室アメニティ</h3>
+            <ul>
+              <li data-i18n="pet.c1.i1">ペット用ベッド・ブランケット</li>
+              <li data-i18n="pet.c1.i2">フードボウル・給水器</li>
+              <li data-i18n="pet.c1.i3">消臭・除菌スプレー</li>
+              <li data-i18n="pet.c1.i4">キャットタワー（貸出）</li>
+              <li data-i18n="pet.c1.i5">ペット用サニタリーシート</li>
+            </ul>
+          </div>
+        </article>
+        <article class="pet-card fade-in">
+          <img src="https://images.unsplash.com/photo-1601758228041-f3b2795255f1?w=600&q=85" alt="ペットと過ごす客室" width="500" height="320" />
+          <div class="pet-card__body">
+            <h3 data-i18n="pet.c2.title">共用・サービス</h3>
+            <ul>
+              <li data-i18n="pet.c2.i1">ペット足洗い場（玄関・客室前）</li>
+              <li data-i18n="pet.c2.i2">ペット用散歩コース案内</li>
+              <li data-i18n="pet.c2.i3">特製ペットごはん（別注 ¥800〜）</li>
+              <li data-i18n="pet.c2.i4">ペットシッター手配（要予約）</li>
+              <li data-i18n="pet.c2.i5">近隣動物病院のご案内</li>
+            </ul>
+          </div>
+        </article>
+        <article class="pet-card fade-in">
+          <img src="https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?w=600&q=85" alt="愛犬" width="500" height="320" />
+          <div class="pet-card__body">
+            <h3 data-i18n="pet.c3.title">ご利用条件</h3>
+            <ul>
+              <li data-i18n="pet.c3.i1">ワクチン接種済み（狂犬病・混合）</li>
+              <li data-i18n="pet.c3.i2">トイレトレーニング済み</li>
+              <li data-i18n="pet.c3.i3">犬：小型〜大型（25kgまで）</li>
+              <li data-i18n="pet.c3.i4">猫：キャリーケース持参</li>
+              <li data-i18n="pet.c3.i5">宿泊料：1頭 ¥2,500/泊（アメニティ込）</li>
+            </ul>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Dog Run ===== -->
+  <section class="dogrun section" id="dogrun">
+    <div class="dogrun__inner">
+      <div class="dogrun__visual fade-in">
+        <img src="https://images.unsplash.com/photo-1558787533-0475f0cfea55?w=1400&q=85" alt="ドッグランで遊ぶ愛犬" width="1200" height="700" />
+        <span class="dogrun__size">約 200㎡</span>
+      </div>
+      <div class="dogrun__content fade-in">
+        <span class="section-tag" data-i18n="dogrun.tag">DOG RUN</span>
+        <h2 class="section-title" data-i18n="dogrun.title">専用ドッグラン</h2>
+        <p data-i18n="dogrun.text">芝生と砂利の200㎡ドッグラン。</p>
+        <ul class="dogrun__list">
+          <li data-i18n="dogrun.i1">🌱 天然芝エリア</li>
+          <li data-i18n="dogrun.i2">💧 水遊び・足洗い場</li>
+          <li data-i18n="dogrun.i3">🏕 日除けテント</li>
+          <li data-i18n="dogrun.i4">🔒 貸切利用可（記念日プランに含む）</li>
+        </ul>
+        <p class="dogrun__note" data-i18n="dogrun.note">利用時間 7:00〜20:00 ｜ 宿泊者無料</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Cuisine ===== -->
+  <section class="cuisine section" id="cuisine">
+    <div class="container">
+      <header class="section-head fade-in">
+        <span class="section-tag" data-i18n="cuisine.tag">CUISINE</span>
+        <h2 class="section-title" data-i18n="cuisine.title">伊豆の恵みを味わうお料理</h2>
+        <p class="section-lead" data-i18n="cuisine.lead">地元の食材を使った季節の会席。ペット用ごはんもご用意できます。</p>
+      </header>
+      <div class="cuisine__featured fade-in">
+        <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=900&q=85" alt="季節の会席料理" width="800" height="500" />
+        <div class="cuisine__text">
+          <span class="cuisine__season" data-i18n="cuisine.season">春の献立</span>
+          <h3 data-i18n="cuisine.featured.title">金目鯛の煮付けと筍の土瓶蒸し</h3>
+          <p data-i18n="cuisine.featured.text">伊豆近海の金目鯛と、地元の筍を使った春の会席。</p>
+        </div>
+      </div>
+      <div class="cuisine__grid fade-in">
+        <article class="cuisine-item">
+          <img src="https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?w=500&q=85" alt="前菜" width="400" height="280" />
+          <h4 data-i18n="cuisine.item1">伊豆野菜の前菜</h4>
+        </article>
+        <article class="cuisine-item">
+          <img src="https://images.unsplash.com/photo-1569718212665-3a8278d5f624?w=500&q=85" alt="椀物" width="400" height="280" />
+          <h4 data-i18n="cuisine.item2">潮汁仕立ての椀</h4>
+        </article>
+        <article class="cuisine-item">
+          <img src="https://images.unsplash.com/photo-1583337130417-3346a1be7dee?w=500&q=85" alt="ペットごはん" width="400" height="280" />
+          <h4 data-i18n="cuisine.item3">特製ペットごはん</h4>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Plans (CMS) ===== -->
+  <section class="plans section" id="plans">
+    <div class="container">
+      <header class="section-head fade-in">
+        <span class="section-tag section-tag--light" data-i18n="plans.tag">PLANS</span>
+        <h2 class="section-title section-title--light" data-i18n="plans.title">宿泊プラン</h2>
+        <p class="section-lead section-lead--light" data-i18n="plans.lead">ペットと一緒に楽しめるプランをご用意しています。</p>
+      </header>
+      <div class="plans__grid" id="cms-plans"></div>
+    </div>
+  </section>
+
+  <!-- ===== FAQ ===== -->
+  <section class="faq section" id="faq">
+    <div class="container container--narrow">
+      <header class="section-head fade-in">
+        <span class="section-tag" data-i18n="faq.tag">FAQ</span>
+        <h2 class="section-title" data-i18n="faq.title">よくあるご質問</h2>
+      </header>
+      <div class="faq__list fade-in">
+        <details class="faq__item">
+          <summary data-i18n="faq.q1">どんなペットが同伴できますか？</summary>
+          <p data-i18n="faq.a1">犬（25kgまで）と猫が同伴可能です。</p>
+        </details>
+        <details class="faq__item">
+          <summary data-i18n="faq.q2">ペットの宿泊料金は？</summary>
+          <p data-i18n="faq.a2">1頭 ¥2,500/泊（税込・アメニティ込）。</p>
+        </details>
+        <details class="faq__item">
+          <summary data-i18n="faq.q3">大浴場にペットを連れて行けますか？</summary>
+          <p data-i18n="faq.a3">大浴場への同伴はご遠慮ください。</p>
+        </details>
+        <details class="faq__item">
+          <summary data-i18n="faq.q4">子供連れでも利用できますか？</summary>
+          <p data-i18n="faq.a4">はい、ファミリープランでお子様連れ＋ペット同伴のご家族も大歓迎です。</p>
+        </details>
+        <details class="faq__item">
+          <summary data-i18n="faq.q5">キャンセルポリシーは？</summary>
+          <p data-i18n="faq.a5">7日前まで無料、6〜3日前30%、2日前50%、前日80%、当日100%。</p>
+        </details>
+        <details class="faq__item">
+          <summary data-i18n="faq.q6">チェックイン時に必要なものは？</summary>
+          <p data-i18n="faq.a6">ペットの狂犬病・混合ワクチン接種証明書をご持参ください。</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Access & Reserve ===== -->
+  <section class="access section" id="access">
+    <div class="container">
+      <header class="section-head fade-in">
+        <span class="section-tag" data-i18n="access.tag">ACCESS</span>
+        <h2 class="section-title" data-i18n="access.title">アクセス</h2>
+      </header>
+      <div class="access__grid fade-in">
+        <div class="access__map">
+          <iframe
+            title="温泉宿 わんにゃんの里 地図"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3248.5!2d139.0721!3d34.9032!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzTCsDU0JzExLjUiEIDEzOcKwMDQnMTkuNiJF!5e0!3m2!1sja!2sjp!4v1700000000000!5m2!1sja!2sjp"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            allowfullscreen
+          ></iframe>
+        </div>
+        <dl class="access__info">
+          <div><dt data-i18n="access.addr">住所</dt><dd>〒413-0232 静岡県伊東市八幡野1234-5</dd></div>
+          <div><dt data-i18n="access.tel">電話</dt><dd><a href="tel:0557000000">0557-00-0000</a>（8:00〜21:00）</dd></div>
+          <div><dt data-i18n="access.car">車</dt><dd data-i18n="access.car.text">東名厚木ICより約90分</dd></div>
+          <div><dt data-i18n="access.train">電車</dt><dd data-i18n="access.train.text">JR伊東駅→伊豆高原駅 約15分</dd></div>
+          <div><dt data-i18n="access.pickup">送迎</dt><dd data-i18n="access.pickup.text">伊豆高原駅より送迎可</dd></div>
+        </dl>
+      </div>
+    </div>
+  </section>
+
+  <section class="reserve section" id="reserve">
+    <div class="container">
+      <header class="section-head fade-in">
+        <span class="section-tag section-tag--light" data-i18n="reserve.tag">RESERVATION</span>
+        <h2 class="section-title section-title--light" data-i18n="reserve.title">ご予約・お問い合わせ</h2>
+        <p class="section-lead section-lead--light" data-i18n="reserve.lead">2営業日以内にご返信いたします。</p>
+      </header>
+      <div class="reserve__layout fade-in">
+        <div class="reserve__phone">
+          <h3 data-i18n="reserve.phone.title">お電話でのご予約</h3>
+          <a href="tel:0557000000" class="reserve__tel">0557-00-0000</a>
+          <p data-i18n="reserve.phone.hours">受付 8:00〜21:00（年中無休）</p>
+          <p class="reserve__hint" data-i18n="reserve.phone.hint">※ ペットの種類・頭数・体重をお伝えください</p>
+        </div>
+        <form class="form" id="contact" novalidate>
+          <h3 class="form__title" data-i18n="form.title">オンラインフォーム</h3>
+          <div class="form__row">
+            <div class="form__group">
+              <label for="name"><span data-i18n="form.name">お名前</span> <span class="req" data-i18n="form.required">必須</span></label>
+              <input type="text" id="name" name="name" required autocomplete="name" />
+            </div>
+            <div class="form__group">
+              <label for="email"><span data-i18n="form.email">メール</span> <span class="req" data-i18n="form.required">必須</span></label>
+              <input type="email" id="email" name="email" required autocomplete="email" />
+            </div>
+          </div>
+          <div class="form__row">
+            <div class="form__group">
+              <label for="tel"><span data-i18n="form.tel">電話番号</span> <span class="req" data-i18n="form.required">必須</span></label>
+              <input type="tel" id="tel" name="tel" required autocomplete="tel" />
+            </div>
+            <div class="form__group">
+              <label for="checkin"><span data-i18n="form.checkin">宿泊日</span> <span class="req" data-i18n="form.required">必須</span></label>
+              <input type="date" id="checkin" name="checkin" required />
+            </div>
+          </div>
+          <fieldset class="form__pet">
+            <legend><span data-i18n="form.pet.legend">ペット情報</span> <span class="req" data-i18n="form.required">必須</span></legend>
+            <div class="form__row">
+              <div class="form__group">
+                <label for="pet-type" data-i18n="form.pet.type">種類</label>
+                <select id="pet-type" name="pet_type" required>
+                  <option value="" data-i18n="form.select">選択</option>
+                  <option value="dog" data-i18n="form.pet.type.dog">犬</option>
+                  <option value="cat" data-i18n="form.pet.type.cat">猫</option>
+                  <option value="other" data-i18n="form.pet.type.other">その他</option>
+                </select>
+              </div>
+              <div class="form__group">
+                <label for="pet-count" data-i18n="form.pet.count">頭数</label>
+                <select id="pet-count" name="pet_count" required>
+                  <option value="" data-i18n="form.select">選択</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                </select>
+              </div>
+            </div>
+            <div class="form__group">
+              <label for="pet-detail" data-i18n="form.pet.detail">ペットの名前・備考</label>
+              <input type="text" id="pet-detail" name="pet_detail" data-i18n-attr="placeholder:form.pet.detail.placeholder" placeholder="例：ポチ（トイプードル・3kg）" />
+            </div>
+          </fieldset>
+          <div class="form__row">
+            <div class="form__group">
+              <label for="plan" data-i18n="form.plan">ご希望プラン</label>
+              <select id="plan" name="plan"><option value="" data-i18n="form.select">選択</option></select>
+            </div>
+            <div class="form__group">
+              <label for="room" data-i18n="form.room">ご希望客室</label>
+              <select id="room" name="room"><option value="" data-i18n="form.select">選択</option></select>
+            </div>
+          </div>
+          <div class="form__group">
+            <label for="message" data-i18n="form.message">メッセージ</label>
+            <textarea id="message" name="message" rows="4" data-i18n-attr="placeholder:form.message.placeholder" placeholder="アレルギー・記念日・送迎希望など"></textarea>
+          </div>
+          <label class="form__check">
+            <input type="checkbox" name="privacy" required />
+            <span><a href="/privacy" target="_blank" rel="noopener" data-i18n="form.privacy">プライバシーポリシー</a><span data-i18n="form.privacy.agree">に同意する</span></span>
+          </label>
+          <button type="submit" class="btn btn--primary btn--block" data-i18n="form.submit">予約リクエストを送信</button>
+          <p class="form__note" data-i18n="form.note">※ 空室確認後、担当者よりご連絡いたします。</p>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container footer__inner">
+    <div class="footer__brand">
+      <span class="footer__logo" id="footer-site-name">🐾 温泉宿 わんにゃんの里</span>
+      <p>〒413-0232 静岡県伊東市八幡野1234-5</p>
+    </div>
+    <nav class="footer__nav">
+      <a href="#rooms" data-i18n="nav.rooms">客室</a>
+      <a href="#onsen" data-i18n="nav.onsen">温泉</a>
+      <a href="#pet" data-i18n="nav.pet">ペット設備</a>
+      <a href="#dogrun" data-i18n="nav.dogrun">ドッグラン</a>
+      <a href="#plans" data-i18n="nav.plans">宿泊プラン</a>
+      <a href="#reserve" data-i18n="nav.reserve">ご予約</a>
+    </nav>
+    <p class="footer__copy" data-i18n="footer.copy">© 2026 温泉宿 わんにゃんの里 ｜ ペット同伴温泉旅館テンプレート</p>
+  </div>
+</footer>
+
+<button class="totop" id="totop" aria-label="ページトップへ">↑</button>
+
+<script src="script.js" type="module"></script>
+</body>
+</html>

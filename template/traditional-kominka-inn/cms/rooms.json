@@ -1,0 +1,62 @@
+[
+  {
+    "id": "room-01",
+    "badge": { "ja": "一棟貸し", "en": "Entire House", "zh": "整栋出租" },
+    "badgeType": "entire",
+    "typeEn": "Kominka Suite",
+    "name": { "ja": "紬の間", "en": "Tsumugi no Ma", "zh": "紬之间" },
+    "description": {
+      "ja": "築100年の古民家をそのままお貸しする一棟貸し。囲炉裏のある土間、畳8畳の寝室、茶室付き。最大6名まで。",
+      "en": "Rent the entire century-old kominka. Earthen-floor entry with irori, 8-tatami bedroom, and attached tea room. Up to 6 guests.",
+      "zh": "整栋出租百年古民家。土间设围炉，8叠榻榻米卧室，附茶室。最多6人。"
+    },
+    "amenities": {
+      "ja": ["一棟貸し", "囲炉裏", "畳8畳", "茶室"],
+      "en": ["Entire house", "Irori hearth", "8 tatami", "Tea room"],
+      "zh": ["整栋出租", "围炉", "8叠榻榻米", "茶室"]
+    },
+    "priceLabel": { "ja": "1泊（2名様〜）", "en": "Per night (2+ guests)", "zh": "1晚（2人起）" },
+    "price": "¥68,000〜",
+    "image": "https://images.unsplash.com/photo-1528360980937-0dd9998a9ef2?w=800&q=80"
+  },
+  {
+    "id": "room-02",
+    "badge": { "ja": "人気", "en": "Popular", "zh": "人气" },
+    "badgeType": "popular",
+    "typeEn": "Garden View",
+    "name": { "ja": "庭の離", "en": "Niwa no Hanare", "zh": "庭之离" },
+    "description": {
+      "ja": "日本庭園を望む離れ。障子越しに庭の緑を感じながら、畳10畳の静かな空間でお過ごしいただけます。",
+      "en": "A detached room overlooking the Japanese garden. Enjoy the greenery through shoji screens in a serene 10-tatami space.",
+      "zh": "眺望日式庭园的离屋。透过障子感受庭园绿意，在10叠榻榻米的静空间中休憩。"
+    },
+    "amenities": {
+      "ja": ["庭園眺望", "障子", "畳10畳", "檜風呂"],
+      "en": ["Garden view", "Shoji screens", "10 tatami", "Hinoki bath"],
+      "zh": ["庭园景观", "障子", "10叠榻榻米", "桧木浴"]
+    },
+    "priceLabel": { "ja": "1泊2食 お一人様", "en": "1 night, 2 meals", "zh": "1晚2餐/人" },
+    "price": "¥42,000〜",
+    "image": "https://images.unsplash.com/photo-1593693397697-46b5d0b7f1d4?w=800&q=80"
+  },
+  {
+    "id": "room-03",
+    "badge": { "ja": "町家", "en": "Machiya", "zh": "町家" },
+    "badgeType": "machiya",
+    "typeEn": "Machiya Room",
+    "name": { "ja": "町家の二階", "en": "Machiya Second Floor", "zh": "町家二楼" },
+    "description": {
+      "ja": "京町家の二階を活かした客室。梁の見える吹き抜けと、古材の床板が味わい深い空間です。",
+      "en": "Guest room on the second floor of a Kyoto machiya. Exposed beams and aged floorboards create a deeply atmospheric space.",
+      "zh": "活用京町家二楼的客房。可见梁的双层挑高，古材地板营造深厚韵味。"
+    },
+    "amenities": {
+      "ja": ["吹き抜け", "古材", "畳6畳", "Wi-Fi"],
+      "en": ["Double-height", "Reclaimed wood", "6 tatami", "Wi-Fi"],
+      "zh": ["挑高", "古材", "6叠榻榻米", "Wi-Fi"]
+    },
+    "priceLabel": { "ja": "1泊2食 お一人様", "en": "1 night, 2 meals", "zh": "1晚2餐/人" },
+    "price": "¥38,000〜",
+    "image": "https://images.unsplash.com/photo-1545569341-9bb253845b9b2?w=800&q=80"
+  }
+]

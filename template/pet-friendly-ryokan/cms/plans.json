@@ -1,0 +1,74 @@
+[
+  {
+    "id": "plan-01",
+    "tag": { "ja": "スタンダード", "en": "Standard", "zh": "标准" },
+    "featured": false,
+    "badge": null,
+    "name": {
+      "ja": "わんにゃんスタンダードプラン",
+      "en": "WANNyan Standard Plan",
+      "zh": "汪汪标准方案"
+    },
+    "description": {
+      "ja": "季節の会席と源泉温泉を、ペットと一緒にお楽しみいただける基本プラン。",
+      "en": "Basic plan with seasonal kaiseki and natural hot spring — enjoy with your pet.",
+      "zh": "季节会席与源泉温泉，可与宠物一起享受的基本方案。"
+    },
+    "includes": {
+      "ja": ["夕食：季節会席10品", "朝食：和食膳＋ペット用ごはん", "客室露天風呂", "ペットアメニティ"],
+      "en": ["Dinner: 10-course seasonal kaiseki", "Breakfast: Japanese set + pet meal", "Room open-air bath", "Pet amenities"],
+      "zh": ["晚餐：季节会席10品", "早餐：和食膳+宠物餐", "客房露天风吕", "宠物用品"]
+    },
+    "priceLabel": { "ja": "1泊2食 お一人様", "en": "1 night, 2 meals", "zh": "1晚2餐/人" },
+    "price": "¥28,000〜",
+    "image": "https://images.unsplash.com/photo-1548196844-e279a4e9a0f1?w=900&q=85"
+  },
+  {
+    "id": "plan-02",
+    "tag": { "ja": "記念日", "en": "Anniversary", "zh": "纪念日" },
+    "featured": true,
+    "badge": { "ja": "人気No.1", "en": "Most Popular", "zh": "人气No.1" },
+    "name": {
+      "ja": "わんちゃん記念日プラン",
+      "en": "Dog Anniversary Plan",
+      "zh": "汪汪纪念日方案"
+    },
+    "description": {
+      "ja": "愛犬の誕生日や家族の記念日に。ケーキ・記念撮影・ドッグラン貸切付き。",
+      "en": "For your dog's birthday or family anniversary. Cake, photo session, private dog run.",
+      "zh": "爱犬生日或家庭纪念日。含蛋糕·纪念摄影·狗跑道包场。"
+    },
+    "includes": {
+      "ja": ["特選会席12品", "記念日ケーキ（ペット用付）", "プロ記念撮影", "ドッグラン貸切30分"],
+      "en": ["Premium 12-course kaiseki", "Anniversary cake (with pet cake)", "Professional photos", "Private dog run 30 min"],
+      "zh": ["特选会席12品", "纪念日蛋糕（含宠物用）", "专业纪念摄影", "狗跑道包场30分钟"]
+    },
+    "priceLabel": { "ja": "1泊2食 お一人様", "en": "1 night, 2 meals", "zh": "1晚2餐/人" },
+    "price": "¥42,000〜",
+    "image": "https://images.unsplash.com/photo-1583337130417-3346a1be7dee?w=900&q=85"
+  },
+  {
+    "id": "plan-03",
+    "tag": { "ja": "ファミリー", "en": "Family", "zh": "家庭" },
+    "featured": false,
+    "badge": null,
+    "name": {
+      "ja": "ファミリー＆ペットプラン",
+      "en": "Family & Pet Plan",
+      "zh": "家庭与宠物方案"
+    },
+    "description": {
+      "ja": "お子様連れ＋ペット同伴のご家族向け。広い客室とキッズアメニティ付き。",
+      "en": "For families with children and pets. Spacious room with kids amenities.",
+      "zh": "带儿童与宠物的家庭向。宽敞客房与儿童用品。"
+    },
+    "includes": {
+      "ja": ["季節会席10品", "キッズメニュー", "ペット＋子供用アメニティ", "ドッグラン自由利用"],
+      "en": ["Seasonal 10-course kaiseki", "Kids menu", "Pet + kids amenities", "Free dog run access"],
+      "zh": ["季节会席10品", "儿童菜单", "宠物+儿童用品", "狗跑道自由使用"]
+    },
+    "priceLabel": { "ja": "1泊2食 お一人様", "en": "1 night, 2 meals", "zh": "1晚2餐/人" },
+    "price": "¥32,000〜",
+    "image": "https://images.unsplash.com/photo-1558787533-0475f0cfea55?w=900&q=85"
+  }
+]

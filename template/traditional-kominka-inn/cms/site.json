@@ -1,0 +1,53 @@
+{
+  "templateName": "古民家宿テンプレート",
+  "name": {
+    "ja": "古民家宿 紬の郷",
+    "en": "Kominka Stay Tsumugi no Sato",
+    "zh": "古民家宿 紬之乡"
+  },
+  "nameEn": "Tsumugi no Sato",
+  "tagline": {
+    "ja": "日本の原風景に泊まる",
+    "en": "Stay in Japan's timeless landscape",
+    "zh": "住进日本的原风景"
+  },
+  "description": {
+    "ja": "京都・東山の築100年古民家。囲炉裏と日本庭園、畳の客室で、町家の静けさと温もりに包まれる一棟貸し宿。",
+    "en": "A century-old kominka in Kyoto Higashiyama. Entire-house rental with irori hearth, Japanese garden, and tatami rooms — quiet warmth of a machiya stay.",
+    "zh": "京都东山百年古民家。围炉、日式庭园与榻榻米客房，整栋出租，感受町家般的静谧与温暖。"
+  },
+  "url": "https://tsumugi.example.com/",
+  "telephone": "075-000-0000",
+  "telephoneRaw": "0750000000",
+  "email": "info@tsumugi.example.com",
+  "address": {
+    "postalCode": "605-0826",
+    "region": {
+      "ja": "京都府",
+      "en": "Kyoto",
+      "zh": "京都府"
+    },
+    "locality": {
+      "ja": "京都市東山区",
+      "en": "Higashiyama-ku, Kyoto",
+      "zh": "京都市东山区"
+    },
+    "street": {
+      "ja": "清水寺町384",
+      "en": "384 Kiyomizucho",
+      "zh": "清水寺町384"
+    }
+  },
+  "geo": { "latitude": "34.9949", "longitude": "135.7850" },
+  "hours": {
+    "ja": "受付 9:00〜18:00",
+    "en": "Reception 9:00–18:00",
+    "zh": "接待 9:00–18:00"
+  },
+  "checkin": "15:00",
+  "checkout": "10:00",
+  "priceRange": "¥¥¥",
+  "ogImage": "https://tsumugi.example.com/images/og-image.jpg",
+  "mapEmbed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3268.5!2d135.7850!3d34.9949!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x600108ee0a918909%3A0x4e5b2c5b5b5b5b5b!2z5bKh6YOo5bGx5Yy65YyX6Kq/5rGf77yR77yR77yR!5e0!3m2!1sja!2sjp!4v1700000000000!5m2!1sja!2sjp",
+  "mapLink": "https://maps.google.com/?q=Kyoto+Higashiyama+Kiyomizucho"
+}

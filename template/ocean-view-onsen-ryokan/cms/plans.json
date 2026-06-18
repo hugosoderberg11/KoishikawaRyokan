@@ -1,0 +1,74 @@
+[
+  {
+    "id": "plan-01",
+    "tag": { "ja": "スタンダード", "en": "Standard", "zh": "标准" },
+    "featured": false,
+    "badge": null,
+    "name": {
+      "ja": "オーシャンリトリートプラン",
+      "en": "Ocean Retreat Plan",
+      "zh": "海洋静修方案"
+    },
+    "description": {
+      "ja": "客室露天風呂付き客室での宿泊と、海の幸を活かした会席夕食・和朝食が含まれる基本プラン。",
+      "en": "Basic plan with in-room open-air bath, kaiseki dinner featuring fresh seafood, and Japanese breakfast.",
+      "zh": "附客室露天风吕住宿、以海鲜为主的会席晚餐与和式早餐的基本方案。"
+    },
+    "includes": {
+      "ja": ["客室宿泊", "海の幸会席夕食", "和朝食", "大浴場・貸切風呂利用"],
+      "en": ["Room stay", "Seafood kaiseki dinner", "Japanese breakfast", "Public & private baths"],
+      "zh": ["客房住宿", "海鲜会席晚餐", "和式早餐", "大浴场·包租风吕使用"]
+    },
+    "priceLabel": { "ja": "1泊 2名様", "en": "1 night, 2 guests", "zh": "1晚 2人" },
+    "price": "¥52,000〜",
+    "image": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1400&q=85"
+  },
+  {
+    "id": "plan-02",
+    "tag": { "ja": "人気", "en": "Popular", "zh": "人气" },
+    "featured": true,
+    "badge": { "ja": "おすすめ", "en": "Recommended", "zh": "推荐" },
+    "name": {
+      "ja": "サンセットスパ＆海鮮会席プラン",
+      "en": "Sunset Spa & Seafood Kaiseki Plan",
+      "zh": "日落SPA与海鲜会席方案"
+    },
+    "description": {
+      "ja": "サンセットタイムの貸切露天風呂と、伊豆近海の海鮮フルコース。カップル・記念日に最適。",
+      "en": "Private open-air bath at sunset plus full-course seafood from Izu waters. Perfect for couples and anniversaries.",
+      "zh": "日落时段包租露天风吕与伊豆近海海鲜全套料理。情侣与纪念日之选。"
+    },
+    "includes": {
+      "ja": ["スイート宿泊", "海鮮フル会席", "サンセット貸切風呂60分", "ウェルカムシャンパン", "和朝食"],
+      "en": ["Suite stay", "Full seafood kaiseki", "60-min sunset private bath", "Welcome champagne", "Japanese breakfast"],
+      "zh": ["套房住宿", "海鲜全套会席", "日落包租风吕60分钟", "欢迎香槟", "和式早餐"]
+    },
+    "priceLabel": { "ja": "1泊 2名様", "en": "1 night, 2 guests", "zh": "1晚 2人" },
+    "price": "¥88,000〜",
+    "image": "https://images.unsplash.com/photo-1495616819653-618148b83e83?w=1400&q=85"
+  },
+  {
+    "id": "plan-03",
+    "tag": { "ja": "ファミリー", "en": "Family", "zh": "家庭" },
+    "featured": false,
+    "badge": null,
+    "name": {
+      "ja": "ファミリーオーシャンプラン",
+      "en": "Family Ocean Plan",
+      "zh": "家庭海洋方案"
+    },
+    "description": {
+      "ja": "ファミリースイート宿泊＋お子様向け海鮮膳＋貸切風呂。ご家族の思い出づくりに。",
+      "en": "Family suite stay with kids' seafood menu and private bath. Create lasting family memories.",
+      "zh": "家庭套房住宿+儿童海鲜膳+包租风吕。为全家创造美好回忆。"
+    },
+    "includes": {
+      "ja": ["ファミリースイート", "大人・子供会席", "貸切風呂90分", "キッズアメニティ", "和朝食"],
+      "en": ["Family suite", "Adult & kids kaiseki", "90-min private bath", "Kids amenities", "Japanese breakfast"],
+      "zh": ["家庭套房", "成人·儿童会席", "包租风吕90分钟", "儿童用品", "和式早餐"]
+    },
+    "priceLabel": { "ja": "1泊 4名様", "en": "1 night, 4 guests", "zh": "1晚 4人" },
+    "price": "¥98,000〜",
+    "image": "https://images.unsplash.com/photo-1540541338287-41700207dee6?w=1400&q=85"
+  }
+]

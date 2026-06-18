@@ -1,0 +1,65 @@
+[
+  {
+    "id": "plan-01",
+    "tag": { "ja": "スタンダード", "en": "Standard", "zh": "标准" },
+    "featured": false,
+    "badge": null,
+    "name": { "ja": "星野庵スタンダードプラン", "en": "Hoshinoan Standard Plan", "zh": "星野庵标准方案" },
+    "description": {
+      "ja": "季節の懐石料理と源泉かけ流しの露天風呂をお楽しみいただける、当館の基本プランです。",
+      "en": "Our basic plan with seasonal kaiseki and natural flowing hot spring baths.",
+      "zh": "享受季节怀石与源泉流淌露天风吕的基本方案。"
+    },
+    "includes": {
+      "ja": ["夕食：季節の懐石全11品", "朝食：和食膳", "露天風呂：客室・大浴場"],
+      "en": ["Dinner: 11-course seasonal kaiseki", "Breakfast: Japanese set", "Baths: room & public"],
+      "zh": ["晚餐：季节怀石11品", "早餐：和食膳", "风吕：客房·大浴场"]
+    },
+    "priceLabel": { "ja": "1泊2食 お一人様", "en": "1 night, 2 meals", "zh": "1晚2餐/人" },
+    "priceNote": { "ja": "（税・サービス料込）", "en": "(tax & service included)", "zh": "（含税·服务费）" },
+    "price": "¥38,000〜",
+    "image": "https://images.unsplash.com/photo-1548196844-e279a4e9a0f1?w=900&q=85"
+  },
+  {
+    "id": "plan-02",
+    "tag": { "ja": "プレミアム", "en": "Premium", "zh": "尊享" },
+    "featured": true,
+    "badge": { "ja": "人気No.1", "en": "Most Popular", "zh": "人气No.1" },
+    "name": { "ja": "飛騨牛・松茸会席プラン", "en": "Hida Beef & Matsutake Plan", "zh": "飞驒牛·松茸会席方案" },
+    "description": {
+      "ja": "飛騨牛A5ランクと秋の味覚・松茸を贅沢に使った特別会席。記念日や特別なひとときに。",
+      "en": "Special kaiseki with A5 Hida beef and autumn matsutake mushrooms — for anniversaries and special moments.",
+      "zh": "A5飞驒牛与秋季松茸的特别会席，适合纪念日与特别时刻。"
+    },
+    "includes": {
+      "ja": ["夕食：飛騨牛・松茸特別会席 全13品", "朝食：和食膳（精進料理より選択可）", "貸切風呂1回無料（90分）", "アメニティ：特別セット"],
+      "en": ["Dinner: 13-course Hida beef & matsutake", "Breakfast: Japanese set (vegetarian option)", "Free private bath (90 min)", "Special amenity set"],
+      "zh": ["晚餐：飞驒牛松茸特别会席13品", "早餐：和食膳（可选精进料理）", "包租风吕1次免费（90分钟）", "特别 amenities"]
+    },
+    "priceLabel": { "ja": "1泊2食 お一人様", "en": "1 night, 2 meals", "zh": "1晚2餐/人" },
+    "priceNote": { "ja": "（税・サービス料込）", "en": "(tax & service included)", "zh": "（含税·服务费）" },
+    "price": "¥58,000〜",
+    "image": "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=900&q=85"
+  },
+  {
+    "id": "plan-03",
+    "tag": { "ja": "記念日", "en": "Anniversary", "zh": "纪念日" },
+    "featured": false,
+    "badge": null,
+    "name": { "ja": "アニバーサリープラン", "en": "Anniversary Plan", "zh": "纪念日方案" },
+    "description": {
+      "ja": "誕生日・結婚記念日などの特別な日を彩る、サプライズ演出付きのプランです。",
+      "en": "Celebrate birthdays and anniversaries with surprise arrangements.",
+      "zh": "为生日·结婚纪念日等特殊日子增添惊喜的安排。"
+    },
+    "includes": {
+      "ja": ["夕食：季節の懐石全11品", "記念日ケーキ（要事前申告）", "アルコール1本サービス", "記念撮影サービス"],
+      "en": ["Dinner: 11-course seasonal kaiseki", "Anniversary cake (advance notice)", "Complimentary bottle of alcohol", "Commemorative photo service"],
+      "zh": ["晚餐：季节怀席11品", "纪念日蛋糕（需提前告知）", "赠酒1瓶", "纪念摄影服务"]
+    },
+    "priceLabel": { "ja": "1泊2食 お一人様", "en": "1 night, 2 meals", "zh": "1晚2餐/人" },
+    "priceNote": { "ja": "（税・サービス料込）", "en": "(tax & service included)", "zh": "（含税·服务费）" },
+    "price": "¥48,000〜",
+    "image": "https://images.unsplash.com/photo-1493770348161-369653ae8272?w=900&q=85"
+  }
+]

@@ -1,0 +1,29 @@
+{
+  "templateName": "オーシャンビュー温泉旅館テンプレート",
+  "name": {
+    "ja": "OCEANA RESORT 潮音の湯",
+    "en": "OCEANA RESORT Shioine",
+    "zh": "OCEANA RESORT 潮音之汤"
+  },
+  "nameEn": "OCEANA RESORT",
+  "tagline": "海と温泉を楽しむ非日常リゾート",
+  "description": "静岡・伊豆の断崖に佇むオーシャンビュー温泉旅館。客室露天風呂、サンセットダイニング、波音に包まれる極上の滞在を。",
+  "url": "https://oceana-resort.example.com/",
+  "telephone": "0557-00-0000",
+  "telephoneRaw": "0557000000",
+  "email": "info@oceana-resort.example.com",
+  "address": {
+    "postalCode": "410-2416",
+    "region": "静岡県",
+    "locality": "伊豆市",
+    "street": "八幡682"
+  },
+  "geo": { "latitude": "34.8765", "longitude": "138.9456" },
+  "hours": "受付 9:00〜21:00",
+  "checkin": "15:00",
+  "checkout": "11:00",
+  "priceRange": "¥¥¥¥",
+  "ogImage": "https://oceana-resort.example.com/images/og-image.jpg",
+  "mapEmbed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13050!2d138.9456!3d34.8765!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMznCsDUyJzM1LjQiTiAxMzhCsDU2JzQ0LjIiRQ!5e0!3m2!1sja!2sjp!4v1700000000000!5m2!1sja!2sjp",
+  "mapLink": "https://maps.google.com/?q=伊豆+温泉+オーシャンビュー"
+}

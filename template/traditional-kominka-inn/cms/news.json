@@ -1,0 +1,32 @@
+[
+  {
+    "date": "2026-05-10",
+    "dateDisplay": { "ja": "2026.05.10", "en": "May 10, 2026", "zh": "2026.05.10" },
+    "title": {
+      "ja": "【新体験】茶室での茶道体験プログラム、宿泊者限定で開始",
+      "en": "New: Guest-only tea ceremony experience in our tea room",
+      "zh": "【新体验】茶室茶道体验，仅限住客"
+    },
+    "url": "#facilities"
+  },
+  {
+    "date": "2026-04-20",
+    "dateDisplay": { "ja": "2026.04.20", "en": "Apr 20, 2026", "zh": "2026.04.20" },
+    "title": {
+      "ja": "築100年の古民家、国登録有形文化財に指定されました",
+      "en": "Our century-old kominka designated as a registered tangible cultural property",
+      "zh": "百年古民家获指定为国家登记有形文化财"
+    },
+    "url": "#facilities"
+  },
+  {
+    "date": "2026-04-01",
+    "dateDisplay": { "ja": "2026.04.01", "en": "Apr 1, 2026", "zh": "2026.04.01" },
+    "title": {
+      "ja": "桜の季節（4月上旬〜中旬）のご予約、残りわずかです",
+      "en": "Cherry blossom season (early–mid April): limited availability",
+      "zh": "樱花季（4月上旬至中旬）预订名额有限"
+    },
+    "url": "#reserve"
+  }
+]

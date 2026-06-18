@@ -1,0 +1,32 @@
+[
+  {
+    "date": "2026-05-01",
+    "dateDisplay": { "ja": "2026.05.01", "en": "May 1, 2026", "zh": "2026.05.01" },
+    "title": {
+      "ja": "【新プラン】愛犬の誕生日を祝う「わんちゃん記念日プラン」予約受付開始",
+      "en": "New: Dog Birthday Anniversary Plan now available",
+      "zh": "【新方案】爱犬生日「汪汪纪念日方案」开始预约"
+    },
+    "url": "#plans"
+  },
+  {
+    "date": "2026-04-15",
+    "dateDisplay": { "ja": "2026.04.15", "en": "Apr 15, 2026", "zh": "2026.04.15" },
+    "title": {
+      "ja": "ドッグランをリニューアル。芝生エリアと水遊びスペースを新設しました",
+      "en": "Dog run renovated with new lawn and water play area",
+      "zh": "狗跑道翻新，新增草坪区与戏水空间"
+    },
+    "url": "#dogrun"
+  },
+  {
+    "date": "2026-04-01",
+    "dateDisplay": { "ja": "2026.04.01", "en": "Apr 1, 2026", "zh": "2026.04.01" },
+    "title": {
+      "ja": "GW期間（5/3〜5/6）のペット同伴宿泊、残りわずかです",
+      "en": "Golden Week (May 3–6) pet stays — limited availability",
+      "zh": "黄金周（5/3–5/6）宠物同伴住宿名额有限"
+    },
+    "url": "#reserve"
+  }
+]

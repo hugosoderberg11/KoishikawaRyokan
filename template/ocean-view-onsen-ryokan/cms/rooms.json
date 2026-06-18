@@ -1,0 +1,82 @@
+[
+  {
+    "id": "room-01",
+    "badge": { "ja": "人気No.1", "en": "Most Popular", "zh": "人气No.1" },
+    "badgeType": "popular",
+    "typeEn": "Ocean Suite",
+    "name": { "ja": "潮音スイート", "en": "Shioine Suite", "zh": "潮音套房" },
+    "description": {
+      "ja": "180度のオーシャンビューと専用露天風呂。サンセットを望む最上階スイート。キングベッド・リビング・テラス付き。",
+      "en": "180° ocean view with private open-air bath. Top-floor suite overlooking the sunset. King bed, living room, terrace.",
+      "zh": "180度海景与专用露天风吕。眺望日落的最顶层套房。附特大床·客厅·露台。"
+    },
+    "amenities": {
+      "ja": ["2名まで", "露天風呂", "オーシャンビュー", "サンセットテラス"],
+      "en": ["Up to 2 guests", "Open-air bath", "Ocean view", "Sunset terrace"],
+      "zh": ["最多2人", "露天风吕", "海景", "日落露台"]
+    },
+    "priceLabel": { "ja": "1泊（2食付）", "en": "1 night (2 meals)", "zh": "1晚（含两餐）" },
+    "price": "¥68,000〜",
+    "image": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1400&q=85"
+  },
+  {
+    "id": "room-02",
+    "badge": { "ja": "カップル", "en": "Couple", "zh": "情侣" },
+    "badgeType": "couple",
+    "typeEn": "Deluxe Ocean",
+    "name": { "ja": "波音デラックス", "en": "Wave Deluxe", "zh": "波音豪华房" },
+    "description": {
+      "ja": "波音が聞こえる海側客室。檜の露天風呂と広々とした和モダン空間。記念日・ご夫婦の旅に。",
+      "en": "Ocean-side room where you hear the waves. Hinoki open-air bath and spacious wa-modern interior. Ideal for anniversaries.",
+      "zh": "可闻波音的海侧客房。桧木露天风吕与宽敞和摩登空间。纪念日与夫妻旅行之选。"
+    },
+    "amenities": {
+      "ja": ["2名まで", "檜風呂", "海側", "記念日対応"],
+      "en": ["Up to 2 guests", "Hinoki bath", "Ocean side", "Anniversary service"],
+      "zh": ["最多2人", "桧木浴", "海侧", "纪念日服务"]
+    },
+    "priceLabel": { "ja": "1泊（2食付）", "en": "1 night (2 meals)", "zh": "1晚（含两餐）" },
+    "price": "¥52,000〜",
+    "image": "https://images.unsplash.com/photo-1611892440503-93ee67e7e8a8?w=1400&q=85"
+  },
+  {
+    "id": "room-03",
+    "badge": { "ja": "ファミリー", "en": "Family", "zh": "家庭" },
+    "badgeType": "family",
+    "typeEn": "Family Ocean",
+    "name": { "ja": "珊瑚ファミリー", "en": "Coral Family", "zh": "珊瑚家庭房" },
+    "description": {
+      "ja": "ご家族向けの広々和室スイート。海を望む半露天風呂とキッズアメニティ完備。",
+      "en": "Spacious Japanese suite for families. Semi-open-air bath with ocean view and kids amenities included.",
+      "zh": "家庭适用的宽敞和室套房。海景半露天风吕与儿童用品完备。"
+    },
+    "amenities": {
+      "ja": ["4名まで", "半露天風呂", "和室", "キッズ対応"],
+      "en": ["Up to 4 guests", "Semi open-air bath", "Japanese room", "Kids friendly"],
+      "zh": ["最多4人", "半露天风吕", "和室", "儿童友好"]
+    },
+    "priceLabel": { "ja": "1泊（2食付）", "en": "1 night (2 meals)", "zh": "1晚（含两餐）" },
+    "price": "¥78,000〜",
+    "image": "https://images.unsplash.com/photo-1566665797739-1674de7a421a?w=1400&q=85"
+  },
+  {
+    "id": "room-04",
+    "badge": { "ja": "プレミアム", "en": "Premium", "zh": "尊享" },
+    "badgeType": "premium",
+    "typeEn": "Presidential Villa",
+    "name": { "ja": "海月ヴィラ", "en": "Kaigetsu Villa", "zh": "海月别墅" },
+    "description": {
+      "ja": "一棟貸しの最上級ヴィラ。プライベート露天風呂・インフィニティデッキ・専属コンシェルジュ付き。",
+      "en": "Top-tier private villa. Private open-air bath, infinity deck, and dedicated concierge.",
+      "zh": "整栋出租的顶级别墅。私人露天风吕·无边际露台·专属礼宾服务。"
+    },
+    "amenities": {
+      "ja": ["6名まで", "一棟貸し", "インフィニティデッキ", "コンシェルジュ"],
+      "en": ["Up to 6 guests", "Entire villa", "Infinity deck", "Concierge"],
+      "zh": ["最多6人", "整栋出租", "无边际露台", "礼宾服务"]
+    },
+    "priceLabel": { "ja": "1泊（2食付）", "en": "1 night (2 meals)", "zh": "1晚（含两餐）" },
+    "price": "¥168,000〜",
+    "image": "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=1400&q=85"
+  }
+]
