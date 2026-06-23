@@ -176,6 +176,18 @@
 
   ナビ・ボタンともやや大きめ（14px / padding 拡大）で間隔を均等化（2026-06-23）
 
+- お問い合わせ・テンプレ購入通知先: koishikawa.vibecoding@gmail.com
+
+  - LP フッター・お問い合わせセクションにメール記載
+
+  - テンプレ購入ボタン → #contact フォーム（テンプレ名・プラン自動入力）
+
+  - 問い合わせ API: `/api/send-inquiry`（Vercel Serverless）
+
+  - Supabase inquiries テーブルに保存 + Resend で Gmail 通知
+
+  - Vercel 必須 env: SUPABASE_SERVICE_ROLE_KEY（supabase/README.md）
+
 ------------------------------------------------------------------
 
 5. 多言語切替（全テンプレ共通）

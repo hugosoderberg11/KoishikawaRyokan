@@ -1681,6 +1681,72 @@ body.nav-open { overflow: hidden; }
   border: none; cursor: pointer; font-family: var(--sans);
   margin-top: 8px;
 }
+.form-submit:disabled { opacity: .65; cursor: not-allowed; }
+
+.form-note {
+  margin-top: 16px;
+  font-size: 13px;
+  color: rgba(255,255,255,.55);
+  text-align: center;
+  line-height: 1.7;
+}
+.form-note a,
+.contact-email-link {
+  color: var(--gold-soft);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.form-note a:hover,
+.contact-email-link:hover { color: #fff; }
+
+.form-status {
+  margin-top: 14px;
+  padding: 14px 16px;
+  border-radius: 10px;
+  font-size: 14px;
+  line-height: 1.7;
+  text-align: center;
+}
+.contact-form.is-success .form-status {
+  background: rgba(72, 160, 96, .18);
+  border: 1px solid rgba(120, 200, 140, .35);
+  color: #b8e8c4;
+}
+.contact-form.is-error .form-status {
+  background: rgba(200, 80, 80, .15);
+  border: 1px solid rgba(220, 120, 120, .35);
+  color: #f0b8b8;
+}
+.contact-form.is-loading .form-status { color: rgba(255,255,255,.7); }
+
+.form-row--purchase { margin-top: -4px; }
+
+.tmpl-buy-btn {
+  width: 100%;
+  margin-top: 20px;
+  justify-content: center;
+}
+
+.footer-contact-mail {
+  margin-top: 8px;
+  font-size: 14px;
+}
+.footer-contact-mail a {
+  color: rgba(255,255,255,.72);
+  transition: color .25s ease;
+}
+.footer-contact-mail a:hover { color: var(--gold-soft); }
+
+.templates-contact-note {
+  margin-top: 16px;
+  font-size: 14px;
+  color: var(--ink-soft);
+}
+.templates-contact-note a {
+  color: var(--gold-deep);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
 
 /* ============================================================
    Footer

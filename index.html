@@ -374,7 +374,7 @@
           </ul>
           <div class="demo-footer-actions">
             <a href="/template/" class="btn btn-gold" target="_blank" rel="noopener">デモを見る</a>
-            <a href="#contact" class="btn btn-ghost">このテンプレで依頼</a>
+            <a href="#contact?intent=template&amp;template=湯宿スタンダード" class="btn btn-ghost">このテンプレで購入・相談</a>
           </div>
         </div>
       </article>
@@ -555,17 +555,20 @@
           <div class="tmpl-price-num">¥9,800</div>
           <h4 class="tmpl-price-name">テンプレのみ</h4>
           <p class="tmpl-price-desc">テンプレートファイルの提供。ご自身で差し替え・公開。</p>
+          <a href="#contact?intent=template&amp;plan=テンプレのみ（¥9,800）" class="btn btn-ghost tmpl-buy-btn">購入・相談する</a>
         </div>
         <div class="tmpl-price-card tmpl-price-featured">
           <div class="tmpl-price-badge">人気</div>
           <div class="tmpl-price-num">¥19,800</div>
           <h4 class="tmpl-price-name">差し替え＋公開</h4>
           <p class="tmpl-price-desc">写真・文章の差し替えと公開作業まで代行。</p>
+          <a href="#contact?intent=template&amp;plan=差し替え＋公開（¥19,800）" class="btn btn-gold tmpl-buy-btn">購入・相談する</a>
         </div>
         <div class="tmpl-price-card">
           <div class="tmpl-price-num">¥49,800</div>
           <h4 class="tmpl-price-name">フルカスタム</h4>
           <p class="tmpl-price-desc">テンプレをベースにデザイン・構成をカスタマイズ。</p>
+          <a href="#contact?intent=template&amp;plan=フルカスタム（¥49,800）" class="btn btn-ghost tmpl-buy-btn">購入・相談する</a>
         </div>
       </div>
     </div>
@@ -688,9 +691,9 @@
     <div class="section-head">
       <span class="section-badge badge-light">CONTACT</span>
       <h2 class="section-title title-light">まずは無料でご相談ください</h2>
-      <p class="section-lead lead-light">じゃらん・楽天依存・サイトのお悩み・リニューアル、どんなご相談でも構いません。<br />お問い合わせ内容を確認後、順次ご連絡いたします。</p>
+      <p class="section-lead lead-light">じゃらん・楽天依存・サイトのお悩み・リニューアル、どんなご相談でも構いません。<br />お問い合わせ内容を確認後、<a href="mailto:koishikawa.vibecoding@gmail.com" class="contact-email-link">koishikawa.vibecoding@gmail.com</a> より順次ご連絡いたします。</p>
     </div>
-    <form class="contact-form reveal" action="#" method="post" novalidate>
+    <form class="contact-form reveal" id="contact-form" action="#" method="post" novalidate>
       <div class="form-row">
         <div class="form-group">
           <label for="name">お名前 <span class="req">必須</span></label>
@@ -725,11 +728,27 @@
           <option>その他</option>
         </select>
       </div>
+      <div class="form-row form-row--purchase">
+        <div class="form-group">
+          <label for="template_name">希望テンプレート</label>
+          <input type="text" id="template_name" name="template_name" placeholder="例：湯宿スタンダード / ペット同伴温泉旅館" />
+        </div>
+        <div class="form-group">
+          <label for="plan_name">希望プラン</label>
+          <select id="plan_name" name="plan_name">
+            <option value="">選択してください</option>
+            <option>テンプレのみ（¥9,800）</option>
+            <option>差し替え＋公開（¥19,800）</option>
+            <option>フルカスタム（¥49,800）</option>
+          </select>
+        </div>
+      </div>
       <div class="form-group">
         <label for="message">メッセージ・現在の課題</label>
         <textarea id="message" name="message" rows="5" placeholder="現在のサイトの課題、OTAの比率、直予約を増やしたい背景など、お気軽にお書きください。"></textarea>
       </div>
       <button type="submit" class="btn btn-gold form-submit">無料相談を申し込む</button>
+      <p class="form-note">送信後、<a href="mailto:koishikawa.vibecoding@gmail.com">koishikawa.vibecoding@gmail.com</a> 宛に通知が届き、担当者よりご連絡いたします。</p>
     </form>
   </div>
 </section>
@@ -745,7 +764,8 @@
         <p class="footer-company-name">株式会社コイシカワ</p>
         <address class="footer-addr">
           〒170-0005 東京都豊島区南大塚2-26-7 5F<br />
-          TEL <a href="tel:0367091795">03-6709-1795</a> / FAX 03-6709-1796
+          TEL <a href="tel:0367091795">03-6709-1795</a> / FAX 03-6709-1796<br />
+          MAIL <a href="mailto:koishikawa.vibecoding@gmail.com">koishikawa.vibecoding@gmail.com</a>
         </address>
         <a href="https://koishikawa.co.jp/" class="footer-corporate-link" target="_blank" rel="noopener noreferrer">コーポレートサイト koishikawa.co.jp →</a>
       </div>
@@ -934,6 +954,10 @@ window.addEventListener('DOMContentLoaded', () => {
   window.addEventListener('scroll', onScroll, { passive: true });
   onScroll();
 });
+</script>
+<script type="module">
+  import { initContactForm } from './js/contact.js';
+  initContactForm('#contact-form');
 </script>
 </body>
 </html>

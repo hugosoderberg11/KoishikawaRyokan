@@ -3,6 +3,11 @@ import { resolve } from 'path';
 
 export default defineConfig({
   root: '.',
+  define: {
+    'import.meta.env.VITE_SUPABASE_URL': JSON.stringify(
+      process.env.VITE_SUPABASE_URL || 'https://vruxpxocefqxoxrwexhj.supabase.co',
+    ),
+  },
   server: {
     port: 5173,
     strictPort: false,
