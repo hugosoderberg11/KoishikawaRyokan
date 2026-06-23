@@ -17,7 +17,7 @@
     },
     "priceLabel": { "ja": "1泊2食 お一人様", "en": "1 night, 2 meals", "zh": "1晚2餐/人" },
     "price": "¥38,000〜",
-    "image": "https://images.unsplash.com/photo-1593693397697-46b5d0b7f1d4?w=900&q=85"
+    "image": "https://images.unsplash.com/photo-1593693397697-46b5d0b7f1d4?w=900&q=90"
   },
   {
     "id": "room-02",
@@ -37,7 +37,7 @@
     },
     "priceLabel": { "ja": "1泊2食 お一人様", "en": "1 night, 2 meals", "zh": "1晚2餐/人" },
     "price": "¥48,000〜",
-    "image": "https://images.unsplash.com/photo-1571902940322-4ac0901747cc?w=900&q=85"
+    "image": "https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=900&q=90"
   },
   {
     "id": "room-03",
@@ -57,6 +57,6 @@
     },
     "priceLabel": { "ja": "1泊2食 お一人様", "en": "1 night, 2 meals", "zh": "1晚2餐/人" },
     "price": "¥78,000〜",
-    "image": "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&q=85"
+    "image": "https://images.unsplash.com/photo-1600334089648-4fa4aa9a543a?w=900&q=90"
   }
 ]

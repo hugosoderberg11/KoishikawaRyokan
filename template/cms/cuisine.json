@@ -4,7 +4,7 @@
     "category": { "ja": "前菜", "en": "Appetizer", "zh": "前菜" },
     "name": { "ja": "山菜の盛り合わせ", "en": "Assorted Mountain Vegetables", "zh": "山菜拼盘" },
     "description": { "ja": "その日の朝に摘んだ山菜を、職人の手で丁寧に調理。", "en": "Mountain vegetables picked that morning, carefully prepared.", "zh": "当日清晨采摘的山菜，匠人精心烹调。" },
-    "image": "https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?w=600&q=85"
+    "image": "https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?w=600&q=90"
   },
   {
     "id": "dish-02",
