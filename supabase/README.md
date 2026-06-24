@@ -23,4 +23,4 @@
 ローカルで API テスト: `npm run dev:api`
 
 ## 4. 通知先
-`koishikawa.vibecoding@gmail.com`
+`koishikawavibecoding@gmail.com`

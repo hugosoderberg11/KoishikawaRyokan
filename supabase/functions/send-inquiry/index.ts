@@ -1,6 +1,6 @@
 import { createClient } from 'https://esm.sh/@supabase/supabase-js@2.49.1';
 
-const CONTACT_EMAIL = 'koishikawa.vibecoding@gmail.com';
+const CONTACT_EMAIL = 'koishikawavibecoding@gmail.com';
 const CORS_HEADERS = {
   'Access-Control-Allow-Origin': '*',
   'Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type',

@@ -1,4 +1,4 @@
-export const CONTACT_EMAIL = 'koishikawa.vibecoding@gmail.com';
+export const CONTACT_EMAIL = 'koishikawavibecoding@gmail.com';
 
 export const SUPABASE_PROJECT_REF = 'vruxpxocefqxoxrwexhj';
 

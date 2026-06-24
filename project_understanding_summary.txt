@@ -8,7 +8,7 @@
 
 
 
-最終更新: 2026-06-23
+最終更新: 2026-06-24
 
 
 
@@ -170,13 +170,29 @@
 
 - ヘッダーブランド: KOISHIKAWA ロゴのみ（サブ文言なし）
 
-- ヒーロー見出し: 「旅館・ホテル業界 専門 Webサイト制作」（バッジ風・小さめ表示）
+- ヒーロー見出し: 「旅館・ホテル向けに、Webサイトをつくります。」（OTA・手数料訴求は廃止、制作サービス訴求に変更）
 
-- ヘッダーナビ: ロゴ右のナビは flex で横幅いっぱいに均等配置、CTA ボタンは右端。
+- LP受注率改善（2026-06-24・軽量版）: デモ表現の修正、Stripe表記削除、月額/買い切り説明、FAQ制作期間、フォームテンプレ欄は購入選択時のみ、モバイルナビに料金/FAQ、フローティング相談チップ削除
 
-  ナビ・ボタンともやや大きめ（14px / padding 拡大）で間隔を均等化（2026-06-23）
+- LP「お悩み」見出し横に undraw 風イラスト（images/illustrations/problem-search.png）を2カラム配置
 
-- お問い合わせ・テンプレ購入通知先: koishikawa.vibecoding@gmail.com
+- LP「サービス」見出し左に undraw 風イラスト（images/illustrations/service-web-design.png）を2カラム配置（section-head--service）
+
+- LP「デモ」セクション（#works .works-template-grid）のサムネイルは `<img class="works-tmpl-img">` + 有効な Unsplash URL（2026-06-24: 旧 photo ID 複数が 404 のため差し替え）
+
+- LP受注率改善（2026-06-24・残り）: パーティクル/stats/3Dティルト/プログレスバー削除、英語バッジ日本語化、5種デモグリッド、初回相談、含む/別途表、向いている/向いていない、LP内テンプレ料金削除、マーケ1枚化、addon圧縮
+
+- お問い合わせ・テンプレ購入通知先: koishikawavibecoding@gmail.com（LP・templates・config.js・send-inquiry API 統一）
+
+- LP削除（2026-06-24）: リニューアル前後のイメージ（works-compare）、導入事例（#cases）、担当者紹介（#team）セクションおよびナビリンク
+
+- LP「集客支援」見出し横に undraw 風イラスト（images/illustrations/marketing-search.png）を2カラム配置（section-head--marketing）
+
+- LP「制作の進め方」見出し横に undraw 風イラスト（images/illustrations/flow-process.png・reviewing-design 差し替え版）を2カラム配置（section-head--flow）
+
+- LP「こんな方におすすめです」見出し左にイラスト（fit-recommend.png、180px・左寄せ・見出し一行・やや大きめ）を配置（section-head--fit）
+
+- お問い合わせ・テンプレ購入通知先: koishikawavibecoding@gmail.com
 
   - LP フッター・お問い合わせセクションにメール記載
 
@@ -184,7 +200,7 @@
 
   - 問い合わせ API: `/api/send-inquiry`（Vercel Serverless）
 
-  - Supabase inquiries テーブルに保存 + Resend で Gmail 通知
+  - 表示・通知とも koishikawavibecoding@gmail.com
 
   - Vercel 必須 env: SUPABASE_SERVICE_ROLE_KEY（supabase/README.md）
 

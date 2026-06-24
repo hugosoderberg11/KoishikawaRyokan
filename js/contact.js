@@ -10,6 +10,17 @@ function getPrefillParams() {
   return new URLSearchParams(window.location.search);
 }
 
+function togglePurchaseFields(form) {
+  const typeSelect = form.querySelector('[name="type"]');
+  const purchaseRow = form.querySelector('.form-row--purchase');
+  if (!typeSelect || !purchaseRow) return;
+
+  const params = getPrefillParams();
+  const hasPrefill = params.get('intent') === 'template' || params.get('template') || params.get('plan');
+  const show = typeSelect.value.includes('購入') || hasPrefill;
+  purchaseRow.hidden = !show;
+}
+
 function applyUrlPrefill(form) {
   const params = getPrefillParams();
   const intent = params.get('intent');
@@ -31,6 +42,8 @@ function applyUrlPrefill(form) {
       messageField.value = parts.join('\n');
     }
   }
+
+  togglePurchaseFields(form);
 }
 
 function setFormState(form, state, message = '') {
@@ -75,6 +88,11 @@ export function initContactForm(formSelector = '.contact-form') {
 
   applyUrlPrefill(form);
 
+  const typeSelect = form.querySelector('[name="type"]');
+  if (typeSelect) {
+    typeSelect.addEventListener('change', () => togglePurchaseFields(form));
+  }
+
   const submitBtn = form.querySelector('[type="submit"]');
   if (submitBtn && !submitBtn.dataset.defaultLabel) {
     submitBtn.dataset.defaultLabel = submitBtn.textContent.trim();
@@ -110,6 +128,7 @@ export function initContactForm(formSelector = '.contact-form') {
       const result = await submitInquiry(payload);
       setFormState(form, 'success', result.message || 'お問い合わせを送信しました。');
       form.reset();
+      togglePurchaseFields(form);
     } catch (err) {
       setFormState(
         form,

@@ -1,4 +1,8 @@
-const CONTACT_EMAIL = 'koishikawa.vibecoding@gmail.com';
+const CONTACT_EMAIL = 'koishikawavibecoding@gmail.com';
+
+function getNotifyRecipients() {
+  return [CONTACT_EMAIL];
+}
 const SUPABASE_URL =
   process.env.SUPABASE_URL ||
   process.env.VITE_SUPABASE_URL ||
@@ -46,7 +50,7 @@ async function sendEmail(data) {
     },
     body: JSON.stringify({
       from,
-      to: [CONTACT_EMAIL],
+      to: getNotifyRecipients(),
       reply_to: data.email,
       subject,
       html: buildEmailHtml(data),
