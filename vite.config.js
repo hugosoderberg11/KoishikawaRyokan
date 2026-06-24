@@ -30,6 +30,8 @@ export default defineConfig({
         traditionalKominkaInn: resolve(__dirname, 'template/traditional-kominka-inn/index.html'),
         luxuryGlamping: resolve(__dirname, 'template/luxury-glamping/index.html'),
         oceanViewOnsenRyokan: resolve(__dirname, 'template/ocean-view-onsen-ryokan/index.html'),
+        urbanBoutiqueHotel: resolve(__dirname, 'template/urban-boutique-hotel/index.html'),
+        skiMountainResort: resolve(__dirname, 'template/ski-mountain-resort/index.html'),
       },
     },
   },

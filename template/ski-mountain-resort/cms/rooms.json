@@ -1,0 +1,82 @@
+[
+  {
+    "id": "standard",
+    "typeEn": "Mountain View Room",
+    "badge": { "ja": "人気", "en": "Popular", "zh": "热门" },
+    "badgeType": "popular",
+    "name": { "ja": "マウンテンビュールーム", "en": "Mountain View Room", "zh": "山景客房" },
+    "description": {
+      "ja": "28㎡。大きな窓から白馬連峰を一望。木のぬくもりあふれるロッジスタイルの客室。スキー後のひとときを、山の絶景とともに。",
+      "en": "28m². Panoramic view of the Hakuba mountain range from large windows. Lodge-style room full of warm wood. Perfect after a day on the slopes.",
+      "zh": "28㎡，落地窗可俯瞰白马山脉全景，充满木质温馨的小屋风格客房。"
+    },
+    "amenities": {
+      "ja": ["28㎡", "山岳ビュー", "ツイン or キング", "スキー棚付き", "加湿器完備"],
+      "en": ["28m²", "Mountain view", "Twin or King", "Ski storage", "Humidifier"],
+      "zh": ["28㎡", "山景", "双床或大床", "滑雪存放架", "加湿器"]
+    },
+    "image": "https://images.unsplash.com/photo-1510798831971-661eb04b3739?w=700&q=85",
+    "priceLabel": { "ja": "1泊 2名（朝夕食付）", "en": "2 guests/night (meals incl.)", "zh": "2人每晚（含早晚餐）" },
+    "price": "¥28,000〜"
+  },
+  {
+    "id": "deluxe",
+    "typeEn": "Deluxe Loft Room",
+    "badge": { "ja": "おすすめ", "en": "Recommended", "zh": "推荐" },
+    "badgeType": "couple",
+    "name": { "ja": "デラックスロフトルーム", "en": "Deluxe Loft Room", "zh": "豪华跃层客房" },
+    "description": {
+      "ja": "45㎡のロフト付き客室。1階にリビングと暖炉、2階に寝室を配した山小屋の趣。ペアでゆったり過ごせる開放的な空間。",
+      "en": "45m² loft room. Living area with fireplace on the lower level, bedroom above. Open and cozy mountain cabin atmosphere for couples.",
+      "zh": "45㎡跃层客房，下层设有起居室和壁炉，上层为卧室，宽敞舒适的山间小屋氛围。"
+    },
+    "amenities": {
+      "ja": ["45㎡", "薪暖炉", "ロフト寝室", "山岳パノラマ", "ウォークインクローゼット"],
+      "en": ["45m²", "Wood fireplace", "Loft bedroom", "Mountain panorama", "Walk-in closet"],
+      "zh": ["45㎡", "实木壁炉", "阁楼卧室", "山岳全景", "步入式衣橱"]
+    },
+    "image": "https://images.unsplash.com/photo-1505692952047-1a78307da8f2?w=700&q=85",
+    "priceLabel": { "ja": "1泊 2名（朝夕食付）", "en": "2 guests/night (meals incl.)", "zh": "2人每晚（含早晚餐）" },
+    "price": "¥42,000〜"
+  },
+  {
+    "id": "family-chalet",
+    "typeEn": "Family Chalet",
+    "badge": { "ja": "ファミリー", "en": "Family", "zh": "家庭" },
+    "badgeType": "family",
+    "name": { "ja": "ファミリーシャレー", "en": "Family Chalet", "zh": "家庭小屋" },
+    "description": {
+      "ja": "独立棟68㎡のプライベートシャレー。最大6名様対応の2寝室。専用テラスと囲炉裏で、家族だけのプライベートな山時間を。",
+      "en": "68m² private chalet sleeping up to 6 guests. 2 bedrooms, private terrace, and irori firepit for the whole family.",
+      "zh": "68㎡独立式小屋，可容纳6人，2间卧室，配有专属露台和地炉。"
+    },
+    "amenities": {
+      "ja": ["68㎡", "独立棟", "2寝室 / 最大6名", "専用テラス", "囲炉裏", "キッチン付き"],
+      "en": ["68m²", "Private chalet", "2 bedrooms / up to 6", "Private terrace", "Irori firepit", "Kitchenette"],
+      "zh": ["68㎡", "独立小屋", "2卧室/最多6人", "专属露台", "地炉", "小厨房"]
+    },
+    "image": "https://images.unsplash.com/photo-1449157291145-7efd050a4d0e?w=700&q=85",
+    "priceLabel": { "ja": "1泊（朝夕食付・最大6名）", "en": "Per night (meals incl., up to 6)", "zh": "每晚（含餐，最多6人）" },
+    "price": "¥96,000〜"
+  },
+  {
+    "id": "summit-suite",
+    "typeEn": "Summit Suite",
+    "badge": { "ja": "最上階", "en": "Top Floor", "zh": "顶层" },
+    "badgeType": "premium",
+    "name": { "ja": "サミットスイート", "en": "Summit Suite", "zh": "峰顶套房" },
+    "description": {
+      "ja": "最上階80㎡のスイート。白馬三山の360°パノラマビュー。専用露天風呂・暖炉・バトラーサービスで、至高の山岳滞在を。",
+      "en": "Top floor 80m² suite. 360° panoramic view of Hakuba's three peaks. Private open-air bath, fireplace, and butler service.",
+      "zh": "顶层80㎡套房，白马三山360°全景，配备专属露天温泉浴池、壁炉及管家服务。"
+    },
+    "amenities": {
+      "ja": ["80㎡", "360°パノラマ", "専用露天風呂", "暖炉", "バトラーサービス", "朝食インルーム"],
+      "en": ["80m²", "360° panorama", "Private open-air bath", "Fireplace", "Butler service", "In-room breakfast"],
+      "zh": ["80㎡", "360°全景", "专属露天浴池", "壁炉", "管家服务", "客房早餐"]
+    },
+    "image": "https://images.unsplash.com/photo-1523217582562-09d0def993a6?w=700&q=85",
+    "priceLabel": { "ja": "1泊 2名（朝夕食付）", "en": "2 guests/night (meals incl.)", "zh": "2人每晚（含早晚餐）" },
+    "price": "¥120,000〜"
+  }
+]

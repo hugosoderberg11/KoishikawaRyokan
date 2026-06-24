@@ -1,0 +1,62 @@
+[
+  {
+    "id": "powder",
+    "featured": false,
+    "tag": { "ja": "スタンダード", "en": "Standard", "zh": "标准" },
+    "badge": null,
+    "name": { "ja": "パウダーパック（2泊3日）", "en": "Powder Pack (2 nights)", "zh": "粉雪套餐（2晚3天）" },
+    "description": {
+      "ja": "リフト券2日分＋朝夕食付きの定番スキーパック。レンタル用品は別途手配可。家族・グループで気軽にスキーを楽しむプランです。",
+      "en": "2-day lift pass + breakfast and dinner included. Rental equipment available separately. A classic ski pack for families and groups.",
+      "zh": "含2日缆车票及早晚餐，租赁装备可另行预约，家庭和团体滑雪的经典套餐。"
+    },
+    "includes": {
+      "ja": ["宿泊2泊", "朝食・夕食付き", "リフト券2日分", "スキー場送迎バス", "温泉入浴（貸切1回）", "スキーロッカー"],
+      "en": ["2 nights accommodation", "Breakfast & dinner", "2-day lift pass", "Shuttle to slopes", "Private onsen (1 session)", "Ski locker"],
+      "zh": ["住宿2晚", "含早晚餐", "2日缆车票", "滑雪场接驳车", "独包温泉（1次）", "滑雪储物柜"]
+    },
+    "image": "https://images.unsplash.com/photo-1551698618-1dfe5d97d256?w=600&q=85",
+    "priceLabel": { "ja": "1名あたり（税別）", "en": "Per person (excl. tax)", "zh": "每人（不含税）" },
+    "price": "¥68,000〜"
+  },
+  {
+    "id": "allstar",
+    "featured": true,
+    "tag": { "ja": "人気No.1", "en": "Most Popular", "zh": "最受欢迎" },
+    "badge": { "ja": "おすすめ", "en": "Recommended", "zh": "推荐" },
+    "name": { "ja": "オールスターパック（3泊4日）", "en": "All Star Pack (3 nights)", "zh": "全明星套餐（3晚4天）" },
+    "description": {
+      "ja": "リフト券・スキーレンタル・温泉・ナイタースキー・スノーシューハイクまで全部込み。スキーを思いっきり楽しみたい方に。",
+      "en": "All-inclusive: lift pass, ski rental, onsen, night skiing, and snowshoe hike. The complete ski experience.",
+      "zh": "全包：缆车票、滑雪租赁、温泉、夜滑及雪地徒步，畅享完整滑雪体验。"
+    },
+    "includes": {
+      "ja": ["宿泊3泊", "朝食・夕食付き（全食）", "リフト券3日分", "スキーレンタル（3日）", "ナイタースキー券", "スノーシューハイク", "温泉入浴（貸切2回）", "スパ・マッサージ1回"],
+      "en": ["3 nights accommodation", "All meals (breakfast & dinner)", "3-day lift pass", "Ski rental (3 days)", "Night skiing pass", "Snowshoe hike", "Private onsen (2 sessions)", "1 spa massage session"],
+      "zh": ["住宿3晚", "全餐（早晚餐）", "3日缆车票", "滑雪租赁（3天）", "夜滑票", "雪地徒步", "独包温泉（2次）", "1次水疗按摩"]
+    },
+    "image": "https://images.unsplash.com/photo-1562777717-dc6984f65a63?w=600&q=85",
+    "priceLabel": { "ja": "1名あたり（税別）", "en": "Per person (excl. tax)", "zh": "每人（不含税）" },
+    "price": "¥118,000〜"
+  },
+  {
+    "id": "family",
+    "featured": false,
+    "tag": { "ja": "ファミリー", "en": "Family", "zh": "家庭" },
+    "badge": null,
+    "name": { "ja": "スノーファミリーパック（2泊3日）", "en": "Snow Family Pack (2 nights)", "zh": "雪地家庭套餐（2晚3天）" },
+    "description": {
+      "ja": "お子様のスキースクール無料参加付き。ファミリーシャレー優先確保。子連れスキーを存分に楽しめる充実のプランです。",
+      "en": "Includes free kids' ski school. Priority access to Family Chalets. The ultimate ski trip for families with children.",
+      "zh": "含免费儿童滑雪学校，优先安排家庭小屋，全家畅享滑雪之旅。"
+    },
+    "includes": {
+      "ja": ["ファミリーシャレー宿泊2泊", "全朝夕食付き", "大人リフト券2日分", "子供スキースクール（2日）", "ソリ貸し出し無料", "温泉入浴（家族貸切2回）", "キッズ送迎バス"],
+      "en": ["Family Chalet 2 nights", "All meals included", "Adult lift pass (2 days)", "Kids ski school (2 days)", "Free sled rental", "Family private onsen (2×)", "Kids shuttle"],
+      "zh": ["家庭小屋住宿2晚", "含全餐", "成人缆车票（2天）", "儿童滑雪学校（2天）", "免费雪橇租赁", "家庭独包温泉（2次）", "儿童接驳车"]
+    },
+    "image": "https://images.unsplash.com/photo-1519904981063-b0cf448d479e?w=600&q=85",
+    "priceLabel": { "ja": "4名（大人2・子供2）税別", "en": "4 guests (2 adults + 2 children)", "zh": "4人（2大人+2儿童，不含税）" },
+    "price": "¥168,000〜"
+  }
+]

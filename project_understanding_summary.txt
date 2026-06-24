@@ -172,13 +172,15 @@
 
 - ヒーロー見出し: 「旅館・ホテル向けに、Webサイトをつくります。」（OTA・手数料訴求は廃止、制作サービス訴求に変更）
 
+- ヒーロー背景（2026-06-24）: 夕景の旅館写真 `public/images/hero-ryokan.png` を背景に採用。`.hero-bg-photo::before` でぼかし(blur 9px)＋scale(1.12)、`::after` で金色グロー＋温色ウォッシュ、`.hero-bg-veil` は左→右で明→透のグラデーション（左の本文を可読に保ち右で写真を見せる）。視差JSは `.hero-bg-photo` の transform を使うため写真は擬似要素に分離。モバイル(≤920px)はベールを上下方向の明グラデに切替えて全幅本文の可読性を確保
+
 - LP受注率改善（2026-06-24・軽量版）: デモ表現の修正、Stripe表記削除、月額/買い切り説明、FAQ制作期間、フォームテンプレ欄は購入選択時のみ、モバイルナビに料金/FAQ、フローティング相談チップ削除
 
 - LP「お悩み」見出し横に undraw 風イラスト（images/illustrations/problem-search.png）を2カラム配置
 
 - LP「サービス」見出し左に undraw 風イラスト（images/illustrations/service-web-design.png）を2カラム配置（section-head--service）
 
-- LP「デモ」セクション（#works .works-template-grid）のサムネイルは `<img class="works-tmpl-img">` + 有効な Unsplash URL（2026-06-24: 旧 photo ID 複数が 404 のため差し替え）
+- LP「デモ」セクション（#works .works-template-grid）のサムネイルは `/templates/` と同じブラウザモックアップ（`.tmpl-preview` + ミニサイトUI）。カード下部にタグ・名称・説明（`.works-tmpl-body`）
 
 - LP受注率改善（2026-06-24・残り）: パーティクル/stats/3Dティルト/プログレスバー削除、英語バッジ日本語化、5種デモグリッド、初回相談、含む/別途表、向いている/向いていない、LP内テンプレ料金削除、マーケ1枚化、addon圧縮
 

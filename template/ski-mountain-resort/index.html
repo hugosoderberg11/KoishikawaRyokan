@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HAKUBA PEAKS RESORT</title>
+  <meta name="description" data-i18n="meta.description" content="" />
+  <meta name="keywords" data-i18n="meta.keywords" content="" />
+  <meta property="og:title" data-i18n="og.title" content="" />
+  <meta property="og:description" data-i18n="og.description" content="" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://hakubapeaks.example.com/og-image.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<!-- ============================================================
+     HEADER
+     ============================================================ -->
+<header class="site-header" id="site-header">
+  <a href="#" class="header-logo">
+    HAKUBA PEAKS
+    <span>RESORT — HAKUBA, NAGANO</span>
+  </a>
+
+  <nav class="header-nav">
+    <a href="#activities" data-i18n="nav.slopes"></a>
+    <a href="#rooms" data-i18n="nav.rooms"></a>
+    <a href="#onsen" data-i18n="nav.onsen"></a>
+    <a href="#dining" data-i18n="nav.dining"></a>
+    <a href="#plans" data-i18n="nav.plans"></a>
+    <a href="#access" data-i18n="nav.access"></a>
+  </nav>
+
+  <div class="header-actions">
+    <div class="lang-switcher">
+      <button class="lang-btn is-active" data-lang="ja">JP</button>
+      <span class="lang-sep">/</span>
+      <button class="lang-btn" data-lang="en">EN</button>
+      <span class="lang-sep">/</span>
+      <button class="lang-btn" data-lang="zh">中</button>
+    </div>
+    <a href="#reserve" class="header-reserve-btn" data-i18n="nav.reserve"></a>
+    <button class="drawer-toggle" id="drawer-toggle" aria-label="メニュー">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- ============================================================
+     MOBILE DRAWER
+     ============================================================ -->
+<div class="drawer-overlay" id="drawer-overlay"></div>
+<nav class="mobile-drawer" id="mobile-drawer">
+  <button class="drawer-close" id="drawer-close" aria-label="閉じる">×</button>
+  <div class="drawer-nav">
+    <a href="#activities" data-i18n="nav.slopes"></a>
+    <a href="#rooms" data-i18n="nav.rooms"></a>
+    <a href="#onsen" data-i18n="nav.onsen"></a>
+    <a href="#dining" data-i18n="nav.dining"></a>
+    <a href="#plans" data-i18n="nav.plans"></a>
+    <a href="#access" data-i18n="nav.access"></a>
+  </div>
+  <a href="#reserve" class="drawer-reserve-btn" data-i18n="nav.reserve"></a>
+  <div class="drawer-lang">
+    <button class="lang-btn is-active" data-lang="ja">JP</button>
+    <button class="lang-btn" data-lang="en">EN</button>
+    <button class="lang-btn" data-lang="zh">中</button>
+  </div>
+</nav>
+
+<!-- ============================================================
+     HERO
+     ============================================================ -->
+<section class="hero" id="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-content fade-in">
+    <p class="hero-eyebrow" data-i18n="hero.eyebrow"></p>
+    <h1 class="hero-title" data-i18n="hero.title"></h1>
+    <p class="hero-lead" data-i18n="hero.lead"></p>
+    <div class="hero-btns">
+      <a href="#plans" class="hero-btn hero-btn--primary" data-i18n="hero.btn1"></a>
+      <a href="#reserve" class="hero-btn hero-btn--outline" data-i18n="hero.btn2"></a>
+    </div>
+    <div class="hero-snow-meta">
+      <div class="hero-snow-item">
+        <span class="hero-snow-label" data-i18n="hero.snow.label"></span>
+      </div>
+      <div class="hero-snow-item">
+        <span class="hero-snow-label" data-i18n="hero.snow.base"></span>
+        <span class="hero-snow-value">210 cm</span>
+      </div>
+      <div class="hero-snow-item">
+        <span class="hero-snow-label" data-i18n="hero.snow.summit"></span>
+        <span class="hero-snow-value">320 cm</span>
+      </div>
+      <div class="hero-snow-item">
+        <span class="hero-snow-label" data-i18n="hero.snow.condition"></span>
+        <span class="hero-snow-value">★★★★★</span>
+      </div>
+    </div>
+  </div>
+  <span class="hero-scroll" data-i18n="hero.scroll"></span>
+</section>
+
+<!-- ============================================================
+     NEWS TICKER
+     ============================================================ -->
+<section class="news-section" id="news">
+  <div class="news-bar">
+    <span class="news-label" data-i18n="news.label"></span>
+    <div class="news-ticker-track">
+      <div class="news-ticker-inner" id="news-list">
+        <!-- JS rendered -->
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     SNOW REPORT
+     ============================================================ -->
+<section class="snow-section" id="snow-report">
+  <div class="snow-inner">
+    <div class="snow-header fade-in">
+      <div>
+        <span class="section-tag" data-i18n="snow.tag"></span>
+        <h2 class="section-title" data-i18n="snow.title"></h2>
+      </div>
+      <span class="snow-updated" data-i18n="snow.updated"></span>
+    </div>
+    <div class="snow-grid fade-in">
+      <div class="snow-stat snow-stat--highlight">
+        <div class="snow-stat-label" data-i18n="snow.base.label"></div>
+        <div class="snow-stat-value" data-i18n="snow.base.value"></div>
+      </div>
+      <div class="snow-stat snow-stat--highlight">
+        <div class="snow-stat-label" data-i18n="snow.summit.label"></div>
+        <div class="snow-stat-value" data-i18n="snow.summit.value"></div>
+      </div>
+      <div class="snow-stat">
+        <div class="snow-stat-label" data-i18n="snow.runs.label"></div>
+        <div class="snow-stat-value" data-i18n="snow.runs.value"></div>
+      </div>
+      <div class="snow-stat">
+        <div class="snow-stat-label" data-i18n="snow.lifts.label"></div>
+        <div class="snow-stat-value" data-i18n="snow.lifts.value"></div>
+      </div>
+      <div class="snow-stat">
+        <div class="snow-stat-label" data-i18n="snow.condition.label"></div>
+        <div class="snow-stat-value" data-i18n="snow.condition.value"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     ABOUT
+     ============================================================ -->
+<section class="about-section" id="about">
+  <div class="about-inner">
+    <div class="about-photo fade-in">
+      <img
+        src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&q=85"
+        alt="白馬の雪山と北アルプス"
+        loading="lazy"
+      />
+      <div class="about-photo-badge">Hakuba, Nagano, Japan<br />1998 Nagano Winter Olympics</div>
+    </div>
+    <div class="about-body fade-in">
+      <span class="section-tag" data-i18n="about.tag"></span>
+      <h2 class="section-title" data-i18n="about.title"></h2>
+      <p class="about-text" data-i18n="about.text1"></p>
+      <p class="about-text" data-i18n="about.text2"></p>
+      <div class="about-stats">
+        <div class="about-stat">
+          <div class="about-stat-label" data-i18n="about.stat1.label"></div>
+          <div class="about-stat-value" data-i18n="about.stat1.value"></div>
+        </div>
+        <div class="about-stat">
+          <div class="about-stat-label" data-i18n="about.stat2.label"></div>
+          <div class="about-stat-value" data-i18n="about.stat2.value"></div>
+        </div>
+        <div class="about-stat">
+          <div class="about-stat-label" data-i18n="about.stat3.label"></div>
+          <div class="about-stat-value" data-i18n="about.stat3.value"></div>
+        </div>
+        <div class="about-stat">
+          <div class="about-stat-label" data-i18n="about.stat4.label"></div>
+          <div class="about-stat-value" data-i18n="about.stat4.value"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     ACTIVITIES
+     ============================================================ -->
+<section class="activities-section" id="activities">
+  <div class="activities-inner">
+    <div class="activities-header fade-in">
+      <span class="section-tag section-tag--light" data-i18n="activities.tag"></span>
+      <h2 class="section-title section-title--light" data-i18n="activities.title"></h2>
+      <p class="section-lead section-lead--light" data-i18n="activities.lead"></p>
+    </div>
+    <div class="activities-grid">
+      <article class="activity-card fade-in">
+        <div class="activity-icon">⛷️</div>
+        <h3 class="activity-title" data-i18n="activities.ski.title"></h3>
+        <p class="activity-desc" data-i18n="activities.ski.desc"></p>
+      </article>
+      <article class="activity-card fade-in">
+        <div class="activity-icon">🌙</div>
+        <h3 class="activity-title" data-i18n="activities.night.title"></h3>
+        <p class="activity-desc" data-i18n="activities.night.desc"></p>
+      </article>
+      <article class="activity-card fade-in">
+        <div class="activity-icon">🥾</div>
+        <h3 class="activity-title" data-i18n="activities.snowshoe.title"></h3>
+        <p class="activity-desc" data-i18n="activities.snowshoe.desc"></p>
+      </article>
+      <article class="activity-card fade-in">
+        <div class="activity-icon">⛰️</div>
+        <h3 class="activity-title" data-i18n="activities.hike.title"></h3>
+        <p class="activity-desc" data-i18n="activities.hike.desc"></p>
+      </article>
+      <article class="activity-card fade-in">
+        <div class="activity-icon">🏂</div>
+        <h3 class="activity-title" data-i18n="activities.school.title"></h3>
+        <p class="activity-desc" data-i18n="activities.school.desc"></p>
+      </article>
+      <article class="activity-card fade-in" style="background:rgba(58,127,212,.08);border-color:rgba(58,127,212,.3);">
+        <div class="activity-icon" style="background:rgba(58,127,212,.3);">📅</div>
+        <h3 class="activity-title">シーズン</h3>
+        <p class="activity-desc">冬季：12月上旬〜3月下旬<br>グリーンシーズン：7月〜9月<br><br>Winter: early Dec – late Mar<br>Green season: Jul – Sep</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     ROOMS
+     ============================================================ -->
+<section class="rooms-section" id="rooms">
+  <div class="rooms-inner">
+    <div class="rooms-header fade-in">
+      <span class="section-tag" data-i18n="rooms.tag"></span>
+      <h2 class="section-title" data-i18n="rooms.title"></h2>
+      <p class="section-lead" data-i18n="rooms.lead"></p>
+    </div>
+    <div class="rooms-grid" id="rooms-grid">
+      <!-- JS rendered -->
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     ONSEN
+     ============================================================ -->
+<section class="onsen-section" id="onsen">
+  <div class="onsen-photo">
+    <img
+      src="https://images.unsplash.com/photo-1520052205864-92d242b3a76b?w=900&q=85"
+      alt="雪見露天風呂"
+      loading="lazy"
+    />
+  </div>
+  <div class="onsen-body">
+    <span class="section-tag section-tag--light" data-i18n="onsen.tag"></span>
+    <h2 class="section-title section-title--light" data-i18n="onsen.title"></h2>
+    <p class="onsen-subtitle" data-i18n="onsen.subtitle"></p>
+    <p class="onsen-text" data-i18n="onsen.text"></p>
+    <div class="onsen-specs">
+      <div class="onsen-spec">
+        <div class="onsen-spec-label" data-i18n="onsen.f1.label"></div>
+        <div class="onsen-spec-value" data-i18n="onsen.f1.value"></div>
+      </div>
+      <div class="onsen-spec">
+        <div class="onsen-spec-label" data-i18n="onsen.f2.label"></div>
+        <div class="onsen-spec-value" data-i18n="onsen.f2.value"></div>
+      </div>
+      <div class="onsen-spec">
+        <div class="onsen-spec-label" data-i18n="onsen.f3.label"></div>
+        <div class="onsen-spec-value" data-i18n="onsen.f3.value"></div>
+      </div>
+      <div class="onsen-spec">
+        <div class="onsen-spec-label" data-i18n="onsen.f4.label"></div>
+        <div class="onsen-spec-value" data-i18n="onsen.f4.value"></div>
+      </div>
+      <div class="onsen-spec">
+        <div class="onsen-spec-label" data-i18n="onsen.f5.label"></div>
+        <div class="onsen-spec-value" data-i18n="onsen.f5.value"></div>
+      </div>
+      <div class="onsen-spec">
+        <div class="onsen-spec-label" data-i18n="onsen.f6.label"></div>
+        <div class="onsen-spec-value" data-i18n="onsen.f6.value"></div>
+      </div>
+    </div>
+    <a href="#reserve" class="onsen-btn" data-i18n="onsen.btn"></a>
+  </div>
+</section>
+
+<!-- ============================================================
+     DINING
+     ============================================================ -->
+<section class="dining-section" id="dining">
+  <div class="dining-body">
+    <span class="section-tag" data-i18n="dining.tag"></span>
+    <h2 class="section-title" data-i18n="dining.title"></h2>
+    <p class="dining-subtitle" data-i18n="dining.subtitle"></p>
+    <p class="dining-text" data-i18n="dining.text"></p>
+    <div class="dining-specs">
+      <div class="dining-spec">
+        <span class="dining-spec-label" data-i18n="dining.f1.label"></span>
+        <span class="dining-spec-value" data-i18n="dining.f1.value"></span>
+      </div>
+      <div class="dining-spec">
+        <span class="dining-spec-label" data-i18n="dining.f2.label"></span>
+        <span class="dining-spec-value" data-i18n="dining.f2.value"></span>
+      </div>
+      <div class="dining-spec">
+        <span class="dining-spec-label" data-i18n="dining.f3.label"></span>
+        <span class="dining-spec-value" data-i18n="dining.f3.value"></span>
+      </div>
+      <div class="dining-spec">
+        <span class="dining-spec-label" data-i18n="dining.f4.label"></span>
+        <span class="dining-spec-value" data-i18n="dining.f4.value"></span>
+      </div>
+    </div>
+    <a href="#reserve" class="dining-btn" data-i18n="dining.btn"></a>
+  </div>
+  <div class="dining-photo">
+    <img
+      src="https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?w=900&q=85"
+      alt="囲炉裏料理"
+      loading="lazy"
+    />
+  </div>
+</section>
+
+<!-- ============================================================
+     APRÈS-SKI BAR
+     ============================================================ -->
+<section class="apresski-section" id="apresski">
+  <div class="apresski-photo">
+    <img
+      src="https://images.unsplash.com/photo-1470337458703-46ad1756a187?w=900&q=85"
+      alt="アプレスキーバー"
+      loading="lazy"
+    />
+  </div>
+  <div class="apresski-body">
+    <span class="section-tag section-tag--light" data-i18n="apresski.tag"></span>
+    <h2 class="section-title section-title--light" data-i18n="apresski.title"></h2>
+    <p class="apresski-subtitle" data-i18n="apresski.subtitle"></p>
+    <p class="apresski-text" data-i18n="apresski.text"></p>
+    <div class="apresski-specs">
+      <div class="apresski-spec">
+        <span class="apresski-spec-label" data-i18n="apresski.hours.label"></span>
+        <span class="apresski-spec-value" data-i18n="apresski.hours.value"></span>
+      </div>
+      <div class="apresski-spec">
+        <span class="apresski-spec-label" data-i18n="apresski.spec1.label"></span>
+        <span class="apresski-spec-value" data-i18n="apresski.spec1.value"></span>
+      </div>
+      <div class="apresski-spec">
+        <span class="apresski-spec-label" data-i18n="apresski.spec2.label"></span>
+        <span class="apresski-spec-value" data-i18n="apresski.spec2.value"></span>
+      </div>
+    </div>
+    <a href="#" class="apresski-btn" data-i18n="apresski.btn"></a>
+  </div>
+</section>
+
+<!-- ============================================================
+     PLANS
+     ============================================================ -->
+<section class="plans-section" id="plans">
+  <div class="plans-inner">
+    <div class="plans-header fade-in">
+      <span class="section-tag section-tag--light" data-i18n="plans.tag"></span>
+      <h2 class="section-title section-title--light" data-i18n="plans.title"></h2>
+      <p class="section-lead section-lead--light" data-i18n="plans.lead"></p>
+    </div>
+    <div class="plans-grid" id="plans-grid">
+      <!-- JS rendered -->
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     FAQ
+     ============================================================ -->
+<section class="faq-section" id="faq">
+  <div class="faq-inner">
+    <div class="faq-header fade-in">
+      <span class="section-tag" data-i18n="faq.tag"></span>
+      <h2 class="section-title" data-i18n="faq.title"></h2>
+    </div>
+    <div class="faq-list fade-in">
+      <div class="faq-item">
+        <div class="faq-q">
+          <span data-i18n="faq.q1"></span>
+          <span class="faq-q-icon">+</span>
+        </div>
+        <div class="faq-a" data-i18n="faq.a1"></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">
+          <span data-i18n="faq.q2"></span>
+          <span class="faq-q-icon">+</span>
+        </div>
+        <div class="faq-a" data-i18n="faq.a2"></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">
+          <span data-i18n="faq.q3"></span>
+          <span class="faq-q-icon">+</span>
+        </div>
+        <div class="faq-a" data-i18n="faq.a3"></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">
+          <span data-i18n="faq.q4"></span>
+          <span class="faq-q-icon">+</span>
+        </div>
+        <div class="faq-a" data-i18n="faq.a4"></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">
+          <span data-i18n="faq.q5"></span>
+          <span class="faq-q-icon">+</span>
+        </div>
+        <div class="faq-a" data-i18n="faq.a5"></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">
+          <span data-i18n="faq.q6"></span>
+          <span class="faq-q-icon">+</span>
+        </div>
+        <div class="faq-a" data-i18n="faq.a6"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     ACCESS
+     ============================================================ -->
+<section class="access-section" id="access">
+  <div class="access-inner">
+    <div class="access-map fade-in">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d25706.2!2d137.860!3d36.698!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzbCsDQxJzUyLjgiTiAxMzfCsDUxJzM2LjAiRQ!5e0!3m2!1sja!2sjp!4v1700000000000!5m2!1sja!2sjp"
+        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+        title="HAKUBA PEAKS RESORT Map"
+      ></iframe>
+    </div>
+    <div class="access-body fade-in">
+      <div class="access-header">
+        <span class="section-tag" data-i18n="access.tag"></span>
+        <h2 class="section-title" data-i18n="access.title"></h2>
+      </div>
+      <div class="access-item">
+        <span class="access-label" data-i18n="access.addr"></span>
+        <span class="access-value">〒399-9211 長野県北安曇郡白馬村北城5905</span>
+      </div>
+      <div class="access-item">
+        <span class="access-label" data-i18n="access.tel"></span>
+        <span class="access-value">0261-00-0000</span>
+      </div>
+      <div class="access-item">
+        <span class="access-label" data-i18n="access.train"></span>
+        <span class="access-value--small" data-i18n="access.train.text"></span>
+      </div>
+      <div class="access-item">
+        <span class="access-label" data-i18n="access.car"></span>
+        <span class="access-value--small" data-i18n="access.car.text"></span>
+      </div>
+      <div class="access-item">
+        <span class="access-label" data-i18n="access.shuttle"></span>
+        <span class="access-value--small" data-i18n="access.shuttle.text"></span>
+      </div>
+      <div class="access-item">
+        <span class="access-label" data-i18n="access.bus"></span>
+        <span class="access-value--small" data-i18n="access.bus.text"></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     RESERVE
+     ============================================================ -->
+<section class="reserve-section" id="reserve">
+  <div class="reserve-inner">
+    <div class="reserve-info fade-in">
+      <div class="reserve-header">
+        <span class="section-tag section-tag--light" data-i18n="reserve.tag"></span>
+        <h2 class="section-title section-title--light" data-i18n="reserve.title"></h2>
+        <p class="reserve-lead" data-i18n="reserve.lead"></p>
+      </div>
+      <div class="reserve-phone-box">
+        <div class="reserve-phone-title" data-i18n="reserve.phone.title"></div>
+        <div class="reserve-phone-num">0261-00-0000</div>
+        <div class="reserve-phone-hours" data-i18n="reserve.phone.hours"></div>
+        <div class="reserve-phone-hint" data-i18n="reserve.phone.hint"></div>
+      </div>
+    </div>
+
+    <div class="reserve-form-wrap fade-in">
+      <p class="form-title" data-i18n="form.title"></p>
+      <form id="reserve-form" novalidate>
+        <div class="form-grid">
+          <div class="form-group">
+            <label class="form-label" for="f-name">
+              <span data-i18n="form.name"></span>
+              <span class="req" data-i18n="form.required"></span>
+            </label>
+            <input type="text" id="f-name" class="form-control" required
+              data-i18n-placeholder="form.name" />
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="f-email">
+              <span data-i18n="form.email"></span>
+              <span class="req" data-i18n="form.required"></span>
+            </label>
+            <input type="email" id="f-email" class="form-control" required
+              data-i18n-placeholder="form.email" />
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="f-tel">
+              <span data-i18n="form.tel"></span>
+            </label>
+            <input type="tel" id="f-tel" class="form-control"
+              data-i18n-placeholder="form.tel" />
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="f-checkin">
+              <span data-i18n="form.checkin"></span>
+              <span class="req" data-i18n="form.required"></span>
+            </label>
+            <input type="date" id="f-checkin" class="form-control" required />
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="f-guests">
+              <span data-i18n="form.guests"></span>
+            </label>
+            <input type="text" id="f-guests" class="form-control"
+              data-i18n-placeholder="form.guests.placeholder" />
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="form-plan">
+              <span data-i18n="form.plan"></span>
+            </label>
+            <select id="form-plan" class="form-control">
+              <!-- JS populated -->
+            </select>
+          </div>
+          <div class="form-group form-group--full">
+            <label class="form-label" for="form-room">
+              <span data-i18n="form.room"></span>
+            </label>
+            <select id="form-room" class="form-control">
+              <!-- JS populated -->
+            </select>
+          </div>
+          <div class="form-group form-group--full">
+            <label class="form-label" for="f-message">
+              <span data-i18n="form.message"></span>
+            </label>
+            <textarea id="f-message" class="form-control"
+              data-i18n-placeholder="form.message.placeholder"></textarea>
+          </div>
+          <div class="form-group form-group--full">
+            <label class="form-privacy">
+              <input type="checkbox" required />
+              <a href="#" data-i18n="form.privacy"></a>
+              <span data-i18n="form.privacy.agree"></span>
+            </label>
+          </div>
+        </div>
+        <button type="submit" class="form-submit" data-i18n="form.submit"></button>
+        <p class="form-note" data-i18n="form.note"></p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     FOOTER
+     ============================================================ -->
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div>
+      <div class="footer-logo">HAKUBA PEAKS RESORT</div>
+      <div class="footer-logo-sub">POWDER SNOW RESORT — HAKUBA, NAGANO</div>
+      <p class="footer-desc">長野・白馬の雪山に佇くスキーリゾート。日本屈指のパウダースノーと源泉かけ流し温泉。</p>
+    </div>
+    <div>
+      <div class="footer-col-title">MENU</div>
+      <ul class="footer-links">
+        <li><a href="#activities" data-i18n="nav.slopes"></a></li>
+        <li><a href="#rooms" data-i18n="nav.rooms"></a></li>
+        <li><a href="#onsen" data-i18n="nav.onsen"></a></li>
+        <li><a href="#dining" data-i18n="nav.dining"></a></li>
+        <li><a href="#plans" data-i18n="nav.plans"></a></li>
+        <li><a href="#access" data-i18n="nav.access"></a></li>
+        <li><a href="#reserve" data-i18n="nav.reserve"></a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title">INFO</div>
+      <div class="footer-info">
+        <div class="footer-info-item"><strong>TEL</strong>0261-00-0000</div>
+        <div class="footer-info-item"><strong>EMAIL</strong>info@hakubapeaks.example.com</div>
+        <div class="footer-info-item"><strong>住所</strong>長野県北安曇郡白馬村北城5905</div>
+        <div class="footer-info-item"><strong>フロント</strong>24時間対応</div>
+        <div class="footer-info-item"><strong>IN / OUT</strong>15:00 / 11:00</div>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom" data-i18n="footer.copy"></div>
+</footer>
+
+<!-- TO-TOP -->
+<button class="to-top" id="to-top" aria-label="トップへ戻る">↑</button>
+
+<script type="module" src="script.js"></script>
+</body>
+</html>

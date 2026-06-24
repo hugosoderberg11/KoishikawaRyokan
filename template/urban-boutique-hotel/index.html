@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- ===== SEO ===== -->
+  <title data-i18n="meta.title">【公式】THE AKARI AOYAMA｜東京・青山のブティックホテル</title>
+  <meta name="description" data-i18n-attr="content:meta.description" content="東京・青山に佇む14室のブティックホテル「THE AKARI」。日本の美学と現代建築の融合。ルーフトップバー、モダンダイニング、24hコンシェルジュ。" />
+  <meta name="keywords" data-i18n-attr="content:meta.keywords" content="ブティックホテル,青山,東京,表参道,高級ホテル,デザインホテル,ルーフトップバー" />
+  <link rel="canonical" href="https://theakari.example.com/" />
+
+  <!-- ===== OGP ===== -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" data-i18n-attr="content:og.title" content="THE AKARI AOYAMA｜東京・青山のブティックホテル" />
+  <meta property="og:description" data-i18n-attr="content:og.description" content="都市の中の、静寂と光。東京・青山、14室のみのプライベートな滞在。" />
+  <meta property="og:url" content="https://theakari.example.com/" />
+  <meta property="og:image" content="https://theakari.example.com/og-image.jpg" />
+  <meta property="og:site_name" content="THE AKARI AOYAMA" />
+  <meta property="og:locale" content="ja_JP" id="og-locale" />
+  <meta property="og:locale:alternate" content="en_US" />
+  <meta property="og:locale:alternate" content="zh_CN" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="THE AKARI AOYAMA｜東京・青山のブティックホテル" />
+  <meta name="twitter:description" content="都市の中の、静寂と光。東京・青山、14室のみ。" />
+  <meta name="twitter:image" content="https://theakari.example.com/og-image.jpg" />
+
+  <!-- ===== Fonts ===== -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Noto+Sans+JP:wght@300;400;500&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- ===== Hotel 構造化データ ===== -->
+  <script type="application/ld+json" id="schema-hotel">
+  {
+    "@context": "https://schema.org",
+    "@type": "Hotel",
+    "name": "THE AKARI AOYAMA",
+    "alternateName": "ジ・アカリ 青山",
+    "description": "東京・青山に佇む14室のブティックホテル。日本の美意識と現代建築の融合。ルーフトップバー、モダンダイニング、24hコンシェルジュ。",
+    "url": "https://theakari.example.com/",
+    "telephone": "03-0000-0000",
+    "email": "concierge@theakari.example.com",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "南青山2-0-0",
+      "addressLocality": "港区",
+      "addressRegion": "東京都",
+      "postalCode": "107-0062",
+      "addressCountry": "JP"
+    },
+    "geo": { "@type": "GeoCoordinates", "latitude": "35.6681", "longitude": "139.7276" },
+    "starRating": { "@type": "Rating", "ratingValue": "5" },
+    "priceRange": "¥¥¥¥",
+    "checkinTime": "15:00",
+    "checkoutTime": "12:00",
+    "numberOfRooms": 14,
+    "amenityFeature": [
+      { "@type": "LocationFeatureSpecification", "name": "ルーフトップバー", "value": true },
+      { "@type": "LocationFeatureSpecification", "name": "レストラン", "value": true },
+      { "@type": "LocationFeatureSpecification", "name": "フィットネス", "value": true },
+      { "@type": "LocationFeatureSpecification", "name": "コンシェルジュ", "value": true },
+      { "@type": "LocationFeatureSpecification", "name": "Wi-Fi", "value": true },
+      { "@type": "LocationFeatureSpecification", "name": "バトラーサービス", "value": true }
+    ],
+    "image": [
+      "https://theakari.example.com/images/hero.jpg",
+      "https://theakari.example.com/images/rooftop.jpg",
+      "https://theakari.example.com/images/room-suite.jpg"
+    ],
+    "sameAs": [
+      "https://www.instagram.com/theakari_aoyama/",
+      "https://twitter.com/theakari_hotel/"
+    ]
+  }
+  </script>
+</head>
+<body>
+
+<!-- ===== Header ===== -->
+<header class="header" id="top">
+  <div class="header__inner">
+    <a href="#top" class="logo" aria-label="THE AKARI AOYAMA トップへ">
+      <span class="logo__en">THE AKARI</span>
+      <span class="logo__ja" id="site-name-ja">AOYAMA</span>
+    </a>
+
+    <nav class="nav" aria-label="メインナビゲーション">
+      <a href="#rooms" data-i18n="nav.rooms">客室</a>
+      <a href="#dining" data-i18n="nav.dining">ダイニング</a>
+      <a href="#rooftop" data-i18n="nav.rooftop">ルーフトップ</a>
+      <a href="#services" data-i18n="nav.services">サービス</a>
+      <a href="#plans" data-i18n="nav.plans">プラン</a>
+      <a href="#access" data-i18n="nav.access">アクセス</a>
+    </nav>
+
+    <div class="header__actions">
+      <div class="lang-switch" role="group" aria-label="Language">
+        <button type="button" class="lang-btn is-active" data-lang="ja" aria-pressed="true">JP</button>
+        <button type="button" class="lang-btn" data-lang="en" aria-pressed="false">EN</button>
+        <button type="button" class="lang-btn" data-lang="zh" aria-pressed="false">中</button>
+      </div>
+      <a href="tel:0300000000" class="header__tel">03-0000-0000</a>
+      <a href="#reserve" class="btn btn--book" data-i18n="nav.reserve">ご予約</a>
+    </div>
+
+    <button class="menu-btn" aria-label="メニューを開く" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- ===== Mobile Drawer ===== -->
+<div class="drawer" aria-hidden="true">
+  <div class="drawer__overlay"></div>
+  <nav class="drawer__panel" aria-label="モバイルナビゲーション">
+    <p class="drawer__logo" id="drawer-site-name">THE AKARI</p>
+    <div class="lang-switch" role="group" aria-label="Language">
+      <button type="button" class="lang-btn is-active" data-lang="ja">JP</button>
+      <button type="button" class="lang-btn" data-lang="en">EN</button>
+      <button type="button" class="lang-btn" data-lang="zh">中</button>
+    </div>
+    <a href="#rooms" data-i18n="nav.rooms">客室</a>
+    <a href="#dining" data-i18n="nav.dining">ダイニング</a>
+    <a href="#rooftop" data-i18n="nav.rooftop">ルーフトップ</a>
+    <a href="#services" data-i18n="nav.services">サービス</a>
+    <a href="#plans" data-i18n="nav.plans">プラン</a>
+    <a href="#access" data-i18n="nav.access">アクセス</a>
+    <div class="drawer__cta">
+      <a href="#reserve" class="btn btn--ghost-w" data-i18n="nav.reserve">ご予約</a>
+    </div>
+  </nav>
+</div>
+
+<main>
+  <!-- ===== Hero ===== -->
+  <section class="hero">
+    <div class="hero__bg">
+      <img
+        src="https://images.unsplash.com/photo-1549294413-26f195200cec?w=2000&q=90"
+        alt="THE AKARI AOYAMA — ホテルエントランス"
+        width="2000" height="1200"
+        class="hero__img"
+        fetchpriority="high"
+      />
+      <div class="hero__overlay"></div>
+    </div>
+
+    <div class="hero__content">
+      <p class="hero__eyebrow" data-i18n="hero.eyebrow">BOUTIQUE HOTEL — AOYAMA, TOKYO</p>
+      <h1 class="hero__title" data-i18n="hero.title">都市の中の、<br />静寂と光。</h1>
+      <p class="hero__lead" data-i18n="hero.lead">東京・青山。14室のみのブティックホテル。<br class="u-pc" />日本の美意識と現代建築が出会う場所。</p>
+      <div class="hero__btns">
+        <a href="#reserve" class="btn btn--book btn--lg" data-i18n="hero.btn1">空室を確認する</a>
+        <a href="#rooms" class="btn btn--ghost-w btn--lg" data-i18n="hero.btn2">客室を見る</a>
+      </div>
+    </div>
+
+    <div class="hero__meta" aria-label="ホテル概要">
+      <div class="hero__meta-item">
+        <span data-i18n="hero.checkin">チェックイン</span>
+        <strong>15:00</strong>
+      </div>
+      <div class="hero__meta-item">
+        <span data-i18n="hero.checkout">チェックアウト</span>
+        <strong>12:00</strong>
+      </div>
+      <div class="hero__meta-item">
+        <span data-i18n="hero.rooms">客室数</span>
+        <strong>14</strong>
+      </div>
+    </div>
+
+    <div class="hero__scroll" aria-hidden="true">
+      <span data-i18n="hero.scroll">SCROLL</span>
+      <span class="hero__scroll-line"></span>
+    </div>
+  </section>
+
+  <!-- ===== News ===== -->
+  <aside class="news" aria-label="お知らせ">
+    <div class="news__inner">
+      <span class="news__label" data-i18n="news.label">NEWS</span>
+      <div class="news__track" id="cms-news"></div>
+    </div>
+  </aside>
+
+  <!-- ===== Concept ===== -->
+  <section class="concept" id="concept">
+    <div class="concept__layout">
+      <div class="concept__visual fade-in">
+        <img
+          src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?w=1200&q=85"
+          alt="THE AKARI ロビー"
+          width="800" height="1000"
+          loading="lazy"
+        />
+        <div class="concept__visual-accent" aria-hidden="true"></div>
+      </div>
+      <div class="concept__body fade-in">
+        <span class="section-tag" data-i18n="concept.tag">CONCEPT</span>
+        <h2 class="section-title section-title--light" data-i18n="concept.title">光と静寂が宿る、<br />都市のオアシス。</h2>
+        <p class="concept__text" data-i18n="concept.text1">THE AKARIは、東京・南青山に佇む14室のみのブティックホテルです。「アカリ（灯り）」という名が示すように、柔らかな光が空間全体を包み込みます。</p>
+        <p class="concept__text" data-i18n="concept.text2">著名な建築家による設計のもと、日本古来の美意識「間（ま）」の思想を現代建築に昇華。素材にはすべて国産の自然素材を使用し、訪れるたびに異なる表情を見せます。</p>
+        <dl class="concept__stats">
+          <div class="concept__stat">
+            <dt data-i18n="concept.stat1.label">客室数</dt>
+            <dd data-i18n="concept.stat1.value">14室</dd>
+          </div>
+          <div class="concept__stat">
+            <dt data-i18n="concept.stat2.label">最寄り駅</dt>
+            <dd data-i18n="concept.stat2.value">表参道 4分</dd>
+          </div>
+          <div class="concept__stat">
+            <dt data-i18n="concept.stat3.label">フロント</dt>
+            <dd data-i18n="concept.stat3.value">24時間</dd>
+          </div>
+        </dl>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Rooms ===== -->
+  <section class="rooms section" id="rooms">
+    <div class="container">
+      <header class="section-head fade-in">
+        <span class="section-tag" data-i18n="rooms.tag">ROOMS</span>
+        <h2 class="section-title" data-i18n="rooms.title">客室</h2>
+        <p class="section-lead" data-i18n="rooms.lead">25㎡から110㎡まで。すべての客室に、光と静寂を設計しました。</p>
+      </header>
+      <div class="rooms__grid" id="cms-rooms"></div>
+    </div>
+  </section>
+
+  <!-- ===== Dining ===== -->
+  <section class="dining section" id="dining">
+    <div class="dining__restaurant fade-in">
+      <div class="dining__restaurant-img">
+        <img
+          src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1400&q=90"
+          alt="Restaurant 灯台"
+          width="1200" height="900"
+          loading="lazy"
+        />
+      </div>
+      <div class="dining__restaurant-body">
+        <span class="section-tag" data-i18n="dining.tag">DINING</span>
+        <h2 class="section-title" data-i18n="dining.title">Restaurant 灯台</h2>
+        <p class="dining__subtitle" data-i18n="dining.subtitle">東京の朝を、最上の食とともに。</p>
+        <p class="dining__text" data-i18n="dining.text">1Fのレストラン「灯台（とうだい）」は、青山の四季を皿に映す日本料理をベースとしたモダン・ジャパニーズ。地方の契約農家から届く旬の食材を、シェフが毎朝丁寧に調理します。</p>
+        <dl class="dining__facts">
+          <div>
+            <dt data-i18n="dining.f1.label">朝食</dt>
+            <dd data-i18n="dining.f1.value">7:00〜10:00（ビュッフェ形式）</dd>
+          </div>
+          <div>
+            <dt data-i18n="dining.f2.label">夕食</dt>
+            <dd data-i18n="dining.f2.value">18:00〜22:00（要予約）</dd>
+          </div>
+          <div>
+            <dt data-i18n="dining.f3.label">席数</dt>
+            <dd data-i18n="dining.f3.value">28席</dd>
+          </div>
+          <div>
+            <dt data-i18n="dining.f4.label">ドレスコード</dt>
+            <dd data-i18n="dining.f4.value">スマートカジュアル</dd>
+          </div>
+        </dl>
+        <a href="#reserve" class="btn btn--ghost-dk" data-i18n="dining.btn">ディナーを予約する</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Rooftop Bar ===== -->
+  <section class="rooftop section" id="rooftop">
+    <div class="container">
+      <div class="rooftop__layout fade-in">
+        <div class="rooftop__body">
+          <span class="section-tag section-tag--light" data-i18n="rooftop.tag">ROOFTOP BAR</span>
+          <h2 class="section-title section-title--light" data-i18n="rooftop.title">Rooftop Bar 燈</h2>
+          <p class="rooftop__subtitle" data-i18n="rooftop.subtitle">東京の夜景に包まれる、屋上の一杯。</p>
+          <p class="rooftop__text" data-i18n="rooftop.text">最上階のルーフトップバー「燈（ともしび）」から、青山の夜景と東京スカイラインを一望。厳選されたシャンパン、クラフトカクテル、ジャパニーズウイスキーで、特別な夜を演出します。</p>
+          <dl class="rooftop__facts">
+            <div>
+              <dt data-i18n="rooftop.hours.label">営業時間</dt>
+              <dd data-i18n="rooftop.hours.value">18:00〜25:00（夏季5/15〜9/30）</dd>
+            </div>
+            <div>
+              <dt data-i18n="rooftop.capacity.label">席数</dt>
+              <dd data-i18n="rooftop.capacity.value">18席（要予約）</dd>
+            </div>
+          </dl>
+          <a href="#reserve" class="btn btn--ghost-w" data-i18n="rooftop.btn">席を予約する</a>
+        </div>
+        <div class="rooftop__img">
+          <img
+            src="https://images.unsplash.com/photo-1519999482648-25049ddd37b1?w=1400&q=85"
+            alt="Rooftop Bar 燈 — 夜景"
+            width="1200" height="900"
+            loading="lazy"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Services ===== -->
+  <section class="services section" id="services">
+    <div class="container">
+      <header class="section-head fade-in">
+        <span class="section-tag" data-i18n="services.tag">SERVICES</span>
+        <h2 class="section-title" data-i18n="services.title">サービス & アメニティ</h2>
+        <p class="section-lead" data-i18n="services.lead">THE AKARIで過ごすすべての時間を、最上のものに。</p>
+      </header>
+      <div class="services__grid fade-in">
+        <div class="service-item">
+          <span class="service-icon" aria-hidden="true">🛎</span>
+          <h3 data-i18n="services.concierge.title">24hコンシェルジュ</h3>
+          <p data-i18n="services.concierge.desc">レストラン予約から観光手配まで</p>
+        </div>
+        <div class="service-item">
+          <span class="service-icon" aria-hidden="true">🏃</span>
+          <h3 data-i18n="services.fitness.title">フィットネス & スパ</h3>
+          <p data-i18n="services.fitness.desc">宿泊者無料・24時間利用可</p>
+        </div>
+        <div class="service-item">
+          <span class="service-icon" aria-hidden="true">🤵</span>
+          <h3 data-i18n="services.butler.title">バトラーサービス</h3>
+          <p data-i18n="services.butler.desc">スイート以上に標準搭載</p>
+        </div>
+        <div class="service-item">
+          <span class="service-icon" aria-hidden="true">🚗</span>
+          <h3 data-i18n="services.car.title">専用送迎</h3>
+          <p data-i18n="services.car.desc">空港・主要スポットへ（有料）</p>
+        </div>
+        <div class="service-item">
+          <span class="service-icon" aria-hidden="true">🍳</span>
+          <h3 data-i18n="services.breakfast.title">朝食ルームサービス</h3>
+          <p data-i18n="services.breakfast.desc">7:00〜10:30まで対応</p>
+        </div>
+        <div class="service-item">
+          <span class="service-icon" aria-hidden="true">💼</span>
+          <h3 data-i18n="services.business.title">ビジネスセンター</h3>
+          <p data-i18n="services.business.desc">会議室・プリンター完備</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Plans ===== -->
+  <section class="plans section" id="plans">
+    <div class="container">
+      <header class="section-head fade-in">
+        <span class="section-tag section-tag--light" data-i18n="plans.tag">PLANS</span>
+        <h2 class="section-title section-title--light" data-i18n="plans.title">宿泊プラン</h2>
+        <p class="section-lead section-lead--light" data-i18n="plans.lead">目的に合わせたプランをご用意しています。</p>
+      </header>
+      <div class="plans__grid" id="cms-plans"></div>
+    </div>
+  </section>
+
+  <!-- ===== Gallery ===== -->
+  <section class="gallery section" id="gallery">
+    <div class="container">
+      <header class="section-head fade-in">
+        <span class="section-tag" data-i18n="gallery.tag">GALLERY</span>
+        <h2 class="section-title" data-i18n="gallery.title">ギャラリー</h2>
+      </header>
+      <div class="gallery__grid fade-in">
+        <div class="gallery__item gallery__item--wide">
+          <img src="https://images.unsplash.com/photo-1566665797739-167ea1b2a7e9?w=1200&q=85" alt="デラックスルーム" width="900" height="600" loading="lazy" />
+          <span class="gallery__caption">DELUXE ROOM</span>
+        </div>
+        <div class="gallery__item gallery__item--tall">
+          <img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=800&q=85" alt="ジュニアスイート" width="600" height="800" loading="lazy" />
+          <span class="gallery__caption">JUNIOR SUITE</span>
+        </div>
+        <div class="gallery__item">
+          <img src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d?w=700&q=85" alt="バスルーム" width="600" height="450" loading="lazy" />
+          <span class="gallery__caption">BATHROOM</span>
+        </div>
+        <div class="gallery__item">
+          <img src="https://images.unsplash.com/photo-1467003909585-2f8a72700288?w=700&q=85" alt="レストラン 灯台" width="600" height="450" loading="lazy" />
+          <span class="gallery__caption">RESTAURANT</span>
+        </div>
+        <div class="gallery__item gallery__item--wide">
+          <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1200&q=85" alt="ペントハウス スイート" width="900" height="600" loading="lazy" />
+          <span class="gallery__caption">PENTHOUSE SUITE</span>
+        </div>
+        <div class="gallery__item">
+          <img src="https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=700&q=85" alt="東京の夜景" width="600" height="450" loading="lazy" />
+          <span class="gallery__caption">TOKYO NIGHT VIEW</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FAQ ===== -->
+  <section class="faq section" id="faq">
+    <div class="container container--narrow">
+      <header class="section-head fade-in">
+        <span class="section-tag" data-i18n="faq.tag">FAQ</span>
+        <h2 class="section-title" data-i18n="faq.title">よくあるご質問</h2>
+      </header>
+      <div class="faq__list fade-in">
+        <details class="faq__item">
+          <summary data-i18n="faq.q1">チェックイン・チェックアウトの時刻は？</summary>
+          <p data-i18n="faq.a1">チェックイン 15:00〜、チェックアウト 〜12:00 です。アーリーチェックインまたはレイトチェックアウトはスタンダードプランに含まれます（各1回選択）。</p>
+        </details>
+        <details class="faq__item">
+          <summary data-i18n="faq.q2">駐車場はありますか？</summary>
+          <p data-i18n="faq.a2">提携駐車場をご利用いただけます（1泊 ¥3,000、要事前予約）。周辺にコインパーキングも多数ございます。</p>
+        </details>
+        <details class="faq__item">
+          <summary data-i18n="faq.q3">子供の宿泊は可能ですか？</summary>
+          <p data-i18n="faq.a3">12歳以上のお子様からご宿泊いただけます。ベビーベッドや子供向けアメニティのご用意はございません。</p>
+        </details>
+        <details class="faq__item">
+          <summary data-i18n="faq.q4">ペットの同伴はできますか？</summary>
+          <p data-i18n="faq.a4">大変申し訳ございませんが、ペット同伴でのご宿泊はお断りしております。</p>
+        </details>
+        <details class="faq__item">
+          <summary data-i18n="faq.q5">Wi-Fiは使えますか？</summary>
+          <p data-i18n="faq.a5">客室・共用エリアすべてで高速Wi-Fiを無料でご利用いただけます。</p>
+        </details>
+        <details class="faq__item">
+          <summary data-i18n="faq.q6">キャンセルポリシーは？</summary>
+          <p data-i18n="faq.a6">7日前まで無料、6〜3日前30%、2日前50%、前日80%、当日100%のキャンセル料が発生します。</p>
+        </details>
+        <details class="faq__item">
+          <summary data-i18n="faq.q7">禁煙ですか？</summary>
+          <p data-i18n="faq.a7">全室・全館禁煙です。喫煙は専用の屋外スペースをご利用ください。</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Access ===== -->
+  <section class="access section" id="access">
+    <div class="container">
+      <header class="section-head fade-in">
+        <span class="section-tag" data-i18n="access.tag">ACCESS</span>
+        <h2 class="section-title" data-i18n="access.title">アクセス</h2>
+      </header>
+      <div class="access__grid fade-in">
+        <div class="access__map">
+          <iframe
+            title="THE AKARI AOYAMA 地図"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3241.2!2d139.7276!3d35.6681!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188ca3a78f8cf3%3A0x940e0dc0bbb0736e!2zUm9wcG9uZ2kgSGlsbHMgVG93ZXI!5e0!3m2!1sja!2sjp!4v1700000000000!5m2!1sja!2sjp"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            allowfullscreen
+          ></iframe>
+        </div>
+        <dl class="access__info">
+          <div>
+            <dt data-i18n="access.addr">住所</dt>
+            <dd>〒107-0062 東京都港区南青山2-0-0</dd>
+          </div>
+          <div>
+            <dt data-i18n="access.tel">電話</dt>
+            <dd><a href="tel:0300000000">03-0000-0000</a>（フロント 24時間）</dd>
+          </div>
+          <div>
+            <dt data-i18n="access.subway">地下鉄</dt>
+            <dd data-i18n="access.subway.text">東京メトロ「表参道」駅 A4出口より徒歩4分</dd>
+          </div>
+          <div>
+            <dt data-i18n="access.car">お車</dt>
+            <dd data-i18n="access.car.text">首都高速3号渋谷線「渋谷」ランプより約10分</dd>
+          </div>
+          <div>
+            <dt data-i18n="access.parking">駐車場</dt>
+            <dd data-i18n="access.parking.text">提携駐車場あり（要予約・有料）</dd>
+          </div>
+          <div>
+            <dt data-i18n="access.taxi">タクシー</dt>
+            <dd data-i18n="access.taxi.text">渋谷駅より約10分 / 品川駅より約20分</dd>
+          </div>
+        </dl>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Reserve ===== -->
+  <section class="reserve section" id="reserve">
+    <div class="container">
+      <header class="section-head fade-in">
+        <span class="section-tag section-tag--light" data-i18n="reserve.tag">RESERVE</span>
+        <h2 class="section-title section-title--light" data-i18n="reserve.title">ご予約・お問い合わせ</h2>
+        <p class="section-lead section-lead--light" data-i18n="reserve.lead">2営業日以内にご返信いたします。</p>
+      </header>
+      <div class="reserve__layout fade-in">
+        <div class="reserve__phone">
+          <h3 data-i18n="reserve.phone.title">お電話でのご予約</h3>
+          <a href="tel:0300000000" class="reserve__tel">03-0000-0000</a>
+          <p data-i18n="reserve.phone.hours">受付 10:00〜20:00（年中無休）</p>
+          <p class="reserve__hint" data-i18n="reserve.phone.hint">※ ご希望の客室・プラン・人数をお伝えください</p>
+        </div>
+        <form class="form" id="contact" novalidate>
+          <h3 class="form__title" data-i18n="form.title">オンラインフォーム</h3>
+          <div class="form__row">
+            <div class="form__group">
+              <label for="name"><span data-i18n="form.name">お名前</span> <span class="req" data-i18n="form.required">必須</span></label>
+              <input type="text" id="name" name="name" required autocomplete="name" />
+            </div>
+            <div class="form__group">
+              <label for="email"><span data-i18n="form.email">メール</span> <span class="req" data-i18n="form.required">必須</span></label>
+              <input type="email" id="email" name="email" required autocomplete="email" />
+            </div>
+          </div>
+          <div class="form__row">
+            <div class="form__group">
+              <label for="tel"><span data-i18n="form.tel">電話番号</span> <span class="req" data-i18n="form.required">必須</span></label>
+              <input type="tel" id="tel" name="tel" required autocomplete="tel" />
+            </div>
+            <div class="form__group">
+              <label for="checkin"><span data-i18n="form.checkin">宿泊日</span> <span class="req" data-i18n="form.required">必須</span></label>
+              <input type="date" id="checkin" name="checkin" required />
+            </div>
+          </div>
+          <div class="form__group">
+            <label for="guests"><span data-i18n="form.guests">人数</span> <span class="req" data-i18n="form.required">必須</span></label>
+            <input type="text" id="guests" name="guests" required data-i18n-attr="placeholder:form.guests.placeholder" placeholder="例：大人2名" />
+          </div>
+          <div class="form__row">
+            <div class="form__group">
+              <label for="plan" data-i18n="form.plan">ご希望プラン</label>
+              <select id="plan" name="plan"><option value="">選択してください</option></select>
+            </div>
+            <div class="form__group">
+              <label for="room" data-i18n="form.room">ご希望客室</label>
+              <select id="room" name="room"><option value="">選択してください</option></select>
+            </div>
+          </div>
+          <div class="form__group">
+            <label for="message" data-i18n="form.message">メッセージ・ご要望</label>
+            <textarea id="message" name="message" rows="4" data-i18n-attr="placeholder:form.message.placeholder" placeholder="アレルギー、記念日、その他ご要望など"></textarea>
+          </div>
+          <label class="form__check">
+            <input type="checkbox" name="privacy" required />
+            <span><a href="/privacy" target="_blank" rel="noopener" data-i18n="form.privacy">プライバシーポリシー</a><span data-i18n="form.privacy.agree">に同意する</span></span>
+          </label>
+          <button type="submit" class="btn btn--book btn--block" data-i18n="form.submit">予約リクエストを送信</button>
+          <p class="form__note" data-i18n="form.note">※ 空室確認後、コンシェルジュよりご連絡いたします。</p>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- ===== Footer ===== -->
+<footer class="footer">
+  <div class="footer__inner">
+    <div class="footer__brand">
+      <span class="footer__logo" id="footer-site-name">THE AKARI</span>
+      <p class="footer__tagline">都市の中の、静寂と光。</p>
+      <address>
+        〒107-0062 東京都港区南青山2-0-0<br />
+        TEL <a href="tel:0300000000">03-0000-0000</a>（フロント 24時間）<br />
+        MAIL <a href="mailto:concierge@theakari.example.com">concierge@theakari.example.com</a>
+      </address>
+    </div>
+    <nav class="footer__nav" aria-label="フッターナビゲーション">
+      <span class="footer__nav-head">NAVIGATE</span>
+      <a href="#rooms" data-i18n="nav.rooms">客室</a>
+      <a href="#dining" data-i18n="nav.dining">ダイニング</a>
+      <a href="#rooftop" data-i18n="nav.rooftop">ルーフトップ</a>
+      <a href="#services" data-i18n="nav.services">サービス</a>
+      <a href="#plans" data-i18n="nav.plans">プラン</a>
+      <a href="#gallery" data-i18n="nav.gallery">ギャラリー</a>
+      <a href="#access" data-i18n="nav.access">アクセス</a>
+      <a href="#reserve" data-i18n="nav.reserve">ご予約</a>
+    </nav>
+    <div class="footer__info">
+      <span class="footer__info-head">INFO</span>
+      <address>
+        チェックイン：15:00〜<br />
+        チェックアウト：〜12:00<br />
+        フロント：24時間<br />
+        レストラン：7:00〜10:00 / 18:00〜22:00<br />
+        ルーフトップバー：18:00〜25:00（夏季）
+      </address>
+    </div>
+  </div>
+  <div class="footer__bottom">
+    <nav class="footer__legal" aria-label="サイトポリシー">
+      <a href="/privacy">プライバシーポリシー</a>
+      <a href="/terms">利用規約</a>
+    </nav>
+    <p class="footer__copy" data-i18n="footer.copy">© 2026 THE AKARI AOYAMA ｜ 都市型ブティックホテルテンプレート</p>
+  </div>
+</footer>
+
+<button class="totop" id="totop" aria-label="ページトップへ">↑</button>
+
+<script src="script.js" type="module"></script>
+</body>
+</html>

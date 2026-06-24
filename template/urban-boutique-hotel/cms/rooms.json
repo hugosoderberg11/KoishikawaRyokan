@@ -1,0 +1,82 @@
+[
+  {
+    "id": "superior",
+    "typeEn": "Superior Room",
+    "badge": { "ja": "人気", "en": "Popular", "zh": "热门" },
+    "badgeType": "popular",
+    "name": { "ja": "スペリオールルーム", "en": "Superior Room", "zh": "优质客房" },
+    "description": {
+      "ja": "25㎡のスタイリッシュな客室。曙光をテーマに、白磁と淡竹色のトーンで統一された落ち着きある空間。高品質のリネンと間接照明が、深い休息をお届けします。",
+      "en": "A stylish 25m² room. Inspired by dawn, porcelain white and pale bamboo tones create a serene space. Premium linen and ambient lighting for deep rest.",
+      "zh": "25㎡的时尚客房，以黎明为主题，白瓷与淡竹色调相融合，优质亚麻布料与间接照明带来深度休息体验。"
+    },
+    "amenities": {
+      "ja": ["25㎡", "シティビュー", "キングベッド", "THANN アメニティ", "Nespresso"],
+      "en": ["25m²", "City view", "King bed", "THANN amenities", "Nespresso"],
+      "zh": ["25㎡", "城市景观", "大床", "THANN护肤品", "Nespresso"]
+    },
+    "image": "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=700&q=85",
+    "priceLabel": { "ja": "1泊 1室（税・朝食別）", "en": "Per room/night (excl. tax & breakfast)", "zh": "每晚每间（不含税及早餐）" },
+    "price": "¥35,000〜"
+  },
+  {
+    "id": "deluxe",
+    "typeEn": "Deluxe Room",
+    "badge": { "ja": "おすすめ", "en": "Recommended", "zh": "推荐" },
+    "badgeType": "couple",
+    "name": { "ja": "デラックスルーム", "en": "Deluxe Room", "zh": "豪华客房" },
+    "description": {
+      "ja": "38㎡。独立したバスルームと青山の夜景が望めるラウンジチェアが特長。ゆとりある空間で、都会の静寂をお楽しみください。",
+      "en": "38m². Separate bathroom and lounge chair with Aoyama night view. Enjoy the silence of the city in a spacious setting.",
+      "zh": "38㎡，独立浴室，配有可欣赏青山夜景的躺椅，尽享都市静谧空间。"
+    },
+    "amenities": {
+      "ja": ["38㎡", "夜景ビュー", "深型バスタブ", "Nespresso", "ラウンジチェア"],
+      "en": ["38m²", "Night view", "Deep bathtub", "Nespresso", "Lounge chair"],
+      "zh": ["38㎡", "夜景景观", "深浴缸", "Nespresso", "躺椅"]
+    },
+    "image": "https://images.unsplash.com/photo-1566665797739-167ea1b2a7e9?w=700&q=85",
+    "priceLabel": { "ja": "1泊 1室（税・朝食別）", "en": "Per room/night (excl. tax & breakfast)", "zh": "每晚每间（不含税及早餐）" },
+    "price": "¥52,000〜"
+  },
+  {
+    "id": "junior-suite",
+    "typeEn": "Junior Suite",
+    "badge": { "ja": "カップル", "en": "Couple", "zh": "情侣" },
+    "badgeType": "couple",
+    "name": { "ja": "ジュニアスイート", "en": "Junior Suite", "zh": "小型套房" },
+    "description": {
+      "ja": "56㎡。広々としたセパレートリビングと専用バルコニー付き。記念日や特別なひとときに。バトラーサービスが利用可能。",
+      "en": "56m². Separate living area, private balcony, and butler service. Perfect for anniversaries and special occasions.",
+      "zh": "56㎡，宽敞的独立客厅及专属阳台，可使用管家服务，适合纪念日或特殊场合。"
+    },
+    "amenities": {
+      "ja": ["56㎡", "セパレートリビング", "専用バルコニー", "バトラーサービス", "ビュッフェ朝食優先"],
+      "en": ["56m²", "Separate living", "Private balcony", "Butler service", "Priority breakfast"],
+      "zh": ["56㎡", "独立客厅", "专属阳台", "管家服务", "早餐优先"]
+    },
+    "image": "https://images.unsplash.com/photo-1578683010236-d716f9a3f461?w=700&q=85",
+    "priceLabel": { "ja": "1泊 1室（税・朝食別）", "en": "Per room/night (excl. tax & breakfast)", "zh": "每晚每间（不含税及早餐）" },
+    "price": "¥88,000〜"
+  },
+  {
+    "id": "penthouse",
+    "typeEn": "Penthouse Suite",
+    "badge": { "ja": "最高層", "en": "Top Floor", "zh": "顶层" },
+    "badgeType": "premium",
+    "name": { "ja": "ペントハウス スイート", "en": "Penthouse Suite", "zh": "顶层豪华套房" },
+    "description": {
+      "ja": "最上階110㎡。東京タワーと青山のパノラマビューを独占。専用テラスとプライベートダイニング、24時間バトラーを備えた至高の滞在。",
+      "en": "Top floor 110m². Panoramic Tokyo Tower and Aoyama view. Private terrace, private dining, and 24h butler service.",
+      "zh": "110㎡顶层套房，独占东京铁塔及青山全景，配备专属露台、私人餐厅及24小时管家服务。"
+    },
+    "amenities": {
+      "ja": ["110㎡", "東京タワービュー", "専用テラス", "プライベートダイニング", "24hバトラー"],
+      "en": ["110m²", "Tokyo Tower view", "Private terrace", "Private dining", "24h butler"],
+      "zh": ["110㎡", "东京铁塔景观", "专属露台", "私人餐厅", "24小时管家"]
+    },
+    "image": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=700&q=85",
+    "priceLabel": { "ja": "1泊 1室（税・朝食別）", "en": "Per room/night (excl. tax & breakfast)", "zh": "每晚每间（不含税及早餐）" },
+    "price": "¥220,000〜"
+  }
+]

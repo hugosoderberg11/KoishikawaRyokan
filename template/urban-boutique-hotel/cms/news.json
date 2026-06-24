@@ -1,0 +1,42 @@
+[
+  {
+    "date": "2026-06-01",
+    "dateDisplay": { "ja": "2026.06.01", "en": "Jun 1, 2026", "zh": "2026.06.01" },
+    "title": {
+      "ja": "夏の特別プラン「AKARI SUMMER」受付開始",
+      "en": "Summer Special Plan 'AKARI SUMMER' Now Available",
+      "zh": "夏季特别方案「AKARI SUMMER」开始受理"
+    },
+    "url": "#plans"
+  },
+  {
+    "date": "2026-05-15",
+    "dateDisplay": { "ja": "2026.05.15", "en": "May 15, 2026", "zh": "2026.05.15" },
+    "title": {
+      "ja": "ルーフトップバー「燈」夏季営業開始（5/15〜9/30）",
+      "en": "Rooftop Bar 'Tomoshibi' Summer Season Opens (May 15–Sep 30)",
+      "zh": "屋顶酒吧「燈」夏季营业开始（5/15〜9/30）"
+    },
+    "url": "#rooftop"
+  },
+  {
+    "date": "2026-04-20",
+    "dateDisplay": { "ja": "2026.04.20", "en": "Apr 20, 2026", "zh": "2026.04.20" },
+    "title": {
+      "ja": "ペントハウススイート リニューアルオープン",
+      "en": "Penthouse Suite Grand Renewal Opening",
+      "zh": "顶层豪华套房翻新重开"
+    },
+    "url": "#rooms"
+  },
+  {
+    "date": "2026-03-01",
+    "dateDisplay": { "ja": "2026.03.01", "en": "Mar 1, 2026", "zh": "2026.03.01" },
+    "title": {
+      "ja": "レストラン「灯台」新シェフ就任・新メニュー公開",
+      "en": "Restaurant 'Todai' Welcomes New Chef & New Menu",
+      "zh": "餐厅「灯台」迎来新主厨及全新菜单"
+    },
+    "url": "#dining"
+  }
+]

@@ -1,0 +1,29 @@
+{
+  "templateName": "スキーリゾート・山岳ロッジテンプレート",
+  "name": {
+    "ja": "HAKUBA PEAKS RESORT",
+    "en": "HAKUBA PEAKS RESORT",
+    "zh": "白马峰度假村"
+  },
+  "nameEn": "HAKUBA PEAKS",
+  "tagline": "雪と山と、生きる喜び。",
+  "description": "長野・白馬の雪山に佇くスキーリゾート。日本屈指のパウダースノーと本格温泉。",
+  "url": "https://hakubapeaks.example.com/",
+  "telephone": "0261-00-0000",
+  "telephoneRaw": "0261000000",
+  "email": "info@hakubapeaks.example.com",
+  "address": {
+    "postalCode": "399-9211",
+    "region": "長野県",
+    "locality": "北安曇郡白馬村",
+    "street": "北城5905"
+  },
+  "geo": { "latitude": "36.6980", "longitude": "137.8600" },
+  "hours": "フロント 24時間対応",
+  "checkin": "15:00",
+  "checkout": "11:00",
+  "priceRange": "¥¥¥",
+  "ogImage": "https://hakubapeaks.example.com/og-image.jpg",
+  "mapEmbed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d25706.2!2d137.860!3d36.698!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzbCsDQxJzUyLjgiTiAxMzfCsDUxJzM2LjAiRQ!5e0!3m2!1sja!2sjp!4v1700000000000!5m2!1sja!2sjp",
+  "mapLink": "https://maps.google.com/?q=白馬村+スキーリゾート"
+}

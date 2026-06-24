@@ -1,0 +1,62 @@
+[
+  {
+    "id": "room-only",
+    "featured": false,
+    "tag": { "ja": "スタンダード", "en": "Standard", "zh": "标准" },
+    "badge": null,
+    "name": { "ja": "AKARI スタンダードプラン", "en": "AKARI Standard Plan", "zh": "AKARI 标准方案" },
+    "description": {
+      "ja": "客室宿泊のみのシンプルプラン。アーリーチェックイン（12時〜）またはレイトチェックアウト（15時まで）いずれかを選択可。",
+      "en": "Room-only plan. Choose early check-in (from 12:00) or late check-out (until 15:00).",
+      "zh": "仅含客房的简洁方案，可选择提前入住（12时起）或延迟退房（至15时）。"
+    },
+    "includes": {
+      "ja": ["客室宿泊", "ウェルカムドリンク", "24hコンシェルジュ", "フィットネスルーム無料", "Wi-Fi無料"],
+      "en": ["Room accommodation", "Welcome drink", "24h concierge", "Free gym access", "Free Wi-Fi"],
+      "zh": ["客房住宿", "欢迎饮品", "24小时礼宾服务", "免费健身房", "免费Wi-Fi"]
+    },
+    "image": "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=600&q=85",
+    "priceLabel": { "ja": "1泊 1室（税別）", "en": "Per room/night (excl. tax)", "zh": "每晚每间（不含税）" },
+    "price": "¥35,000〜"
+  },
+  {
+    "id": "dining",
+    "featured": true,
+    "tag": { "ja": "人気プラン", "en": "Most Popular", "zh": "最受欢迎" },
+    "badge": { "ja": "おすすめ", "en": "Recommended", "zh": "推荐" },
+    "name": { "ja": "AKARI ダイニングプラン", "en": "AKARI Dining Plan", "zh": "AKARI 餐饮方案" },
+    "description": {
+      "ja": "1Fレストランでの朝食付き。シェフ特製の季節食材ビュッフェで青山の一日を豊かにスタート。ルーフトップバー「燈」の優先入場特典付き。",
+      "en": "Includes breakfast at our 1F restaurant with seasonal chef's buffet. Plus priority access to Rooftop Bar 'Tomoshibi'.",
+      "zh": "含1楼餐厅季节食材自助早餐，附屋顶酒吧「燈」优先入场特权。"
+    },
+    "includes": {
+      "ja": ["客室宿泊", "朝食（1Fレストラン）", "ウェルカムシャンパン", "ルーフトップ優先入場", "24hコンシェルジュ", "フィットネス&スパ無料"],
+      "en": ["Room accommodation", "Breakfast (1F restaurant)", "Welcome champagne", "Rooftop priority access", "24h concierge", "Free fitness & spa"],
+      "zh": ["客房住宿", "早餐（1楼餐厅）", "欢迎香槟", "屋顶优先入场", "24小时礼宾服务", "免费健身房及水疗"]
+    },
+    "image": "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=600&q=85",
+    "priceLabel": { "ja": "1泊 1室（税別）", "en": "Per room/night (excl. tax)", "zh": "每晚每间（不含税）" },
+    "price": "¥48,000〜"
+  },
+  {
+    "id": "anniversary",
+    "featured": false,
+    "tag": { "ja": "記念日", "en": "Anniversary", "zh": "纪念日" },
+    "badge": null,
+    "name": { "ja": "AKARI アニバーサリープラン", "en": "AKARI Anniversary Plan", "zh": "AKARI 纪念日方案" },
+    "description": {
+      "ja": "大切なひとと過ごす特別な夜に。シャンパン、フラワーアレンジメント、記念日ケーキの用意からプロフォトサービスまで、最高の思い出を演出します。",
+      "en": "For your special night together. Champagne, flower arrangement, anniversary cake, and professional photo service.",
+      "zh": "为特别的夜晚而设，含香槟、花艺装饰、纪念日蛋糕及专业摄影服务。"
+    },
+    "includes": {
+      "ja": ["デラックス以上の客室", "シャンパン＆フラワー装飾", "記念日ケーキ", "プロフォトサービス", "朝食（ルームサービス）", "バス用アメニティセット"],
+      "en": ["Deluxe or higher room", "Champagne & flower decoration", "Anniversary cake", "Pro photo service", "Breakfast (room service)", "Bath amenity gift set"],
+      "zh": ["豪华房或以上", "香槟及鲜花装饰", "纪念日蛋糕", "专业摄影服务", "早餐（客房服务）", "浴室礼品套装"]
+    },
+    "image": "https://images.unsplash.com/photo-1510076857177-7470076d4098?w=600&q=85",
+    "priceLabel": { "ja": "1泊 2名（税別）", "en": "Per room/night for 2 (excl. tax)", "zh": "每晚2人（不含税）" },
+    "price": "¥98,000〜"
+  }
+]

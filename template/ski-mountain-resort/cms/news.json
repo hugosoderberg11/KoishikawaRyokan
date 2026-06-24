@@ -1,0 +1,42 @@
+[
+  {
+    "date": "2026-01-15",
+    "dateDisplay": { "ja": "2026.01.15", "en": "Jan 15, 2026", "zh": "2026.01.15" },
+    "title": {
+      "ja": "【積雪情報】ベース 210cm ／ 山頂 320cm — 全コースオープン",
+      "en": "[Snow Report] Base 210cm / Summit 320cm — All Runs Open",
+      "zh": "【积雪信息】山底210cm / 山顶320cm — 全线开放"
+    },
+    "url": "#snow-report"
+  },
+  {
+    "date": "2026-01-10",
+    "dateDisplay": { "ja": "2026.01.10", "en": "Jan 10, 2026", "zh": "2026.01.10" },
+    "title": {
+      "ja": "早割リフト券付きプラン、残り8室のみ！",
+      "en": "Early Bird Ski Pass Package — Only 8 Rooms Left!",
+      "zh": "早鸟滑雪缆车套餐，仅剩8间客房！"
+    },
+    "url": "#plans"
+  },
+  {
+    "date": "2025-12-20",
+    "dateDisplay": { "ja": "2025.12.20", "en": "Dec 20, 2025", "zh": "2025.12.20" },
+    "title": {
+      "ja": "2025-26シーズン オープン！ゲレンデコンディション最高",
+      "en": "2025-26 Season Open! Slope Conditions Are Outstanding",
+      "zh": "2025-26赛季开幕！雪场状况绝佳"
+    },
+    "url": "#activities"
+  },
+  {
+    "date": "2025-12-01",
+    "dateDisplay": { "ja": "2025.12.01", "en": "Dec 1, 2025", "zh": "2025.12.01" },
+    "title": {
+      "ja": "ナイタースキー営業開始（毎週金・土・日）",
+      "en": "Night Skiing Opens (Fri, Sat & Sun each week)",
+      "zh": "夜间滑雪开放（每周五、六、日）"
+    },
+    "url": "#activities"
+  }
+]

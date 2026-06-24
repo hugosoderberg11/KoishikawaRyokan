@@ -1,0 +1,29 @@
+{
+  "templateName": "都市型ブティックホテルテンプレート",
+  "name": {
+    "ja": "THE AKARI AOYAMA",
+    "en": "THE AKARI AOYAMA",
+    "zh": "THE AKARI 青山酒店"
+  },
+  "nameEn": "THE AKARI",
+  "tagline": "都市の中の、静寂と光。",
+  "description": "東京・青山に佇む、14室のみのブティックホテル。",
+  "url": "https://theakari.example.com/",
+  "telephone": "03-0000-0000",
+  "telephoneRaw": "0300000000",
+  "email": "concierge@theakari.example.com",
+  "address": {
+    "postalCode": "107-0062",
+    "region": "東京都",
+    "locality": "港区",
+    "street": "南青山2-0-0"
+  },
+  "geo": { "latitude": "35.6681", "longitude": "139.7276" },
+  "hours": "フロント 24時間対応",
+  "checkin": "15:00",
+  "checkout": "12:00",
+  "priceRange": "¥¥¥¥",
+  "ogImage": "https://theakari.example.com/og-image.jpg",
+  "mapEmbed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3241.2!2d139.7276!3d35.6681!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzXCsDQwJzA1LjIiTiAxMznCsDQzJzM5LjQiRQ!5e0!3m2!1sja!2sjp!4v1700000000000!5m2!1sja!2sjp",
+  "mapLink": "https://maps.google.com/?q=東京+南青山+ブティックホテル"
+}
