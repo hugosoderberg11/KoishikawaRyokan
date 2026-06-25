@@ -69,26 +69,34 @@ async function saveInquiry(data) {
     throw new Error('SUPABASE_SERVICE_ROLE_KEY が設定されていません');
   }
 
-  const res = await fetch(`${SUPABASE_URL}/rest/v1/inquiries`, {
-    method: 'POST',
-    headers: {
-      apikey: serviceKey,
-      Authorization: `Bearer ${serviceKey}`,
-      'Content-Type': 'application/json',
-      Prefer: 'return=minimal',
-    },
-    body: JSON.stringify({
-      name: data.name.trim(),
-      email: data.email.trim(),
-      phone: data.phone?.trim() || null,
-      facility: data.facility?.trim() || null,
-      inquiry_type: data.inquiry_type.trim(),
-      message: data.message?.trim() || null,
-      source: data.source || 'contact',
-      template_name: data.template_name?.trim() || null,
-      plan_name: data.plan_name?.trim() || null,
-    }),
-  });
+  let res;
+  try {
+    res = await fetch(`${SUPABASE_URL}/rest/v1/inquiries`, {
+      method: 'POST',
+      headers: {
+        apikey: serviceKey,
+        Authorization: `Bearer ${serviceKey}`,
+        'Content-Type': 'application/json',
+        Prefer: 'return=minimal',
+      },
+      body: JSON.stringify({
+        name: data.name.trim(),
+        email: data.email.trim(),
+        phone: data.phone?.trim() || null,
+        facility: data.facility?.trim() || null,
+        inquiry_type: data.inquiry_type.trim(),
+        message: data.message?.trim() || null,
+        source: data.source || 'contact',
+        template_name: data.template_name?.trim() || null,
+        plan_name: data.plan_name?.trim() || null,
+      }),
+    });
+  } catch (err) {
+    console.error('Supabase connection error:', err);
+    throw new Error(
+      'データベースへの接続に失敗しました。開発環境では npm run dev を再起動してください。',
+    );
+  }
 
   if (!res.ok) {
     const err = await res.text();

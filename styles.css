@@ -635,6 +635,8 @@ body.nav-open { overflow: hidden; }
   .price-grid { grid-template-columns: repeat(2, 1fr); }
   .price-featured { transform: none; }
   .price-featured:hover { transform: translateY(-4px); }
+  .addon-cards { grid-template-columns: repeat(2, 1fr); }
+  .price-mode-banner { gap: 16px; padding: 20px 24px; }
   .marketing-grid { grid-template-columns: repeat(2, 1fr); }
   .template-grid { grid-template-columns: repeat(2, 1fr); }
 }
@@ -1612,21 +1614,67 @@ body.nav-open { overflow: hidden; }
   color: var(--gold-deep); margin-bottom: 16px;
 }
 
-/* dual pricing: monthly + buyout */
-.plan-price-dual { display: flex; flex-direction: column; gap: 8px; margin-bottom: 12px; }
-.price-row { display: flex; align-items: baseline; gap: 8px; flex-wrap: wrap; }
-.price-label {
-  font-size: 11px; font-weight: 700; letter-spacing: .06em;
-  color: var(--ink-soft); min-width: 48px;
+/* payment mode explanation banner */
+.price-mode-banner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  background: var(--paper);
+  border: 1.5px solid var(--line);
+  border-radius: var(--radius-lg);
+  padding: 24px 32px;
+  margin: -8px auto 48px;
+  max-width: 700px;
 }
-.price-num  { font-size: clamp(26px, 2.4vw, 34px); font-weight: 700; font-family: var(--serif); letter-spacing: -.02em; }
-.price-num.sm { font-size: clamp(22px, 2vw, 28px); }
-.price-unit { font-size: 14px; color: var(--ink-soft); }
-.price-or {
+.price-mode-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  flex: 1;
+}
+.price-mode-icon { font-size: 26px; line-height: 1; margin-top: 2px; flex-shrink: 0; }
+.price-mode-text strong {
+  display: block; font-size: 14px; font-weight: 700;
+  color: var(--ink); margin-bottom: 4px;
+}
+.price-mode-text p {
+  font-size: 12.5px; color: var(--ink-soft); line-height: 1.65; margin: 0;
+}
+.price-mode-divider {
   font-size: 11px; font-weight: 700; color: var(--gold-deep);
-  letter-spacing: .08em; padding-left: 48px;
+  letter-spacing: .06em; border: 1px solid var(--gold-soft);
+  border-radius: 999px; padding: 6px 14px;
+  white-space: nowrap; flex-shrink: 0;
 }
-.plan-desc  { font-size: 13px; color: var(--ink-soft); line-height: 1.7; }
+
+/* plan price block: buyout primary, monthly as alternative */
+.plan-price-block { display: flex; flex-direction: column; gap: 10px; margin-bottom: 14px; }
+.price-buyout-row { display: flex; flex-direction: column; gap: 3px; }
+.price-buyout-lbl {
+  font-size: 11px; font-weight: 700; letter-spacing: .07em;
+  color: var(--ink-soft); text-transform: uppercase;
+}
+.price-buyout-val {
+  font-size: clamp(28px, 2.6vw, 36px); font-weight: 700;
+  font-family: var(--serif); letter-spacing: -.02em; color: var(--ink); line-height: 1.1;
+}
+.price-buyout-val .price-unit { font-size: 16px; font-weight: 500; color: var(--ink-soft); }
+.price-num  { font-size: inherit; font-weight: inherit; font-family: inherit; letter-spacing: inherit; }
+.price-unit { font-size: 14px; color: var(--ink-soft); }
+.price-monthly-row {
+  display: flex; align-items: center; gap: 10px; flex-wrap: wrap;
+}
+.price-or-txt {
+  font-size: 11px; font-weight: 700; color: var(--gold-deep);
+  letter-spacing: .06em; background: var(--gold-tint);
+  padding: 2px 10px; border-radius: 999px; white-space: nowrap;
+}
+.price-monthly-val { font-size: 13px; color: var(--ink-soft); }
+.price-monthly-val strong { color: var(--ink); font-weight: 700; }
+.price-monthly-val small { font-size: 11px; color: var(--ink-soft); }
+
+.plan-desc  { font-size: 13px; color: var(--ink-soft); line-height: 1.7; margin-bottom: 16px; }
 
 .plan-features { display: flex; flex-direction: column; gap: 10px; margin-bottom: 28px; }
 .plan-features li { font-size: 13px; padding-left: 22px; position: relative; }
@@ -1684,46 +1732,56 @@ body.nav-open { overflow: hidden; }
   line-height: 1.75;
 }
 
-/* ---- Add-on options ---- */
-.addon-list {
+/* ---- Add-on option cards ---- */
+.addon-cards {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 0;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.addon-card {
   background: var(--paper);
   border: 1.5px solid var(--line);
-  border-radius: var(--radius-lg);
-  overflow: hidden;
-}
-
-.addon-item {
+  border-radius: var(--radius-md);
+  padding: 20px 18px;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 16px;
-  padding: 18px 24px;
-  border-bottom: 1px solid var(--line);
-  font-size: 14px;
+  flex-direction: column;
+  gap: 8px;
+  transition: transform .25s ease, box-shadow .25s ease;
 }
-.addon-item:nth-child(odd) { border-right: 1px solid var(--line); }
-.addon-item:nth-last-child(-n+2) { border-bottom: none; }
+.addon-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-sm); }
 
+.addon-card-icon { font-size: 26px; line-height: 1; }
+
+.addon-card-body { flex: 1; }
+
+.addon-card-name {
+  font-size: 14px; font-weight: 700; color: var(--ink);
+  line-height: 1.4; margin-bottom: 6px;
+}
+.addon-card-name small {
+  font-weight: 400; font-size: 12px; color: var(--ink-soft);
+}
+
+.addon-card-desc {
+  font-size: 12px; color: var(--ink-soft); line-height: 1.65; margin: 0;
+}
+
+.addon-card-price {
+  display: inline-block;
+  margin-top: 4px;
+  font-size: 13px; font-weight: 700; font-family: var(--serif);
+  color: var(--gold-deep); background: var(--gold-tint);
+  padding: 4px 12px; border-radius: 999px; white-space: nowrap;
+  align-self: flex-start;
+}
+
+/* legacy – kept for any other pages that still reference these */
+.addon-list { display: grid; grid-template-columns: repeat(2,1fr); }
+.addon-item { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 18px 24px; border-bottom: 1px solid var(--line); font-size: 14px; }
+.addon-item:nth-child(odd) { border-right: 1px solid var(--line); }
 .addon-name { font-weight: 500; color: var(--ink); }
-.addon-price {
-  font-weight: 700;
-  color: var(--gold-deep);
-  white-space: nowrap;
-  font-family: var(--serif);
-  font-size: 15px;
-}
-.addon-free { background: var(--bg); }
-.addon-price-free {
-  color: var(--gold);
-  background: var(--gold-tint);
-  padding: 3px 12px;
-  border-radius: 999px;
-  font-size: 13px;
-  font-family: var(--sans);
-}
+.addon-price { font-weight: 700; color: var(--gold-deep); white-space: nowrap; font-family: var(--serif); font-size: 15px; }
 
 .price-explainer {
   text-align: center;
@@ -1973,16 +2031,19 @@ body.nav-open { overflow: hidden; }
 }
 .footer-top {
   display: grid;
-  grid-template-columns: 1.1fr 0.75fr 1.15fr;
-  gap: 48px 40px;
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr);
+  gap: 48px 56px;
   align-items: start;
 }
-.footer-brand-block { display: flex; flex-direction: column; gap: 10px; }
+.footer-brand-block { display: flex; flex-direction: column; gap: 10px; max-width: 360px; }
 .footer-brand-block .brand-mark {
   color: var(--gold-soft); font-size: 22px;
   font-family: var(--serif); letter-spacing: .12em;
 }
-.footer-tagline { font-size: 12px; color: rgba(255,255,255,.42); letter-spacing: .06em; line-height: 1.6; }
+.footer-tagline {
+  font-size: 13px; color: rgba(255,255,255,.58);
+  letter-spacing: .04em; line-height: 1.7;
+}
 .footer-company-name {
   font-size: 14px; font-weight: 600; color: rgba(255,255,255,.82);
   margin-top: 6px; letter-spacing: .04em;
@@ -2001,7 +2062,23 @@ body.nav-open { overflow: hidden; }
 .footer-corporate-link:hover { color: #fff; }
 
 .footer-nav {
-  display: flex; flex-direction: column; gap: 10px;
+  display: flex; flex-direction: column; gap: 12px;
+}
+.footer-nav-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px 20px;
+}
+.footer-links {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, .9fr);
+  gap: 32px 40px;
+  align-items: start;
+}
+.footer-about-text {
+  font-size: 13px;
+  line-height: 1.85;
+  color: rgba(255,255,255,.52);
 }
 .footer-nav-head {
   font-size: 11px; font-weight: 600; letter-spacing: .14em;
@@ -2089,8 +2166,9 @@ body.nav-open { overflow: hidden; }
   .service-grid    { grid-template-columns: repeat(2, 1fr); }
   .problem-grid    { grid-template-columns: repeat(2, 1fr); }
   .works-demo-grid { grid-template-columns: 1fr; }
-  .footer-top { grid-template-columns: 1fr 1fr; }
-  .footer-profile { grid-column: 1 / -1; }
+  .footer-top { grid-template-columns: 1fr; gap: 36px; }
+  .footer-links { grid-template-columns: 1fr; gap: 28px; }
+  .footer-nav-grid { grid-template-columns: 1fr 1fr; }
 }
 
 @media (max-width: 920px) {
@@ -2150,10 +2228,13 @@ body.nav-open { overflow: hidden; }
   .price-featured  { transform: none; }
   .price-featured:hover { transform: translateY(-4px); }
   .template-price-grid { grid-template-columns: 1fr; max-width: 420px; margin: 0 auto; }
+  .addon-cards     { grid-template-columns: 1fr; }
   .addon-list      { grid-template-columns: 1fr; }
   .addon-item:nth-child(odd) { border-right: none; }
   .addon-item:nth-last-child(-n+2) { border-bottom: 1px solid var(--line); }
   .addon-item:last-child { border-bottom: none; }
+  .price-mode-banner { flex-direction: column; gap: 20px; padding: 20px 18px; }
+  .price-mode-divider { align-self: center; }
   .stats-inner     { flex-wrap: wrap; }
   .stat-item       { flex: 1 1 45%; min-width: 140px; }
   .stat-divider    { display: none; }
@@ -2193,7 +2274,8 @@ body.nav-open { overflow: hidden; }
   .works-coming-soon { min-height: 240px; }
   .coming-soon-inner { padding: 28px 20px; }
   .price-card      { padding: 28px 22px; }
-  .price-num       { font-size: 26px; }
+  .price-buyout-val { font-size: 28px; }
+  .addon-card      { padding: 18px 16px; }
   .addon-item      { flex-direction: column; align-items: flex-start; gap: 6px; padding: 16px 18px; }
   .plan-btn,
   .demo-footer-actions .btn,

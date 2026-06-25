@@ -20,7 +20,11 @@
 フォーム → /api/send-inquiry（Vercel）→ Supabase inquiries テーブル → Gmail 通知
 ```
 
-ローカルで API テスト: `npm run dev:api`
+ローカルで API テスト: `npm run dev`（Vite + vite-plugin-api で `/api/send-inquiry` を提供）
+
+`.env` に `SUPABASE_SERVICE_ROLE_KEY` を設定してから開発サーバーを再起動すること。
+
+Windows で `fetch failed` / SSL エラーが出る場合: `npm run dev` は `node --use-system-ca` 経由で起動する（package.json 設定済み）。
 
 ## 4. 通知先
 `koishikawavibecoding@gmail.com`

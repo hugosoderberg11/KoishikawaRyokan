@@ -8,7 +8,7 @@
     "node": ">=20.0.0"
   },
   "scripts": {
-    "dev": "vite",
+    "dev": "node --use-system-ca ./node_modules/vite/bin/vite.js",
     "dev:api": "vercel dev",
     "build": "vite build",
     "preview": "vite preview"

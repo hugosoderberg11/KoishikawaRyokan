@@ -158,11 +158,7 @@
 
   （ヒーロー・各セクション・ドロワーナビ・フォーム・フッター）
 
-- メインLPフッター: 株式会社コイシカワ情報（住所・電話・コーポレートリンク）、
-
-  会社概要欄はURL（https://koishikawa.co.jp/）のみ、
-
-  法的情報リンク（プライバシーポリシー・個人情報の取扱・労働方針声明）
+- メインLPフッター（2026-06-24 整理）: 2カラム構成。左=ブランド・会社名・住所・TEL/MAIL・コーポレートリンク、右=ページナビ（2列グリッド8項目）+ 事業内容。会社概要の重複dl・FAX・長い法務リンクは削除。法的情報はプライバシーポリシー・個人情報の取扱のみ
 
 - モバイルヘッダー（920px以下）: 料金・FAQ・お問い合わせリンクを非表示
 
@@ -182,7 +178,7 @@
 
 - LP「デモ」セクション（#works .works-template-grid）のサムネイルは `/templates/` と同じブラウザモックアップ（`.tmpl-preview` + ミニサイトUI）。カード下部にタグ・名称・説明（`.works-tmpl-body`）
 
-- LP受注率改善（2026-06-24・残り）: パーティクル/stats/3Dティルト/プログレスバー削除、英語バッジ日本語化、5種デモグリッド、初回相談、含む/別途表、向いている/向いていない、LP内テンプレ料金削除、マーケ1枚化、addon圧縮
+- LP受注率改善（2026-06-24・残り）: パーティクル/stats/3Dティルト/プログレスバー削除、英語バッジ日本語化、デモグリッド（#works）、初回相談、含む/別途表、向いている/向いていない、LP内テンプレ料金削除、マーケ1枚化、addon圧縮
 
 - お問い合わせ・テンプレ購入通知先: koishikawavibecoding@gmail.com（LP・templates・config.js・send-inquiry API 統一）
 
@@ -201,6 +197,12 @@
   - テンプレ購入ボタン → #contact フォーム（テンプレ名・プラン自動入力）
 
   - 問い合わせ API: `/api/send-inquiry`（Vercel Serverless）
+
+  - ローカル `npm run dev`（Vite）でも同 API を利用可能（vite-plugin-api.js が api/send-inquiry.js をミドルウェアで実行）
+
+  - ローカル dev は `node --use-system-ca` で Vite 起動（Windows の Node SSL 証明書問題対策）
+
+  - ローカル .env にも SUPABASE_SERVICE_ROLE_KEY 必須（未設定時は 500）
 
   - 表示・通知とも koishikawavibecoding@gmail.com
 
