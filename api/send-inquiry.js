@@ -1,7 +1,8 @@
 const CONTACT_EMAIL = 'koishikawavibecoding@gmail.com';
 
 function getNotifyRecipients() {
-  return [CONTACT_EMAIL];
+  const override = process.env.NOTIFY_EMAIL;
+  return [override || CONTACT_EMAIL];
 }
 const SUPABASE_URL =
   process.env.SUPABASE_URL ||
@@ -66,7 +67,8 @@ async function sendEmail(data) {
 async function saveInquiry(data) {
   const serviceKey = process.env.SUPABASE_SERVICE_ROLE_KEY;
   if (!serviceKey) {
-    throw new Error('SUPABASE_SERVICE_ROLE_KEY が設定されていません');
+    console.warn('SUPABASE_SERVICE_ROLE_KEY not set — skipping DB save');
+    return;
   }
 
   let res;

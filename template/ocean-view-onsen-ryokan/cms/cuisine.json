@@ -11,20 +11,20 @@
     "category": { "ja": "焼物", "en": "Grilled", "zh": "烤物" },
     "name": { "ja": "金目鯛の塩焼き", "en": "Salt-Grilled Kinmedai", "zh": "盐烤金目鲷" },
     "description": { "ja": "伊豆の名物・金目鯛を炭火で丁寧に焼き上げた逸品。", "en": "Izu's famed kinmedai, carefully grilled over charcoal.", "zh": "伊豆名产金目鲷，炭火精心烤制。" },
-    "image": "https://images.unsplash.com/photo-1519708227418-c8fd9a32b5a2?w=800&q=85"
+    "image": "https://images.unsplash.com/photo-1611143669185-af224c5e3252?w=800&q=85"
   },
   {
     "id": "dish-03",
     "category": { "ja": "椀物", "en": "Soup", "zh": "椀物" },
     "name": { "ja": "伊勢海老の清汁", "en": "Ise Lobster Clear Broth", "zh": "伊势龙虾清汤" },
     "description": { "ja": "伊勢海老の旨味が凝縮された、透明感のある一椀。", "en": "A crystal-clear bowl capturing the essence of Ise lobster.", "zh": "浓缩伊势龙虾鲜味的透明清汤。" },
-    "image": "https://images.unsplash.com/photo-1569718212665-3a8278d5f624?w=800&q=85"
+    "image": "https://images.unsplash.com/photo-1547592166-23ac45744acd?w=800&q=85"
   },
   {
     "id": "dish-04",
     "category": { "ja": "デザート", "en": "Dessert", "zh": "甜品" },
     "name": { "ja": "潮風レモンのパフェ", "en": "Sea Breeze Lemon Parfait", "zh": "海风柠檬芭菲" },
     "description": { "ja": "伊豆レモンと和三盆糖を使った、爽やかな締めくくり。", "en": "Refreshing finish with Izu lemon and wasanbon sugar.", "zh": "伊豆柠檬与和三盆糖的清爽收尾。" },
-    "image": "https://images.unsplash.com/photo-1493770348161-369653ae8272?w=800&q=85"
+    "image": "https://images.unsplash.com/photo-1563729784474-d77dbb933a9e?w=800&q=85"
   }
 ]

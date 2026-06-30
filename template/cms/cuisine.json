@@ -11,13 +11,13 @@
     "category": { "ja": "椀物", "en": "Soup", "zh": "椀物" },
     "name": { "ja": "白味噌仕立ての椀", "en": "White Miso Soup Bowl", "zh": "白味噌椀物" },
     "description": { "ja": "地元・飛騨の白味噌と昆布の上品な出汁が織りなす一椀。", "en": "Elegant broth with local Hida white miso and kelp.", "zh": "当地飞驒白味噌与昆布的上品高汤。" },
-    "image": "https://images.unsplash.com/photo-1569718212665-3a8278d5f624?w=600&q=85"
+    "image": "https://images.unsplash.com/photo-1680137248903-7af5d51a3350?w=600&q=85"
   },
   {
     "id": "dish-03",
     "category": { "ja": "デザート", "en": "Dessert", "zh": "甜品" },
     "name": { "ja": "季節のわらびもち", "en": "Seasonal Warabi Mochi", "zh": "季节蕨饼" },
     "description": { "ja": "地元産の本蕨粉を使った手作りのわらびもち。", "en": "Handmade warabi mochi with local bracken starch.", "zh": "使用当地本蕨粉的手作蕨饼。" },
-    "image": "https://images.unsplash.com/photo-1493770348161-369653ae8272?w=600&q=85"
+    "image": "https://images.unsplash.com/photo-1758779527956-0da4cd6ca77d?w=600&q=85"
   }
 ]

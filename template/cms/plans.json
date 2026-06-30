@@ -18,7 +18,7 @@
     "priceLabel": { "ja": "1泊2食 お一人様", "en": "1 night, 2 meals", "zh": "1晚2餐/人" },
     "priceNote": { "ja": "（税・サービス料込）", "en": "(tax & service included)", "zh": "（含税·服务费）" },
     "price": "¥38,000〜",
-    "image": "https://images.unsplash.com/photo-1548196844-e279a4e9a0f1?w=900&q=85"
+    "image": "https://images.unsplash.com/photo-1653220329192-ce4d725d352a?w=900&q=85"
   },
   {
     "id": "plan-02",
@@ -60,6 +60,6 @@
     "priceLabel": { "ja": "1泊2食 お一人様", "en": "1 night, 2 meals", "zh": "1晚2餐/人" },
     "priceNote": { "ja": "（税・サービス料込）", "en": "(tax & service included)", "zh": "（含税·服务费）" },
     "price": "¥48,000〜",
-    "image": "https://images.unsplash.com/photo-1493770348161-369653ae8272?w=900&q=85"
+    "image": "https://images.unsplash.com/photo-1772183095553-fd145c037e87?w=900&q=85"
   }
 ]

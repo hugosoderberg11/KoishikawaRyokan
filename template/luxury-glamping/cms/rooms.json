@@ -17,7 +17,7 @@
     },
     "priceLabel": { "ja": "1泊（朝食付）", "en": "1 night (breakfast)", "zh": "1晚（含早餐）" },
     "price": "¥38,000〜",
-    "image": "https://images.unsplash.com/photo-1523987355523-0a70375ef3ce?w=1200&q=85"
+    "image": "https://images.unsplash.com/photo-1533777857889-4be7c70b33f7?w=1200&q=85"
   },
   {
     "id": "room-02",
@@ -57,7 +57,7 @@
     },
     "priceLabel": { "ja": "1泊（朝食付）", "en": "1 night (breakfast)", "zh": "1晚（含早餐）" },
     "price": "¥48,000〜",
-    "image": "https://images.unsplash.com/photo-1449158743715-0cb90f40e2a8?w=1200&q=85"
+    "image": "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=1200&q=85"
   },
   {
     "id": "room-04",
@@ -77,6 +77,6 @@
     },
     "priceLabel": { "ja": "1泊（朝食付）", "en": "1 night (breakfast)", "zh": "1晚（含早餐）" },
     "price": "¥78,000〜",
-    "image": "https://images.unsplash.com/photo-1478131188740-ef5b588173ea?w=1200&q=85"
+    "image": "https://images.unsplash.com/photo-1519681393784-d120267933ba?w=1200&q=85"
   }
 ]
