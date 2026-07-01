@@ -64,7 +64,12 @@ async function sendEmail(data) {
   });
 
   if (error) {
-    console.error('[send-inquiry] Resend エラー:', JSON.stringify(error));
+    console.error('[send-inquiry] Resend エラー詳細:');
+    console.error('  error.name       :', error.name);
+    console.error('  error.message    :', error.message);
+    console.error('  error.statusCode :', error.statusCode);
+    console.error('  error.response   :', JSON.stringify(error.response ?? null));
+    console.error('  error (raw)      :', JSON.stringify(error));
     return { ok: false, reason: error.message || JSON.stringify(error) };
   }
 
