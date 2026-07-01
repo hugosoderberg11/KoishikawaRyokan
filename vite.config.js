@@ -32,6 +32,9 @@ export default defineConfig(({ mode }) => {
       rollupOptions: {
         input: {
           main: resolve(__dirname, 'index.html'),
+          notFound: resolve(__dirname, '404.html'),
+          tokusho: resolve(__dirname, 'tokusho/index.html'),
+          company: resolve(__dirname, 'company/index.html'),
           templates: resolve(__dirname, 'templates/index.html'),
           template: resolve(__dirname, 'template/index.html'),
           petFriendlyRyokan: resolve(__dirname, 'template/pet-friendly-ryokan/index.html'),

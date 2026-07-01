@@ -1,9 +1,12 @@
+import { Resend } from 'resend';
+
 const CONTACT_EMAIL = 'koishikawavibecoding@gmail.com';
 
 function getNotifyRecipients() {
   const override = process.env.NOTIFY_EMAIL;
   return [override || CONTACT_EMAIL];
 }
+
 const SUPABASE_URL =
   process.env.SUPABASE_URL ||
   process.env.VITE_SUPABASE_URL ||
@@ -34,7 +37,13 @@ function buildEmailHtml(data) {
 
 async function sendEmail(data) {
   const resendKey = process.env.RESEND_API_KEY;
-  if (!resendKey) return { ok: false, reason: 'RESEND_API_KEY not set' };
+  if (!resendKey) {
+    console.error('[send-inquiry] RESEND_API_KEY が設定されていません');
+    return { ok: false, reason: 'RESEND_API_KEY not set' };
+  }
+  console.log('[send-inquiry] RESEND_API_KEY 確認OK — Resend SDK を初期化');
+
+  const resend = new Resend(resendKey);
 
   const from = process.env.RESEND_FROM || 'KOISHIKAWA <onboarding@resend.dev>';
   const isPurchase =
@@ -43,31 +52,30 @@ async function sendEmail(data) {
     ? `【テンプレート購入】${data.template_name || data.inquiry_type} — ${data.name}`
     : `【お問い合わせ】${data.inquiry_type} — ${data.name}`;
 
-  const res = await fetch('https://api.resend.com/emails', {
-    method: 'POST',
-    headers: {
-      Authorization: `Bearer ${resendKey}`,
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify({
-      from,
-      to: getNotifyRecipients(),
-      reply_to: data.email,
-      subject,
-      html: buildEmailHtml(data),
-    }),
+  const to = getNotifyRecipients();
+  console.log('[send-inquiry] メール送信先:', to, '| subject:', subject, '| from:', from);
+
+  const { data: emailData, error } = await resend.emails.send({
+    from,
+    to,
+    reply_to: data.email,
+    subject,
+    html: buildEmailHtml(data),
   });
 
-  if (!res.ok) {
-    return { ok: false, reason: await res.text() };
+  if (error) {
+    console.error('[send-inquiry] Resend エラー:', JSON.stringify(error));
+    return { ok: false, reason: error.message || JSON.stringify(error) };
   }
-  return { ok: true };
+
+  console.log('[send-inquiry] メール送信成功 — id:', emailData?.id);
+  return { ok: true, id: emailData?.id };
 }
 
 async function saveInquiry(data) {
   const serviceKey = process.env.SUPABASE_SERVICE_ROLE_KEY;
   if (!serviceKey) {
-    console.warn('SUPABASE_SERVICE_ROLE_KEY not set — skipping DB save');
+    console.warn('[send-inquiry] SUPABASE_SERVICE_ROLE_KEY 未設定 — DB保存をスキップ');
     return;
   }
 
@@ -94,17 +102,19 @@ async function saveInquiry(data) {
       }),
     });
   } catch (err) {
-    console.error('Supabase connection error:', err);
+    console.error('[send-inquiry] Supabase 接続エラー:', err);
     throw new Error(
       'データベースへの接続に失敗しました。開発環境では npm run dev を再起動してください。',
     );
   }
 
   if (!res.ok) {
-    const err = await res.text();
-    console.error('Supabase insert error:', err);
+    const errText = await res.text();
+    console.error('[send-inquiry] Supabase insert エラー:', errText);
     throw new Error('保存に失敗しました');
   }
+
+  console.log('[send-inquiry] Supabase 保存成功');
 }
 
 export default async function handler(req, res) {
@@ -120,22 +130,43 @@ export default async function handler(req, res) {
     return res.status(405).json({ error: 'Method not allowed' });
   }
 
+  console.log('[send-inquiry] POST リクエスト受信');
+
   const data = req.body;
   if (!data?.name?.trim() || !data?.email?.trim() || !data?.inquiry_type?.trim()) {
+    console.warn('[send-inquiry] バリデーション失敗:', {
+      name: !!data?.name,
+      email: !!data?.email,
+      inquiry_type: !!data?.inquiry_type,
+    });
     return res.status(400).json({ error: '必須項目が不足しています' });
   }
+
+  console.log('[send-inquiry] ペイロード:', {
+    name: data.name,
+    email: data.email,
+    inquiry_type: data.inquiry_type,
+    source: data.source,
+  });
 
   try {
     await saveInquiry(data);
   } catch (err) {
+    console.error('[send-inquiry] saveInquiry 失敗:', err.message);
     return res.status(500).json({ error: err.message || '保存に失敗しました' });
   }
 
   const emailResult = await sendEmail(data);
 
+  if (!emailResult.ok) {
+    console.error('[send-inquiry] メール送信失敗:', emailResult.reason);
+    // メール失敗でも受付自体は成功扱いにするが、reason をレスポンスに含める
+  }
+
   return res.status(200).json({
     ok: true,
     email_sent: emailResult.ok,
+    ...(emailResult.ok ? {} : { email_error: emailResult.reason }),
     message: emailResult.ok
       ? 'お問い合わせを送信しました。担当者よりご連絡いたします。'
       : 'お問い合わせを受け付けました。担当者より順次ご連絡いたします。',

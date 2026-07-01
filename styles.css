@@ -4231,6 +4231,112 @@ body.nav-open { overflow: hidden; }
   .works-tmpl-body { padding: 16px 18px 20px; }
 }
 
+/* ===== Form privacy checkbox ===== */
+.form-check {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 14px;
+  color: var(--ink-soft);
+  cursor: pointer;
+  margin-bottom: 8px;
+}
+.form-check input[type="checkbox"] {
+  flex-shrink: 0;
+  width: 18px;
+  height: 18px;
+  margin-top: 1px;
+  accent-color: var(--gold);
+  cursor: pointer;
+}
+.form-check a { color: var(--gold); text-decoration: underline; }
+
+/* ===== 特定商取引法ページ ===== */
+.legal-table-wrap {
+  max-width: 800px;
+  margin: 0 auto 48px;
+}
+.legal-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 15px;
+  line-height: 1.8;
+}
+.legal-table th,
+.legal-table td {
+  padding: 14px 18px;
+  border: 1px solid var(--border);
+  vertical-align: top;
+  text-align: left;
+}
+.legal-table th {
+  width: 180px;
+  background: var(--bg-warm, #faf7f2);
+  font-weight: 600;
+  white-space: nowrap;
+}
+.legal-table td a { color: var(--gold); }
+.legal-table small { display: block; margin-top: 6px; font-size: 12px; color: var(--ink-soft); }
+.legal-back { text-align: center; }
+.legal-back a { color: var(--gold); font-size: 14px; }
+
+@media (max-width: 600px) {
+  .legal-table th { width: auto; white-space: normal; }
+  .legal-table th,
+  .legal-table td { display: block; width: 100%; }
+  .legal-table th { background: var(--bg-warm, #faf7f2); border-bottom: none; }
+}
+
+/* ===== 会社概要ページ ===== */
+.company-mission {
+  max-width: 720px;
+  margin: 0 auto 48px;
+  text-align: center;
+}
+.company-mission__title {
+  font-family: 'Noto Serif JP', serif;
+  font-size: clamp(20px, 3vw, 26px);
+  font-weight: 600;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+.company-mission__text {
+  font-size: 15px;
+  line-height: 1.9;
+  color: var(--ink-soft);
+  text-align: left;
+}
+.company-access {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: start;
+  max-width: 900px;
+  margin: 0 auto;
+}
+.company-access__map iframe { width: 100%; }
+.company-access__info {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.company-access__info dt {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: .08em;
+  color: var(--gold);
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+.company-access__info dd {
+  font-size: 15px;
+  line-height: 1.7;
+}
+.company-access__info a { color: var(--ink); }
+@media (max-width: 700px) {
+  .company-access { grid-template-columns: 1fr; }
+}
+
 /* ===== Reduced motion ===== */
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {

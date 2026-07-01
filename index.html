@@ -5,6 +5,51 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>KOISHIKAWA｜旅館・ホテル専門のWebサイト制作</title>
   <meta name="description" content="旅館・ホテルに特化したWebサイト制作。お宿の魅力を伝えるデザイン、スマホ対応、Google集客までワンストップで提供。" />
+  <link rel="canonical" href="https://koishikawa.co.jp/" />
+
+  <!-- OGP -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://koishikawa.co.jp/" />
+  <meta property="og:title" content="KOISHIKAWA｜旅館・ホテル専門のWebサイト制作" />
+  <meta property="og:description" content="旅館・ホテルに特化したWebサイト制作。お宿の魅力を伝えるデザイン、スマホ対応、Google集客までワンストップで提供。" />
+  <meta property="og:image" content="https://koishikawa.co.jp/images/og-image.jpg" />
+  <meta property="og:site_name" content="KOISHIKAWA" />
+  <meta property="og:locale" content="ja_JP" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="KOISHIKAWA｜旅館・ホテル専門のWebサイト制作" />
+  <meta name="twitter:description" content="旅館・ホテルに特化したWebサイト制作。お宿の魅力を伝えるデザイン、スマホ対応、Google集客までワンストップで提供。" />
+  <meta name="twitter:image" content="https://koishikawa.co.jp/images/og-image.jpg" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="/favicon.ico" sizes="any" />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
+  <!-- JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "KOISHIKAWA",
+    "legalName": "株式会社コイシカワ",
+    "description": "旅館・ホテル専門のWebサイト制作会社。デザイン・SEO・予約動線設計をワンストップで提供。",
+    "url": "https://koishikawa.co.jp/",
+    "telephone": "+81-3-6709-1795",
+    "email": "koishikawavibecoding@gmail.com",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "南大塚2-26-7 5F",
+      "addressLocality": "豊島区",
+      "addressRegion": "東京都",
+      "postalCode": "170-0005",
+      "addressCountry": "JP"
+    },
+    "areaServed": "JP",
+    "priceRange": "¥¥¥",
+    "serviceType": ["Webサイト制作", "SEO対策", "旅館・ホテル向けWebデザイン"]
+  }
+  </script>
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Noto+Serif+JP:wght@500;600;700&family=Cormorant+Garamond:wght@500;600&display=swap" rel="stylesheet" />
@@ -28,6 +73,7 @@
       <a href="/templates/">テンプレート</a>
       <a href="#price" class="nav-hide-mobile">料金</a>
       <a href="#faq" class="nav-hide-mobile">FAQ</a>
+      <a href="/company/" class="nav-hide-mobile">会社概要</a>
       <a href="#contact" class="nav-hide-mobile">お問い合わせ</a>
     </nav>
 
@@ -1196,6 +1242,10 @@
         <label for="message">メッセージ・現在の課題</label>
         <textarea id="message" name="message" rows="5" placeholder="現在のサイトの課題、OTAの比率、直予約を増やしたい背景など、お気軽にお書きください。"></textarea>
       </div>
+      <label class="form-check">
+        <input type="checkbox" name="privacy" required />
+        <span><a href="https://koishikawa.co.jp/privacy" target="_blank" rel="noopener noreferrer">プライバシーポリシー</a>および<a href="/tokusho/" target="_blank" rel="noopener">特定商取引法に基づく表記</a>に同意する <span class="req">必須</span></span>
+      </label>
       <button type="submit" class="btn btn-gold form-submit">無料相談を申し込む</button>
       <p class="form-note">送信後、<a href="mailto:koishikawavibecoding@gmail.com">koishikawavibecoding@gmail.com</a> 宛に通知が届き、2営業日以内に担当者よりご連絡いたします。</p>
     </form>
@@ -1241,6 +1291,7 @@
             <a href="#price">料金</a>
             <a href="#flow">進め方</a>
             <a href="#faq">FAQ</a>
+            <a href="/company/">会社概要</a>
             <a href="#contact">お問い合わせ</a>
           </div>
         </nav>
@@ -1253,6 +1304,7 @@
 
     <div class="footer-bottom">
       <nav class="footer-legal" aria-label="法的情報ナビゲーション">
+        <a href="/tokusho/">特定商取引法に基づく表記</a>
         <a href="https://koishikawa.co.jp/privacy" target="_blank" rel="noopener noreferrer">プライバシーポリシー</a>
         <a href="https://koishikawa.co.jp/personal" target="_blank" rel="noopener noreferrer">個人情報の取扱について</a>
       </nav>
@@ -1273,6 +1325,7 @@
     <a href="#price">料金</a>
     <a href="#faq">FAQ</a>
     <a href="#flow">進め方</a>
+    <a href="/company/">会社概要</a>
     <div class="drawer-cta">
       <a href="#works" class="btn btn-ghost">デモを見る</a>
       <a href="#contact" class="btn btn-gold">無料相談する</a>
