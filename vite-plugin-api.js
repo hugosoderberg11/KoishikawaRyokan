@@ -1,4 +1,25 @@
-import handler from './api/send-inquiry.js';
+import sendInquiryHandler from './api/send-inquiry.js';
+import stripeWebhookHandler from './api/stripe-webhook.js';
+
+const API_ROUTES = {
+  '/api/send-inquiry': {
+    handler: sendInquiryHandler,
+    rawBody: false,
+  },
+  '/api/stripe-webhook': {
+    handler: stripeWebhookHandler,
+    rawBody: true,
+  },
+};
+
+function readRawBody(req) {
+  return new Promise((resolve, reject) => {
+    const chunks = [];
+    req.on('data', (chunk) => chunks.push(chunk));
+    req.on('end', () => resolve(Buffer.concat(chunks)));
+    req.on('error', reject);
+  });
+}
 
 function readJsonBody(req) {
   return new Promise((resolve, reject) => {
@@ -50,15 +71,18 @@ export function vitePluginApi() {
     configureServer(server) {
       server.middlewares.use(async (req, res, next) => {
         const path = req.url?.split('?')[0];
-        if (path !== '/api/send-inquiry') return next();
+        const route = API_ROUTES[path];
+        if (!route) return next();
 
         try {
-          if (req.method === 'POST') {
+          if (route.rawBody) {
+            req.rawBody = await readRawBody(req);
+          } else if (req.method === 'POST') {
             req.body = await readJsonBody(req);
           }
-          await handler(req, wrapRes(res));
+          await route.handler(req, wrapRes(res));
         } catch (err) {
-          console.error('[api/send-inquiry]', err);
+          console.error(`[api${path}]`, err);
           if (!res.headersSent) {
             res.statusCode = 500;
             res.setHeader('Content-Type', 'application/json');

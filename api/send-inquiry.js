@@ -177,6 +177,7 @@ async function sendInquiryEmailViaGmail(data) {
       subject,
       html: buildEmailHtml(data),
       replyTo: data.email.trim(),
+      logScope: 'send-inquiry',
     });
   } catch (err) {
     console.error('[send-inquiry] Gmail SMTP エラー:', err.message);

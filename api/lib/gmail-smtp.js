@@ -27,7 +27,14 @@ export function createGmailTransport() {
   });
 }
 
-export async function sendViaGmail({ to, subject, html, replyTo, from }) {
+export async function sendViaGmail({
+  to,
+  subject,
+  html,
+  replyTo,
+  from,
+  logScope = 'gmail-smtp',
+}) {
   const transport = createGmailTransport();
   const gmailConfig = resolveGmailConfig();
 
@@ -39,7 +46,7 @@ export async function sendViaGmail({ to, subject, html, replyTo, from }) {
     replyTo: replyTo || undefined,
   };
 
-  console.log('[send-inquiry] Gmail SMTP 送信開始:', {
+  console.log(`[${logScope}] Gmail SMTP 送信開始:`, {
     from: mailOptions.from,
     to: mailOptions.to,
     subject: mailOptions.subject,
@@ -47,6 +54,6 @@ export async function sendViaGmail({ to, subject, html, replyTo, from }) {
   });
 
   const info = await transport.sendMail(mailOptions);
-  console.log('[send-inquiry] Gmail SMTP 送信成功 — messageId:', info.messageId);
+  console.log(`[${logScope}] Gmail SMTP 送信成功 — messageId:`, info.messageId);
   return { ok: true, id: info.messageId };
 }

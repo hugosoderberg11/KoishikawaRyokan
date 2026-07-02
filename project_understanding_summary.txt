@@ -8,7 +8,7 @@
 
 
 
-最終更新: 2026-06-24
+最終更新: 2026-07-02
 
 
 
@@ -200,11 +200,6 @@
 
   - 問い合わせメール: Gmail SMTP（Nodemailer）→ koishikawavibecoding@gmail.com
     - env: GMAIL_USER, GMAIL_APP_PASSWORD（Vercel / .env）
-    - Resend コードは api/send-inquiry.js に残存（Stripe 購入確認等で利用）
-
-  - Resend テストモード（ドメイン認証前）: `RESEND_TEST_MODE=1`（デフォルト ON）
-    - from: `onboarding@resend.dev` / to: `bando.eiji.1177@gmail.com`（Resend 認証済みアドレス）
-    - 本番切替: `RESEND_TEST_MODE=0` + `NOTIFY_EMAIL=koishikawavibecoding@gmail.com`
 
   - API ログ: 環境変数の有無・from/to/reply_to の解決値を `[send-inquiry]` で出力
 
@@ -223,9 +218,12 @@
   - Supabase `orders` テーブル（002_orders.sql）に保存
   - 商品名: session metadata または line_items から取得
   - 顧客メール: customer_details.email / customer_email
-  - 購入確認メール: `api/lib/purchase-email.js`（現状 console.log dry-run）
-  - DNS 認証後: `RESEND_SEND_PURCHASE_EMAIL=1` + purchase-email.js の Resend ブロックのコメント解除
-  - env: STRIPE_SECRET_KEY, STRIPE_WEBHOOK_SECRET
+  - 購入確認メール: Gmail SMTP — 購入者 + 管理者（koishikawavibecoding@gmail.com）
+  - 購入確認メール（購入者）テンプレート:
+    - 件名: `【KOISHIKAWA】ご購入ありがとうございます`
+    - 本文: `{{customer_name}}様` / 商品名・金額 / KOISHIKAWA + https://koishikawa-web.com
+    - 商品別差分: `api/lib/purchase-email-templates.js` の `PRODUCT_PURCHASE_TEMPLATES`
+  - env: GMAIL_USER, GMAIL_APP_PASSWORD, STRIPE_SECRET_KEY, STRIPE_WEBHOOK_SECRET
 
 ------------------------------------------------------------------
 
