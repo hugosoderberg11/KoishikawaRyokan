@@ -1,16 +1,62 @@
 import { Resend } from 'resend';
+import { resolveGmailConfig, sendViaGmail } from './lib/gmail-smtp.js';
 
 const CONTACT_EMAIL = 'koishikawavibecoding@gmail.com';
-
-function getNotifyRecipients() {
-  const override = process.env.NOTIFY_EMAIL;
-  return [override || CONTACT_EMAIL];
-}
+const RESEND_TEST_DEFAULT_TO = 'bando.eiji.1177@gmail.com';
+const RESEND_TEST_DEFAULT_FROM = 'KOISHIKAWA <onboarding@resend.dev>';
 
 const SUPABASE_URL =
   process.env.SUPABASE_URL ||
   process.env.VITE_SUPABASE_URL ||
   'https://vruxpxocefqxoxrwexhj.supabase.co';
+
+// --- Resend（Stripe 購入確認等で引き続き利用。問い合わせフォームでは未使用） ---
+
+function isResendTestMode() {
+  const flag = process.env.RESEND_TEST_MODE;
+  if (flag === '0' || flag === 'false') return false;
+  if (flag === '1' || flag === 'true') return true;
+  return true;
+}
+
+function resolveMailConfig() {
+  const testMode = isResendTestMode();
+
+  if (testMode) {
+    const from = process.env.RESEND_TEST_FROM || RESEND_TEST_DEFAULT_FROM;
+    const to = [process.env.RESEND_TEST_TO || RESEND_TEST_DEFAULT_TO];
+    return {
+      testMode: true,
+      from,
+      to,
+      fromSource: process.env.RESEND_TEST_FROM
+        ? 'RESEND_TEST_FROM'
+        : 'default (onboarding@resend.dev)',
+      toSource: process.env.RESEND_TEST_TO
+        ? 'RESEND_TEST_TO'
+        : `default (${RESEND_TEST_DEFAULT_TO})`,
+    };
+  }
+
+  const from = process.env.RESEND_FROM || RESEND_TEST_DEFAULT_FROM;
+  const override = process.env.NOTIFY_EMAIL;
+  const to = [override || CONTACT_EMAIL];
+  return {
+    testMode: false,
+    from,
+    to,
+    fromSource: process.env.RESEND_FROM ? 'RESEND_FROM' : 'default (onboarding@resend.dev)',
+    toSource: override ? 'NOTIFY_EMAIL' : `default (${CONTACT_EMAIL})`,
+  };
+}
+
+function buildInquirySubject(data) {
+  const isPurchase =
+    data.source === 'template_purchase' || data.inquiry_type.includes('購入');
+  return isPurchase
+    ? `【テンプレート購入】${data.template_name || data.inquiry_type} — ${data.name}`
+    : `【お問い合わせ】${data.inquiry_type} — ${data.name}`;
+}
 
 function buildEmailHtml(data) {
   const rows = [
@@ -35,29 +81,28 @@ function buildEmailHtml(data) {
   return `<div style="font-family:sans-serif;max-width:600px"><h2 style="color:#1a3a2a">KOISHIKAWA お問い合わせ</h2><table style="border-collapse:collapse;width:100%">${tableRows}</table></div>`;
 }
 
-async function sendEmail(data) {
+/** @deprecated 問い合わせフォームでは Gmail SMTP を使用。Resend は購入確認メール等で利用。 */
+async function sendEmailViaResend(data, mailConfig) {
   const resendKey = process.env.RESEND_API_KEY;
   if (!resendKey) {
     console.error('[send-inquiry] RESEND_API_KEY が設定されていません');
     return { ok: false, reason: 'RESEND_API_KEY not set' };
   }
-  console.log('[send-inquiry] RESEND_API_KEY 確認OK — Resend SDK を初期化');
 
   const resend = new Resend(resendKey);
+  const subject = buildInquirySubject(data);
 
-  const from = process.env.RESEND_FROM || 'KOISHIKAWA <onboarding@resend.dev>';
-  const isPurchase =
-    data.source === 'template_purchase' || data.inquiry_type.includes('購入');
-  const subject = isPurchase
-    ? `【テンプレート購入】${data.template_name || data.inquiry_type} — ${data.name}`
-    : `【お問い合わせ】${data.inquiry_type} — ${data.name}`;
-
-  const to = getNotifyRecipients();
-  console.log('[send-inquiry] メール送信先:', to, '| subject:', subject, '| from:', from);
+  console.log('[send-inquiry] Resend SDK 送信開始:', {
+    testMode: mailConfig.testMode,
+    from: mailConfig.from,
+    to: mailConfig.to,
+    subject,
+    reply_to: data.email,
+  });
 
   const { data: emailData, error } = await resend.emails.send({
-    from,
-    to,
+    from: mailConfig.from,
+    to: mailConfig.to,
     reply_to: data.email,
     subject,
     html: buildEmailHtml(data),
@@ -73,8 +118,70 @@ async function sendEmail(data) {
     return { ok: false, reason: error.message || JSON.stringify(error) };
   }
 
-  console.log('[send-inquiry] メール送信成功 — id:', emailData?.id);
-  return { ok: true, id: emailData?.id };
+  console.log('[send-inquiry] Resend 送信成功 — id:', emailData?.id);
+  return { ok: true, id: emailData?.id, provider: 'resend' };
+}
+
+// --- 問い合わせフォーム: Gmail SMTP ---
+
+function logEnvDiagnostics(gmailConfig, replyTo) {
+  const secretKeys = new Set([
+    'RESEND_API_KEY',
+    'SUPABASE_SERVICE_ROLE_KEY',
+    'GMAIL_APP_PASSWORD',
+  ]);
+  const trackedKeys = [
+    'GMAIL_USER',
+    'GMAIL_APP_PASSWORD',
+    'RESEND_API_KEY',
+    'RESEND_FROM',
+    'RESEND_TEST_MODE',
+    'RESEND_TEST_FROM',
+    'RESEND_TEST_TO',
+    'NOTIFY_EMAIL',
+    'SUPABASE_URL',
+    'VITE_SUPABASE_URL',
+    'SUPABASE_SERVICE_ROLE_KEY',
+  ];
+
+  console.log('[send-inquiry] ===== 環境変数診断 =====');
+  for (const key of trackedKeys) {
+    const raw = process.env[key];
+    if (secretKeys.has(key)) {
+      console.log(
+        `  ${key}: ${raw ? `SET (len=${raw.length}, prefix=${raw.slice(0, 4)}...)` : 'NOT SET'}`,
+      );
+      continue;
+    }
+    console.log(`  ${key}: ${raw ?? '(未設定)'}`);
+  }
+
+  console.log('[send-inquiry] ===== 解決済みメール設定（問い合わせ → Gmail SMTP） =====');
+  console.log(`  provider   : gmail`);
+  console.log(`  from       : ${gmailConfig.from ?? '(GMAIL_USER 未設定)'}`);
+  console.log(`  fromSource : ${gmailConfig.userSource}`);
+  console.log(`  to         : ${gmailConfig.to}`);
+  console.log(`  toSource   : ${gmailConfig.toSource}`);
+  console.log(`  reply_to   : ${replyTo}`);
+  console.log(`  SUPABASE_URL (resolved): ${SUPABASE_URL}`);
+}
+
+async function sendInquiryEmailViaGmail(data) {
+  const gmailConfig = resolveGmailConfig();
+  const subject = buildInquirySubject(data);
+
+  try {
+    return await sendViaGmail({
+      from: gmailConfig.from,
+      to: gmailConfig.to,
+      subject,
+      html: buildEmailHtml(data),
+      replyTo: data.email.trim(),
+    });
+  } catch (err) {
+    console.error('[send-inquiry] Gmail SMTP エラー:', err.message);
+    return { ok: false, reason: err.message || 'Gmail SMTP send failed' };
+  }
 }
 
 async function saveInquiry(data) {
@@ -154,6 +261,9 @@ export default async function handler(req, res) {
     source: data.source,
   });
 
+  const gmailConfig = resolveGmailConfig();
+  logEnvDiagnostics(gmailConfig, data.email.trim());
+
   try {
     await saveInquiry(data);
   } catch (err) {
@@ -161,16 +271,16 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: err.message || '保存に失敗しました' });
   }
 
-  const emailResult = await sendEmail(data);
+  const emailResult = await sendInquiryEmailViaGmail(data);
 
   if (!emailResult.ok) {
     console.error('[send-inquiry] メール送信失敗:', emailResult.reason);
-    // メール失敗でも受付自体は成功扱いにするが、reason をレスポンスに含める
   }
 
   return res.status(200).json({
     ok: true,
     email_sent: emailResult.ok,
+    email_provider: 'gmail',
     ...(emailResult.ok ? {} : { email_error: emailResult.reason }),
     message: emailResult.ok
       ? 'お問い合わせを送信しました。担当者よりご連絡いたします。'
