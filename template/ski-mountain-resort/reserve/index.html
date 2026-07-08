@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title data-i18n="reserve.page.meta">ご宿泊予約｜HAKUBA PEAKS RESORT</title>
+  <meta name="description" data-i18n="reserve.page.description" content="" />
+  <link rel="canonical" href="https://hakubapeaks.example.com/reserve/" />
+  <link rel="stylesheet" href="/template/ski-mountain-resort/styles.css" />
+</head>
+<body class="reserve-page">
+
+<header class="site-header is-scrolled" id="site-header">
+  <a href="../index.html" class="header-logo">
+    HAKUBA PEAKS
+    <span>RESORT — HAKUBA, NAGANO</span>
+  </a>
+  <nav class="header-nav">
+    <a href="../index.html#activities" data-i18n="nav.slopes"></a>
+    <a href="../index.html#rooms" data-i18n="nav.rooms"></a>
+    <a href="../index.html#onsen" data-i18n="nav.onsen"></a>
+    <a href="../index.html#dining" data-i18n="nav.dining"></a>
+    <a href="../index.html#plans" data-i18n="nav.plans"></a>
+    <a href="../index.html#access" data-i18n="nav.access"></a>
+  </nav>
+  <div class="header-actions">
+    <div class="lang-switcher">
+      <button class="lang-btn is-active" data-lang="ja">JP</button>
+      <span class="lang-sep">/</span>
+      <button class="lang-btn" data-lang="en">EN</button>
+      <span class="lang-sep">/</span>
+      <button class="lang-btn" data-lang="zh">中</button>
+    </div>
+    <span class="header-reserve-btn is-current" data-i18n="nav.reserve"></span>
+    <button class="drawer-toggle" id="drawer-toggle" aria-label="メニュー">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<div class="drawer-overlay" id="drawer-overlay"></div>
+<nav class="mobile-drawer" id="mobile-drawer">
+  <button class="drawer-close" id="drawer-close" aria-label="閉じる">×</button>
+  <div class="drawer-nav">
+    <a href="../index.html#activities" data-i18n="nav.slopes"></a>
+    <a href="../index.html#rooms" data-i18n="nav.rooms"></a>
+    <a href="../index.html#onsen" data-i18n="nav.onsen"></a>
+    <a href="../index.html#dining" data-i18n="nav.dining"></a>
+    <a href="../index.html#plans" data-i18n="nav.plans"></a>
+    <a href="../index.html#access" data-i18n="nav.access"></a>
+  </div>
+  <a href="index.html" class="drawer-reserve-btn is-current" data-i18n="nav.reserve"></a>
+  <div class="drawer-lang">
+    <button class="lang-btn is-active" data-lang="ja">JP</button>
+    <button class="lang-btn" data-lang="en">EN</button>
+    <button class="lang-btn" data-lang="zh">中</button>
+  </div>
+</nav>
+
+<main>
+  <section class="reserve-page-hero" aria-labelledby="reserve-page-title">
+    <div class="reserve-page-hero__inner">
+      <p class="section-tag section-tag--light" data-i18n="reserve.page.label"></p>
+      <h1 class="reserve-page-hero__title" id="reserve-page-title" data-i18n="reserve.page.title"></h1>
+      <p class="reserve-page-hero__lead" data-i18n="reserve.page.lead"></p>
+    </div>
+  </section>
+
+  <section class="reserve-page-main" aria-labelledby="booking-form-title">
+    <div class="reserve-page-main__inner">
+      <aside class="reserve-sidebar">
+        <div class="reserve-phone-box">
+          <div class="reserve-phone-title" data-i18n="reserve.phone.title"></div>
+          <a href="tel:0261000000" class="reserve-phone-num" id="sidebar-tel">0261-00-0000</a>
+          <div class="reserve-phone-hours" data-i18n="reserve.phone.hours"></div>
+          <div class="reserve-phone-hint" data-i18n="reserve.phone.hint"></div>
+        </div>
+
+        <div class="booking-summary" id="booking-summary" aria-live="polite">
+          <h2 class="booking-summary__title" data-i18n="reserve.summary.title"></h2>
+          <dl class="booking-summary__list">
+            <div class="booking-summary__row">
+              <dt data-i18n="form.checkin"></dt>
+              <dd id="summary-checkin">—</dd>
+            </div>
+            <div class="booking-summary__row">
+              <dt data-i18n="form.checkout"></dt>
+              <dd id="summary-checkout">—</dd>
+            </div>
+            <div class="booking-summary__row">
+              <dt data-i18n="form.guests"></dt>
+              <dd id="summary-guests">—</dd>
+            </div>
+            <div class="booking-summary__row">
+              <dt data-i18n="form.plan"></dt>
+              <dd id="summary-plan">—</dd>
+            </div>
+            <div class="booking-summary__row">
+              <dt data-i18n="form.room"></dt>
+              <dd id="summary-room">—</dd>
+            </div>
+          </dl>
+        </div>
+
+        <ol class="booking-steps">
+          <li class="is-active" data-i18n="reserve.steps.1"></li>
+          <li data-i18n="reserve.steps.2"></li>
+          <li data-i18n="reserve.steps.3"></li>
+          <li data-i18n="reserve.steps.4"></li>
+        </ol>
+      </aside>
+
+      <div class="reserve-form-panel">
+        <form class="booking-form" id="booking-form" novalidate>
+          <h2 class="visually-hidden" id="booking-form-title" data-i18n="reserve.page.title"></h2>
+
+          <fieldset class="booking-section">
+            <legend class="booking-section__title" data-i18n="reserve.section.stay"></legend>
+            <div class="form-row form-row--3">
+              <div class="form-group">
+                <label class="form-label" for="b-checkin">
+                  <span data-i18n="form.checkin"></span>
+                  <span class="req" data-i18n="form.required"></span>
+                </label>
+                <input type="date" id="b-checkin" name="checkin" class="form-control" required />
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="b-nights">
+                  <span data-i18n="form.nights"></span>
+                  <span class="req" data-i18n="form.required"></span>
+                </label>
+                <select id="b-nights" name="nights" class="form-control" required>
+                  <option value="" data-i18n="form.select"></option>
+                  <option value="1" data-i18n="form.nights.1"></option>
+                  <option value="2" data-i18n="form.nights.2"></option>
+                  <option value="3" data-i18n="form.nights.3"></option>
+                  <option value="4" data-i18n="form.nights.4"></option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="b-checkout" data-i18n="form.checkout"></label>
+                <input type="date" id="b-checkout" name="checkout" class="form-control" readonly aria-readonly="true" tabindex="-1" />
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label" for="b-adults">
+                  <span data-i18n="form.adults"></span>
+                  <span class="req" data-i18n="form.required"></span>
+                </label>
+                <select id="b-adults" name="adults" class="form-control" required>
+                  <option value="" data-i18n="form.select"></option>
+                  <option value="1" data-i18n="form.adults.1"></option>
+                  <option value="2" data-i18n="form.adults.2"></option>
+                  <option value="3" data-i18n="form.adults.3"></option>
+                  <option value="4" data-i18n="form.adults.4"></option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="b-children" data-i18n="form.children"></label>
+                <select id="b-children" name="children" class="form-control">
+                  <option value="0" data-i18n="form.children.0"></option>
+                  <option value="1" data-i18n="form.children.1"></option>
+                  <option value="2" data-i18n="form.children.2"></option>
+                  <option value="3" data-i18n="form.children.3"></option>
+                </select>
+              </div>
+            </div>
+          </fieldset>
+
+          <fieldset class="booking-section">
+            <legend class="booking-section__title" data-i18n="reserve.section.plan"></legend>
+            <div class="form-group">
+              <label class="form-label" for="b-plan" data-i18n="form.plan"></label>
+              <select id="b-plan" name="plan" class="form-control"><option value="" data-i18n="form.select"></option></select>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="b-room" data-i18n="form.room"></label>
+              <select id="b-room" name="room" class="form-control"><option value="" data-i18n="form.select"></option></select>
+            </div>
+          </fieldset>
+
+          <fieldset class="booking-section">
+            <legend class="booking-section__title" data-i18n="reserve.section.guest"></legend>
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label" for="b-name">
+                  <span data-i18n="form.name"></span>
+                  <span class="req" data-i18n="form.required"></span>
+                </label>
+                <input type="text" id="b-name" name="name" class="form-control" autocomplete="name" required />
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="b-name-kana">
+                  <span data-i18n="form.nameKana"></span>
+                  <span class="req" data-i18n="form.required"></span>
+                </label>
+                <input type="text" id="b-name-kana" name="name_kana" class="form-control" required />
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label" for="b-email">
+                  <span data-i18n="form.email"></span>
+                  <span class="req" data-i18n="form.required"></span>
+                </label>
+                <input type="email" id="b-email" name="email" class="form-control" autocomplete="email" required />
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="b-tel">
+                  <span data-i18n="form.tel"></span>
+                  <span class="req" data-i18n="form.required"></span>
+                </label>
+                <input type="tel" id="b-tel" name="tel" class="form-control" autocomplete="tel" required />
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="b-arrival" data-i18n="form.arrival"></label>
+              <select id="b-arrival" name="arrival" class="form-control">
+                <option value="15:00" data-i18n="form.arrival.1500"></option>
+                <option value="16:00" data-i18n="form.arrival.1600"></option>
+                <option value="17:00" data-i18n="form.arrival.1700"></option>
+                <option value="18:00" data-i18n="form.arrival.1800"></option>
+                <option value="19:00+" data-i18n="form.arrival.late"></option>
+                <option value="undecided" data-i18n="form.arrival.undecided"></option>
+              </select>
+            </div>
+          </fieldset>
+
+          <fieldset class="booking-section">
+            <legend class="booking-section__title" data-i18n="reserve.section.requests"></legend>
+            <div class="form-group">
+              <label class="form-label" for="b-requests" data-i18n="form.requests"></label>
+              <textarea id="b-requests" name="requests" class="form-control" rows="4" data-i18n-placeholder="form.requests.placeholder"></textarea>
+            </div>
+          </fieldset>
+
+          <label class="form-privacy">
+            <input type="checkbox" name="privacy" required />
+            <a href="/privacy" target="_blank" rel="noopener" data-i18n="form.privacy"></a>
+            <span data-i18n="form.privacy.agree"></span>
+          </label>
+
+          <button type="submit" class="form-submit" data-i18n="form.submit"></button>
+          <p class="form-note" data-i18n="form.note"></p>
+          <p class="form-status" id="form-status" role="status" aria-live="polite" hidden></p>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div>
+      <div class="footer-logo" id="footer-site-name">HAKUBA PEAKS RESORT</div>
+      <div class="footer-logo-sub">POWDER SNOW RESORT — HAKUBA, NAGANO</div>
+      <p class="footer-desc" id="footer-address">〒399-9211 長野県北安曇郡白馬村北城5905<br />TEL 0261-00-0000</p>
+    </div>
+    <div>
+      <div class="footer-col-title">MENU</div>
+      <ul class="footer-links">
+        <li><a href="../index.html#rooms" data-i18n="nav.rooms"></a></li>
+        <li><a href="../index.html#plans" data-i18n="nav.plans"></a></li>
+        <li><a href="../index.html#access" data-i18n="nav.access"></a></li>
+        <li><a href="index.html" aria-current="page" data-i18n="nav.reserve"></a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p data-i18n="footer.copy"></p>
+  </div>
+</footer>
+
+<script src="reserve.js" type="module"></script>
+</body>
+</html>

@@ -93,7 +93,7 @@
         <button type="button" class="lang-switch__btn" data-lang="zh" aria-pressed="false">中文</button>
       </div>
       <a href="tel:0750000000" class="header__tel" id="header-tel">075-000-0000</a>
-      <a href="#reserve" class="btn btn--primary" data-i18n="nav.reserve">ご予約</a>
+      <a href="reserve/" class="btn btn--primary" data-i18n="nav.reserve">ご予約</a>
     </div>
     <button class="menu-btn" aria-label="メニュー" aria-expanded="false">
       <span></span><span></span><span></span>
@@ -117,7 +117,7 @@
     <a href="#sightseeing" data-i18n="nav.sightseeing">周辺観光</a>
     <a href="#faq" data-i18n="nav.faq">FAQ</a>
     <a href="#access" data-i18n="nav.access">アクセス</a>
-    <a href="#reserve" class="btn btn--primary" data-i18n="nav.reserve">ご予約</a>
+    <a href="reserve/" class="btn btn--primary" data-i18n="nav.reserve">ご予約</a>
   </nav>
 </div>
 
@@ -134,7 +134,7 @@
       <h1 class="hero__title" data-i18n="hero.title">日本の原風景に、<br />泊まる。</h1>
       <p class="hero__lead" data-i18n="hero.lead">京都・東山の古民家で、囲炉裏の温もりと庭の静けさを。</p>
       <div class="hero__btns">
-        <a href="#reserve" class="btn btn--primary btn--lg" data-i18n="hero.btn1">空室を確認する</a>
+        <a href="reserve/" class="btn btn--primary btn--lg" data-i18n="hero.btn1">空室を確認する</a>
         <a href="#facilities" class="btn btn--outline btn--lg" data-i18n="hero.btn2">館内を見る</a>
       </div>
     </div>
@@ -392,76 +392,58 @@
   </section>
 
   <!-- Reserve -->
-  <section class="reserve section" id="reserve">
+  <section class="reserve-teaser section" id="reserve">
     <div class="container">
       <header class="section-head fade-in">
         <span class="section-tag section-tag--dark" data-i18n="reserve.tag">ご予約</span>
-        <h2 class="section-title section-title--light" data-i18n="reserve.title">ご予約・お問い合わせ</h2>
-        <p class="section-lead section-lead--light" data-i18n="reserve.lead">2営業日以内にご返信いたします。</p>
+        <h2 class="section-title section-title--light" data-i18n="reserve.title">ご宿泊予約</h2>
+        <p class="section-lead section-lead--light" data-i18n="reserve.lead">オンライン予約フォームより空室確認のうえ、担当者よりご連絡いたします。</p>
       </header>
-      <div class="reserve__layout fade-in">
-        <div class="reserve__phone">
-          <h3 data-i18n="reserve.phone.title">お電話でのご予約</h3>
-          <a href="tel:0750000000" class="reserve__tel" id="reserve-tel">075-000-0000</a>
-          <p data-i18n="reserve.phone.hours">受付 9:00〜18:00（年中無休）</p>
-          <p class="reserve__hint" data-i18n="reserve.phone.hint">※ ご希望のプラン・人数をお伝えください</p>
+      <div class="reserve-teaser-grid fade-in">
+        <div class="phone-reserve">
+          <h3 class="phone-reserve-title" data-i18n="reserve.phone.title">お電話でのご予約</h3>
+          <a href="tel:0750000000" class="phone-number" id="teaser-tel">075-000-0000</a>
+          <p class="phone-hours" data-i18n="reserve.phone.hours">受付 9:00〜18:00（年中無休）</p>
+          <p class="phone-hint" data-i18n="reserve.phone.hint">※ ご希望のプラン・人数をお伝えください</p>
         </div>
-        <form class="form" id="contact" novalidate>
-          <h3 class="form__title" data-i18n="form.title">オンラインフォーム</h3>
-          <div class="form__row">
-            <div class="form__group">
-              <label for="name"><span data-i18n="form.name">お名前</span> <span class="req" data-i18n="form.required">必須</span></label>
-              <input type="text" id="name" name="name" required autocomplete="name" />
+        <div class="reserve-online-card">
+          <h3 class="form-title" data-i18n="reserve.teaser.online">オンライン予約</h3>
+          <form class="reserve-quick" id="reserve-quick" action="reserve/" method="get">
+            <div class="form-row form-row--3">
+              <div class="form-group">
+                <label for="q-checkin" data-i18n="form.checkin">チェックイン</label>
+                <input type="date" id="q-checkin" name="checkin" required />
+              </div>
+              <div class="form-group">
+                <label for="q-nights" data-i18n="form.nights">泊数</label>
+                <select id="q-nights" name="nights" required>
+                  <option value="" data-i18n="form.select">選択してください</option>
+                  <option value="1" data-i18n="form.nights.1">1泊</option>
+                  <option value="2" data-i18n="form.nights.2">2泊</option>
+                  <option value="3" data-i18n="form.nights.3">3泊</option>
+                  <option value="4" data-i18n="form.nights.4">4泊以上</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="q-adults" data-i18n="form.adults">大人</label>
+                <select id="q-adults" name="adults" required>
+                  <option value="" data-i18n="form.select">選択してください</option>
+                  <option value="1" data-i18n="form.adults.1">1名</option>
+                  <option value="2" data-i18n="form.adults.2">2名</option>
+                  <option value="3" data-i18n="form.adults.3">3名</option>
+                  <option value="4" data-i18n="form.adults.4">4名</option>
+                </select>
+              </div>
             </div>
-            <div class="form__group">
-              <label for="email"><span data-i18n="form.email">メール</span> <span class="req" data-i18n="form.required">必須</span></label>
-              <input type="email" id="email" name="email" required autocomplete="email" />
-            </div>
-          </div>
-          <div class="form__row">
-            <div class="form__group">
-              <label for="tel"><span data-i18n="form.tel">電話番号</span> <span class="req" data-i18n="form.required">必須</span></label>
-              <input type="tel" id="tel" name="tel" required autocomplete="tel" />
-            </div>
-            <div class="form__group">
-              <label for="checkin"><span data-i18n="form.checkin">宿泊日</span> <span class="req" data-i18n="form.required">必須</span></label>
-              <input type="date" id="checkin" name="checkin" required />
-            </div>
-          </div>
-          <div class="form__group">
-            <label for="guests"><span data-i18n="form.guests">人数</span> <span class="req" data-i18n="form.required">必須</span></label>
-            <select id="guests" name="guests" required>
-              <option value="" data-i18n="form.guests.placeholder">選択</option>
-              <option value="1" data-i18n="form.guests.1">1名</option>
-              <option value="2" data-i18n="form.guests.2">2名</option>
-              <option value="3" data-i18n="form.guests.3">3名</option>
-              <option value="4" data-i18n="form.guests.4">4名</option>
-              <option value="5" data-i18n="form.guests.5">5名</option>
-              <option value="6" data-i18n="form.guests.6">6名</option>
-            </select>
-          </div>
-          <div class="form__row">
-            <div class="form__group">
-              <label for="plan" data-i18n="form.plan">ご希望プラン</label>
-              <select id="plan" name="plan"><option value="" data-i18n="form.select">選択</option></select>
-            </div>
-            <div class="form__group">
-              <label for="room" data-i18n="form.room">ご希望客室</label>
-              <select id="room" name="room"><option value="" data-i18n="form.select">選択</option></select>
-            </div>
-          </div>
-          <div class="form__group">
-            <label for="message" data-i18n="form.message">メッセージ</label>
-            <textarea id="message" name="message" rows="4" data-i18n-attr="placeholder:form.message.placeholder" placeholder="文化体験・送迎・アレルギーなど"></textarea>
-          </div>
-          <label class="form__check">
-            <input type="checkbox" name="privacy" required />
-            <span><a href="/privacy" target="_blank" rel="noopener" data-i18n="form.privacy">プライバシーポリシー</a><span data-i18n="form.privacy.agree">に同意する</span></span>
-          </label>
-          <button type="submit" class="btn btn--primary btn--block" data-i18n="form.submit">予約リクエストを送信</button>
-          <p class="form__note" data-i18n="form.note">※ 空室確認後、担当者よりご連絡いたします。</p>
-        </form>
+            <button type="submit" class="btn btn--primary btn--block btn-submit" data-i18n="reserve.teaser.cta">予約フォームへ</button>
+            <p class="form-note" data-i18n="form.note">※ このフォームは予約リクエストです。空室確認後、担当者よりご連絡いたします。</p>
+          </form>
+        </div>
       </div>
+      <p class="reserve-teaser-contact fade-in">
+        <span data-i18n="reserve.teaser.contact">その他のお問い合わせは</span>
+        <a href="mailto:info@tsumugi.example.com" id="teaser-contact-mail">info@tsumugi.example.com</a>
+      </p>
     </div>
   </section>
 </main>
@@ -478,7 +460,7 @@
       <a href="#cuisine" data-i18n="nav.cuisine">お料理</a>
       <a href="#plans" data-i18n="nav.plans">宿泊プラン</a>
       <a href="#sightseeing" data-i18n="nav.sightseeing">周辺観光</a>
-      <a href="#reserve" data-i18n="nav.reserve">ご予約</a>
+      <a href="reserve/" data-i18n="nav.reserve">ご予約</a>
     </nav>
     <p class="footer__copy" data-i18n="footer.copy">© 2026 古民家宿 紬の郷 ｜ 古民家宿テンプレート</p>
   </div>

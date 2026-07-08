@@ -77,7 +77,14 @@ function applyI18n() {
   renderPlans(plansData);
   renderCuisine(cuisineData);
   renderTestimonials(testimonialsData);
-  fillFormSelects(roomsData, plansData);
+
+  const tel = siteData.telephone;
+  const telRaw = siteData.telephoneRaw;
+  $('#teaser-tel') && ($('#teaser-tel').textContent = tel);
+  $('#teaser-tel') && ($('#teaser-tel').href = `tel:${telRaw}`);
+  $('#hero-contact') && ($('#hero-contact').href = `mailto:${siteData.email}`);
+  $('#footer-contact-mail') && ($('#footer-contact-mail').href = `mailto:${siteData.email}`);
+  $('#teaser-contact-mail') && ($('#teaser-contact-mail').href = `mailto:${siteData.email}`);
 }
 
 function updateSchema() {
@@ -109,7 +116,7 @@ function renderRooms(rooms) {
     const badgeCls = r.badgeType === 'special' ? ' special' : '';
     return `
       <article class="room-card reveal-up">
-        <a href="#reserve" class="room-card-link">
+        <a href="reserve/?room=${r.id}" class="room-card-link">
           <div class="room-photo" style="background-image:url('${r.image}')">
             <div class="room-photo-overlay"></div>
             <span class="room-badge${badgeCls}">${pick(r.badge)}</span>
@@ -149,7 +156,7 @@ function renderPlans(plans) {
           <strong>${p.price}</strong>
           <span class="price-note">${pick(p.priceNote)}</span>
         </div>
-        <a href="#reserve" class="btn ${p.featured ? 'btn-plan-gold' : 'btn-plan'}">${t(p.featured ? 'plan.btn.featured' : 'plan.btn')}</a>
+        <a href="reserve/?plan=${p.id}" class="btn ${p.featured ? 'btn-plan-gold' : 'btn-plan'}">${t(p.featured ? 'plan.btn.featured' : 'plan.btn')}</a>
       </div>
     </article>`;
   }).join('');
@@ -186,24 +193,6 @@ function renderTestimonials(items) {
     </blockquote>
   `).join('');
   observeReveals(el);
-}
-
-function fillFormSelects(rooms, plans) {
-  fillSelect('#r-plan', [
-    ...plans.map(p => ({ value: pick(p.name), label: pick(p.name) })),
-    { value: 'other', label: t('form.other') },
-  ]);
-  fillSelect('#r-room', [
-    ...rooms.map(r => ({ value: pick(r.name), label: pick(r.name) })),
-    { value: 'omakase', label: t('form.omakase') },
-  ]);
-}
-
-function fillSelect(sel, opts) {
-  const el = $(sel);
-  if (!el) return;
-  el.innerHTML = `<option value="">${t('form.select')}</option>` +
-    opts.map(o => `<option value="${o.value}">${o.label}</option>`).join('');
 }
 
 function setLang(lang) {
@@ -278,24 +267,10 @@ document.addEventListener('DOMContentLoaded', () => {
   }, { passive: true });
   scrollTopBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
 
-  const form = $('.contact-form');
-  form?.addEventListener('submit', e => {
-    e.preventDefault();
-    if (!form.checkValidity()) { form.reportValidity(); return; }
-    const btn = form.querySelector('[type="submit"]');
-    btn.textContent = t('form.sending');
-    btn.disabled = true;
-    setTimeout(() => {
-      btn.textContent = t('form.sent');
-      btn.style.background = 'var(--moss-mid)';
-      setTimeout(() => {
-        btn.textContent = t('form.submit');
-        btn.style.background = '';
-        btn.disabled = false;
-        form.reset();
-      }, 4000);
-    }, 1200);
-  });
+  const quickCheckin = $('#q-checkin');
+  if (quickCheckin) {
+    quickCheckin.min = new Date().toISOString().slice(0, 10);
+  }
 
   const heroPhoto = $('.hero-photo');
   if (heroPhoto && window.matchMedia('(min-width: 769px)').matches) {

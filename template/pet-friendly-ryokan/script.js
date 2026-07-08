@@ -50,7 +50,13 @@ function applyI18n() {
   const siteName = pick(siteData.name);
   $('#site-name-ja') && ($('#site-name-ja').textContent = siteName);
   $('#drawer-site-name') && ($('#drawer-site-name').textContent = siteName);
-  $('#footer-site-name') && ($('#footer-site-name').textContent = siteName);
+  $('#footer-site-name') && ($('#footer-site-name').textContent = `🐾 ${siteName}`);
+
+  const tel = siteData.telephone;
+  const telRaw = siteData.telephoneRaw;
+  $('#teaser-tel') && ($('#teaser-tel').textContent = tel);
+  $('#teaser-tel') && ($('#teaser-tel').href = `tel:${telRaw}`);
+  $('#teaser-contact-mail') && ($('#teaser-contact-mail').href = `mailto:${siteData.email}`);
 
   updateSchema();
   renderNews(newsData);
@@ -94,11 +100,10 @@ function renderRooms(rooms) {
           <p>${pick(r.description)}</p>
           <ul class="room-card__tags">${amenities.map(a => `<li>${a}</li>`).join('')}</ul>
           <p class="room-card__price"><small>${pick(r.priceLabel)}</small> <strong>${r.price}</strong></p>
-          <a href="#reserve" class="btn btn--secondary">${t('room.btn')}</a>
+          <a href="reserve/?room=${r.id}" class="btn btn--secondary">${t('room.btn')}</a>
         </div>
       </article>`;
   }).join('');
-  fillSelect('#room', rooms.map(r => ({ value: pick(r.name), label: pick(r.name) })));
   initScrollReveal();
 }
 
@@ -117,22 +122,11 @@ function renderPlans(plans) {
         <p>${pick(p.description)}</p>
         <ul>${includes.map(i => `<li>${i}</li>`).join('')}</ul>
         <p class="plan-card__price"><small>${pick(p.priceLabel)}</small> <strong>${p.price}</strong></p>
-        <a href="#reserve" class="btn ${p.featured ? 'btn--warm' : 'btn--secondary'}">${t('plan.btn')}</a>
+        <a href="reserve/?plan=${p.id}" class="btn ${p.featured ? 'btn--warm' : 'btn--secondary'}">${t('plan.btn')}</a>
       </div>
     </article>`;
   }).join('');
-  fillSelect('#plan', [
-    ...plans.map(p => ({ value: pick(p.name), label: pick(p.name) })),
-    { value: 'other', label: t('form.other') },
-  ]);
   initScrollReveal();
-}
-
-function fillSelect(sel, opts) {
-  const el = $(sel);
-  if (!el) return;
-  el.innerHTML = `<option value="">${t('form.select')}</option>` +
-    opts.map(o => `<option value="${o.value}">${o.label}</option>`).join('');
 }
 
 function setLang(lang) {
@@ -182,18 +176,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
   $('#totop').addEventListener('click', () => scrollTo({ top: 0, behavior: 'smooth' }));
 
-  const form = $('.form');
-  form?.addEventListener('submit', e => {
-    e.preventDefault();
-    if (!form.checkValidity()) { form.reportValidity(); return; }
-    const btn = form.querySelector('[type="submit"]');
-    btn.textContent = t('form.sending');
-    btn.disabled = true;
-    setTimeout(() => {
-      btn.textContent = t('form.sent');
-      setTimeout(() => { btn.textContent = t('form.submit'); btn.disabled = false; form.reset(); }, 3500);
-    }, 1000);
-  });
+  const quickCheckin = $('#q-checkin');
+  if (quickCheckin) {
+    quickCheckin.min = new Date().toISOString().slice(0, 10);
+  }
 
   $$('.nav a, .drawer__panel a').forEach(a => {
     a.addEventListener('click', e => {

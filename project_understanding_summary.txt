@@ -8,7 +8,7 @@
 
 
 
-最終更新: 2026-07-02
+最終更新: 2026-07-08（スキーリゾート 予約フォーム追加）
 
 
 
@@ -45,6 +45,7 @@
     コンセプト: 静寂・非日常・贅沢（深緑×生成り×金）
 
     実装: 多言語（JP・EN・中文）/ Unsplash写真 / Google Maps / CMS
+    予約: 専用ページ template/reserve/（CSS は reserve.js から import、reveal-up 非使用）
 
 
 
@@ -64,6 +65,10 @@
 
           CMS / 多言語（JP・EN・中文）/ 客室4件
 
+    予約: 専用ページ template/pet-friendly-ryokan/reserve/（CSS は reserve.js から import）
+
+          トップはクイック予約ティーザー → 詳細フォームへ GET 連携
+
 
 
 [C] 古民家宿・町家宿 — 古民家宿テンプレート
@@ -74,7 +79,11 @@
 
     - cms/sightseeing.json 含む
 
-    実装: CMS / 多言語（JP・EN・中文）
+    予約: 専用ページ template/traditional-kominka-inn/reserve/（CSS は reserve.js から import）
+
+          トップはクイック予約ティーザー → 詳細フォームへ GET 連携
+
+    実装: CMS / 多言語（JP・EN・中文）/ 予約リクエストフォーム
 
 
 
@@ -96,7 +105,11 @@
 
     実装: レスポンシブ / SEO / OGP / Hotel構造化データ / Google Maps /
 
-          お問い合わせフォーム / CMS / 多言語（JP・EN・中文）
+          CMS / 多言語（JP・EN・中文）
+
+    予約: 専用ページ template/luxury-glamping/reserve/（CSS は reserve.js から import）
+
+          トップはクイック予約ティーザー → 詳細フォームへ GET 連携
 
 
 
@@ -118,9 +131,61 @@
 
     ページ: トップ / 客室 / 温泉 / お料理 / 宿泊プラン / FAQ / アクセス・予約
 
+    予約: 専用ページ template/ocean-view-onsen-ryokan/reserve/（CSS は reserve.js から import）
+
+          トップはクイック予約ティーザー → 詳細フォームへ GET 連携
+
     実装: レスポンシブ / SEO / OGP / Hotel構造化データ / Google Maps /
 
-          お問い合わせフォーム / CMS / 多言語（JP・EN・中文）
+          予約リクエストフォーム /           CMS / 多言語（JP・EN・中文）
+
+
+
+[F] 都市型ブティックホテル — 都市型ブティックホテルテンプレート
+
+    パス: template/urban-boutique-hotel/
+
+    デモ施設名: THE AKARI AOYAMA
+
+    - index.html / styles.css / script.js
+
+    - cms/site.json, i18n.json, news.json, rooms.json, plans.json
+
+    コンセプト: 東京・青山の14室ブティックホテル（ニアブラック×オフホワイト×マットゴールド）
+
+    ページ: トップ / 客室 / ダイニング / ルーフトップ / サービス / プラン / FAQ / アクセス・予約
+
+    実装: レスポンシブ / SEO / OGP / Hotel構造化データ / Google Maps /
+
+          CMS / 多言語（JP・EN・中文）
+
+    予約: 専用ページ template/urban-boutique-hotel/reserve/（CSS は reserve.js から import）
+
+          トップはクイック予約ティーザー → 詳細フォームへ GET 連携
+
+
+
+[G] スキーリゾート・山岳ロッジ — スキーリゾート・山岳ロッジテンプレート
+
+    パス: template/ski-mountain-resort/
+
+    デモ施設名: HAKUBA PEAKS RESORT
+
+    - index.html / styles.css / script.js
+
+    - cms/site.json, i18n.json, news.json, rooms.json, plans.json
+
+    コンセプト: 長野・白馬のパウダースノーリゾート（ネイビー×スカイブルー×ウッド）
+
+    ページ: トップ / スロープ / 客室 / 温泉 / ダイニング / プラン / FAQ / アクセス・予約
+
+    実装: レスポンシブ / SEO / OGP / LodgingBusiness構造化データ / Google Maps /
+
+          CMS / 多言語（JP・EN・中文）
+
+    予約: 専用ページ template/ski-mountain-resort/reserve/（CSS は reserve.js から import）
+
+          トップはクイック予約ティーザー → 詳細フォームへ GET 連携
 
 
 
@@ -150,7 +215,9 @@
 
                /template/pet-friendly-ryokan/, /template/traditional-kominka-inn/,
 
-               /template/luxury-glamping/, /template/ocean-view-onsen-ryokan/
+               /template/luxury-glamping/, /template/ocean-view-onsen-ryokan/,
+               /template/urban-boutique-hotel/, /template/ski-mountain-resort/,
+               /template/reserve/（星野庵 予約専用）
 
 - npm run build → dist/ に7ページ以上出力
 

@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title data-i18n="reserve.page.meta">ご宿泊予約｜湯宿 星野庵</title>
+  <meta name="description" data-i18n-attr="content:reserve.page.description" content="湯宿 星野庵のご宿泊予約。チェックイン日・人数・プランを入力のうえ、予約リクエストを送信してください。" />
+  <link rel="canonical" href="https://hoshinoan.example.com/reserve/" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Noto+Sans+JP:wght@300;400;500&family=Noto+Serif+JP:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/template/styles.css" />
+</head>
+<body class="reserve-page">
+
+<header class="site-header is-scrolled" id="top">
+  <div class="header-inner">
+    <a href="../index.html" class="brand" aria-label="湯宿 星野庵 トップへ">
+      <span class="brand-en">HOSHINOAN</span>
+      <span class="brand-ja" id="site-name-ja">湯宿 星野庵</span>
+    </a>
+
+    <nav class="global-nav" aria-label="グローバルナビゲーション">
+      <a href="../index.html#rooms" data-i18n="nav.rooms">客室</a>
+      <a href="../index.html#onsen" data-i18n="nav.onsen">温泉</a>
+      <a href="../index.html#cuisine" data-i18n="nav.cuisine">お料理</a>
+      <a href="../index.html#plans" data-i18n="nav.plans">宿泊プラン</a>
+      <a href="../index.html#access" data-i18n="nav.access">アクセス</a>
+      <a href="../index.html#faq" data-i18n="nav.faq">FAQ</a>
+    </nav>
+
+    <div class="header-actions">
+      <div class="lang-switch" role="group" aria-label="Language">
+        <button type="button" class="lang-switch__btn is-active" data-lang="ja" aria-pressed="true">JP</button>
+        <button type="button" class="lang-switch__btn" data-lang="en" aria-pressed="false">EN</button>
+        <button type="button" class="lang-switch__btn" data-lang="zh" aria-pressed="false">中文</button>
+      </div>
+      <a href="tel:0578000000" class="btn-tel">
+        <span class="tel-icon" aria-hidden="true">☎</span>
+        <span id="header-tel">0578-00-0000</span>
+      </a>
+      <span class="btn btn-reserve is-current" data-i18n="nav.reserve">ご予約</span>
+    </div>
+
+    <button class="nav-toggle" aria-label="メニューを開く" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<div class="nav-drawer" aria-hidden="true">
+  <div class="drawer-bg"></div>
+  <nav class="drawer-panel">
+    <div class="drawer-logo">
+      <span class="brand-en">HOSHINOAN</span>
+      <span class="brand-ja">湯宿 星野庵</span>
+    </div>
+    <div class="lang-switch lang-switch--drawer" role="group" aria-label="Language">
+      <button type="button" class="lang-switch__btn is-active" data-lang="ja">JP</button>
+      <button type="button" class="lang-switch__btn" data-lang="en">EN</button>
+      <button type="button" class="lang-switch__btn" data-lang="zh">中文</button>
+    </div>
+    <a href="../index.html#rooms" data-i18n="nav.rooms">客室</a>
+    <a href="../index.html#onsen" data-i18n="nav.onsen">温泉</a>
+    <a href="../index.html#cuisine" data-i18n="nav.cuisine">お料理</a>
+    <a href="../index.html#plans" data-i18n="nav.plans">宿泊プラン</a>
+    <a href="../index.html#access" data-i18n="nav.access">アクセス</a>
+    <a href="../index.html#faq" data-i18n="nav.faq">FAQ</a>
+    <div class="drawer-cta">
+      <a href="tel:0578000000" class="btn btn-ghost-light" id="drawer-tel">0578-00-0000</a>
+    </div>
+  </nav>
+</div>
+
+<main>
+  <section class="reserve-page-hero" aria-labelledby="reserve-page-title">
+    <div class="reserve-page-hero__inner">
+      <p class="reserve-page-hero__label" data-i18n="reserve.page.label">RESERVATION</p>
+      <h1 class="reserve-page-hero__title" id="reserve-page-title" data-i18n="reserve.page.title">ご宿泊予約</h1>
+      <p class="reserve-page-hero__lead" data-i18n="reserve.page.lead">チェックイン日・人数・プランをご入力のうえ、予約リクエストをお送りください。空室確認後、担当者よりご連絡いたします。</p>
+    </div>
+  </section>
+
+  <section class="reserve-page-main" aria-labelledby="booking-form-title">
+    <div class="reserve-page-main__inner">
+      <aside class="reserve-sidebar">
+        <div class="phone-reserve">
+          <h2 class="phone-reserve-title" data-i18n="reserve.phone.title">お電話でのご予約</h2>
+          <a href="tel:0578000000" class="phone-number" id="sidebar-tel">0578-00-0000</a>
+          <p class="phone-hours" data-i18n="reserve.phone.hours">受付時間 8:00〜21:00（年中無休）</p>
+        </div>
+
+        <div class="booking-summary" id="booking-summary" aria-live="polite">
+          <h2 class="booking-summary__title" data-i18n="reserve.summary.title">ご予約内容</h2>
+          <dl class="booking-summary__list">
+            <div class="booking-summary__row">
+              <dt data-i18n="form.checkin">チェックイン</dt>
+              <dd id="summary-checkin">—</dd>
+            </div>
+            <div class="booking-summary__row">
+              <dt data-i18n="form.checkout">チェックアウト</dt>
+              <dd id="summary-checkout">—</dd>
+            </div>
+            <div class="booking-summary__row">
+              <dt data-i18n="form.guests">人数</dt>
+              <dd id="summary-guests">—</dd>
+            </div>
+            <div class="booking-summary__row">
+              <dt data-i18n="form.plan">プラン</dt>
+              <dd id="summary-plan">—</dd>
+            </div>
+            <div class="booking-summary__row">
+              <dt data-i18n="form.room">客室</dt>
+              <dd id="summary-room">—</dd>
+            </div>
+          </dl>
+        </div>
+
+        <ol class="booking-steps">
+          <li class="is-active" data-i18n="reserve.steps.1">宿泊条件</li>
+          <li data-i18n="reserve.steps.2">プラン・客室</li>
+          <li data-i18n="reserve.steps.3">ご予約者情報</li>
+          <li data-i18n="reserve.steps.4">確認・送信</li>
+        </ol>
+      </aside>
+
+      <div class="reserve-form-panel">
+        <form class="booking-form" id="booking-form" novalidate>
+          <h2 class="visually-hidden" id="booking-form-title" data-i18n="reserve.page.title">ご宿泊予約</h2>
+
+          <fieldset class="booking-section">
+            <legend class="booking-section__title" data-i18n="reserve.section.stay">1. 宿泊条件</legend>
+            <div class="form-row form-row--3">
+              <div class="form-group">
+                <label for="b-checkin"><span data-i18n="form.checkin">チェックイン</span> <span class="req" data-i18n="form.required">必須</span></label>
+                <input type="date" id="b-checkin" name="checkin" required />
+              </div>
+              <div class="form-group">
+                <label for="b-nights"><span data-i18n="form.nights">泊数</span> <span class="req" data-i18n="form.required">必須</span></label>
+                <select id="b-nights" name="nights" required>
+                  <option value="" data-i18n="form.select">選択してください</option>
+                  <option value="1" data-i18n="form.nights.1">1泊</option>
+                  <option value="2" data-i18n="form.nights.2">2泊</option>
+                  <option value="3" data-i18n="form.nights.3">3泊</option>
+                  <option value="4" data-i18n="form.nights.4">4泊以上</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="b-checkout"><span data-i18n="form.checkout">チェックアウト</span></label>
+                <input type="date" id="b-checkout" name="checkout" readonly aria-readonly="true" tabindex="-1" />
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="b-adults"><span data-i18n="form.adults">大人</span> <span class="req" data-i18n="form.required">必須</span></label>
+                <select id="b-adults" name="adults" required>
+                  <option value="" data-i18n="form.select">選択してください</option>
+                  <option value="1" data-i18n="form.adults.1">1名</option>
+                  <option value="2" data-i18n="form.adults.2">2名</option>
+                  <option value="3" data-i18n="form.adults.3">3名</option>
+                  <option value="4" data-i18n="form.adults.4">4名</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="b-children"><span data-i18n="form.children">お子様</span></label>
+                <select id="b-children" name="children">
+                  <option value="0" data-i18n="form.children.0">0名</option>
+                  <option value="1" data-i18n="form.children.1">1名</option>
+                  <option value="2" data-i18n="form.children.2">2名</option>
+                  <option value="3" data-i18n="form.children.3">3名</option>
+                </select>
+              </div>
+            </div>
+          </fieldset>
+
+          <fieldset class="booking-section">
+            <legend class="booking-section__title" data-i18n="reserve.section.plan">2. プラン・客室</legend>
+            <div class="form-group">
+              <label for="b-plan" data-i18n="form.plan">ご希望のプラン</label>
+              <select id="b-plan" name="plan"><option value="" data-i18n="form.select">選択してください</option></select>
+            </div>
+            <div class="form-group">
+              <label for="b-room" data-i18n="form.room">ご希望の客室</label>
+              <select id="b-room" name="room"><option value="" data-i18n="form.select">選択してください</option></select>
+            </div>
+          </fieldset>
+
+          <fieldset class="booking-section">
+            <legend class="booking-section__title" data-i18n="reserve.section.guest">3. ご予約者情報</legend>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="b-name"><span data-i18n="form.name">お名前</span> <span class="req" data-i18n="form.required">必須</span></label>
+                <input type="text" id="b-name" name="name" autocomplete="name" required />
+              </div>
+              <div class="form-group">
+                <label for="b-name-kana"><span data-i18n="form.nameKana">フリガナ</span> <span class="req" data-i18n="form.required">必須</span></label>
+                <input type="text" id="b-name-kana" name="name_kana" required />
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="b-email"><span data-i18n="form.email">メールアドレス</span> <span class="req" data-i18n="form.required">必須</span></label>
+                <input type="email" id="b-email" name="email" autocomplete="email" required />
+              </div>
+              <div class="form-group">
+                <label for="b-tel"><span data-i18n="form.tel">電話番号</span> <span class="req" data-i18n="form.required">必須</span></label>
+                <input type="tel" id="b-tel" name="tel" autocomplete="tel" required />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="b-arrival" data-i18n="form.arrival">到着予定時刻</label>
+              <select id="b-arrival" name="arrival">
+                <option value="15:00" data-i18n="form.arrival.1500">15:00</option>
+                <option value="16:00" data-i18n="form.arrival.1600">16:00</option>
+                <option value="17:00" data-i18n="form.arrival.1700">17:00</option>
+                <option value="18:00" data-i18n="form.arrival.1800">18:00</option>
+                <option value="19:00+" data-i18n="form.arrival.late">19:00以降</option>
+                <option value="undecided" data-i18n="form.arrival.undecided">未定</option>
+              </select>
+            </div>
+          </fieldset>
+
+          <fieldset class="booking-section">
+            <legend class="booking-section__title" data-i18n="reserve.section.requests">4. ご要望（任意）</legend>
+            <div class="form-group">
+              <label for="b-requests" data-i18n="form.requests">アレルギー・記念日・送迎など</label>
+              <textarea id="b-requests" name="requests" rows="4" data-i18n-attr="placeholder:form.requests.placeholder" placeholder="食物アレルギー、記念日のサプライズ、送迎のご希望など"></textarea>
+            </div>
+          </fieldset>
+
+          <div class="form-privacy">
+            <label class="checkbox-label">
+              <input type="checkbox" name="privacy" required />
+              <span><a href="/privacy" target="_blank" rel="noopener" data-i18n="form.privacy">プライバシーポリシー</a><span data-i18n="form.privacy.agree">に同意する</span> <span class="req" data-i18n="form.required">必須</span></span>
+            </label>
+          </div>
+
+          <button type="submit" class="btn btn-submit" data-i18n="form.submit">予約リクエストを送信する</button>
+          <p class="form-note" data-i18n="form.note">※ このフォームは予約リクエストです。空室確認後、担当者よりご連絡いたします。</p>
+          <p class="form-status" id="form-status" role="status" aria-live="polite" hidden></p>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <span class="brand-en footer-logo-en">HOSHINOAN</span>
+        <span class="brand-ja footer-logo-ja">湯宿 星野庵</span>
+        <p class="footer-addr" id="footer-address">〒506-1400 岐阜県高山市奥飛騨温泉郷新平湯温泉0000<br />Tel: <a href="tel:0578000000">0578-00-0000</a></p>
+      </div>
+      <nav class="footer-nav" aria-label="フッターナビゲーション">
+        <div class="footer-nav-col">
+          <span class="footer-nav-head" data-i18n="footer.about">宿について</span>
+          <a href="../index.html#rooms" data-i18n="footer.about.rooms">客室</a>
+          <a href="../index.html#onsen" data-i18n="footer.about.onsen">温泉</a>
+          <a href="../index.html#cuisine" data-i18n="footer.about.cuisine">お料理</a>
+        </div>
+        <div class="footer-nav-col">
+          <span class="footer-nav-head" data-i18n="footer.guide">ご利用案内</span>
+          <a href="../index.html#plans" data-i18n="footer.guide.plans">宿泊プラン</a>
+          <a href="../index.html#access" data-i18n="footer.guide.access">アクセス</a>
+          <a href="../index.html#faq" data-i18n="footer.guide.faq">FAQ</a>
+        </div>
+        <div class="footer-nav-col">
+          <span class="footer-nav-head" data-i18n="footer.book">ご予約</span>
+          <a href="index.html" aria-current="page" data-i18n="footer.book.online">オンライン予約</a>
+          <a href="tel:0578000000" data-i18n="footer.book.phone">お電話でのご予約</a>
+          <a href="mailto:info@hoshinoan.example.com" id="footer-contact-mail" data-i18n="footer.book.contact">お問い合わせ</a>
+        </div>
+      </nav>
+    </div>
+    <div class="footer-bottom">
+      <nav class="footer-legal" aria-label="法的情報ナビゲーション">
+        <a href="/privacy" data-i18n="footer.privacy">プライバシーポリシー</a>
+        <a href="/terms" data-i18n="footer.terms">利用規約</a>
+        <a href="/sitemap" data-i18n="footer.sitemap">サイトマップ</a>
+      </nav>
+      <p class="footer-copy" data-i18n="footer.copy">© 2025 湯宿 星野庵 All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="reserve.js" type="module"></script>
+</body>
+</html>

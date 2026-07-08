@@ -52,6 +52,14 @@ function applyI18n() {
   $('#drawer-site-name') && ($('#drawer-site-name').textContent = siteName);
   $('#footer-site-name') && ($('#footer-site-name').textContent = siteName);
 
+  const tel = siteData.telephone;
+  const telRaw = siteData.telephoneRaw;
+  $$('.header__tel, #teaser-tel').forEach((el) => {
+    el.textContent = tel;
+    if (el.tagName === 'A') el.href = `tel:${telRaw}`;
+  });
+  $('#teaser-contact-mail')?.setAttribute('href', `mailto:${siteData.email}`);
+
   updateSchema();
   renderNews(newsData);
   renderRooms(roomsData);
@@ -94,11 +102,10 @@ function renderRooms(rooms) {
           <p>${pick(r.description)}</p>
           <ul class="room-card__amenities">${amenities.map(a => `<li>${a}</li>`).join('')}</ul>
           <p class="room-card__price"><small>${pick(r.priceLabel)}</small> <strong>${r.price}</strong></p>
-          <a href="#reserve" class="btn btn--book">${t('room.btn')}</a>
+          <a href="reserve/?room=${r.id}" class="btn btn--book">${t('room.btn')}</a>
         </div>
       </article>`;
   }).join('');
-  fillSelect('#room', rooms.map(r => ({ value: pick(r.name), label: pick(r.name) })));
   initScrollReveal();
 }
 
@@ -117,22 +124,11 @@ function renderPlans(plans) {
           <p>${pick(p.description)}</p>
           <ul class="plan-card__includes">${includes.map(i => `<li>${i}</li>`).join('')}</ul>
           <p class="plan-card__price"><small>${pick(p.priceLabel)}</small> <strong>${p.price}</strong></p>
-          <a href="#reserve" class="btn ${p.featured ? 'btn--book' : 'btn--outline-light'}">${t('plan.btn')}</a>
+          <a href="reserve/?plan=${p.id}" class="btn ${p.featured ? 'btn--book' : 'btn--outline-light'}">${t('plan.btn')}</a>
         </div>
       </article>`;
   }).join('');
-  fillSelect('#plan', [
-    ...plans.map(p => ({ value: pick(p.name), label: pick(p.name) })),
-    { value: 'other', label: t('form.other') },
-  ]);
   initScrollReveal();
-}
-
-function fillSelect(sel, opts) {
-  const el = $(sel);
-  if (!el) return;
-  el.innerHTML = `<option value="">${t('form.select')}</option>` +
-    opts.map(o => `<option value="${o.value}">${o.label}</option>`).join('');
 }
 
 function setLang(lang) {
@@ -193,20 +189,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
   totop?.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
 
-  const form = $('#contact');
-  if (form) {
-    form.addEventListener('submit', e => {
-      e.preventDefault();
-      if (!form.checkValidity()) { form.reportValidity(); return; }
-      const btn = form.querySelector('[type="submit"]');
-      btn.disabled = true;
-      btn.textContent = '送信中…';
-      setTimeout(() => {
-        btn.textContent = '送信しました ✓';
-        form.reset();
-      }, 1200);
-    });
-  }
+  const qCheckin = $('#q-checkin');
+  if (qCheckin) qCheckin.min = new Date().toISOString().slice(0, 10);
 
   const faqItems = $$('.faq__item');
   faqItems.forEach(item => {

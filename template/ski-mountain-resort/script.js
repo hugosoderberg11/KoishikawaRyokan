@@ -35,6 +35,15 @@ function applyI18n() {
     el.placeholder = t(el.getAttribute('data-i18n-placeholder'));
   });
   document.title = t('meta.title');
+
+  const tel = site.telephone;
+  const telRaw = site.telephoneRaw;
+  const teaserTel = document.getElementById('teaser-tel');
+  if (teaserTel) {
+    teaserTel.textContent = tel;
+    teaserTel.href = `tel:${telRaw}`;
+  }
+  document.getElementById('teaser-contact-mail')?.setAttribute('href', `mailto:${site.email}`);
 }
 
 function setLang(lang) {
@@ -45,7 +54,6 @@ function setLang(lang) {
   renderNews();
   renderRooms();
   renderPlans();
-  fillSelects();
   document.querySelectorAll('.lang-btn').forEach(btn => {
     btn.classList.toggle('is-active', btn.dataset.lang === lang);
   });
@@ -81,7 +89,7 @@ function renderRooms() {
           <span class="room-price-label">${pick(room.priceLabel)}</span>
           <span class="room-price">${room.price}</span>
         </div>
-        <a href="#reserve" class="room-btn">${t('room.btn')}</a>
+        <a href="reserve/?room=${room.id}" class="room-btn">${t('room.btn')}</a>
       </div>
     </article>
   `).join('');
@@ -105,27 +113,10 @@ function renderPlans() {
           <span class="plan-price-label">${pick(plan.priceLabel)}</span>
           <span class="plan-price">${plan.price}</span>
         </div>
-        <a href="#reserve" class="plan-btn">${t('plan.btn')}</a>
+        <a href="reserve/?plan=${plan.id}" class="plan-btn">${t('plan.btn')}</a>
       </div>
     </article>
   `).join('');
-}
-
-function fillSelects() {
-  const planSel = document.getElementById('form-plan');
-  if (planSel) {
-    const placeholder = t('form.select');
-    planSel.innerHTML = `<option value="">${placeholder}</option>` +
-      plansData.map(p => `<option value="${p.id}">${pick(p.name)}</option>`).join('') +
-      `<option value="other">${t('form.other')}</option>`;
-  }
-  const roomSel = document.getElementById('form-room');
-  if (roomSel) {
-    const placeholder = t('form.select');
-    roomSel.innerHTML = `<option value="">${placeholder}</option>` +
-      roomsData.map(r => `<option value="${r.id}">${pick(r.name)}</option>`).join('') +
-      `<option value="other">${t('form.other')}</option>`;
-  }
 }
 
 function initHeader() {
@@ -212,19 +203,6 @@ function initToTop() {
   btn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
 }
 
-function initForm() {
-  const form = document.getElementById('reserve-form');
-  if (!form) return;
-  form.addEventListener('submit', e => {
-    e.preventDefault();
-    const btn = form.querySelector('.form-submit');
-    if (btn) {
-      btn.textContent = '送信完了しました / Sent!';
-      btn.disabled = true;
-    }
-  });
-}
-
 function injectSchema() {
   const s = site;
   const schema = {
@@ -274,6 +252,8 @@ document.addEventListener('DOMContentLoaded', () => {
   initScrollReveal();
   initNewsTickerDuplicate();
   initToTop();
-  initForm();
   injectSchema();
+
+  const qCheckin = document.getElementById('q-checkin');
+  if (qCheckin) qCheckin.min = new Date().toISOString().slice(0, 10);
 });

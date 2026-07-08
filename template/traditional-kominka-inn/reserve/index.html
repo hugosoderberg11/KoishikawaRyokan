@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title data-i18n="reserve.page.meta">ご宿泊予約｜古民家宿 紬の郷</title>
+  <meta name="description" data-i18n-attr="content:reserve.page.description" content="古民家宿 紬の郷のご宿泊予約。チェックイン日・人数・プランを入力のうえ、予約リクエストを送信してください。" />
+  <link rel="canonical" href="https://tsumugi.example.com/reserve/" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Noto+Serif+JP:wght@400;500;600;700&family=Shippori+Mincho:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/template/traditional-kominka-inn/styles.css" />
+</head>
+<body class="reserve-page">
+
+<header class="header header--scrolled" id="top">
+  <div class="header__inner">
+    <a href="../index.html" class="logo" aria-label="古民家宿 紬の郷 トップへ">
+      <span class="logo__mark" aria-hidden="true">紬</span>
+      <span class="logo__text">
+        <span class="logo__en">Tsumugi no Sato</span>
+        <span class="logo__ja" id="site-name-ja">古民家宿 紬の郷</span>
+      </span>
+    </a>
+    <nav class="nav" aria-label="メインナビゲーション">
+      <a href="../index.html#rooms" data-i18n="nav.rooms">客室</a>
+      <a href="../index.html#facilities" data-i18n="nav.facilities">館内紹介</a>
+      <a href="../index.html#cuisine" data-i18n="nav.cuisine">お料理</a>
+      <a href="../index.html#plans" data-i18n="nav.plans">宿泊プラン</a>
+      <a href="../index.html#sightseeing" data-i18n="nav.sightseeing">周辺観光</a>
+      <a href="../index.html#faq" data-i18n="nav.faq">FAQ</a>
+      <a href="../index.html#access" data-i18n="nav.access">アクセス</a>
+    </nav>
+    <div class="header__actions">
+      <div class="lang-switch" role="group" aria-label="Language">
+        <button type="button" class="lang-switch__btn is-active" data-lang="ja" aria-pressed="true">JP</button>
+        <button type="button" class="lang-switch__btn" data-lang="en" aria-pressed="false">EN</button>
+        <button type="button" class="lang-switch__btn" data-lang="zh" aria-pressed="false">中文</button>
+      </div>
+      <a href="tel:0750000000" class="header__tel" id="header-tel">075-000-0000</a>
+      <span class="btn btn--primary is-current" data-i18n="nav.reserve">ご予約</span>
+    </div>
+    <button class="menu-btn" aria-label="メニュー" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<div class="drawer" aria-hidden="true">
+  <div class="drawer__overlay"></div>
+  <nav class="drawer__panel">
+    <p class="drawer__logo" id="drawer-site-name">古民家宿 紬の郷</p>
+    <div class="lang-switch lang-switch--drawer" role="group" aria-label="Language">
+      <button type="button" class="lang-switch__btn is-active" data-lang="ja">JP</button>
+      <button type="button" class="lang-switch__btn" data-lang="en">EN</button>
+      <button type="button" class="lang-switch__btn" data-lang="zh">中文</button>
+    </div>
+    <a href="../index.html#rooms" data-i18n="nav.rooms">客室</a>
+    <a href="../index.html#facilities" data-i18n="nav.facilities">館内紹介</a>
+    <a href="../index.html#cuisine" data-i18n="nav.cuisine">お料理</a>
+    <a href="../index.html#plans" data-i18n="nav.plans">宿泊プラン</a>
+    <a href="../index.html#sightseeing" data-i18n="nav.sightseeing">周辺観光</a>
+    <a href="../index.html#faq" data-i18n="nav.faq">FAQ</a>
+    <a href="../index.html#access" data-i18n="nav.access">アクセス</a>
+    <a href="index.html" class="btn btn--primary is-current" data-i18n="nav.reserve">ご予約</a>
+  </nav>
+</div>
+
+<main>
+  <section class="reserve-page-hero" aria-labelledby="reserve-page-title">
+    <div class="reserve-page-hero__inner container">
+      <p class="reserve-page-hero__label" data-i18n="reserve.page.label">RESERVE</p>
+      <h1 class="reserve-page-hero__title" id="reserve-page-title" data-i18n="reserve.page.title">ご宿泊予約</h1>
+      <p class="reserve-page-hero__lead" data-i18n="reserve.page.lead">チェックイン日・人数・プランをご入力のうえ、予約リクエストをお送りください。空室確認後、担当者よりご連絡いたします。</p>
+    </div>
+  </section>
+
+  <section class="reserve-page-main" aria-labelledby="booking-form-title">
+    <div class="reserve-page-main__inner container">
+      <aside class="reserve-sidebar">
+        <div class="phone-reserve">
+          <h2 class="phone-reserve-title" data-i18n="reserve.phone.title">お電話でのご予約</h2>
+          <a href="tel:0750000000" class="phone-number" id="sidebar-tel">075-000-0000</a>
+          <p class="phone-hours" data-i18n="reserve.phone.hours">受付 9:00〜18:00（年中無休）</p>
+          <p class="phone-hint" data-i18n="reserve.phone.hint">※ ご希望のプラン・人数をお伝えください</p>
+        </div>
+
+        <div class="booking-summary" id="booking-summary" aria-live="polite">
+          <h2 class="booking-summary__title" data-i18n="reserve.summary.title">ご予約内容</h2>
+          <dl class="booking-summary__list">
+            <div class="booking-summary__row">
+              <dt data-i18n="form.checkin">チェックイン</dt>
+              <dd id="summary-checkin">—</dd>
+            </div>
+            <div class="booking-summary__row">
+              <dt data-i18n="form.checkout">チェックアウト</dt>
+              <dd id="summary-checkout">—</dd>
+            </div>
+            <div class="booking-summary__row">
+              <dt data-i18n="form.guests">人数</dt>
+              <dd id="summary-guests">—</dd>
+            </div>
+            <div class="booking-summary__row">
+              <dt data-i18n="form.plan">プラン</dt>
+              <dd id="summary-plan">—</dd>
+            </div>
+            <div class="booking-summary__row">
+              <dt data-i18n="form.room">客室</dt>
+              <dd id="summary-room">—</dd>
+            </div>
+          </dl>
+        </div>
+
+        <ol class="booking-steps">
+          <li class="is-active" data-i18n="reserve.steps.1">宿泊条件</li>
+          <li data-i18n="reserve.steps.2">プラン・客室</li>
+          <li data-i18n="reserve.steps.3">ご予約者情報</li>
+          <li data-i18n="reserve.steps.4">確認・送信</li>
+        </ol>
+      </aside>
+
+      <div class="reserve-form-panel">
+        <form class="booking-form" id="booking-form" novalidate>
+          <h2 class="visually-hidden" id="booking-form-title" data-i18n="reserve.page.title">ご宿泊予約</h2>
+
+          <fieldset class="booking-section">
+            <legend class="booking-section__title" data-i18n="reserve.section.stay">1. 宿泊条件</legend>
+            <div class="form-row form-row--3">
+              <div class="form-group">
+                <label for="b-checkin"><span data-i18n="form.checkin">チェックイン</span> <span class="req" data-i18n="form.required">必須</span></label>
+                <input type="date" id="b-checkin" name="checkin" required />
+              </div>
+              <div class="form-group">
+                <label for="b-nights"><span data-i18n="form.nights">泊数</span> <span class="req" data-i18n="form.required">必須</span></label>
+                <select id="b-nights" name="nights" required>
+                  <option value="" data-i18n="form.select">選択してください</option>
+                  <option value="1" data-i18n="form.nights.1">1泊</option>
+                  <option value="2" data-i18n="form.nights.2">2泊</option>
+                  <option value="3" data-i18n="form.nights.3">3泊</option>
+                  <option value="4" data-i18n="form.nights.4">4泊以上</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="b-checkout"><span data-i18n="form.checkout">チェックアウト</span></label>
+                <input type="date" id="b-checkout" name="checkout" readonly aria-readonly="true" tabindex="-1" />
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="b-adults"><span data-i18n="form.adults">大人</span> <span class="req" data-i18n="form.required">必須</span></label>
+                <select id="b-adults" name="adults" required>
+                  <option value="" data-i18n="form.select">選択してください</option>
+                  <option value="1" data-i18n="form.adults.1">1名</option>
+                  <option value="2" data-i18n="form.adults.2">2名</option>
+                  <option value="3" data-i18n="form.adults.3">3名</option>
+                  <option value="4" data-i18n="form.adults.4">4名</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="b-children"><span data-i18n="form.children">お子様</span></label>
+                <select id="b-children" name="children">
+                  <option value="0" data-i18n="form.children.0">0名</option>
+                  <option value="1" data-i18n="form.children.1">1名</option>
+                  <option value="2" data-i18n="form.children.2">2名</option>
+                  <option value="3" data-i18n="form.children.3">3名</option>
+                </select>
+              </div>
+            </div>
+          </fieldset>
+
+          <fieldset class="booking-section">
+            <legend class="booking-section__title" data-i18n="reserve.section.plan">2. プラン・客室</legend>
+            <div class="form-group">
+              <label for="b-plan" data-i18n="form.plan">ご希望のプラン</label>
+              <select id="b-plan" name="plan"><option value="" data-i18n="form.select">選択してください</option></select>
+            </div>
+            <div class="form-group">
+              <label for="b-room" data-i18n="form.room">ご希望の客室</label>
+              <select id="b-room" name="room"><option value="" data-i18n="form.select">選択してください</option></select>
+            </div>
+          </fieldset>
+
+          <fieldset class="booking-section">
+            <legend class="booking-section__title" data-i18n="reserve.section.guest">3. ご予約者情報</legend>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="b-name"><span data-i18n="form.name">お名前</span> <span class="req" data-i18n="form.required">必須</span></label>
+                <input type="text" id="b-name" name="name" autocomplete="name" required />
+              </div>
+              <div class="form-group">
+                <label for="b-name-kana"><span data-i18n="form.nameKana">フリガナ</span> <span class="req" data-i18n="form.required">必須</span></label>
+                <input type="text" id="b-name-kana" name="name_kana" required />
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="b-email"><span data-i18n="form.email">メールアドレス</span> <span class="req" data-i18n="form.required">必須</span></label>
+                <input type="email" id="b-email" name="email" autocomplete="email" required />
+              </div>
+              <div class="form-group">
+                <label for="b-tel"><span data-i18n="form.tel">電話番号</span> <span class="req" data-i18n="form.required">必須</span></label>
+                <input type="tel" id="b-tel" name="tel" autocomplete="tel" required />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="b-arrival" data-i18n="form.arrival">到着予定時刻</label>
+              <select id="b-arrival" name="arrival">
+                <option value="15:00" data-i18n="form.arrival.1500">15:00</option>
+                <option value="16:00" data-i18n="form.arrival.1600">16:00</option>
+                <option value="17:00" data-i18n="form.arrival.1700">17:00</option>
+                <option value="18:00" data-i18n="form.arrival.1800">18:00</option>
+                <option value="19:00+" data-i18n="form.arrival.late">19:00以降</option>
+                <option value="undecided" data-i18n="form.arrival.undecided">未定</option>
+              </select>
+            </div>
+          </fieldset>
+
+          <fieldset class="booking-section">
+            <legend class="booking-section__title" data-i18n="reserve.section.requests">4. ご要望（任意）</legend>
+            <div class="form-group">
+              <label for="b-requests" data-i18n="form.requests">文化体験・送迎・アレルギーなど</label>
+              <textarea id="b-requests" name="requests" rows="4" data-i18n-attr="placeholder:form.requests.placeholder" placeholder="茶道体験、送迎希望、食物アレルギー、記念日など"></textarea>
+            </div>
+          </fieldset>
+
+          <div class="form-privacy">
+            <label class="checkbox-label">
+              <input type="checkbox" name="privacy" required />
+              <span><a href="/privacy" target="_blank" rel="noopener" data-i18n="form.privacy">プライバシーポリシー</a><span data-i18n="form.privacy.agree">に同意する</span> <span class="req" data-i18n="form.required">必須</span></span>
+            </label>
+          </div>
+
+          <button type="submit" class="btn btn--primary btn--block btn-submit" data-i18n="form.submit">予約リクエストを送信する</button>
+          <p class="form-note" data-i18n="form.note">※ このフォームは予約リクエストです。空室確認後、担当者よりご連絡いたします。</p>
+          <p class="form-status" id="form-status" role="status" aria-live="polite" hidden></p>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container footer__inner">
+    <div class="footer__brand">
+      <span class="footer__logo" id="footer-site-name">古民家宿 紬の郷</span>
+      <p id="footer-address">〒605-0826 京都府京都市東山区清水寺町384<br />Tel: <a href="tel:0750000000">075-000-0000</a></p>
+    </div>
+    <nav class="footer__nav">
+      <a href="../index.html#rooms" data-i18n="nav.rooms">客室</a>
+      <a href="../index.html#facilities" data-i18n="nav.facilities">館内紹介</a>
+      <a href="../index.html#cuisine" data-i18n="nav.cuisine">お料理</a>
+      <a href="../index.html#plans" data-i18n="nav.plans">宿泊プラン</a>
+      <a href="index.html" aria-current="page" data-i18n="nav.reserve">ご予約</a>
+    </nav>
+    <p class="footer__copy" data-i18n="footer.copy">© 2026 古民家宿 紬の郷 ｜ 古民家宿テンプレート</p>
+  </div>
+</footer>
+
+<script src="reserve.js" type="module"></script>
+</body>
+</html>

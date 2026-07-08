@@ -103,7 +103,7 @@
         <button type="button" class="lang-btn" data-lang="zh" aria-pressed="false">中</button>
       </div>
       <a href="tel:0300000000" class="header__tel">03-0000-0000</a>
-      <a href="#reserve" class="btn btn--book" data-i18n="nav.reserve">ご予約</a>
+      <a href="reserve/" class="btn btn--book" data-i18n="nav.reserve">ご予約</a>
     </div>
 
     <button class="menu-btn" aria-label="メニューを開く" aria-expanded="false">
@@ -129,7 +129,7 @@
     <a href="#plans" data-i18n="nav.plans">プラン</a>
     <a href="#access" data-i18n="nav.access">アクセス</a>
     <div class="drawer__cta">
-      <a href="#reserve" class="btn btn--ghost-w" data-i18n="nav.reserve">ご予約</a>
+      <a href="reserve/" class="btn btn--ghost-w" data-i18n="nav.reserve">ご予約</a>
     </div>
   </nav>
 </div>
@@ -153,7 +153,7 @@
       <h1 class="hero__title" data-i18n="hero.title">都市の中の、<br />静寂と光。</h1>
       <p class="hero__lead" data-i18n="hero.lead">東京・青山。14室のみのブティックホテル。<br class="u-pc" />日本の美意識と現代建築が出会う場所。</p>
       <div class="hero__btns">
-        <a href="#reserve" class="btn btn--book btn--lg" data-i18n="hero.btn1">空室を確認する</a>
+        <a href="reserve/" class="btn btn--book btn--lg" data-i18n="hero.btn1">空室を確認する</a>
         <a href="#rooms" class="btn btn--ghost-w btn--lg" data-i18n="hero.btn2">客室を見る</a>
       </div>
     </div>
@@ -268,7 +268,7 @@
             <dd data-i18n="dining.f4.value">スマートカジュアル</dd>
           </div>
         </dl>
-        <a href="#reserve" class="btn btn--ghost-dk" data-i18n="dining.btn">ディナーを予約する</a>
+        <a href="reserve/" class="btn btn--ghost-dk" data-i18n="dining.btn">ディナーを予約する</a>
       </div>
     </div>
   </section>
@@ -292,7 +292,7 @@
               <dd data-i18n="rooftop.capacity.value">18席（要予約）</dd>
             </div>
           </dl>
-          <a href="#reserve" class="btn btn--ghost-w" data-i18n="rooftop.btn">席を予約する</a>
+          <a href="reserve/" class="btn btn--ghost-w" data-i18n="rooftop.btn">席を予約する</a>
         </div>
         <div class="rooftop__img">
           <img
@@ -484,69 +484,59 @@
     </div>
   </section>
 
-  <!-- ===== Reserve ===== -->
-  <section class="reserve section" id="reserve">
+  <!-- ===== Reserve Teaser ===== -->
+  <section class="reserve-teaser section" id="reserve">
     <div class="container">
       <header class="section-head fade-in">
         <span class="section-tag section-tag--light" data-i18n="reserve.tag">RESERVE</span>
-        <h2 class="section-title section-title--light" data-i18n="reserve.title">ご予約・お問い合わせ</h2>
-        <p class="section-lead section-lead--light" data-i18n="reserve.lead">2営業日以内にご返信いたします。</p>
+        <h2 class="section-title section-title--light" data-i18n="reserve.title">ご宿泊予約</h2>
+        <p class="section-lead section-lead--light" data-i18n="reserve.lead">オンライン予約フォームより空室確認のうえ、コンシェルジュよりご連絡いたします。</p>
       </header>
-      <div class="reserve__layout fade-in">
-        <div class="reserve__phone">
-          <h3 data-i18n="reserve.phone.title">お電話でのご予約</h3>
-          <a href="tel:0300000000" class="reserve__tel">03-0000-0000</a>
-          <p data-i18n="reserve.phone.hours">受付 10:00〜20:00（年中無休）</p>
-          <p class="reserve__hint" data-i18n="reserve.phone.hint">※ ご希望の客室・プラン・人数をお伝えください</p>
+      <div class="reserve-teaser-grid fade-in">
+        <div class="phone-reserve">
+          <h3 class="phone-reserve-title" data-i18n="reserve.phone.title">お電話でのご予約</h3>
+          <a href="tel:0300000000" class="phone-number" id="teaser-tel">03-0000-0000</a>
+          <p class="phone-hours" data-i18n="reserve.phone.hours">受付 10:00〜20:00（年中無休）</p>
+          <p class="phone-hint" data-i18n="reserve.phone.hint">※ ご希望の客室・プラン・人数をお伝えください</p>
         </div>
-        <form class="form" id="contact" novalidate>
-          <h3 class="form__title" data-i18n="form.title">オンラインフォーム</h3>
-          <div class="form__row">
-            <div class="form__group">
-              <label for="name"><span data-i18n="form.name">お名前</span> <span class="req" data-i18n="form.required">必須</span></label>
-              <input type="text" id="name" name="name" required autocomplete="name" />
+        <div class="reserve-online-card">
+          <h3 class="form-title" data-i18n="reserve.teaser.online">オンライン予約</h3>
+          <form class="reserve-quick" id="reserve-quick" action="reserve/" method="get">
+            <div class="form-row form-row--3">
+              <div class="form-group">
+                <label for="q-checkin" data-i18n="form.checkin">チェックイン</label>
+                <input type="date" id="q-checkin" name="checkin" required />
+              </div>
+              <div class="form-group">
+                <label for="q-nights" data-i18n="form.nights">泊数</label>
+                <select id="q-nights" name="nights" required>
+                  <option value="" data-i18n="form.select">選択してください</option>
+                  <option value="1" data-i18n="form.nights.1">1泊</option>
+                  <option value="2" data-i18n="form.nights.2">2泊</option>
+                  <option value="3" data-i18n="form.nights.3">3泊</option>
+                  <option value="4" data-i18n="form.nights.4">4泊以上</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="q-adults" data-i18n="form.adults">大人</label>
+                <select id="q-adults" name="adults" required>
+                  <option value="" data-i18n="form.select">選択してください</option>
+                  <option value="1" data-i18n="form.adults.1">1名</option>
+                  <option value="2" data-i18n="form.adults.2">2名</option>
+                  <option value="3" data-i18n="form.adults.3">3名</option>
+                  <option value="4" data-i18n="form.adults.4">4名</option>
+                </select>
+              </div>
             </div>
-            <div class="form__group">
-              <label for="email"><span data-i18n="form.email">メール</span> <span class="req" data-i18n="form.required">必須</span></label>
-              <input type="email" id="email" name="email" required autocomplete="email" />
-            </div>
-          </div>
-          <div class="form__row">
-            <div class="form__group">
-              <label for="tel"><span data-i18n="form.tel">電話番号</span> <span class="req" data-i18n="form.required">必須</span></label>
-              <input type="tel" id="tel" name="tel" required autocomplete="tel" />
-            </div>
-            <div class="form__group">
-              <label for="checkin"><span data-i18n="form.checkin">宿泊日</span> <span class="req" data-i18n="form.required">必須</span></label>
-              <input type="date" id="checkin" name="checkin" required />
-            </div>
-          </div>
-          <div class="form__group">
-            <label for="guests"><span data-i18n="form.guests">人数</span> <span class="req" data-i18n="form.required">必須</span></label>
-            <input type="text" id="guests" name="guests" required data-i18n-attr="placeholder:form.guests.placeholder" placeholder="例：大人2名" />
-          </div>
-          <div class="form__row">
-            <div class="form__group">
-              <label for="plan" data-i18n="form.plan">ご希望プラン</label>
-              <select id="plan" name="plan"><option value="">選択してください</option></select>
-            </div>
-            <div class="form__group">
-              <label for="room" data-i18n="form.room">ご希望客室</label>
-              <select id="room" name="room"><option value="">選択してください</option></select>
-            </div>
-          </div>
-          <div class="form__group">
-            <label for="message" data-i18n="form.message">メッセージ・ご要望</label>
-            <textarea id="message" name="message" rows="4" data-i18n-attr="placeholder:form.message.placeholder" placeholder="アレルギー、記念日、その他ご要望など"></textarea>
-          </div>
-          <label class="form__check">
-            <input type="checkbox" name="privacy" required />
-            <span><a href="/privacy" target="_blank" rel="noopener" data-i18n="form.privacy">プライバシーポリシー</a><span data-i18n="form.privacy.agree">に同意する</span></span>
-          </label>
-          <button type="submit" class="btn btn--book btn--block" data-i18n="form.submit">予約リクエストを送信</button>
-          <p class="form__note" data-i18n="form.note">※ 空室確認後、コンシェルジュよりご連絡いたします。</p>
-        </form>
+            <button type="submit" class="btn btn--book btn--block btn-submit" data-i18n="reserve.teaser.cta">予約フォームへ</button>
+            <p class="form-note" data-i18n="form.note">※ 空室確認後、コンシェルジュよりご連絡いたします。</p>
+          </form>
+        </div>
       </div>
+      <p class="reserve-teaser-contact fade-in">
+        <span data-i18n="reserve.teaser.contact">その他のお問い合わせは</span>
+        <a href="mailto:concierge@theakari.example.com" id="teaser-contact-mail">concierge@theakari.example.com</a>
+      </p>
     </div>
   </section>
 </main>
@@ -572,7 +562,7 @@
       <a href="#plans" data-i18n="nav.plans">プラン</a>
       <a href="#gallery" data-i18n="nav.gallery">ギャラリー</a>
       <a href="#access" data-i18n="nav.access">アクセス</a>
-      <a href="#reserve" data-i18n="nav.reserve">ご予約</a>
+      <a href="reserve/" data-i18n="nav.reserve">ご予約</a>
     </nav>
     <div class="footer__info">
       <span class="footer__info-head">INFO</span>
