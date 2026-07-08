@@ -341,8 +341,8 @@
   </div>
 </section>
 
-<!-- ====================== Testimonials ====================== -->
-<section class="section testimonials" aria-labelledby="testimonials-heading">
+<!-- ====================== Testimonials + Review Form ====================== -->
+<section class="section testimonials" id="voice" aria-labelledby="testimonials-heading">
   <div class="section-inner">
     <header class="section-head">
       <span class="section-label reveal-up" data-i18n="voice.label">VOICE</span>
@@ -350,6 +350,67 @@
     </header>
 
     <div class="testimonials-grid"></div>
+
+    <!-- 口コミ投稿 -->
+    <div class="review-submit-wrap reveal-up">
+      <button type="button" class="btn btn-outline-moss" id="toggle-review-form" data-i18n="review.btn">
+        口コミを投稿する
+      </button>
+      <div class="review-form-container" id="review-form-container" hidden>
+        <form class="review-form" id="review-form" novalidate>
+          <h3 class="review-form-title" data-i18n="review.form.title">口コミを書く</h3>
+
+          <div class="form-group">
+            <label class="form-label" data-i18n="review.form.rating">総合評価 <span class="req">*</span></label>
+            <div class="star-rating" role="group" aria-label="評価">
+              <input type="radio" name="rating" id="r5" value="5" /><label for="r5" aria-label="5点">★</label>
+              <input type="radio" name="rating" id="r4" value="4" /><label for="r4" aria-label="4点">★</label>
+              <input type="radio" name="rating" id="r3" value="3" /><label for="r3" aria-label="3点">★</label>
+              <input type="radio" name="rating" id="r2" value="2" /><label for="r2" aria-label="2点">★</label>
+              <input type="radio" name="rating" id="r1" value="1" /><label for="r1" aria-label="1点">★</label>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" for="review-nickname" data-i18n="review.form.nickname">ニックネーム <span class="req">*</span></label>
+              <input type="text" id="review-nickname" name="nickname" required maxlength="50" data-i18n-attr="placeholder:review.form.nickname.placeholder" placeholder="例：旅好きKさん" />
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="review-stay-type" data-i18n="review.form.stayType">ご利用シーン</label>
+              <select id="review-stay-type" name="stay_type">
+                <option value="" data-i18n="form.select">選択してください</option>
+                <option value="couple" data-i18n="review.stay.couple">カップル</option>
+                <option value="family" data-i18n="review.stay.family">家族旅行</option>
+                <option value="solo" data-i18n="review.stay.solo">一人旅</option>
+                <option value="anniversary" data-i18n="review.stay.anniversary">記念日</option>
+                <option value="group" data-i18n="review.stay.group">グループ旅行</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="review-comment" data-i18n="review.form.comment">コメント <span class="req">*</span></label>
+            <textarea id="review-comment" name="comment" rows="5" required maxlength="500" data-i18n-attr="placeholder:review.form.comment.placeholder" placeholder="ご滞在の感想をお聞かせください（500文字以内）"></textarea>
+            <span class="char-count"><span id="review-char-count">0</span>/500</span>
+          </div>
+
+          <div class="form-group review-form-note">
+            <p data-i18n="review.form.note">※ 投稿内容は確認後、掲載させていただきます。個人情報は含めないようお願いします。</p>
+          </div>
+
+          <div class="form-actions">
+            <button type="submit" class="btn btn-hero-gold" id="review-submit" data-i18n="review.form.submit">投稿する</button>
+          </div>
+
+          <div class="form-message" id="review-message" hidden></div>
+        </form>
+        <div class="review-success" id="review-success" hidden>
+          <div class="review-success-icon">✓</div>
+          <p data-i18n="review.success">口コミをお送りいただきありがとうございます。<br>確認後、掲載させていただきます。</p>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -445,6 +506,29 @@
   </div>
 </section>
 
+<!-- ====================== Newsletter ====================== -->
+<section class="section newsletter-section" id="newsletter">
+  <div class="section-inner newsletter-inner">
+    <div class="newsletter-text reveal-up">
+      <span class="section-label" data-i18n="newsletter.label">NEWSLETTER</span>
+      <h2 class="newsletter-title" data-i18n="newsletter.title">季節のたよりをお届け</h2>
+      <p class="newsletter-lead" data-i18n="newsletter.lead">限定プランや旬の情報をいち早くメールでご案内します。</p>
+    </div>
+    <div class="newsletter-form-wrap reveal-up">
+      <form class="newsletter-form" id="newsletter-form" novalidate>
+        <div class="newsletter-input-row">
+          <input type="email" name="email" id="newsletter-email" required
+            data-i18n-attr="placeholder:newsletter.placeholder"
+            placeholder="メールアドレス" class="newsletter-input" />
+          <button type="submit" class="btn btn-hero-gold newsletter-btn" id="newsletter-submit" data-i18n="newsletter.btn">登録する</button>
+        </div>
+        <p class="newsletter-note" data-i18n="newsletter.note">いつでも配信停止できます。個人情報は厳重に管理します。</p>
+        <div class="newsletter-message" id="newsletter-message" hidden></div>
+      </form>
+    </div>
+  </div>
+</section>
+
 <!-- ====================== Reserve Teaser ====================== -->
 <section class="section reserve-teaser" id="reserve" aria-labelledby="reserve-heading">
   <div class="section-inner">
@@ -453,6 +537,29 @@
       <h2 class="section-title section-title-light reveal-up" id="reserve-heading" data-i18n="reserve.title">ご宿泊予約</h2>
       <p class="section-lead section-lead-light reveal-up" data-i18n="reserve.lead">オンライン予約フォームより空室確認のうえ、担当者よりご連絡いたします。</p>
     </header>
+
+    <!-- 価格カレンダー -->
+    <div class="price-calendar reveal-up" id="price-calendar" aria-label="空室・料金カレンダー">
+      <div class="cal-header">
+        <button class="cal-nav-btn" id="cal-prev" aria-label="前の月" type="button">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="15 18 9 12 15 6"/></svg>
+        </button>
+        <span class="cal-month-label" id="cal-month-label"></span>
+        <button class="cal-nav-btn" id="cal-next" aria-label="次の月" type="button">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="9 18 15 12 9 6"/></svg>
+        </button>
+      </div>
+      <div class="cal-legend">
+        <span class="cal-legend-item cal-low" data-i18n="cal.low">お得</span>
+        <span class="cal-legend-item cal-standard" data-i18n="cal.standard">通常</span>
+        <span class="cal-legend-item cal-peak" data-i18n="cal.peak">繁忙</span>
+        <span class="cal-legend-item cal-sold" data-i18n="cal.sold">満室</span>
+      </div>
+      <div class="cal-weekdays">
+        <span>日</span><span>月</span><span>火</span><span>水</span><span>木</span><span>金</span><span>土</span>
+      </div>
+      <div class="cal-grid" id="cal-grid"></div>
+    </div>
 
     <div class="reserve-teaser-grid">
       <div class="phone-reserve reveal-up">
@@ -557,10 +664,61 @@
   </div>
 </footer>
 
+<!-- ====================== Share Bar ====================== -->
+<div class="share-bar">
+  <span class="share-bar-label" data-i18n="share.label">このページをシェア</span>
+  <div class="share-buttons">
+    <a href="#" id="share-x" class="share-btn share-btn-x" target="_blank" rel="noopener" aria-label="Xでシェア">
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.73-8.835L1.254 2.25H8.08l4.259 5.63L18.244 2.25zm-1.161 17.52h1.833L7.084 4.126H5.117L17.083 19.77z"/></svg>
+      <span data-i18n="share.x">Xでシェア</span>
+    </a>
+    <a href="#" id="share-line" class="share-btn share-btn-line" target="_blank" rel="noopener" aria-label="LINEでシェア">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63h2.386c.346 0 .627.285.627.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63.346 0 .628.285.628.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.282.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/></svg>
+      <span data-i18n="share.line">LINEでシェア</span>
+    </a>
+    <button type="button" id="share-copy" class="share-btn share-btn-copy">
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+      <span class="copy-label" data-i18n="share.copy">リンクをコピー</span>
+    </button>
+  </div>
+</div>
+
 <!-- Scroll to Top -->
 <button class="scroll-top" aria-label="ページ先頭へ戻る" id="scrollTop">
   <span aria-hidden="true">↑</span>
 </button>
+
+<!-- ====================== Sticky Reserve Bar ====================== -->
+<div class="sticky-reserve" id="sticky-reserve" aria-hidden="true">
+  <div class="sticky-reserve-inner">
+    <span class="sticky-reserve-name" id="sticky-site-name">湯宿 星野庵</span>
+    <div class="sticky-reserve-actions">
+      <a href="tel:0578000000" class="sticky-reserve-tel" id="sticky-tel">0578-00-0000</a>
+      <a href="reserve/" class="btn btn-reserve sticky-reserve-btn" data-i18n="nav.reserve">ご予約</a>
+    </div>
+  </div>
+</div>
+
+<!-- ====================== Lightbox ====================== -->
+<div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-label="画像を拡大表示" hidden>
+  <div class="lightbox-backdrop"></div>
+  <button class="lightbox-close" aria-label="閉じる" type="button">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+  </button>
+  <button class="lightbox-prev" aria-label="前の画像" type="button">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="15 18 9 12 15 6"/></svg>
+  </button>
+  <button class="lightbox-next" aria-label="次の画像" type="button">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="9 18 15 12 9 6"/></svg>
+  </button>
+  <div class="lightbox-img-wrap">
+    <img class="lightbox-img" src="" alt="" />
+  </div>
+  <div class="lightbox-footer">
+    <span class="lightbox-caption"></span>
+    <span class="lightbox-counter"></span>
+  </div>
+</div>
 
 <script src="script.js" type="module"></script>
 </body>

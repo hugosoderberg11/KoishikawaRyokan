@@ -8,7 +8,7 @@
 
 
 
-最終更新: 2026-07-08（スキーリゾート 予約フォーム追加）
+最終更新: 2026-07-08（LP テンプレート vs 受託制作 比較セクション追加）
 
 
 
@@ -252,6 +252,8 @@
 - LP削除（2026-06-24）: リニューアル前後のイメージ（works-compare）、導入事例（#cases）、担当者紹介（#team）セクションおよびナビリンク
 
 - LP「集客支援」見出し横に undraw 風イラスト（images/illustrations/marketing-search.png）を2カラム配置（section-head--marketing）
+
+- LP「導入方法比較」セクション（#compare、2026-07-08）: 料金（#price）直前に配置。見出し「あなたに合った導入方法を選べます」。2カラムカード（左=テンプレート購入「安く早く始める」、右=受託制作「しっかり作る」）+ 6項目比較表（デザイン・納期・カスタマイズ・予約機能・決済機能・サポート）+ CTA（テンプレートを見る → /templates/、無料相談をする → #contact）。PC 2カラム / モバイル縦並び・比較表はカード型スタック
 
 - LP「制作の進め方」見出し横に undraw 風イラスト（images/illustrations/flow-process.png・reviewing-design 差し替え版）を2カラム配置（section-head--flow）
 
