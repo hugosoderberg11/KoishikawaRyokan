@@ -115,6 +115,36 @@ export const PRODUCT_PURCHASE_TEMPLATES = [
         'スキーリゾート・山岳ロッジテンプレートの内容を確認後、納品方法について順次ご案内いたします。',
     },
   },
+  {
+    id: 'minshuku-guesthouse',
+    match: (order) =>
+      matchProductKey(order, ['minshuku-guesthouse']) ||
+      matchProductName(order, ['民宿', 'ゲストハウス', 'よしだや', 'minshuku']),
+    customer: {
+      followUp:
+        '民宿・ゲストハウステンプレートの内容を確認後、納品方法について順次ご案内いたします。',
+    },
+  },
+  {
+    id: 'temple-stay-shukubo',
+    match: (order) =>
+      matchProductKey(order, ['temple-stay-shukubo']) ||
+      matchProductName(order, ['宿坊', '蓮台寺', 'shukubo']),
+    customer: {
+      followUp:
+        '宿坊テンプレートの内容を確認後、納品方法について順次ご案内いたします。',
+    },
+  },
+  {
+    id: 'kaiseki-ryokan',
+    match: (order) =>
+      matchProductKey(order, ['kaiseki-ryokan']) ||
+      matchProductName(order, ['料理旅館', '花車', '懐石', 'kaiseki']),
+    customer: {
+      followUp:
+        '料理旅館テンプレートの内容を確認後、納品方法について順次ご案内いたします。',
+    },
+  },
 ];
 
 export function resolvePurchaseTemplate(order) {

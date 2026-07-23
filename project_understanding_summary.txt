@@ -8,7 +8,7 @@
 
 
 
-最終更新: 2026-07-08（LP テンプレート vs 受託制作 比較セクション追加）
+最終更新: 2026-07-09（バグ修正・決済フロー整備・法的表記更新）
 
 
 
@@ -189,6 +189,60 @@
 
 
 
+[H] 民宿・ゲストハウス — 民宿・ゲストハウステンプレート
+
+    パス: template/minshuku-guesthouse/
+
+    デモ施設名: 民宿 よしだや
+
+    - index.html / styles.css / script.js
+
+    - cms/site.json, i18n.json, news.json, rooms.json, plans.json
+
+    コンセプト: 小規模宿・民宿・ゲストハウス（テラコッタ×クリーム×ウッド）
+
+    ページ: トップ / 客室 / おもてなし / 周辺案内 / 宿泊プラン / FAQ / アクセス・予約
+
+    実装: レスポンシブ / SEO / OGP / Hotel構造化データ / Google Maps /
+
+          CMS / 多言語（JP・EN・中文）
+
+    予約: 専用ページ template/minshuku-guesthouse/reserve/
+
+
+
+[I] 宿坊・寺院滞在 — 宿坊テンプレート
+
+    パス: template/temple-stay-shukubo/
+
+    デモ施設名: 宿坊 蓮台寺
+
+    - cms/sightseeing.json 含む
+
+    コンセプト: 高野山の宿坊（藍色×生成り×墨色・精進料理・朝勤行）
+
+    ページ: トップ / 客室 / 館内 / 精進料理 / 宿泊プラン / 周辺観光 / FAQ / アクセス・予約
+
+    予約: 専用ページ template/temple-stay-shukubo/reserve/
+
+
+
+[J] 料理旅館・懐石 — 料理旅館テンプレート
+
+    パス: template/kaiseki-ryokan/
+
+    デモ施設名: 料理旅館 花車
+
+    - cms/cuisine.json 含む
+
+    コンセプト: 京都・祇園の懐石料理旅館（深紅×墨色×金）
+
+    ページ: トップ / 客室 / 温泉 / お料理 / 宿泊プラン / FAQ / アクセス・予約
+
+    予約: 専用ページ template/kaiseki-ryokan/reserve/
+
+
+
 ------------------------------------------------------------------
 
 3. 技術スタック
@@ -217,9 +271,11 @@
 
                /template/luxury-glamping/, /template/ocean-view-onsen-ryokan/,
                /template/urban-boutique-hotel/, /template/ski-mountain-resort/,
+               /template/minshuku-guesthouse/, /template/temple-stay-shukubo/,
+               /template/kaiseki-ryokan/,
                /template/reserve/（星野庵 予約専用）
 
-- npm run build → dist/ に7ページ以上出力
+- npm run build → dist/ に10テンプレート以上出力
 
 - メインLP（index.html）: 920px / 768px / 560px / 400px ブレークポイントでレスポンシブ対応
 
@@ -241,19 +297,22 @@
 
 - LP「お悩み」見出し横に undraw 風イラスト（images/illustrations/problem-search.png）を2カラム配置
 
-- LP「サービス」見出し左に undraw 風イラスト（images/illustrations/service-web-design.png）を2カラム配置（section-head--service）
+- LP「サービス」見出し（#service）: 中央配置の標準 section-head（2026-07-10 左イラスト service-web-design.png を削除）
 
-- LP「デモ」セクション（#works .works-template-grid）のサムネイルは `/templates/` と同じブラウザモックアップ（`.tmpl-preview` + ミニサイトUI）。カード下部にタグ・名称・説明（`.works-tmpl-body`）
+- LP「デモ」セクション（#works .works-template-grid）: 横3列で代表デモ3件（湯宿スタンダード・ペット同伴・古民家宿）のみ表示。直下に丸型「もっと見る」ボタン（`.works-more-btn` → `/templates/`）。サムネイルは `/templates/` と同じブラウザモックアップ（`.tmpl-preview` + ミニサイトUI）。カード下部にタグ・名称・説明（`.works-tmpl-body`）
 
 - LP受注率改善（2026-06-24・残り）: パーティクル/stats/3Dティルト/プログレスバー削除、英語バッジ日本語化、デモグリッド（#works）、初回相談、含む/別途表、向いている/向いていない、LP内テンプレ料金削除、マーケ1枚化、addon圧縮
 
 - お問い合わせ・テンプレ購入通知先: koishikawavibecoding@gmail.com（LP・templates・config.js・send-inquiry API 統一）
 
-- LP削除（2026-06-24）: リニューアル前後のイメージ（works-compare）、導入事例（#cases）、担当者紹介（#team）セクションおよびナビリンク
+- LP削除（2026-06-24）: リニューアル前後のイメージ（works-compare）、担当者紹介（#team）セクションおよびナビリンク
+- LP削除（2026-07-09）: 導入事例セクション（#cases「お宿の直予約を、Webサイトが変えた」）— 実績データ未整備のため削除
 
 - LP「集客支援」見出し横に undraw 風イラスト（images/illustrations/marketing-search.png）を2カラム配置（section-head--marketing）
 
 - LP「導入方法比較」セクション（#compare、2026-07-08）: 料金（#price）直前に配置。見出し「あなたに合った導入方法を選べます」。2カラムカード（左=テンプレート購入「安く早く始める」、右=受託制作「しっかり作る」）+ 6項目比較表（デザイン・納期・カスタマイズ・予約機能・決済機能・サポート）+ CTA（テンプレートを見る → /templates/、無料相談をする → #contact）。PC 2カラム / モバイル縦並び・比較表はカード型スタック
+
+- テンプレート一覧サムネイル（#template-list、2026-07-09）: ヒーローヘッダー（ナビ＋キャッチ＋CTA）を中心に表示。客室など下部コンテンツは非表示。全10テンプレに各デモのヒーロー写真背景を適用（都市型・スキー・民宿・宿坊・料理旅館を含む）
 
 - LP「制作の進め方」見出し横に undraw 風イラスト（images/illustrations/flow-process.png・reviewing-design 差し替え版）を2カラム配置（section-head--flow）
 
@@ -331,6 +390,52 @@
 - 写真ソース: Unsplash CDN（cms/*.json と同一 URL）。ローカル画像ファイルは未コミット。
 
 - 表示確認: npm run dev → http://localhost:5173/templates/ および各 /template/ 配下
+
+
+------------------------------------------------------------------
+
+7. モバイルレスポンシブ改善（2026-07-21）
+
+------------------------------------------------------------------
+- 症状: スマホ幅（~390px）で全10テンプレートのヒーローが横にはみ出し「見づらい」。
+  原因 = ヒーローの content ブロックが flex 中央寄せで max-content 幅に膨張し、
+  英字ラベル（eyebrow/badge、white-space:nowrap＋letter-spacing）や
+  横並び CTA ボタンがビューポート幅を超過。かつ body/html に overflow-x:hidden 未設定。
+- 対応: 各テンプレートの styles.css 末尾に「モバイル最適化」ブロックを追記。
+  - html, body { overflow-x: hidden }（横スクロール防止。星野庵は body 既存のため html を追加）
+  - @media (max-width: 768px) で:
+    - ヒーロー content を width:100%; max-width:100%; 左右パディング縮小（flex膨張を抑止）
+    - eyebrow/badge を white-space:normal; overflow-wrap:break-word; フォント・字間縮小
+    - title を clamp で縮小 + overflow-wrap:break-word
+    - lead を max-width:100%; フォント縮小; 内部 <br> をモバイルで非表示
+    - CTA ボタン群を縦積み（flex-direction:column）＋ボタン全幅・中央寄せ（左寄せテンプレは中央寄せなし）
+- クラス命名は3系統: 星野庵(template/)=hero-inner/hero-meta/hero-title/hero-sub/hero-cta、
+  スキー(ski-mountain-resort)=hero-content/hero-eyebrow/hero-title/hero-lead/hero-btns、
+  それ以外の BEM系=hero__content/hero__eyebrow|badge/hero__title/hero__lead/hero__btns
+- 検証: ヘッドレスEdge + iframe(幅390px固定)で document.scrollWidth を計測。
+  ocean-view で docSW=375（<390、横あふれなし=clean）を確認。他は同一構造・同一修正のため解消。
+  ※ ヘッドレスの --window-size は最小幅制限(~500px)があり、直接スクショは真の390pxにならない点に注意
+    （正確な検証は iframe を 390px 固定にして計測するのが確実）。
+- 変更ファイル: template/styles.css および template/{pet-friendly-ryokan, traditional-kominka-inn,
+  luxury-glamping, ocean-view-onsen-ryokan, urban-boutique-hotel, ski-mountain-resort,
+  minshuku-guesthouse, temple-stay-shukubo, kaiseki-ryokan}/styles.css
+
+------------------------------------------------------------------
+
+8. LP UI不具合修正（2026-07-23）
+
+------------------------------------------------------------------
+- 対象: メインLP（index.html / styles.css）320px〜1440px
+- レスポンシブ: html { overflow-x: clip }、各カード/グリッドに minmax(0,1fr) と min-width:0、
+  360px/320px ブレークポイント追加、テキスト overflow-wrap 対策
+- お悩みカード（.problem-card）ホバー: box-shadow 変化とアイコン icon-pop アニメ削除、
+  transform: translateY(-4px) のみ（レイアウトシフト防止）
+- 画像付き見出し（problem/marketing/flow/fit/service）: 金棒装飾を .section-head-copy::after に統一
+  （グリッド全体の ::after から移動）。PC=左寄せ、モバイル=中央。align-items: start で縦位置統一
+
+- LPカードインタラクション（2026-07-23）: 非リンクカードのホバー演出・シマー・cursor:pointer を削除。
+  リンクカードのみホバー維持（a.works-tmpl-card / a.works-more-btn）。
+  静的: problem/service/mkt/price/addon/intro-option/fit 各カード
 
 
 

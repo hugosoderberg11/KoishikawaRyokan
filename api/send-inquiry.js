@@ -1,53 +1,63 @@
-import { Resend } from 'resend';
-import { resolveGmailConfig, sendViaGmail } from './lib/gmail-smtp.js';
-
-const CONTACT_EMAIL = 'koishikawavibecoding@gmail.com';
-const RESEND_TEST_DEFAULT_TO = 'bando.eiji.1177@gmail.com';
-const RESEND_TEST_DEFAULT_FROM = 'KOISHIKAWA <onboarding@resend.dev>';
+import { resolveGmailConfig, sendViaGmail, INQUIRY_NOTIFY_EMAIL } from './lib/gmail-smtp.js';
 
 const SUPABASE_URL =
   process.env.SUPABASE_URL ||
   process.env.VITE_SUPABASE_URL ||
   'https://vruxpxocefqxoxrwexhj.supabase.co';
 
-// --- Resend（Stripe 購入確認等で引き続き利用。問い合わせフォームでは未使用） ---
+const RECAPTCHA_VERIFY_URL = 'https://www.google.com/recaptcha/api/siteverify';
+const RECAPTCHA_THRESHOLD = 0.5;
 
-function isResendTestMode() {
-  const flag = process.env.RESEND_TEST_MODE;
-  if (flag === '0' || flag === 'false') return false;
-  if (flag === '1' || flag === 'true') return true;
-  return true;
+async function verifyRecaptcha(token) {
+  const secretKey = process.env.RECAPTCHA_SECRET_KEY;
+  if (!secretKey) {
+    console.log('[send-inquiry] RECAPTCHA_SECRET_KEY 未設定 — reCAPTCHA 検証をスキップ');
+    return true;
+  }
+  if (!token) {
+    console.warn('[send-inquiry] reCAPTCHA トークンなし — 拒否');
+    return false;
+  }
+  try {
+    const res = await fetch(RECAPTCHA_VERIFY_URL, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: `secret=${encodeURIComponent(secretKey)}&response=${encodeURIComponent(token)}`,
+    });
+    const json = await res.json();
+    console.log('[send-inquiry] reCAPTCHA 結果:', { success: json.success, score: json.score });
+    return json.success && (json.score ?? 1) >= RECAPTCHA_THRESHOLD;
+  } catch (err) {
+    console.error('[send-inquiry] reCAPTCHA 検証エラー:', err.message);
+    return true; // 検証エラー時は通過させる（ユーザー体験優先）
+  }
 }
 
-function resolveMailConfig() {
-  const testMode = isResendTestMode();
+function buildAutoReplyHtml(data) {
+  const isPurchase = data.source === 'template_purchase' || data.inquiry_type?.includes('購入');
+  const templateLine = data.template_name ? `<br />ご希望テンプレート：${data.template_name}` : '';
+  const planLine = data.plan_name ? `<br />ご希望プラン：${data.plan_name}` : '';
 
-  if (testMode) {
-    const from = process.env.RESEND_TEST_FROM || RESEND_TEST_DEFAULT_FROM;
-    const to = [process.env.RESEND_TEST_TO || RESEND_TEST_DEFAULT_TO];
-    return {
-      testMode: true,
-      from,
-      to,
-      fromSource: process.env.RESEND_TEST_FROM
-        ? 'RESEND_TEST_FROM'
-        : 'default (onboarding@resend.dev)',
-      toSource: process.env.RESEND_TEST_TO
-        ? 'RESEND_TEST_TO'
-        : `default (${RESEND_TEST_DEFAULT_TO})`,
-    };
-  }
-
-  const from = process.env.RESEND_FROM || RESEND_TEST_DEFAULT_FROM;
-  const override = process.env.NOTIFY_EMAIL;
-  const to = [override || CONTACT_EMAIL];
-  return {
-    testMode: false,
-    from,
-    to,
-    fromSource: process.env.RESEND_FROM ? 'RESEND_FROM' : 'default (onboarding@resend.dev)',
-    toSource: override ? 'NOTIFY_EMAIL' : `default (${CONTACT_EMAIL})`,
-  };
+  return `
+    <div style="font-family:sans-serif;max-width:600px;color:#222;line-height:1.8">
+      <p style="margin:0 0 16px">${data.name?.trim() || 'お客'}様</p>
+      <p style="margin:0 0 16px">この度はKOISHIKAWAへのお問い合わせありがとうございます。<br />
+      以下の内容でお問い合わせを受け付けました。</p>
+      <table style="border-collapse:collapse;width:100%;margin-bottom:20px">
+        <tr>
+          <td style="padding:8px 12px;border:1px solid #ddd;background:#f9f9f9;font-weight:600;width:130px">ご相談内容</td>
+          <td style="padding:8px 12px;border:1px solid #ddd">${data.inquiry_type || '—'}${templateLine}${planLine}</td>
+        </tr>
+      </table>
+      <p style="margin:0 0 16px">${isPurchase
+        ? 'テンプレートのご購入について、担当者より<strong>2営業日以内</strong>にご連絡いたします。'
+        : '内容を確認のうえ、担当者より<strong>2営業日以内</strong>にご連絡いたします。'
+      }</p>
+      <p style="margin:0 0 16px">お急ぎの場合は下記までお電話ください。<br />
+      TEL：<a href="tel:0367091795" style="color:#1a3a2a">03-6709-1795</a>（平日10:00〜18:00）</p>
+      <p style="margin:0 0 8px">KOISHIKAWA</p>
+      <p style="margin:0;font-size:13px;color:#888"><a href="https://koishikawa-web.com" style="color:#1a3a2a">https://koishikawa-web.com</a></p>
+    </div>`;
 }
 
 function buildInquirySubject(data) {
@@ -81,63 +91,16 @@ function buildEmailHtml(data) {
   return `<div style="font-family:sans-serif;max-width:600px"><h2 style="color:#1a3a2a">KOISHIKAWA お問い合わせ</h2><table style="border-collapse:collapse;width:100%">${tableRows}</table></div>`;
 }
 
-/** @deprecated 問い合わせフォームでは Gmail SMTP を使用。Resend は購入確認メール等で利用。 */
-async function sendEmailViaResend(data, mailConfig) {
-  const resendKey = process.env.RESEND_API_KEY;
-  if (!resendKey) {
-    console.error('[send-inquiry] RESEND_API_KEY が設定されていません');
-    return { ok: false, reason: 'RESEND_API_KEY not set' };
-  }
-
-  const resend = new Resend(resendKey);
-  const subject = buildInquirySubject(data);
-
-  console.log('[send-inquiry] Resend SDK 送信開始:', {
-    testMode: mailConfig.testMode,
-    from: mailConfig.from,
-    to: mailConfig.to,
-    subject,
-    reply_to: data.email,
-  });
-
-  const { data: emailData, error } = await resend.emails.send({
-    from: mailConfig.from,
-    to: mailConfig.to,
-    reply_to: data.email,
-    subject,
-    html: buildEmailHtml(data),
-  });
-
-  if (error) {
-    console.error('[send-inquiry] Resend エラー詳細:');
-    console.error('  error.name       :', error.name);
-    console.error('  error.message    :', error.message);
-    console.error('  error.statusCode :', error.statusCode);
-    console.error('  error.response   :', JSON.stringify(error.response ?? null));
-    console.error('  error (raw)      :', JSON.stringify(error));
-    return { ok: false, reason: error.message || JSON.stringify(error) };
-  }
-
-  console.log('[send-inquiry] Resend 送信成功 — id:', emailData?.id);
-  return { ok: true, id: emailData?.id, provider: 'resend' };
-}
-
 // --- 問い合わせフォーム: Gmail SMTP ---
 
 function logEnvDiagnostics(gmailConfig, replyTo) {
   const secretKeys = new Set([
-    'RESEND_API_KEY',
     'SUPABASE_SERVICE_ROLE_KEY',
     'GMAIL_APP_PASSWORD',
   ]);
   const trackedKeys = [
     'GMAIL_USER',
     'GMAIL_APP_PASSWORD',
-    'RESEND_API_KEY',
-    'RESEND_FROM',
-    'RESEND_TEST_MODE',
-    'RESEND_TEST_FROM',
-    'RESEND_TEST_TO',
     'NOTIFY_EMAIL',
     'SUPABASE_URL',
     'VITE_SUPABASE_URL',
@@ -262,6 +225,12 @@ export default async function handler(req, res) {
     source: data.source,
   });
 
+  // reCAPTCHA 検証（SECRET_KEY 未設定時はスキップ）
+  const recaptchaOk = await verifyRecaptcha(data.recaptcha_token);
+  if (!recaptchaOk) {
+    return res.status(400).json({ error: 'スパム検出により送信をブロックしました。ページを再読み込みして再度お試しください。' });
+  }
+
   const gmailConfig = resolveGmailConfig();
   logEnvDiagnostics(gmailConfig, data.email.trim());
 
@@ -272,18 +241,32 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: err.message || '保存に失敗しました' });
   }
 
-  const emailResult = await sendInquiryEmailViaGmail(data);
+  // 管理者通知メール
+  const adminResult = await sendInquiryEmailViaGmail(data);
+  if (!adminResult.ok) {
+    console.error('[send-inquiry] 管理者メール送信失敗:', adminResult.reason);
+  }
 
-  if (!emailResult.ok) {
-    console.error('[send-inquiry] メール送信失敗:', emailResult.reason);
+  // 自動返信メール（失敗しても全体は成功扱い）
+  try {
+    await sendViaGmail({
+      from: gmailConfig.from,
+      to: data.email.trim(),
+      subject: '【KOISHIKAWA】お問い合わせを受け付けました',
+      html: buildAutoReplyHtml(data),
+      replyTo: INQUIRY_NOTIFY_EMAIL,
+      logScope: 'send-inquiry-autoreply',
+    });
+  } catch (err) {
+    console.error('[send-inquiry] 自動返信メール送信失敗:', err.message);
   }
 
   return res.status(200).json({
     ok: true,
-    email_sent: emailResult.ok,
+    email_sent: adminResult.ok,
     email_provider: 'gmail',
-    ...(emailResult.ok ? {} : { email_error: emailResult.reason }),
-    message: emailResult.ok
+    ...(adminResult.ok ? {} : { email_error: adminResult.reason }),
+    message: adminResult.ok
       ? 'お問い合わせを送信しました。担当者よりご連絡いたします。'
       : 'お問い合わせを受け付けました。担当者より順次ご連絡いたします。',
   });

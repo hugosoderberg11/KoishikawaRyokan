@@ -1,4 +1,4 @@
-﻿@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Noto+Sans+JP:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Noto+Sans+JP:wght@400;500;700&display=swap');
 
 /* ============================================================
    DESIGN TOKENS
@@ -1792,4 +1792,35 @@ a.reserve-phone-num:hover { color: var(--sky-lt); }
 @media (max-width: 480px) {
   .price-calendar { padding: 16px; }
   .cal-day { font-size: 12px; }
+}
+
+/* ============================================================
+   モバイル最適化 — レスポンシブ改善 (2026-07-21)
+   ヒーロー横はみ出し・横スクロール対策
+   ============================================================ */
+html, body { overflow-x: hidden; }
+
+@media (max-width: 768px) {
+  .hero-content {
+    width: 100%;
+    max-width: 100%;
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+  .hero-eyebrow {
+    white-space: normal;
+    overflow-wrap: break-word;
+    max-width: 100%;
+    font-size: 11px;
+    letter-spacing: .14em;
+    line-height: 1.7;
+  }
+  .hero-title { overflow-wrap: break-word; }
+  .hero-lead {
+    max-width: 100%;
+    overflow-wrap: break-word;
+  }
+  .hero-lead br { display: none; }
+  .hero-btns { flex-wrap: wrap; }
+  .hero-snow-meta { flex-wrap: wrap; }
 }

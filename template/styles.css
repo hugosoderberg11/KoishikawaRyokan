@@ -2404,3 +2404,42 @@ input, select, textarea { font-family: inherit; }
   .share-bar { flex-direction: column; gap: 14px; padding: 20px; }
   .share-btn  { font-size: 12px; padding: 7px 14px; }
 }
+
+/* ============================================================
+   モバイル最適化 — レスポンシブ改善 (2026-07-21)
+   ヒーロー横はみ出し・横スクロール対策
+   ============================================================ */
+html { overflow-x: hidden; }
+
+@media (max-width: 768px) {
+  .hero-inner {
+    width: 100%;
+    max-width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .hero-meta {
+    white-space: normal;
+    overflow-wrap: break-word;
+    max-width: 100%;
+    letter-spacing: .28em;
+    font-size: 10px;
+    line-height: 1.8;
+  }
+  .hero-title { overflow-wrap: break-word; }
+  .hero-sub {
+    max-width: 100%;
+    overflow-wrap: break-word;
+  }
+  .hero-cta {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  .hero-cta > a,
+  .hero-cta .btn {
+    width: 100%;
+    max-width: 320px;
+    justify-content: center;
+  }
+}

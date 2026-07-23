@@ -1,0 +1,29 @@
+{
+  "templateName": "宿坊テンプレート",
+  "name": {
+    "ja": "宿坊 蓮台寺",
+    "en": "Rentai-ji Shukubo",
+    "zh": "宿坊 莲台寺"
+  },
+  "nameEn": "Rentai-ji Shukubo",
+  "tagline": "静寂の宿坊で心を整える",
+  "description": "和歌山・高野山の宿坊。精進料理と朝勤行、静寂の空間で心を整える滞在を。",
+  "url": "https://rentaiji.example.com/",
+  "telephone": "0736-00-0000",
+  "telephoneRaw": "0736000000",
+  "email": "info@rentaiji.example.com",
+  "address": {
+    "postalCode": "648-0211",
+    "region": "和歌山県",
+    "locality": "高野町",
+    "street": "高野山1234"
+  },
+  "geo": { "latitude": "34.2131", "longitude": "135.5906" },
+  "hours": "受付 8:00〜17:00",
+  "checkin": "15:00",
+  "checkout": "10:00",
+  "priceRange": "¥¥",
+  "ogImage": "https://rentaiji.example.com/images/og-image.jpg",
+  "mapEmbed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3248.5!2d135.5906!3d34.2131!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzQuMjEzMSwxMzUuNTkwNg!5e0!3m2!1sja!2sjp!4v1700000000000!5m2!1sja!2sjp",
+  "mapLink": "https://maps.google.com/?q=高野山+宿坊"
+}

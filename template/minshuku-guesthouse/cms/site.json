@@ -1,0 +1,29 @@
+{
+  "templateName": "民宿・ゲストハウステンプレート",
+  "name": {
+    "ja": "民宿 よしだや",
+    "en": "Yoshidaya Minshuku",
+    "zh": "民宿 吉田屋"
+  },
+  "nameEn": "Yoshidaya Minshuku",
+  "tagline": "家庭的なおもてなしの民宿・ゲストハウス",
+  "description": "長野・軽井沢の小さな民宿。地元食材の朝食、共用リビング、素泊まり・朝食付きプランで気軽にお泊りいただけます。",
+  "url": "https://yoshidaya.example.com/",
+  "telephone": "0267-00-0000",
+  "telephoneRaw": "0267000000",
+  "email": "info@yoshidaya.example.com",
+  "address": {
+    "postalCode": "389-0102",
+    "region": "長野県",
+    "locality": "軽井沢町",
+    "street": "軽井沢1234-5"
+  },
+  "geo": { "latitude": "36.3428", "longitude": "138.6356" },
+  "hours": "受付 8:00〜21:00",
+  "checkin": "15:00",
+  "checkout": "10:00",
+  "priceRange": "¥¥",
+  "ogImage": "https://yoshidaya.example.com/images/og-image.jpg",
+  "mapEmbed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3248.5!2d138.6356!3d36.3428!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzYuMzQyOCwxMzguNjM1Ng!5e0!3m2!1sja!2sjp!4v1700000000000!5m2!1sja!2sjp",
+  "mapLink": "https://maps.google.com/?q=軽井沢+民宿"
+}

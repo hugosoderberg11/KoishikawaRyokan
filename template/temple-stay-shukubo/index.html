@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title data-i18n="meta.title">【公式】宿坊 蓮台寺｜築100年の古民家一棟貸し ｜ 京都・東山</title>
+  <meta name="description" data-i18n-attr="content:meta.description" content="京都・東山の築100年古民家「蓮台寺」。囲炉裏・日本庭園・畳の客室で、日本の原風景に泊まる一棟貸し宿。" />
+  <meta name="keywords" data-i18n-attr="content:meta.keywords" content="古民家,町家,一棟貸し,京都,東山,インバウンド,宿泊,文化体験" />
+  <link rel="canonical" href="https://rentaiji.example.com/" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" data-i18n-attr="content:og.title" content="宿坊 蓮台寺｜日本の原風景に泊まる" />
+  <meta property="og:description" data-i18n-attr="content:og.description" content="築100年の古民家。囲炉裏と日本庭園、畳の客室。京都・東山の静かな一棟貸し宿。" />
+  <meta property="og:url" content="https://rentaiji.example.com/" />
+  <meta property="og:image" content="https://rentaiji.example.com/images/og-image.jpg" />
+  <meta property="og:site_name" content="宿坊 蓮台寺" id="og-site-name" />
+  <meta property="og:locale" content="ja_JP" id="og-locale" />
+  <meta property="og:locale:alternate" content="en_US" />
+  <meta property="og:locale:alternate" content="zh_CN" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" data-i18n-attr="content:og.title" content="宿坊 蓮台寺｜日本の原風景に泊まる" />
+  <meta name="twitter:description" data-i18n-attr="content:og.description" content="築100年の古民家。囲炉裏と日本庭園、畳の客室。" />
+  <meta name="twitter:image" content="https://rentaiji.example.com/images/og-image.jpg" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Noto+Serif+JP:wght@400;500;600;700&family=Shippori+Mincho:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
+
+  <script type="application/ld+json" id="schema-hotel">
+  {
+    "@context": "https://schema.org",
+    "@type": "Hotel",
+    "name": "宿坊 蓮台寺",
+    "alternateName": "Kominka Stay Tsumugi no Sato",
+    "description": "京都・東山の築100年古民家。囲炉裏・日本庭園・畳の客室で、日本の原風景に泊まる一棟貸し宿。",
+    "url": "https://rentaiji.example.com/",
+    "telephone": "075-000-0000",
+    "email": "info@rentaiji.example.com",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "清水寺町384",
+      "addressLocality": "高野町東山区",
+      "addressRegion": "京都府",
+      "postalCode": "605-0826",
+      "addressCountry": "JP"
+    },
+    "geo": { "@type": "GeoCoordinates", "latitude": "34.9949", "longitude": "135.7850" },
+    "priceRange": "¥¥¥",
+    "checkinTime": "15:00",
+    "checkoutTime": "10:00",
+    "amenityFeature": [
+      { "@type": "LocationFeatureSpecification", "name": "一棟貸し", "value": true },
+      { "@type": "LocationFeatureSpecification", "name": "囲炉裏", "value": true },
+      { "@type": "LocationFeatureSpecification", "name": "日本庭園", "value": true },
+      { "@type": "LocationFeatureSpecification", "name": "茶室", "value": true },
+      { "@type": "LocationFeatureSpecification", "name": "文化体験", "value": true },
+      { "@type": "LocationFeatureSpecification", "name": "駐車場", "value": true }
+    ],
+    "image": [
+      "https://rentaiji.example.com/images/hero.jpg",
+      "https://rentaiji.example.com/images/garden.jpg"
+    ]
+  }
+  </script>
+</head>
+<body>
+
+<header class="header" id="top">
+  <div class="header__inner">
+    <a href="#top" class="logo">
+      <span class="logo__mark" aria-hidden="true">紬</span>
+      <span class="logo__text">
+        <span class="logo__en">Tsumugi no Sato</span>
+        <span class="logo__ja" id="site-name-ja">宿坊 蓮台寺</span>
+      </span>
+    </a>
+    <nav class="nav" aria-label="メインナビゲーション">
+      <a href="#rooms" data-i18n="nav.rooms">客室</a>
+      <a href="#facilities" data-i18n="nav.facilities">館内紹介</a>
+      <a href="#cuisine" data-i18n="nav.cuisine">お料理</a>
+      <a href="#plans" data-i18n="nav.plans">宿泊プラン</a>
+      <a href="#sightseeing" data-i18n="nav.sightseeing">周辺観光</a>
+      <a href="#faq" data-i18n="nav.faq">FAQ</a>
+      <a href="#access" data-i18n="nav.access">アクセス</a>
+    </nav>
+    <div class="header__actions">
+      <div class="lang-switch" role="group" aria-label="Language">
+        <button type="button" class="lang-switch__btn is-active" data-lang="ja" aria-pressed="true">JP</button>
+        <button type="button" class="lang-switch__btn" data-lang="en" aria-pressed="false">EN</button>
+        <button type="button" class="lang-switch__btn" data-lang="zh" aria-pressed="false">中文</button>
+      </div>
+      <a href="tel:0750000000" class="header__tel" id="header-tel">075-000-0000</a>
+      <a href="reserve/" class="btn btn--primary" data-i18n="nav.reserve">ご予約</a>
+    </div>
+    <button class="menu-btn" aria-label="メニュー" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<div class="drawer" aria-hidden="true">
+  <div class="drawer__overlay"></div>
+  <nav class="drawer__panel">
+    <p class="drawer__logo" id="drawer-site-name">宿坊 蓮台寺</p>
+    <div class="lang-switch lang-switch--drawer" role="group" aria-label="Language">
+      <button type="button" class="lang-switch__btn is-active" data-lang="ja">JP</button>
+      <button type="button" class="lang-switch__btn" data-lang="en">EN</button>
+      <button type="button" class="lang-switch__btn" data-lang="zh">中文</button>
+    </div>
+    <a href="#rooms" data-i18n="nav.rooms">客室</a>
+    <a href="#facilities" data-i18n="nav.facilities">館内紹介</a>
+    <a href="#cuisine" data-i18n="nav.cuisine">お料理</a>
+    <a href="#plans" data-i18n="nav.plans">宿泊プラン</a>
+    <a href="#sightseeing" data-i18n="nav.sightseeing">周辺観光</a>
+    <a href="#faq" data-i18n="nav.faq">FAQ</a>
+    <a href="#access" data-i18n="nav.access">アクセス</a>
+    <a href="reserve/" class="btn btn--primary" data-i18n="nav.reserve">ご予約</a>
+  </nav>
+</div>
+
+<main>
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero__visual">
+      <img src="https://images.unsplash.com/photo-1503551723145-6c040742065b?w=1800&q=85" alt="築100年の古民家" width="1800" height="1000" class="hero__img" />
+      <div class="hero__shoji" aria-hidden="true"></div>
+      <div class="hero__overlay"></div>
+    </div>
+    <div class="hero__content">
+      <span class="hero__badge" data-i18n="hero.badge">築100年 — 国登録有形文化財</span>
+      <h1 class="hero__title" data-i18n="hero.title">日本の原風景に、<br />泊まる。</h1>
+      <p class="hero__lead" data-i18n="hero.lead">京都・東山の古民家で、囲炉裏の温もりと庭の静けさを。</p>
+      <div class="hero__btns">
+        <a href="reserve/" class="btn btn--primary btn--lg" data-i18n="hero.btn1">空室を確認する</a>
+        <a href="#facilities" class="btn btn--outline btn--lg" data-i18n="hero.btn2">館内を見る</a>
+      </div>
+    </div>
+    <div class="hero__vertical" aria-hidden="true">古民家宿</div>
+  </section>
+
+  <!-- News CMS -->
+  <aside class="news" aria-label="お知らせ">
+    <div class="news__inner">
+      <span class="news__label" data-i18n="news.label">お知らせ</span>
+      <div class="news__track" id="cms-news"></div>
+    </div>
+  </aside>
+
+  <!-- Intro -->
+  <section class="intro">
+    <div class="container">
+      <div class="intro__grid">
+        <div class="intro__text fade-in">
+          <span class="section-tag" data-i18n="intro.tag">蓮台寺について</span>
+          <h2 class="section-title" data-i18n="intro.title">古民家が語る、<br />京の暮らし。</h2>
+          <p data-i18n="intro.text">蓮台寺は、明治時代に建てられた京町家を活かした古民家宿です。</p>
+        </div>
+        <div class="intro__photos fade-in">
+          <img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=640&q=80" alt="日本庭園" width="640" height="480" class="intro__photo intro__photo--main" />
+          <img src="https://images.unsplash.com/photo-1528360983277-13d401cdc186?w=440&q=80" alt="囲炉裏" width="440" height="330" class="intro__photo intro__photo--sub" />
+        </div>
+      </div>
+      <ul class="intro__features fade-in">
+        <li><span class="intro__feat-icon" aria-hidden="true">家</span><span data-i18n="intro.feat1">築100年の古民家</span></li>
+        <li><span class="intro__feat-icon" aria-hidden="true">庭</span><span data-i18n="intro.feat2">日本庭園</span></li>
+        <li><span class="intro__feat-icon" aria-hidden="true">炉</span><span data-i18n="intro.feat3">囲炉裏</span></li>
+        <li><span class="intro__feat-icon" aria-hidden="true">体</span><span data-i18n="intro.feat4">文化体験</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Rooms CMS -->
+  <section class="rooms section" id="rooms">
+    <div class="container">
+      <header class="section-head fade-in">
+        <span class="section-tag" data-i18n="rooms.tag">客室</span>
+        <h2 class="section-title" data-i18n="rooms.title">畳と障子の客室</h2>
+        <p class="section-lead" data-i18n="rooms.lead">古民家の構造を活かした、静かで温かみのあるお部屋。</p>
+      </header>
+      <div class="rooms__grid" id="cms-rooms">
+        <article class="room-card fade-in">
+          <div class="room-card__img"><img src="https://images.unsplash.com/photo-1503551723145-6c040742065b?w=800&q=80" alt="紬の間" width="600" height="400" loading="lazy" /><span class="badge">一棟貸し</span></div>
+          <div class="room-card__body"><span class="room-card__type">Kominka Suite</span><h3 class="room-card__name">紬の間</h3><p>築100年の古民家をそのままお貸しする一棟貸し。囲炉裏のある土間、畳8畳の寝室、茶室付き。</p><p class="room-card__price"><small>1泊（2名様〜）</small> <strong>¥68,000〜</strong></p></div>
+        </article>
+        <article class="room-card fade-in">
+          <div class="room-card__img"><img src="https://images.unsplash.com/photo-1468581264429-2548ef9eb732?w=800&q=80" alt="庭の離" width="600" height="400" loading="lazy" /><span class="badge badge--pop">人気</span></div>
+          <div class="room-card__body"><span class="room-card__type">Garden View</span><h3 class="room-card__name">庭の離</h3><p>日本庭園を望む離れ。障子越しに庭の緑を感じながら、畳10畳の静かな空間でお過ごしいただけます。</p><p class="room-card__price"><small>1泊2食 お一人様</small> <strong>¥42,000〜</strong></p></div>
+        </article>
+        <article class="room-card fade-in">
+          <div class="room-card__img"><img src="https://images.unsplash.com/photo-1528360983277-13d401cdc186?w=800&q=80" alt="町家の二階" width="600" height="400" loading="lazy" /><span class="badge">町家</span></div>
+          <div class="room-card__body"><span class="room-card__type">Machiya Room</span><h3 class="room-card__name">町家の二階</h3><p>京町家の二階を活かした客室。梁の見える吹き抜けと、古材の床板が味わい深い空間です。</p><p class="room-card__price"><small>1泊2食 お一人様</small> <strong>¥38,000〜</strong></p></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Facilities -->
+  <section class="facilities section" id="facilities">
+    <div class="container">
+      <header class="section-head fade-in">
+        <span class="section-tag" data-i18n="facilities.tag">館内紹介</span>
+        <h2 class="section-title" data-i18n="facilities.title">古民家の設え</h2>
+        <p class="section-lead" data-i18n="facilities.lead">木材・障子・畳 — 日本の伝統建築が織りなす空間。</p>
+      </header>
+      <div class="facilities__grid">
+        <article class="fac-card fac-card--large fade-in">
+          <img src="https://images.unsplash.com/photo-1528360983277-13d401cdc186?w=900&q=85" alt="日本庭園" width="900" height="560" loading="lazy" />
+          <div class="fac-card__body">
+            <h3 data-i18n="fac.garden.title">日本庭園</h3>
+            <p data-i18n="fac.garden.text">苔むした石と楓の木。四季折々の表情を映す、枯山水を取り入れた庭。</p>
+          </div>
+        </article>
+        <article class="fac-card fade-in">
+          <img src="https://images.unsplash.com/photo-1528360983277-13d401cdc186?w=600&q=80" alt="囲炉裏" width="600" height="400" loading="lazy" />
+          <div class="fac-card__body">
+            <h3 data-i18n="fac.irori.title">囲炉裏</h3>
+            <p data-i18n="fac.irori.text">土間に据えた囲炉裏。炭火のパチパチという音と、ほのかな煙の香り。</p>
+          </div>
+        </article>
+        <article class="fac-card fade-in">
+          <img src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?w=600&q=85" alt="古民家建築" width="600" height="400" loading="lazy" />
+          <div class="fac-card__body">
+            <h3 data-i18n="fac.arch.title">古民家建築</h3>
+            <p data-i18n="fac.arch.text">梁の見える吹き抜け、古材の床板、漆喰の壁。</p>
+          </div>
+        </article>
+        <article class="fac-card fade-in">
+          <img src="https://images.unsplash.com/photo-1468581264429-2548ef9eb732?w=600&q=80" alt="畳の客室" width="600" height="400" loading="lazy" />
+          <div class="fac-card__body">
+            <h3 data-i18n="fac.tea.title">茶室</h3>
+            <p data-i18n="fac.tea.text">離れに設えた茶室。宿泊者限定で茶道体験も承ります。</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Cuisine -->
+  <section class="cuisine section" id="cuisine">
+    <div class="container">
+      <header class="section-head fade-in">
+        <span class="section-tag" data-i18n="cuisine.tag">お料理</span>
+        <h2 class="section-title" data-i18n="cuisine.title">京の恵みを、囲炉裏で。</h2>
+        <p class="section-lead" data-i18n="cuisine.lead">地元の食材を使った季節の料理。</p>
+      </header>
+      <div class="cuisine__featured fade-in">
+        <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=840&q=80" alt="季節の会席料理" width="840" height="520" />
+        <div class="cuisine__text">
+          <span class="cuisine__season" data-i18n="cuisine.season">春の献立</span>
+          <h3 data-i18n="cuisine.featured.title">筍の土瓶蒸しと京野菜の会席</h3>
+          <p data-i18n="cuisine.featured.text">京都近郊の筍と、契約農家の京野菜を使った春の献立。</p>
+        </div>
+      </div>
+      <div class="cuisine__grid fade-in">
+        <article class="cuisine-item">
+          <img src="https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?w=420&q=80" alt="前菜" width="420" height="300" loading="lazy" />
+          <h4 data-i18n="cuisine.item1">京野菜の前菜</h4>
+        </article>
+        <article class="cuisine-item">
+          <img src="https://images.unsplash.com/photo-1547592166-23ac45744acd?w=420&q=80" alt="土瓶蒸し" width="420" height="300" loading="lazy" />
+          <h4 data-i18n="cuisine.item2">囲炉裏の土瓶蒸し</h4>
+        </article>
+        <article class="cuisine-item">
+          <img src="https://images.unsplash.com/photo-1563729784474-d77dbb933a9e?w=420&q=80" alt="椀物" width="420" height="300" loading="lazy" />
+          <h4 data-i18n="cuisine.item3">季節の椀物</h4>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Plans CMS -->
+  <section class="plans section" id="plans">
+    <div class="container">
+      <header class="section-head fade-in">
+        <span class="section-tag section-tag--dark" data-i18n="plans.tag">宿泊プラン</span>
+        <h2 class="section-title section-title--light" data-i18n="plans.title">宿泊プラン</h2>
+        <p class="section-lead section-lead--light" data-i18n="plans.lead">古民家ステイから文化体験まで。</p>
+      </header>
+      <div class="plans__grid" id="cms-plans">
+        <article class="plan-card fade-in">
+          <div class="plan-card__img"><img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800&q=80" alt="古民家ステイプラン" width="500" height="320" loading="lazy" /></div>
+          <div class="plan-card__body"><span class="plan-card__tag">スタンダード</span><h3>古民家ステイプラン</h3><p>築100年の古民家で、京の暮らしを体感。朝食付きの基本プラン。</p><p class="plan-card__price"><small>1泊 お一人様</small> <strong>¥38,000〜</strong></p></div>
+        </article>
+        <article class="plan-card plan-card--featured fade-in">
+          <span class="plan-card__badge">おすすめ</span>
+          <div class="plan-card__img"><img src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?w=800&q=80" alt="京文化体験プラン" width="500" height="320" loading="lazy" /></div>
+          <div class="plan-card__body"><span class="plan-card__tag">文化体験</span><h3>京文化体験プラン</h3><p>茶道・着物レンタル・町家散策ガイド付き。インバウンドの方にも人気の体験プラン。</p><p class="plan-card__price"><small>1泊2食 お一人様</small> <strong>¥58,000〜</strong></p></div>
+        </article>
+        <article class="plan-card fade-in">
+          <div class="plan-card__img"><img src="https://images.unsplash.com/photo-1503551723145-6c040742065b?w=800&q=80" alt="蓮台寺 一棟貸しプラン" width="500" height="320" loading="lazy" /></div>
+          <div class="plan-card__body"><span class="plan-card__tag">一棟貸し</span><h3>蓮台寺 一棟貸しプラン</h3><p>古民家全体を貸切。家族・グループ旅行に。囲炉裏で囲む夕食もご用意できます。</p><p class="plan-card__price"><small>1泊（2名様〜）</small> <strong>¥68,000〜</strong></p></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sightseeing CMS -->
+  <section class="sightseeing section" id="sightseeing">
+    <div class="container">
+      <header class="section-head fade-in">
+        <span class="section-tag" data-i18n="sight.tag">周辺観光</span>
+        <h2 class="section-title" data-i18n="sight.title">周辺観光</h2>
+        <p class="section-lead" data-i18n="sight.lead">清水寺・祇園・高台寺など、東山の名所へ徒歩圏内。</p>
+      </header>
+      <div class="sight__grid" id="cms-sightseeing">
+        <article class="sight-card fade-in">
+          <div class="sight-card__img"><img src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?w=600&q=80" alt="清水寺" width="480" height="320" loading="lazy" /><span class="sight-card__dist">徒歩8分</span></div>
+          <div class="sight-card__body"><h3>清水寺</h3><p>世界遺産・清水の舞台。春の桜、秋の紅葉が美しい京都を代表する寺院。</p></div>
+        </article>
+        <article class="sight-card fade-in">
+          <div class="sight-card__img"><img src="https://images.unsplash.com/photo-1528360983277-13d401cdc186?w=600&q=80" alt="祇園・花見小路" width="480" height="320" loading="lazy" /><span class="sight-card__dist">徒歩15分</span></div>
+          <div class="sight-card__body"><h3>祇園・花見小路</h3><p>石畳の町並みと料亭が並ぶ、京都の風情を感じる散策コース。</p></div>
+        </article>
+        <article class="sight-card fade-in">
+          <div class="sight-card__img"><img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=600&q=80" alt="高台寺" width="480" height="320" loading="lazy" /><span class="sight-card__dist">徒歩10分</span></div>
+          <div class="sight-card__body"><h3>高台寺</h3><p>豊臣秀吉ゆかりの寺院。枯山水の庭園と夜間ライトアップが人気。</p></div>
+        </article>
+        <article class="sight-card fade-in">
+          <div class="sight-card__img"><img src="https://images.unsplash.com/photo-1468581264429-2548ef9eb732?w=600&q=80" alt="二年坂・三年坂" width="480" height="320" loading="lazy" /><span class="sight-card__dist">徒歩5分</span></div>
+          <div class="sight-card__body"><h3>二年坂・三年坂</h3><p>古い町家が残る坂道。京都土産やカフェが並び、散策に最適。</p></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq section" id="faq">
+    <div class="container container--narrow">
+      <header class="section-head fade-in">
+        <span class="section-tag" data-i18n="faq.tag">FAQ</span>
+        <h2 class="section-title" data-i18n="faq.title">よくあるご質問</h2>
+      </header>
+      <div class="faq__list fade-in">
+        <details class="faq__item">
+          <summary data-i18n="faq.q1">一棟貸しは何名まで利用できますか？</summary>
+          <p data-i18n="faq.a1">最大6名様までご利用いただけます。</p>
+        </details>
+        <details class="faq__item">
+          <summary data-i18n="faq.q2">チェックイン・チェックアウトの時間は？</summary>
+          <p data-i18n="faq.a2">チェックイン 15:00、チェックアウト 10:00 です。</p>
+        </details>
+        <details class="faq__item">
+          <summary data-i18n="faq.q3">外国語対応はありますか？</summary>
+          <p data-i18n="faq.a3">英語・中国語（簡体字）でのご案内が可能です。</p>
+        </details>
+        <details class="faq__item">
+          <summary data-i18n="faq.q4">駐車場はありますか？</summary>
+          <p data-i18n="faq.a4">一棟貸しプランのお客様には専用駐車場1台分をご用意しています。</p>
+        </details>
+        <details class="faq__item">
+          <summary data-i18n="faq.q5">キャンセルポリシーは？</summary>
+          <p data-i18n="faq.a5">14日前まで無料、13〜7日前30%、6〜3日前50%、2日前以降100%。</p>
+        </details>
+        <details class="faq__item">
+          <summary data-i18n="faq.q6">文化体験は予約が必要ですか？</summary>
+          <p data-i18n="faq.a6">茶道・着物レンタル等は事前予約をお願いします。</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- Access -->
+  <section class="access section" id="access">
+    <div class="container">
+      <header class="section-head fade-in">
+        <span class="section-tag" data-i18n="access.tag">アクセス</span>
+        <h2 class="section-title" data-i18n="access.title">アクセス</h2>
+      </header>
+      <div class="access__grid fade-in">
+        <div class="access__map">
+          <iframe
+            title="宿坊 蓮台寺 地図"
+            id="map-iframe"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3268.5!2d135.7850!3d34.9949!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x600108ee0a918909%3A0x4e5b2c5b5b5b5b5b!2z5bKh6YOo5bGx5Yy65YyX6Kq/5rGf77yR77yR77yR!5e0!3m2!1sja!2sjp!4v1700000000000!5m2!1sja!2sjp"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            allowfullscreen
+          ></iframe>
+        </div>
+        <dl class="access__info">
+          <div><dt data-i18n="access.addr">住所</dt><dd id="access-address">〒605-0826 和歌山県高野山東山区清水寺町384</dd></div>
+          <div><dt data-i18n="access.tel">電話</dt><dd><a href="tel:0750000000" id="access-tel">075-000-0000</a> <span id="access-hours">（9:00〜18:00）</span></dd></div>
+          <div><dt data-i18n="access.car">車</dt><dd data-i18n="access.car.text">名神高速 京都南ICより約20分</dd></div>
+          <div><dt data-i18n="access.train">電車</dt><dd data-i18n="access.train.text">京阪「清水五条」駅より徒歩12分</dd></div>
+          <div><dt data-i18n="access.pickup">送迎</dt><dd data-i18n="access.pickup.text">京都駅よりタクシー約15分</dd></div>
+        </dl>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reserve -->
+    <!-- ====================== Guest Voices ====================== -->
+  <section class="section voices-section" id="voices">
+    <div class="container">
+      <header class="section-head fade-in">
+        <span class="section-tag" data-i18n="voices.tag">GUEST VOICES</span>
+        <h2 class="section-title" data-i18n="voices.title">お客様の声</h2>
+      </header>
+      <div class="review-submit-wrap fade-in">
+        <button type="button" class="btn btn-outline" id="toggle-review-form" aria-expanded="false" data-i18n="review.toggle">口コミを投稿する</button>
+        <div class="review-form-container" id="review-form-container" hidden>
+          <h3 class="review-form-title" data-i18n="review.form.title">宿泊体験を投稿</h3>
+          <form id="review-form" novalidate>
+            <div class="form-group">
+              <label for="review-nickname"><span data-i18n="review.form.nickname">お名前（ニックネーム可）</span><span class="req">*</span></label>
+              <input type="text" id="review-nickname" name="nickname" required maxlength="50" placeholder="例: 旅好きAさん" />
+            </div>
+            <div class="form-group">
+              <label for="review-stay-type" data-i18n="review.form.stay_type">宿泊タイプ</label>
+              <select id="review-stay-type" name="stay_type">
+                <option value="" data-i18n="form.select">選択してください</option>
+                <option value="couple" data-i18n="review.stay.couple">カップル</option>
+                <option value="family" data-i18n="review.stay.family">家族</option>
+                <option value="solo" data-i18n="review.stay.solo">一人旅</option>
+                <option value="group" data-i18n="review.stay.group">グループ</option>
+                <option value="business" data-i18n="review.stay.business">出張</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label><span data-i18n="review.form.rating">総合評価</span><span class="req">*</span></label>
+              <div class="star-rating" role="radiogroup" aria-label="評価">
+                <input type="radio" id="star5" name="rating" value="5" /><label for="star5" aria-label="5">★</label>
+                <input type="radio" id="star4" name="rating" value="4" /><label for="star4" aria-label="4">★</label>
+                <input type="radio" id="star3" name="rating" value="3" /><label for="star3" aria-label="3">★</label>
+                <input type="radio" id="star2" name="rating" value="2" /><label for="star2" aria-label="2">★</label>
+                <input type="radio" id="star1" name="rating" value="1" /><label for="star1" aria-label="1">★</label>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="review-comment"><span data-i18n="review.form.comment">コメント</span><span class="req">*</span></label>
+              <textarea id="review-comment" name="comment" rows="5" required maxlength="1000" placeholder="ご滞在の感想をお聞かせください（1000文字以内）"></textarea>
+              <span class="char-count"><span id="review-char-count">0</span>/1000</span>
+            </div>
+            <div class="review-form-note">
+              <p data-i18n="review.form.note">投稿された口コミは内容を確認後、掲載いたします。</p>
+            </div>
+            <div class="form-message" id="review-message" hidden></div>
+            <button type="submit" class="btn btn-primary" id="review-submit" data-i18n="review.form.submit">投稿する</button>
+          </form>
+          <div class="review-success" id="review-success" hidden>
+            <div class="review-success-icon">✓</div>
+            <p data-i18n="review.success">口コミをお送りいただきありがとうございます。内容確認後に掲載いたします。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====================== Newsletter ====================== -->
+  <section class="newsletter-section" id="newsletter">
+    <div class="container newsletter-inner">
+      <div class="newsletter-text fade-in">
+        <span class="section-tag section-tag--light" data-i18n="newsletter.label">NEWSLETTER</span>
+        <h2 class="newsletter-title" data-i18n="newsletter.title">季節のたよりをお届け</h2>
+        <p class="newsletter-lead" data-i18n="newsletter.lead">限定プランや旬の情報をいち早くメールでご案内します。</p>
+      </div>
+      <div class="newsletter-form-wrap fade-in">
+        <form class="newsletter-form" id="newsletter-form" novalidate>
+          <div class="newsletter-input-row">
+            <input type="email" name="email" id="newsletter-email" required placeholder="メールアドレス" class="newsletter-input" />
+            <button type="submit" class="btn btn-primary newsletter-btn" id="newsletter-submit" data-i18n="newsletter.btn">登録する</button>
+          </div>
+          <p class="newsletter-note" data-i18n="newsletter.note">いつでも配信停止できます。個人情報は厳重に管理します。</p>
+          <div class="newsletter-message" id="newsletter-message" hidden></div>
+        </form>
+      </div>
+    </div>
+  </section>
+  <section class="reserve-teaser section" id="reserve">
+    <div class="container">
+      <header class="section-head fade-in">
+        <span class="section-tag section-tag--dark" data-i18n="reserve.tag">ご予約</span>
+        <h2 class="section-title section-title--light" data-i18n="reserve.title">ご宿泊予約</h2>
+        <p class="section-lead section-lead--light" data-i18n="reserve.lead">オンライン予約フォームより空室確認のうえ、担当者よりご連絡いたします。</p>
+      </header>
+            <!-- 価格カレンダー -->
+      <div class="price-calendar fade-in" id="price-calendar" aria-label="空室・料金カレンダー">
+        <div class="cal-header">
+          <button class="cal-nav-btn" id="cal-prev" aria-label="前の月" type="button">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="15 18 9 12 15 6"/></svg>
+          </button>
+          <span class="cal-month-label" id="cal-month-label"></span>
+          <button class="cal-nav-btn" id="cal-next" aria-label="次の月" type="button">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="9 18 15 12 9 6"/></svg>
+          </button>
+        </div>
+        <div class="cal-legend">
+          <span class="cal-legend-item cal-low" data-i18n="cal.low">お得</span>
+          <span class="cal-legend-item cal-standard" data-i18n="cal.standard">通常</span>
+          <span class="cal-legend-item cal-peak" data-i18n="cal.peak">繁忙</span>
+          <span class="cal-legend-item cal-sold" data-i18n="cal.sold">満室</span>
+        </div>
+        <div class="cal-weekdays">
+          <span>日</span><span>月</span><span>火</span><span>水</span><span>木</span><span>金</span><span>土</span>
+        </div>
+        <div class="cal-grid" id="cal-grid"></div>
+      </div>
+      <div class="reserve-teaser-grid fade-in">
+        <div class="phone-reserve">
+          <h3 class="phone-reserve-title" data-i18n="reserve.phone.title">お電話でのご予約</h3>
+          <a href="tel:0750000000" class="phone-number" id="teaser-tel">075-000-0000</a>
+          <p class="phone-hours" data-i18n="reserve.phone.hours">受付 9:00〜18:00（年中無休）</p>
+          <p class="phone-hint" data-i18n="reserve.phone.hint">※ ご希望のプラン・人数をお伝えください</p>
+        </div>
+        <div class="reserve-online-card">
+          <h3 class="form-title" data-i18n="reserve.teaser.online">オンライン予約</h3>
+          <form class="reserve-quick" id="reserve-quick" action="reserve/" method="get">
+            <div class="form-row form-row--3">
+              <div class="form-group">
+                <label for="q-checkin" data-i18n="form.checkin">チェックイン</label>
+                <input type="date" id="q-checkin" name="checkin" required />
+              </div>
+              <div class="form-group">
+                <label for="q-nights" data-i18n="form.nights">泊数</label>
+                <select id="q-nights" name="nights" required>
+                  <option value="" data-i18n="form.select">選択してください</option>
+                  <option value="1" data-i18n="form.nights.1">1泊</option>
+                  <option value="2" data-i18n="form.nights.2">2泊</option>
+                  <option value="3" data-i18n="form.nights.3">3泊</option>
+                  <option value="4" data-i18n="form.nights.4">4泊以上</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="q-adults" data-i18n="form.adults">大人</label>
+                <select id="q-adults" name="adults" required>
+                  <option value="" data-i18n="form.select">選択してください</option>
+                  <option value="1" data-i18n="form.adults.1">1名</option>
+                  <option value="2" data-i18n="form.adults.2">2名</option>
+                  <option value="3" data-i18n="form.adults.3">3名</option>
+                  <option value="4" data-i18n="form.adults.4">4名</option>
+                </select>
+              </div>
+            </div>
+            <button type="submit" class="btn btn--primary btn--block btn-submit" data-i18n="reserve.teaser.cta">予約フォームへ</button>
+            <p class="form-note" data-i18n="form.note">※ このフォームは予約リクエストです。空室確認後、担当者よりご連絡いたします。</p>
+          </form>
+        </div>
+      </div>
+      <p class="reserve-teaser-contact fade-in">
+        <span data-i18n="reserve.teaser.contact">その他のお問い合わせは</span>
+        <a href="mailto:info@rentaiji.example.com" id="teaser-contact-mail">info@rentaiji.example.com</a>
+      </p>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container footer__inner">
+    <div class="footer__brand">
+      <span class="footer__logo" id="footer-site-name">宿坊 蓮台寺</span>
+      <p id="footer-address">〒605-0826 和歌山県高野山東山区清水寺町384</p>
+    </div>
+    <nav class="footer__nav">
+      <a href="#rooms" data-i18n="nav.rooms">客室</a>
+      <a href="#facilities" data-i18n="nav.facilities">館内紹介</a>
+      <a href="#cuisine" data-i18n="nav.cuisine">お料理</a>
+      <a href="#plans" data-i18n="nav.plans">宿泊プラン</a>
+      <a href="#sightseeing" data-i18n="nav.sightseeing">周辺観光</a>
+      <a href="reserve/" data-i18n="nav.reserve">ご予約</a>
+    </nav>
+    <p class="footer__copy" data-i18n="footer.copy">© 2026 宿坊 蓮台寺 ｜ 宿坊テンプレート</p>
+  </div>
+</footer>
+
+<!-- ====================== Share Bar ====================== -->
+<div class="share-bar">
+  <span class="share-bar-label" data-i18n="share.label">このページをシェア</span>
+  <div class="share-buttons">
+    <a href="#" id="share-x" class="share-btn share-btn-x" target="_blank" rel="noopener" aria-label="Xでシェア">
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.73-8.835L1.254 2.25H8.08l4.259 5.63L18.244 2.25zm-1.161 17.52h1.833L7.084 4.126H5.117L17.083 19.77z"/></svg>
+      <span data-i18n="share.x">Xでシェア</span>
+    </a>
+    <a href="#" id="share-line" class="share-btn share-btn-line" target="_blank" rel="noopener" aria-label="LINEでシェア">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63h2.386c.346 0 .627.285.627.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63.346 0 .628.285.628.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.282.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/></svg>
+      <span data-i18n="share.line">LINEでシェア</span>
+    </a>
+    <button type="button" id="share-copy" class="share-btn share-btn-copy">
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+      <span class="copy-label" data-i18n="share.copy">リンクをコピー</span>
+    </button>
+  </div>
+</div>
+
+<button class="totop" id="totop" aria-label="ページトップへ">↑</button>
+
+<!-- ====================== Sticky Reserve Bar ====================== -->
+<div class="sticky-reserve" id="sticky-reserve" aria-hidden="true">
+  <div class="sticky-reserve-inner">
+    <span class="sticky-reserve-name" id="sticky-site-name"></span>
+    <div class="sticky-reserve-actions">
+      <a href="tel:" class="sticky-reserve-tel" id="sticky-tel"></a>
+      <a href="reserve/" class="btn btn--primary sticky-reserve-btn" data-i18n="nav.reserve">ご予約</a>
+    </div>
+  </div>
+</div>
+
+<!-- ====================== Lightbox ====================== -->
+<div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-label="画像を拡大表示" hidden>
+  <div class="lightbox-backdrop"></div>
+  <button class="lightbox-close" aria-label="閉じる" type="button">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+  </button>
+  <button class="lightbox-prev" aria-label="前の画像" type="button">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="15 18 9 12 15 6"/></svg>
+  </button>
+  <button class="lightbox-next" aria-label="次の画像" type="button">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="9 18 15 12 9 6"/></svg>
+  </button>
+  <div class="lightbox-img-wrap">
+    <img class="lightbox-img" src="" alt="" />
+  </div>
+  <div class="lightbox-footer">
+    <span class="lightbox-caption"></span>
+    <span class="lightbox-counter"></span>
+  </div>
+</div>
+
+<script src="script.js" type="module"></script>
+</body>
+</html>

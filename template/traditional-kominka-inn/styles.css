@@ -1,4 +1,4 @@
-﻿/* ================================================================
+/* ================================================================
    Traditional Kominka Inn Template
    古民家宿 紬の郷 — 販売用独立テンプレート
    Design: 生成り × 木目 × 墨色 × 深茶色
@@ -1607,4 +1607,52 @@ body.menu-open { overflow: hidden; }
 @media (max-width: 480px) {
   .price-calendar { padding: 16px; }
   .cal-day { font-size: 12px; }
+}
+
+/* ============================================================
+   モバイル最適化 — レスポンシブ改善 (2026-07-21)
+   ヒーロー横はみ出し・横スクロール対策
+   ============================================================ */
+html, body { overflow-x: hidden; }
+
+@media (max-width: 768px) {
+  .hero__content {
+    width: 100%;
+    max-width: 100%;
+    padding-left: 22px;
+    padding-right: 22px;
+  }
+  .hero__badge {
+    white-space: normal;
+    overflow-wrap: break-word;
+    max-width: 100%;
+    font-size: 11.5px;
+    line-height: 1.55;
+  }
+  .hero__title {
+    font-size: clamp(30px, 8.4vw, 46px);
+    overflow-wrap: break-word;
+  }
+  .hero__lead {
+    font-size: 14px;
+    line-height: 1.85;
+    max-width: 100%;
+    overflow-wrap: break-word;
+  }
+  .hero__lead br { display: none; }
+  .hero__btns {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+    width: 100%;
+    max-width: 340px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .hero__btns > a,
+  .hero__btns > button {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+  }
 }

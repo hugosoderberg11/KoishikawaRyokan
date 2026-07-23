@@ -1,5 +1,6 @@
 import sendInquiryHandler from './api/send-inquiry.js';
 import stripeWebhookHandler from './api/stripe-webhook.js';
+import createCheckoutSessionHandler from './api/create-checkout-session.js';
 
 const API_ROUTES = {
   '/api/send-inquiry': {
@@ -9,6 +10,10 @@ const API_ROUTES = {
   '/api/stripe-webhook': {
     handler: stripeWebhookHandler,
     rawBody: true,
+  },
+  '/api/create-checkout-session': {
+    handler: createCheckoutSessionHandler,
+    rawBody: false,
   },
 };
 

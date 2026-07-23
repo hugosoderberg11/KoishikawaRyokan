@@ -1,0 +1,29 @@
+{
+  "templateName": "料理旅館テンプレート",
+  "name": {
+    "ja": "料理旅館 花車",
+    "en": "Kaguruma Kaiseki Ryokan",
+    "zh": "料理旅馆 花车"
+  },
+  "nameEn": "Kaguruma Kaiseki Ryokan",
+  "tagline": "旬の味わいと、京のおもてなし",
+  "description": "京都・祇園の懐石料理旅館。旬の京野菜と近江牛、築地直送の海の幸を使った懐石料理が自慢。",
+  "url": "https://kaguruma.example.com/",
+  "telephone": "075-000-0000",
+  "telephoneRaw": "0750000000",
+  "email": "info@kaguruma.example.com",
+  "address": {
+    "postalCode": "605-0073",
+    "region": "京都府",
+    "locality": "京都市",
+    "street": "祇園町南側570"
+  },
+  "geo": { "latitude": "35.0037", "longitude": "135.7756" },
+  "hours": "受付 9:00〜20:00",
+  "checkin": "15:00",
+  "checkout": "11:00",
+  "priceRange": "¥¥¥",
+  "ogImage": "https://kaguruma.example.com/images/og-image.jpg",
+  "mapEmbed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3248.5!2d135.7756!3d35.0037!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzUuMDAzNywxMzUuNzc1Ng!5e0!3m2!1sja!2sjp!4v1700000000000!5m2!1sja!2sjp",
+  "mapLink": "https://maps.google.com/?q=祇園+料理旅館"
+}

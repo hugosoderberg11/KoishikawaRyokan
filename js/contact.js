@@ -1,4 +1,6 @@
 import { CONTACT_EMAIL } from './config.js';
+import { getRecaptchaToken } from './recaptcha.js';
+import { trackEvent } from './analytics.js';
 
 const API_ENDPOINT = '/api/send-inquiry';
 
@@ -109,6 +111,12 @@ export function initContactForm(formSelector = '.contact-form') {
     const inquiryType = fd.get('type')?.toString().trim() || '';
     const isPurchase = inquiryType.includes('購入') || fd.get('template_name')?.toString().trim();
 
+    setFormState(form, 'loading', '送信中…');
+    if (submitBtn) submitBtn.textContent = '送信中…';
+
+    // reCAPTCHA トークン取得（未設定時は空文字のまま通過）
+    const recaptchaToken = await getRecaptchaToken('contact');
+
     const payload = {
       name: fd.get('name')?.toString().trim(),
       email: fd.get('email')?.toString().trim(),
@@ -119,16 +127,21 @@ export function initContactForm(formSelector = '.contact-form') {
       template_name: fd.get('template_name')?.toString().trim() || undefined,
       plan_name: fd.get('plan_name')?.toString().trim() || undefined,
       source: isPurchase ? 'template_purchase' : 'contact',
+      recaptcha_token: recaptchaToken || undefined,
     };
-
-    setFormState(form, 'loading', '送信中…');
-    if (submitBtn) submitBtn.textContent = '送信中…';
 
     try {
       const result = await submitInquiry(payload);
       setFormState(form, 'success', result.message || 'お問い合わせを送信しました。');
       form.reset();
       togglePurchaseFields(form);
+
+      // GA4 フォーム送信イベント
+      trackEvent('form_submit', {
+        event_category: 'contact',
+        event_label: isPurchase ? 'template_purchase' : 'inquiry',
+        inquiry_type: inquiryType,
+      });
     } catch (err) {
       setFormState(
         form,
