@@ -437,6 +437,13 @@
   リンクカードのみホバー維持（a.works-tmpl-card / a.works-more-btn）。
   静的: problem/service/mkt/price/addon/intro-option/fit 各カード
 
+- LP UX改善（2026-07-23 追記）:
+  - 個性: セクションbadge印判風・bg-warm格子（和紙調）・静的カード左金線・
+    解決策バナー上線・デモカード「デモを見る→」常時表示
+  - 非リンクカード: hover transform/box-shadow を明示リセット（誤認防止）
+  - レスポンシブ: hero-kanji 1080px以下非表示、price-featured scale廃止、
+    addon/price grid minmax、768px以下 phone非表示・works 1列、320/360px調整
+
 
 
 ==================================================================

@@ -632,9 +632,9 @@ body.nav-open { overflow: hidden; }
   .global-nav a { padding: 7px 4px; }
   .btn { font-size: 13px; padding: 10px 18px; }
   .header-actions { gap: 10px; }
-  .price-grid { grid-template-columns: repeat(2, 1fr); }
+  .price-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .price-featured { transform: none; }
-  .addon-cards { grid-template-columns: repeat(2, 1fr); }
+  .addon-cards { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .price-mode-banner { gap: 16px; padding: 20px 24px; }
   .marketing-grid { grid-template-columns: repeat(2, 1fr); }
   .template-grid { grid-template-columns: repeat(2, 1fr); }
@@ -817,7 +817,24 @@ body.nav-open { overflow: hidden; }
    Section — common
    ============================================================ */
 .section-wrap { padding: 100px 32px; }
-.bg-warm { background: var(--bg-warm); }
+.bg-warm {
+  background-color: var(--bg-warm);
+  background-image:
+    repeating-linear-gradient(
+      90deg,
+      transparent 0,
+      transparent 47px,
+      rgba(176, 132, 51, .025) 47px,
+      rgba(176, 132, 51, .025) 48px
+    ),
+    repeating-linear-gradient(
+      0deg,
+      transparent 0,
+      transparent 47px,
+      rgba(176, 132, 51, .018) 47px,
+      rgba(176, 132, 51, .018) 48px
+    );
+}
 .bg-night {
   background: linear-gradient(135deg, #20180f 0%, #2c1f0e 50%, #1a1008 100%);
 }
@@ -943,8 +960,20 @@ body.nav-open { overflow: hidden; }
   font-size: 11px;
   font-weight: 700;
   letter-spacing: .22em;
-  color: var(--gold);
+  color: var(--gold-deep);
   margin-bottom: 16px;
+  padding: 7px 16px;
+  border: 1px solid rgba(176, 132, 51, .35);
+  background: rgba(243, 232, 210, .4);
+  border-radius: 2px;
+  position: relative;
+}
+.section-badge::before {
+  content: "";
+  position: absolute;
+  inset: 3px;
+  border: 1px solid rgba(176, 132, 51, .12);
+  pointer-events: none;
 }
 .badge-light { color: var(--gold-soft); }
 
@@ -1039,7 +1068,9 @@ body.nav-open { overflow: hidden; }
   font-size: 12px;
   color: rgba(255,255,255,.55);
   letter-spacing: .06em;
-  white-space: nowrap;
+  white-space: normal;
+  line-height: 1.5;
+  max-width: 12em;
 }
 .stat-divider {
   width: 1px;
@@ -1096,6 +1127,7 @@ body.nav-open { overflow: hidden; }
   border-radius: var(--radius-lg);
   padding: 52px 40px;
   text-align: center;
+  border-top: 3px solid rgba(216, 178, 94, .45);
 }
 .solution-inner { display: flex; flex-direction: column; align-items: center; gap: 20px; }
 .solution-label {
@@ -1564,7 +1596,7 @@ body.nav-open { overflow: hidden; }
 
 .price-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 24px;
   align-items: start;
 }
@@ -1580,8 +1612,7 @@ body.nav-open { overflow: hidden; }
 
 .price-featured {
   border-color: var(--gold);
-  box-shadow: 0 0 0 2px rgba(176,132,51,.14), var(--shadow-md);
-  transform: scale(1.04);
+  box-shadow: 0 0 0 2px rgba(176,132,51,.18), var(--shadow-md);
   z-index: 1;
 }
 
@@ -1589,9 +1620,12 @@ body.nav-open { overflow: hidden; }
   position: absolute; top: -14px; left: 50%; transform: translateX(-50%);
   background: linear-gradient(135deg, var(--gold-soft), var(--gold-deep));
   color: #fff; font-size: 12px; font-weight: 700; letter-spacing: .08em;
-  padding: 5px 20px; border-radius: 999px;
+  padding: 5px 16px; border-radius: 999px;
   box-shadow: 0 6px 14px rgba(176,132,51,.35);
   white-space: nowrap;
+  max-width: calc(100% - 24px);
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .price-header { margin-bottom: 24px; padding-bottom: 24px; border-bottom: 1px solid var(--line); }
@@ -1721,7 +1755,7 @@ body.nav-open { overflow: hidden; }
 /* ---- Add-on option cards ---- */
 .addon-cards {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 16px;
 }
 
@@ -3910,8 +3944,7 @@ body.nav-open { overflow: hidden; }
 /* ===== Consult chip — pulse ring ===== */
 .chip-icon { animation: chip-pulse 2.5s ease-out infinite; }
 
-/* ===== Featured price — glow pulse ===== */
-.price-featured { animation: price-glow 3.5s ease-in-out infinite; }
+/* ===== Featured price — static emphasis (no pulse) ===== */
 
 /* ===== Btn-gold — shimmer pass ===== */
 .btn-gold { position: relative; overflow: hidden; }
@@ -4032,7 +4065,7 @@ body.nav-open { overflow: hidden; }
   gap: 2px;
 }
 .works-more-btn:hover {
-  transform: translateY(-4px) scale(1.04);
+  transform: translateY(-4px);
   box-shadow: 0 20px 40px rgba(176, 132, 51, .45);
 }
 .works-more-btn-arrow {
@@ -4051,11 +4084,7 @@ body.nav-open { overflow: hidden; }
   color: var(--ink);
   text-decoration: none;
   cursor: pointer;
-  transition: transform .35s ease, box-shadow .35s ease;
-}
-.works-tmpl-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 20px 56px rgba(43,36,28,.14);
+  transition: transform .35s ease, box-shadow .35s ease, border-color .35s ease;
 }
 #works .tmpl-preview {
   min-height: 300px;
@@ -4089,6 +4118,15 @@ body.nav-open { overflow: hidden; }
   font-size: 12.5px;
   color: var(--ink-soft);
   line-height: 1.7;
+}
+.works-tmpl-body::after {
+  content: "デモを見る →";
+  display: block;
+  margin-top: 10px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: .08em;
+  color: var(--gold-deep);
 }
 
 /* ===== Before / After compare ===== */
@@ -4846,6 +4884,10 @@ html { overflow-x: clip; }
   align-items: center;
 }
 
+@media (max-width: 1080px) {
+  .hero-kanji { display: none; }
+}
+
 @media (max-width: 920px) {
   .section-head--problem,
   .section-head--marketing,
@@ -4857,18 +4899,55 @@ html { overflow-x: clip; }
     width: 100%;
     max-width: 240px;
   }
+  .addon-cards { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (min-width: 561px) and (max-width: 1080px) {
+  .price-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 
 @media (max-width: 768px) {
   .hero-lead,
   .section-lead,
   .problem-card p,
-  .problem-card h3 {
+  .problem-card h3,
+  .service-card h3,
+  .service-card p,
+  .mkt-card h3,
+  .mkt-card p,
+  .intro-option-name,
+  .price-buyout-val,
+  .addon-card-name {
     overflow-wrap: anywhere;
     word-break: break-word;
   }
+  .section-lead br,
+  .section-title br { display: none; }
   .cta { min-width: 0; }
   .intro-compare-table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+  .price-mode-banner { flex-direction: column; align-items: stretch; text-align: left; }
+  .price-mode-divider { align-self: center; }
+  .works-template-grid { grid-template-columns: 1fr; }
+  .hero-visual { min-height: 240px; }
+  .laptop { width: min(100%, 360px); }
+  .phone { display: none; }
+}
+
+@media (max-width: 560px) {
+  .addon-cards { grid-template-columns: 1fr; }
+  .price-grid { grid-template-columns: 1fr; }
+  .price-badge-pop {
+    white-space: normal;
+    text-align: center;
+    font-size: 11px;
+    line-height: 1.4;
+    padding: 5px 12px;
+  }
+  .price-buyout-val { font-size: 26px; }
+  .intro-compare-table tbody td::before {
+    display: block;
+    margin-bottom: 2px;
+  }
 }
 
 @media (max-width: 360px) {
@@ -4885,6 +4964,7 @@ html { overflow-x: clip; }
   .intro-option-card { padding: 20px 16px; }
   .section-head-illust img { max-width: 180px; }
   .works-more-btn { width: 104px; height: 104px; font-size: 13px; }
+  .plan-btn { font-size: 13px; padding: 14px 16px; }
 }
 
 @media (max-width: 320px) {
@@ -4893,23 +4973,65 @@ html { overflow-x: clip; }
   .brand-mark { font-size: 14px; letter-spacing: .12em; }
   .section-title { font-size: 20px; }
   .footer-nav-grid { grid-template-columns: 1fr; }
+  .hero-points li { font-size: 12.5px; }
 }
 
 /* ============================================================
-   LP card interaction — クリック可能/不可の区別 (2026-07-23)
-   ============================================================
-   リンクカード（ホバーあり）:
-     - a.works-tmpl-card … デモテンプレート (#works)
-     - a.works-more-btn … テンプレート一覧へ
-   静的カード（ホバーなし・cursor:default）:
-     - .problem-card / .service-card / .mkt-card
-     - .price-card / .addon-card / .intro-option-card / .fit-card
-   カード内ボタン（a.plan-btn 等）は個別にクリック可能
+   LP card interaction — クリック可能/不可 + 個性 (2026-07-23)
    ============================================================ */
 .consult-preview,
 .flow-item,
 .problem-solution {
   cursor: default;
+}
+
+/* 静的カード — 旅館らしい左金線・和紙調。ホバーで動かさない */
+.problem-card,
+.service-card,
+.mkt-card,
+.price-card,
+.addon-card,
+.intro-option-card {
+  border-left: 3px solid rgba(176, 132, 51, .42);
+  background: linear-gradient(180deg, var(--paper) 0%, rgba(251, 248, 243, .55) 100%);
+  box-shadow: var(--shadow-sm);
+}
+
+.fit-card.fit-yes,
+.fit-card.fit-no {
+  border-left: 3px solid rgba(176, 132, 51, .28);
+}
+
+.problem-card:hover,
+.service-card:hover,
+.mkt-card:hover,
+.price-card:hover,
+.price-featured:hover,
+.addon-card:hover,
+.intro-option-card:hover,
+.fit-card:hover {
+  transform: none;
+  box-shadow: var(--shadow-sm);
+}
+
+/* リンクカードのみ浮き上がり + 明示ラベル */
+a.works-tmpl-card {
+  border-left: none;
+  background: var(--paper);
+}
+a.works-tmpl-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 56px rgba(43, 36, 28, .14);
+  border-color: rgba(176, 132, 51, .35);
+}
+a.works-tmpl-card:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 3px;
+}
+
+a.works-more-btn:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px rgba(176, 132, 51, .45);
 }
 
 /* ===== Reduced motion ===== */
