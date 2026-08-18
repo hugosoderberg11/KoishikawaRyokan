@@ -259,10 +259,11 @@ ul { list-style: none; }
 
 .hero-eyebrow {
   display: inline-block;
+  max-width: 100%;
   font-family: var(--sans);
   font-weight: 700;
   font-size: 13px;
-  line-height: 1.4;
+  line-height: 1.5;
   letter-spacing: .08em;
   color: var(--gold-deep);
   background: rgba(255,255,255,.7);
@@ -271,6 +272,7 @@ ul { list-style: none; }
   border-radius: 999px;
   margin-bottom: 20px;
   box-shadow: var(--shadow-sm);
+  text-wrap: balance;
 }
 
 .hero-title {
@@ -300,17 +302,21 @@ ul { list-style: none; }
 
 .hero-points {
   display: grid;
-  grid-template-columns: repeat(2, max-content);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 14px 36px;
   margin-bottom: 42px;
 }
 .hero-points li {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 12px;
+  min-width: 0;
   font-size: 15px;
   font-weight: 700;
   color: var(--ink);
+  line-height: 1.55;
+  overflow-wrap: anywhere;
+  word-break: break-word;
 }
 .tick {
   width: 24px; height: 24px;
@@ -391,6 +397,7 @@ ul { list-style: none; }
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 0 8px 48px;
 }
 .visual-glow {
   position: absolute;
@@ -465,9 +472,12 @@ ul { list-style: none; }
 }
 .mini-hero {
   position: absolute;
-  left: 28px; top: 50%;
+  left: 28px;
+  right: 28px;
+  top: 50%;
   transform: translateY(-30%);
   z-index: 2;
+  max-width: 72%;
 }
 .mini-jp {
   font-family: var(--serif);
@@ -504,11 +514,12 @@ ul { list-style: none; }
   white-space: nowrap;
 }
 
-/* Phone */
+/* Phone — 右下に配置し、PC画面のキャッチコピーと重ならないようにする */
 .phone {
   position: absolute;
-  left: -2%;
-  bottom: -6%;
+  right: 0;
+  left: auto;
+  bottom: 0;
   width: 168px;
   background: #16110c;
   border-radius: 30px;
@@ -622,17 +633,18 @@ ul { list-style: none; }
    ============================================================ */
 body.nav-open { overflow: hidden; }
 
+@media (max-width: 1200px) {
+  .global-nav .nav-hide-mobile { display: none; }
+  .header-actions .btn-ghost { display: none; }
+}
+
 @media (max-width: 1080px) {
   .header-inner { padding: 16px 24px; gap: 20px; }
-  .global-nav {
-    font-size: 13px;
-    gap: clamp(10px, 1.2vw, 18px);
-    padding-left: 20px;
-  }
-  .global-nav a { padding: 7px 4px; }
+  .global-nav,
+  .header-actions { display: none; }
+  .nav-toggle { display: flex; margin-left: auto; }
+  .nav-drawer { z-index: 60; }
   .btn { font-size: 13px; padding: 10px 18px; }
-  .header-actions { gap: 10px; }
-  .price-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .price-featured { transform: none; }
   .addon-cards { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .price-mode-banner { gap: 16px; padding: 20px 24px; }
@@ -641,9 +653,6 @@ body.nav-open { overflow: hidden; }
 }
 
 @media (max-width: 920px) {
-  .global-nav, .header-actions { display: none; }
-  .nav-toggle { display: flex; margin-left: auto; }
-  .nav-drawer { z-index: 60; }
   .nav-hide-mobile { display: none !important; }
   .global-nav {
     margin-left: 0;
@@ -682,6 +691,19 @@ body.nav-open { overflow: hidden; }
         rgba(251, 248, 243, .08) 100%);
   }
   .hero-lead br { display: none; }
+  .hero-points {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    margin-bottom: 36px;
+  }
+  .hero-cta {
+    flex-direction: column;
+    gap: 12px;
+  }
+  .cta {
+    min-width: 0;
+    width: 100%;
+  }
   .section-head { margin-bottom: 48px; }
   .section-title br { display: none; }
   .section-lead br { display: none; }
@@ -695,7 +717,8 @@ body.nav-open { overflow: hidden; }
   }
   .phone {
     width: 130px;
-    left: 2%;
+    right: 2%;
+    left: auto;
     bottom: -4%;
   }
   .price-grid,
@@ -771,7 +794,8 @@ body.nav-open { overflow: hidden; }
   }
   .phone {
     width: 108px;
-    left: 0;
+    right: 0;
+    left: auto;
     bottom: 0;
     animation: none;
   }
@@ -816,7 +840,7 @@ body.nav-open { overflow: hidden; }
 /* ============================================================
    Section — common
    ============================================================ */
-.section-wrap { padding: 100px 32px; }
+.section-wrap { padding: clamp(88px, 10vw, 128px) clamp(20px, 4vw, 40px); }
 .bg-warm {
   background-color: var(--bg-warm);
   background-image:
@@ -841,7 +865,7 @@ body.nav-open { overflow: hidden; }
 
 .section-inner { max-width: var(--maxw); margin: 0 auto; }
 
-.section-head { text-align: center; margin-bottom: 64px; }
+.section-head { text-align: center; margin-bottom: clamp(52px, 6vw, 80px); }
 
 .section-head--problem,
 .section-head--marketing,
@@ -991,7 +1015,10 @@ body.nav-open { overflow: hidden; }
 .section-lead {
   font-size: clamp(14px, 1.1vw, 16px);
   color: var(--ink-soft);
-  line-height: 2;
+  line-height: 1.9;
+  max-width: 30em;
+  margin-left: auto;
+  margin-right: auto;
 }
 .lead-light { color: rgba(255,255,255,.65); }
 
@@ -1095,6 +1122,7 @@ body.nav-open { overflow: hidden; }
   padding: 32px 28px;
   min-width: 0;
   cursor: default;
+  transition: none;
 }
 .problem-icon {
   display: inline-flex;
@@ -2062,6 +2090,8 @@ body.nav-open { overflow: hidden; }
 .footer-tagline {
   font-size: 13px; color: rgba(255,255,255,.58);
   letter-spacing: .04em; line-height: 1.7;
+  overflow-wrap: anywhere;
+  word-break: break-word;
 }
 .footer-company-name {
   font-size: 14px; font-weight: 600; color: rgba(255,255,255,.82);
@@ -4736,16 +4766,20 @@ body.nav-open { overflow: hidden; }
 .form-group textarea:focus { box-shadow: 0 0 0 3px rgba(216,178,94,.2); }
 
 @media (max-width: 920px) {
-  .works-template-grid { grid-template-columns: 1fr 1fr; }
-  .works-tmpl-card:nth-child(odd):last-child { grid-column: span 2; }
+  .works-template-grid {
+    grid-template-columns: 1fr;
+    max-width: 480px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .works-tmpl-card { grid-column: auto; }
   .compare-grid, .cases-grid, .fit-grid, .price-scope-grid,
   .intro-options-grid { grid-template-columns: 1fr; }
   .team-card { flex-direction: column; align-items: center; text-align: center; }
 }
 
 @media (max-width: 560px) {
-  .works-template-grid { grid-template-columns: 1fr; }
-  .works-tmpl-card:last-child { grid-column: auto; }
+  .works-template-grid { max-width: none; }
   .works-tmpl-body { padding: 16px 18px 20px; }
 }
 
@@ -4902,11 +4936,18 @@ html { overflow-x: clip; }
   .addon-cards { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 
-@media (min-width: 561px) and (max-width: 1080px) {
+@media (min-width: 769px) and (max-width: 1080px) {
   .price-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 
 @media (max-width: 768px) {
+  .price-grid,
+  .template-price-grid {
+    grid-template-columns: 1fr;
+    max-width: 420px;
+    margin-left: auto;
+    margin-right: auto;
+  }
   .hero-lead,
   .section-lead,
   .problem-card p,
@@ -4917,7 +4958,8 @@ html { overflow-x: clip; }
   .mkt-card p,
   .intro-option-name,
   .price-buyout-val,
-  .addon-card-name {
+  .addon-card-name,
+  .hero-points li {
     overflow-wrap: anywhere;
     word-break: break-word;
   }
@@ -4927,7 +4969,13 @@ html { overflow-x: clip; }
   .intro-compare-table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; }
   .price-mode-banner { flex-direction: column; align-items: stretch; text-align: left; }
   .price-mode-divider { align-self: center; }
-  .works-template-grid { grid-template-columns: 1fr; }
+  .works-template-grid {
+    grid-template-columns: 1fr;
+    max-width: 480px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .works-tmpl-card { grid-column: auto; }
   .hero-visual { min-height: 240px; }
   .laptop { width: min(100%, 360px); }
   .phone { display: none; }
@@ -5014,6 +5062,13 @@ html { overflow-x: clip; }
   box-shadow: var(--shadow-sm);
 }
 
+.problem-card:hover,
+.problem-card:hover .problem-icon {
+  animation: none;
+  border-color: var(--line);
+  border-left-color: rgba(176, 132, 51, .42);
+}
+
 /* リンクカードのみ浮き上がり + 明示ラベル */
 a.works-tmpl-card {
   border-left: none;
@@ -5032,6 +5087,76 @@ a.works-tmpl-card:focus-visible {
 a.works-more-btn:hover {
   transform: translateY(-4px);
   box-shadow: 0 20px 40px rgba(176, 132, 51, .45);
+}
+
+/* ===== LP text density — expand blocks (2026-08-18) ===== */
+.card-teaser {
+  font-size: 13.5px;
+  color: var(--ink-soft);
+  line-height: 1.75;
+  margin: 0 0 2px;
+}
+.expand-block { margin-top: 8px; }
+.expand-block > summary {
+  list-style: none;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12.5px;
+  font-weight: 700;
+  letter-spacing: .08em;
+  color: var(--gold-deep);
+  padding: 6px 0;
+  user-select: none;
+  transition: color .2s ease;
+}
+.expand-block > summary::-webkit-details-marker { display: none; }
+.expand-block > summary::marker { content: ""; }
+.expand-block > summary::after {
+  content: "＋";
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1;
+  opacity: .65;
+}
+.expand-block[open] > summary::after { content: "−"; }
+.expand-block > summary:hover { color: var(--gold); }
+.expand-block__body { padding-top: 10px; }
+.expand-block--section {
+  margin-top: 24px;
+  max-width: 520px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.expand-block--wide { max-width: none; width: 100%; }
+.hero-expand { margin-bottom: 36px; }
+.hero-expand .hero-points {
+  margin-top: 12px;
+  margin-bottom: 0;
+}
+.hero-lead { margin-bottom: 24px; }
+.hero-title { margin-bottom: 18px; }
+.problem-grid { gap: 24px; margin-bottom: 72px; }
+.service-grid { gap: 24px; }
+.problem-card,
+.service-card { padding: 28px 24px; }
+.flow-item { padding: 28px 0; }
+.intro-compare-cta { margin-top: 40px; }
+.price-scope { margin-top: 32px; }
+.expand-block__body .plan-features { margin-bottom: 0; }
+.price-card .plan-btn { margin-top: 14px; }
+.bg-night .expand-block > summary { color: var(--gold-soft); }
+.bg-night .expand-block > summary:hover { color: #fff; }
+.contact-expand-note {
+  font-size: clamp(14px, 1.1vw, 16px);
+  color: rgba(255,255,255,.65);
+  line-height: 1.9;
+  margin: 0;
+}
+.contact-expand-note a { color: var(--gold-soft); }
+@media (prefers-reduced-motion: reduce) {
+  .expand-block__body { animation: none; }
 }
 
 /* ===== Reduced motion ===== */
